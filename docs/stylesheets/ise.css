@@ -1,0 +1,20 @@
+@font-face {
+    font-family: lcdFont;
+    src: url(ProtoThrottleLCD.woff2);
+}
+
+.lcd {
+    font-family: lcdFont;
+    font-size: 1rem;
+}
+
+.screen {
+    border: 1px solid black;
+    padding: 12px;
+    border-radius: 10px;
+    width: max-content;
+}
+
+.faint {
+    color: #cccccc;
+}
