@@ -1,8 +1,8 @@
-Create and activate virtual environment
+Create and activate virtual environment in a location of your choosing:
 	python3 -m venv mkdocs.venv
 	source mkdocs.venv/bin/activate
-Clone mkdocs-material
+Clone mkdocs-material in a location of your choosing:
 	git clone https://github.com/squidfunk/mkdocs-material.git
-Install mkdocs-material
+Install mkdocs-material and plugins
 	pip install -e mkdocs-material
 	pip install mkdocs-awesome-pages-plugin

@@ -15,12 +15,16 @@ tailor its performance for specific situations.  These parameters include:
 
 !!! warning "Please Note"
     Making these adjustments does require a basic level of familiarity with
-    computers and the Windows operating system, and a some experience with
-    installing software, connecting USB devices, and interacting with a text
-    terminal.  While we would love to support every customer in this effort,
-    making these adjustments is considered an advanced topic and our ability
-    to provide direct technical support (other than through this guide) may
-    be limited.
+    computers and operating systems, and a some experience with installing
+    software, connecting USB devices, and interacting with a text terminal. 
+    While we would love to support every customer in this effort, making
+    these adjustments is considered an advanced topic and our ability to
+    provide direct technical support (other than through this guide) may be
+    limited.
+
+!!! tip "Mac Users"
+    The instructions below assume a Windows operating system.  If you are
+    using a Mac, please read the [Mac Notes](#mac-notes) section first.
 
 ## Step 1 - Install Tera Term
 
@@ -112,3 +116,27 @@ Down Coef.
 When you make a change to one of the values, it is automatically saved to
 the non-volatile memory on the Squealer.  No special steps are needed to
 save the values and it will power up next time using the values you set.
+
+## Mac Notes
+
+For those using a Mac, the instructions above are slightly different.  First
+of all, skip Step 1 - you don't need to download a terminal emulator since
+the Mac comes with one pre-installed.
+
+Second, replace Step 3 with the instructions below:
+
+From a terminal window, run the following command:
+
+```
+ls /dev/tty*
+```
+
+In the results, looks for something like tty.usbmodemN where N is some
+number.  Remember that name.  Then, run the following command:
+
+```
+screen /dev/tty.usbmodemN
+```
+
+Replace tty.usbmodemN with the value found above.  Once connected, you may
+have to press 'q' to reset the Squealer and see the initialization screen.
