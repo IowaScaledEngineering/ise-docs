@@ -3,11 +3,15 @@ title: User Manual
 ---
 # Basic Crossing Controller Manual (CKT-XING-BASIC v1.0)
 
-![](img/ckt-xing-basic.jpg)
-
 ## Overview
 
-The Basic Crossing Controller (CKT-XING-BASIC) is de
+The Basic Crossing Controller (CKT-XING-BASIC) is designed as a simple way to control model railroad grade crossing lights and provide a bell.  It includes two TrainSpotter optical detectors, and has a built-in SoundBytes crossing bell that includes all seven of our standard North American crossing bell sounds.  It will drive any number of common anode (common positive) LED crossing signals, the most common type found on the market today.  The crossing will start when one of the detectors senses something in front of it, and will continue for selectable time after all sensors are again clear.
+
+Additional TrainSpotter sensors can be connected for additional tracks, or for additional detection distance from the crossing.
+
+Note:  This basic controller does not include any control for cross gates, and does not implement approach sensors.
+
+![](img/ckt-xing-basic.jpg)
 
 ---
 
@@ -41,9 +45,9 @@ Connect the common anode (common positive) lead of your signals into the +V term
 
 Connect the left and right negative leads - *making sure you have resistors on your signals* - to the L and R terminals.  The exact orientation (left or right) is not important - they're just marked that way to help the user be consistent if so desired.  Some crossings are wired so that all lights blink in the same direction at once, whereas others are wired so that signals on opposite sides of the road blink opposite.  It's entirely up to you.
 
-Step 5: Set switches A, B, and C to the bell sound you want for your crossing.  
+Step 5: Set switches A, B, and C to the bell sound you want for your crossing.  See "Configuration Options".
 
-Step 6: Set switches X and Y for the turn-off delay you want.  This is the time between when the sensors clear and when the crossing shuts down.
+Step 6: Set switches X and Y for the turn-off delay you want.  This is the time between when the sensors clear and when the crossing shuts down.  See (Configuration Options).
 
 Step 7: Place your hand in front of one of the sensors.  You should see the red light on the sensor stalk turn on, and the crossing should begin ringing and flashing lights back and forth.  Congratulations on a successful install!
 
@@ -54,6 +58,32 @@ Step 7: Place your hand in front of one of the sensors.  You should see the red 
 ![](img/ckt-xing-basic-diagram.png)
 
 ---
+
+## Configuration Options
+
+The basic crossing controller has two configuration options:  how long the crossing will stay active after all the detectors are clear, and which bell should be used.  Switches X/Y configure the turn-off delay, and switches A/B/C configure which bell sound will be played.
+
+| X | Y | Turn-off Delay |
+|---|---|----------------|
+| 0 | 0 | 5 seconds | 
+| 0 | 1 | 10 seconds | 
+| 1 | 0 | 15 seconds | 
+| 1 | 1 | 30 seconds | 
+
+| A | B | C | Bell Sound |
+|---|---|---|----------------|
+| 0 | 0 | 0 | Generic crossing bell | 
+| 0 | 0 | 1 | Safetran Mechanical | 
+| 0 | 1 | 0 | Safetran Hybrid | 
+| 0 | 1 | 1 | US&S Teardrop | 
+| 1 | 0 | 0 | Western Cullen Hayes 333 | 
+| 1 | 0 | 1 | Western Cullen Hayes 777 | 
+| 1 | 1 | 0 | Western Railroad Supply 222 | 
+| 1 | 1 | 1 | Reserved / Do Not Use | 
+
+
+---
+
 
 ## Open Source 
 
