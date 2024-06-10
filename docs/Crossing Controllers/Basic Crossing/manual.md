@@ -34,7 +34,8 @@ If you're not sure exactly when you want your crossing to trigger, you can leave
 
 Step 4: Crossing signals are available from a variety of vendors to match your prototype and budget.  Most signals available today are compatible with the board - they just need to be LEDs and wired as common anode (common positive).   All signals need current limiting resistors installed, if they're not already installed from the factory.  For typical ~12V power, a 1k resistor is recommended on each negative lead from each signal.  (Generally that means 2 - one on the left lights, one on the right lights.)  It can be done with a single 1k resistor on the common positive lead as well, but this will lead to some unevenness in the lights while they fade back and forth.
 
-**The lack of current-limiting resistors will cause permanent damage to the LEDs in your crossing signals.  Make sure you have them installed!**
+!!! note warning
+    **The lack of current-limiting resistors will cause permanent damage to the LEDs in your crossing signals.  Make sure you have them installed!**
 
 Connect the common anode (common positive) lead of your signals into the +V terminal of the "CROSSING SIGNAL OUTPUTS" terminal block.
 
