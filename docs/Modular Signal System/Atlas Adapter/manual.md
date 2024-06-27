@@ -22,11 +22,11 @@ MSS provides a number of advantages over the Atlas system:
 **Key Features:**
 
 * Combines two directional Atlas All Scales Signal System buses into a single MSS-compatible connection
-* Powered from 5-24V of AC, DC, or DCC
+* Powered from 6V to 24V of AC, DC, or DCC
 * Onboard diagnostic LEDs help debug problems between the two systems
 * Robust, protected bus interfaces assure reliable operation
 
-**Input Power:**  6-24 volts DC, AC, or DCC  (must be shared with the Atlas modules)  
+**Input Power:**  6 to 24 volts DC, AC, or DCC  (must be shared with the Atlas modules)  
 **Input Current:**  <100mA maximum  
 **MSS Standard Compatibility:** 1.x, 2.x, and (proposed) 3.x  
 
@@ -37,7 +37,7 @@ MSS provides a number of advantages over the Atlas system:
 !!! info "Please Note"
     Since the wiring nomenclature gets a bit confusing in terms of directions, looking at the wiring diagram below is highly recommended rather than just relying on the text.    
 
-Step 1: The Atlas adapter needs 5-24V of DC, AC, or DCC power, and it must be the same power supply that is used to power the Atlas modules, since the Atlas signal bus does not carry a ground wire.  
+Step 1: The Atlas adapter needs 6V to 24V of DC, AC, or DCC power, and it must be the same power supply that is used to power the Atlas modules, since the Atlas signal bus does not carry a ground wire.  
 
 Step 2: Connect J1 on the adapter to J2 on the last Atlas Universal Signal Control Board (USCB) for signals headed away from the connection point.  Likewise, connect J2 on the adapter board to J1 on the last Atlas USCB for signals headed towards the connection point.  Connections should be made with standard 4 or 6 wire, "straight through" RJ11 cables.
 
@@ -74,6 +74,7 @@ adapt, improve, and share with others.
 
 The design of the MSS-ATLASADAPTER hardware is open source hardware, and is made available under the
 terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
-Design files can be found in the [mss-crossover project](https://github.com/IowaScaledEngineering/mss-atlasadapter) on 
+
+Design files can be found in the [mss-atlasadapter project](https://github.com/IowaScaledEngineering/mss-atlasadapter) on 
 Github.
 

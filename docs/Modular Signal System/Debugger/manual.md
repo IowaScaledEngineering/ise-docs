@@ -5,7 +5,7 @@ title: User Manual
 
 ## Overview
 
-The MSS-DEBUG is a diagnostic tool designed to help users debug [Modular Signal System (MSS)](https://modularsignalsystem.info/) systems, from testing hardware already installed on layout modules to developing new MSS hardware.  It provides a handheld, stand-alone way to see which MSS signal wires are active on the bus, or manually activate individual signal wires and test how installed MSS signaling modules react.
+The MSS-DEBUG is a diagnostic tool designed to help users debug [Modular Signal System (MSS)](https://modularsignalsystem.info/) setups, from testing hardware already installed on layout modules to developing new MSS hardware.  It provides a handheld, stand-alone way to see which MSS signal wires are active on the bus, or manually activate individual signal wires and test how installed MSS signaling modules react.
 
 ![](img/mss-debug.jpg)
 
@@ -16,12 +16,12 @@ The MSS-DEBUG is a diagnostic tool designed to help users debug [Modular Signal 
 **Key Features:**
 
 * Diagnostic LEDs indicate status of all six MSS signal lines
-** Local Block Occupancy
-** Approach Occupancy In (to node)
-** Advance Approach Occupancy In (to node)
-** Advance Occupancy Out (from node)
-** Advance Approach Occupancy Out (from node)
-** Diverging Approach In/Out (to/from node)
+    * Local Block Occupancy
+    * Approach Occupancy In (to node)
+    * Advance Approach Occupancy In (to node)
+    * Advance Occupancy Out (from node)
+    * Advance Approach Occupancy Out (from node)
+    * Diverging Approach In/Out (to/from node)
 * Switches allow user to toggle each signal line to test module response
 * Provides +12V bus pull-up bias voltage from 3x AAA batteries for testing bus segments without
 pull-ups (such as the MSS-CROSSOVER module)
@@ -72,7 +72,8 @@ Iowa Scaled Engineering is committed to creating open designs that users are fre
 
 The design of the MSS-DEBUG hardware is open source hardware, and is made available under the
 terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
-Design files can be found in the [mss-crossover project](https://github.com/IowaScaledEngineering/mss-debug) on 
+
+Design files can be found in the [mss-debug project](https://github.com/IowaScaledEngineering/mss-debug) on 
 Github.
 
 

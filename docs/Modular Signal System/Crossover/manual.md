@@ -6,7 +6,7 @@ title: User Manual
 ## Overview
 
 The MSS-CROSSOVER is complete “crossover” unit described in the [Modular Signal System (MSS)](https://modularsignalsystem.info/) standard, providing MSS-compliant current-based block detection for model railroad layout modules.  It contains an integrated
-DCC block detector, a universal (DC/AC/DCC) power supply directly compatible with Free-Mo accessory power bus, and an 
+DCC block detector, a universal (DC/AC/DCC) power supply directly compatible with Free-Mo accessory power bus, and a 
 robust MSS bus interface protected against static discharge, overcurrent, ground loop, and reverse polarity events.
 
 It is intended for use on modules that require block detection to participate in layouts where MSS signaling is in use, but 
@@ -23,22 +23,22 @@ the module itself does not have signals.
 * Single button sensitivity adjustment (no fiddling with tiny potentiometers!)
 * Isolated using a current transformer
 * Highly sensitive (1ma, or ~10k ohms) yet resistant to false detection
-* Powered from 5-24V of AC, DC, or DCC
+* Powered from 5V to 24V of AC, DC, or DCC
 * Onboard detection indicator LED
 * 0.4s turn on and 2.5s turn off delay to eliminate glitching
 
-**Input Power:**  6-24 volts DC, AC, or DCC  
+**Input Power:**  6 to 24 volts DC, AC, or DCC  
 **Input Supply Current:**  20 milliamps (max)  
 **Turn On Delay:**  0.4 seconds  
 **Turn Off Delay:**  2.5 seconds  
-**Sensitivity:**  1mA at DCC frequencies
+**Sensitivity:**  1mA at DCC frequencies  
 **MSS Standard Compatibility:** 1.x, 2.x, and (proposed) 3.x
 
 ---
 
 ## Quick Start Guide
 
-The Crossover needs 5-24V of DC, AC, or DCC power.  In a typical modular setup, this will come from the 
+The Crossover needs 5V to 24V of DC, AC, or DCC power.  In a typical modular setup, this will come from the 
 accessory power bus, but can come from anywhere convenient.  Connect power to the terminal block labeled "POWER" (J1). 
 Polarity is not important.
 
@@ -46,7 +46,7 @@ If power is correctly connected, the green PWR LED should light.
 
 Both rails must be gapped at the ends of modules to assure that adjoining connected modules do not interfere with detection.
 
-All of the feeders from one side of the track should be combined into a single wire and passed through hole in the current transformer (the large black tombstone-shaped item) between the track and the connection to the track bus.  Only one pass through the hole is needed.  Multiple turns will lead to excessive sensitivity and false detection.  The feeders for the opposite rail should be directly connected to the Track (DCC) Bus.  See the simplified wiring diagram below for details.
+All of the feeders from one side of the track should be combined into a single wire and passed through the hole in the current transformer (the large black tombstone-shaped item) between the track and the connection to the track bus.  Only one pass through the hole is needed.  Multiple turns will lead to excessive sensitivity and false detection.  The feeders for the opposite rail should be directly connected to the Track (DCC) Bus.  See the simplified wiring diagram below for details.
 
 With accessory and DCC power both on and nothing on the track, verify that the red DETECT LED does not illuminate.  If it does illuminate with nothing
 on the track, either there's a flaw in the wiring, or you may have leakage current and need to do a recalibration.  (See [Leakage Current Calibration](#leakage-current-calibration) later on for details.)
@@ -73,7 +73,7 @@ If you do need to adjust for sensitivity, press and hold the CAL pushbutton. You
 
 ## AUX DETECT Inputs
 
-In cases were you may need to trigger detection in a block manually, such as using the auxilliary contacts of a switch machine to detect an an open industry siding turnout off the mainline, you can wire directly into the AUX DETECT terminal block.  If these terminals are shorted together, they will trigger detection in the immediate block.  (This is done by connecting MSS pin 4 - the local block detection line - and MSS pin 5, ground.  These two MSS wires are brought out on the IN and GROUND terminals respectively.)   *NOTE:  The red DETECT light only illuminates if the DCC detector triggers.  It will not illuminate if the AUX DETECT pins are shorted together.*
+In cases were you may need to trigger detection in a block manually, such as using the auxilliary contacts of a switch machine to detect an open industry siding turnout off the mainline, you can wire directly into the AUX DETECT terminal block.  If these terminals are shorted together, they will trigger detection in the immediate block.  (This is done by connecting MSS pin 4 - the local block detection line - and MSS pin 5, ground.  These two MSS wires are brought out on the IN and GND terminals respectively.)   *NOTE:  The red DETECT light only illuminates if the DCC detector triggers.  It will not illuminate if the AUX DETECT pins are shorted together.*
 
 !!! note warning
     Never apply power of any kind to the AUX DETECT inputs, or you may damage other connected MSS nodes.  The AUX DETECT terminals should only ever be connected to
