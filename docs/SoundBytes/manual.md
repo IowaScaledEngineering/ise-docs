@@ -5,8 +5,9 @@ title: User Manual
 
 ## Overview
 
-SoundBytes are simple, fully self-contained sound modules that play ambient
-sound effects for your model railroad.
+[SoundBytes](https://www.iascaled.com/store/SoundBytes) are simple, fully
+self-contained sound modules that play ambient sound effects for your model
+railroad.
 
 ## Installation
 
@@ -55,3 +56,19 @@ sound, again depending on the model.  See the table below for more details.
 
 The volume is adjustable using the square, white potentiometer on top of the
 board.  Turn it with a small screwdriver to adjust the volume up or down.
+
+## Open Source 
+
+Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
+adapt, improve, and share with others.  
+
+The design of the SoundBytes hardware is open source hardware, and is made
+available under the terms of the 
+[Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
+The firmware for the SoundBytes is free software: you can redistribute
+it and/or modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either [version 3 of the
+License](https://www.gnu.org/licenses/gpl.html), or any later version.
+
+Design files can be found in the [ckt-dingdong](https://github.com/IowaScaledEngineering/ckt-dingdong)
+project on Github.
