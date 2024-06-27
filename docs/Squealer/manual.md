@@ -58,6 +58,15 @@ Although the sensor and the control electronics are relatively robust,
 standard precautions should be taken — avoid static electricity, don’t let
 it get wet, and keep conductive materials away, etc.
 
+Additional sensors may be connected the same way as above.  Terminals IN3
+and IN4 can also be used for the sensor output wires (white and blue) if
+more space is needed.  Although a large number of sensors can be connected
+to one board, practically speaking, four or five is probably the most that
+make sense in most situations since you want the speaker to be reasonably
+close to where the sound is triggered.  More than that, and you will likely
+be happier having multiple Squealer modules spaced around, connected to the
+nearest sensors.
+
 ## Speaker
 
 The speaker attaches to connector J6 (SPK OUT) on the board.  The plastic
