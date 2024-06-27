@@ -16,7 +16,7 @@ Note:  This basic controller does not include any control for crossing gates, an
 ---
 
 ## Key Features
-* Universal Power - works from 6 to 24V DC, AC, or DCC
+* Universal Power - works from 6V to 24V DC, AC, or DCC
 * Works with common anode (common positive) LED grade crossing signals
 * Seven different built-in crossing bell sounds
 * Plug-and-play sensors and speaker connections - no fiddly terminal blocks!
