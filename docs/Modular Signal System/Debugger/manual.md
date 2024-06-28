@@ -74,4 +74,4 @@ The design of the MSS-DEBUG hardware is open source hardware, and is made availa
 terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
 
 Design files can be found in the [mss-debug](https://github.com/IowaScaledEngineering/mss-debug) project on 
-Github.
+GitHub.

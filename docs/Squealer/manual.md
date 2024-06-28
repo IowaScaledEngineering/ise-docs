@@ -126,6 +126,7 @@ adapt, improve, and share with others.
 The design of the Squealer hardware is open source hardware, and is made
 available under the terms of the 
 [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
+
 The firmware for the Squealer is free software: you can redistribute
 it and/or modify it under the terms of the GNU General Public License as
 published by the Free Software Foundation, either [version 3 of the License](https://www.gnu.org/licenses/gpl.html), or any later version.
@@ -135,4 +136,4 @@ Design files can be found in the [ckt-soundplay](https://github.com/IowaScaledEn
 [ckt-motion](https://github.com/IowaScaledEngineering/ckt-motion), 
 [ckt-irsense](https://github.com/IowaScaledEngineering/ckt-irsense), 
 and [ckt-dingdong](https://github.com/IowaScaledEngineering/ckt-dingdong)
-projects on Github.
+projects on GitHub.

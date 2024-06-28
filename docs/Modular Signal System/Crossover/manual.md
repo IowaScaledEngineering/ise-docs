@@ -95,7 +95,7 @@ adapt, improve, and share with others.
 The design of the MSS-CROSSOVER hardware is open source hardware, and is made available under the
 terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
 Design files can be found in the [mss-crossover](https://github.com/IowaScaledEngineering/mss-crossover) project on 
-Github.
+GitHub.
 
 The firmware for the MSS-CROSSOVER is free software: you can redistribute it and/or modify it under the 
 terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the 

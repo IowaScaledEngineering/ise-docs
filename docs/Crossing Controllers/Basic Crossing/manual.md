@@ -91,8 +91,8 @@ Iowa Scaled Engineering is committed to creating open designs that users are fre
 adapt, improve, and share with others.  
 
 The design of the MSS-CROSSOVER hardware is open source hardware, and is made available under the
-terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  The firmware for the CKT-XING-BASIC is free software: you can redistribute it and/or modify it under the  terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the  License](https://www.gnu.org/licenses/gpl.html), or any later version.
+terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).
 
-Design files can be found in the [ckt-xing project](https://github.com/IowaScaledEngineering/ckt-xing) on 
-Github.
+The firmware for the CKT-XING-BASIC is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the  License](https://www.gnu.org/licenses/gpl.html), or any later version.
 
+Design files can be found in the [ckt-xing](https://github.com/IowaScaledEngineering/ckt-xing) project on GitHub.
