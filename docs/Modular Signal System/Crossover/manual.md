@@ -22,12 +22,12 @@ the module itself does not have signals.
 
 * Single button sensitivity adjustment (no fiddling with tiny potentiometers!)
 * Isolated using a current transformer
-* Highly sensitive (1ma, or ~10k ohms) yet resistant to false detection
+* Highly sensitive (1mA, or ~10k ohms) yet resistant to false detection
 * Powered from 5V to 24V of AC, DC, or DCC
 * Onboard detection indicator LED
 * 0.4s turn on and 2.5s turn off delay to eliminate glitching
 
-**Input Power:**  6 to 24 volts DC, AC, or DCC  
+**Input Power:**  5 to 24 volts DC, AC, or DCC  
 **Input Supply Current:**  20 milliamps (max)  
 **Turn On Delay:**  0.4 seconds  
 **Turn Off Delay:**  2.5 seconds  
@@ -94,11 +94,11 @@ adapt, improve, and share with others.
 
 The design of the MSS-CROSSOVER hardware is open source hardware, and is made available under the
 terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
-Design files can be found in the [mss-crossover project](https://github.com/IowaScaledEngineering/mss-crossover) on 
+Design files can be found in the [mss-crossover](https://github.com/IowaScaledEngineering/mss-crossover) project on 
 Github.
 
 The firmware for the MSS-CROSSOVER is free software: you can redistribute it and/or modify it under the 
 terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the 
 License](https://www.gnu.org/licenses/gpl.html), or any later version. Firmware for the MSS-CROSSOVER is shared with
-the CKT-BD1, and can be found in the [ckt-bd1 project](https://github.com/IowaScaledEngineering/ckt-bd1).
-
+the CKT-BD1, and can be found in the [ckt-bd1](https://github.com/IowaScaledEngineering/ckt-bd1)
+project on GitHub.
