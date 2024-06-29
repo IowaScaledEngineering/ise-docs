@@ -18,3 +18,7 @@
 .faint {
     color: #cccccc;
 }
+
+.md-typeset hr {
+    border-bottom: 0.1rem solid #777;
+}

@@ -134,7 +134,7 @@ supported DCC command stations.
 
     See [Set Locomotive Menu](#set-locomotive-cenu) for how to set a short (primary) address. 
 
-**NOTE: the ProtoThrottle function settings are set to standard DCC function numbers by default.
+**NOTE: The ProtoThrottle function settings are set to standard DCC function numbers by default.
 If you need to change any function number, the steps are explained below:**
 
 !!! success "Step 4"
@@ -218,7 +218,7 @@ If you need to change any function number, the steps are explained below:**
     Engineering’s wireless fast clocks www.iascaled.com/store/MRBW-FCM
     or the fast time provided by the NCE Cab Bus.
 
-    <span class="lcd">&#174;</span> 12-hour mode AM indicator<span class="lcd"> &#175;</span> 12-hour mode PM indicator
+    <span class="lcd">&#270;</span> 12-hour mode AM indicator<span class="lcd"> &#271;</span> 12-hour mode PM indicator
 
     No AM or PM indicator when in 24-hour mode.
 
@@ -264,10 +264,6 @@ If you need to change any function number, the steps are explained below:**
 momentarily will return you to the main screen from any of the main
 menus.
 
-|     | Navigation |     |
-|----:|:----------:|:----|
-|Advance to Engine Menu :material-arrow-right-drop-circle:<br><br>Toggle backlight on/off :material-checkbox-marked-circle:<br>**hold** to power down throttle|<br>LCD SCREEN<br> |:material-arrow-up-circle: Up<br><br>:material-arrow-down-circle: Down|
-
 The Up and Down buttons can be assigned a function using the [Configure Function](#configure-function-menu) menu.
 
 Pressing and holding the Select button for a few seconds will prompt to power down the throttle:
@@ -278,3 +274,377 @@ DOWN  -&#256
 </pre>
 
 Click the Down button to confirm and turn off the throttle.
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to Engine Menu](#engine-menu) :material-arrow-right-drop-circle:<br><br>Toggle backlight on/off :material-checkbox-marked-circle:<br>**hold** to power down throttle|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Up<br><br>:material-arrow-down-circle: Down|
+
+---
+
+<div style="float: right; padding-left: 10px"><pre class="lcd screen">
+ ENGINE 
+  OFF
+</pre></div>
+## Engine Menu
+
+The behavior of the Engine menu depends on the configuration of the
+ENG ON and ENG STOP settings in the Configure Function menu. 
+
+For DCC decoders that take a single function on/off to turn the prime
+mover on/off (such as ESU Loksound or TCS WOWSound decoders), configure ENG
+ON to that function number and set ENG STOP to off (F--).  The Engine menu
+will then change between OFF and ON when pressing the Up and Down buttons.
+<pre class="lcd screen">
+ ENGINE 
+   OFF
+</pre>
+<pre class="lcd screen">
+ ENGINE 
+   ON
+</pre>
+
+If a decoder is edge triggered instead (requires a function on/off transition)
+to turn the prime mover on and off (such as Soundtraxx Tsunami2), set
+both ENG ON and ENG STOP to the appropriate function numbers.
+In this case, the Engine menu will display STARTING and STOPPING be-
+tween the ON and OFF settings as the assigned functions are sent to the
+locomotive decoder.
+<pre class="lcd screen">
+ ENGINE 
+   OFF
+</pre>
+<pre class="lcd screen">
+ ENGINE 
+STARTING
+</pre>
+<pre class="lcd screen">
+ ENGINE 
+   ON
+</pre>
+<pre class="lcd screen">
+ ENGINE 
+STOPPING
+</pre>
+<pre class="lcd screen">
+ ENGINE 
+   OFF
+</pre>
+
+If the throttle is not in idle when attempting to turn off the prime mover,
+a warning will be displayed and the ENG STOP function will not be sent.
+Move the throttle back to idle to continue.
+<pre class="lcd screen">
+ ENGINE 
+NOT IDLE 
+</pre>
+
+**Example #1, F8 for ESU Loksound or F12 for TCS WOWSound:**
+<pre class="lcd">
+ENG ON = F08      ENG ON = F12
+ENG STOP = F--    ENG STOP = F--
+</pre>
+
+**Example #2, F5 (on, RPM+) and F6 (off, RPM-) for Soundtraxx Tsunami 2:**
+<pre class="lcd">
+ENG ON = F05
+ENG STOP = F06
+</pre>
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to Special Functions Menu](#special-functions-menu) :material-arrow-right-drop-circle:<br><br>Return to Main Screen :material-checkbox-marked-circle:|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Start or turn on prime mover<br><br>:material-arrow-down-circle: Stop or turn off prime mover|
+
+---
+
+<div style="float: right; padding-left: 10px"><pre class="lcd screen">
+ SPECIAL
+&#257- FUNCS
+</pre></div>
+## Special Functions Menu
+
+This screen provides access to the special functions of the ProtoThrottle. 
+Currently, one special function is available: a brake test simulator.
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to Load Configuration Menu](#load-configuration-menu) :material-arrow-right-drop-circle:<br><br>[Enter Special Functions](special-functions.md) :material-checkbox-marked-circle:|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: None<br><br>:material-arrow-down-circle: None|
+
+---
+
+<div style="float: right; padding-left: 10px"><pre class="lcd screen">
+LOAD CNF
+01: 0250
+</pre></div>
+## Load Configuration Menu
+
+The Load Configuration screen loads a set of existing configuration settings
+that were previously saved using the Save Configuration screen.
+
+!!! info ""
+    <pre class="lcd screen">
+    LOAD CNF
+    01: 0250
+    </pre>
+
+    <span class="lcd">01: </span> Configuration Number. Up to 20 distinct configurations (locomotive
+    address, function mappings, throttle notch settings, options) can be
+    stored in the ProtoThrottle and loaded quickly using this menu.
+
+    <span class="lcd">0250 </span> Locomotive Address. This is the locomotive address associated
+    with the selected configuration number.
+
+    Press the Select button to load the configuration.
+
+!!! info ""
+    <pre class="lcd screen">
+    CONFIRM
+    LOAD  -&#256
+    </pre>
+
+    Before loading the selected configuratoin, you will be asked to confirm
+    by pressing the Down button.  To cancel, click the Menu button.
+
+![](img/load-save-config.png)
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to Save Configuration Menu](#save-configuration-menu) :material-arrow-right-drop-circle:<br><br>Load Selected Configuration :material-checkbox-marked-circle:<br>(and return to Main Screen)|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Configuration Number<br><br>:material-arrow-down-circle: Decrease Configuration Number|
+
+---
+
+<div style="float: right; padding-left: 10px"><pre class="lcd screen">
+SAVE CNF
+01: 0250
+</pre></div>
+## Save Configuration Menu
+
+The Save Configuration screen saves the current loaded configuration
+(with any changes you’ve made) into whatever configuration slot is on
+the screen. In order to copy an established configuration, you must load
+it into the throttle first before “saving” it to another slot.
+
+!!! info ""
+    <pre class="lcd screen">
+    SAVE CNF
+    01: 0250
+    </pre>
+
+    <span class="lcd">01: </span> Configuration Number. Up to 20 distinct configurations (locomotive
+    address, function mappings, throttle notch settings, options) can be
+    stored in the ProtoThrottle and saved using this menu.
+
+    <span class="lcd">0250 </span> Locomotive Address. This is the locomotive address associated
+    with the selected configuration number.
+
+    Press the Select button to save the configuration.
+
+!!! info ""
+    <pre class="lcd screen">
+    CONFIRM
+    SAVE  -&#256
+    </pre>
+
+    Before saving the selected configuratoin, you will be asked to confirm
+    by pressing the Down button.  To cancel, click the Menu button.
+
+![](img/load-save-config.png)
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to Set Locomotive Menu](#set-locomotive-menu) :material-arrow-right-drop-circle:<br><br>Save Selected Configuration :material-checkbox-marked-circle:<br>(and return to Main Screen)|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Configuration Number<br><br>:material-arrow-down-circle: Decrease Configuration Number|
+
+---
+
+<div style="float: right; padding-left: 10px"><pre class="lcd screen">
+     SET
+&#257-  LOCO
+</pre></div>
+## Set Locomotive Menu
+
+This screen lets you change the currently selected locomotive address.
+
+**NOTE:** To set a short (primary) address, the first digit will need to display
+an “s”.  To do so, make sure the other three digits are first set to a valid
+short address value (<128).  Then, cycle through the first digit until the
+“s” appears.
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to Force Function Menu](#force-function-menu) :material-arrow-right-drop-circle:<br><br>Enter Set Locomotive Sub-Menu :material-checkbox-marked-circle:|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: None<br><br>:material-arrow-down-circle: None|
+
+**Set Locomotive Sub-Menu**
+
+!!! info ""
+    <pre class="lcd screen">
+      0250&#32;&#32;
+      ^
+    </pre>
+
+    <span class="lcd">0250 </span>Locomotive Address.
+
+    <span class="lcd">^ </span>Digit Selector.
+
+|     | Set<br>Locomotive |     |
+|----:|:----------:|:----|
+|Move Digit Selector to the next digit :material-arrow-right-drop-circle:<br><br>Save locomotive address and :material-checkbox-marked-circle:<br> return to Set Locomotive Menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase selected digit<br><br>:material-arrow-down-circle: Decrease selected digit|
+
+---
+
+<div style="float: right; padding-left: 10px"><pre class="lcd screen">
+   FORCE
+&#257-  FUNC
+</pre></div>
+## Force Function Menu
+
+The Force Function menu allows any of the 29 standard DCC functions to be turned
+ON or OFF, regardless of any other ProtoThrottle lever or button. These can be used to test
+functions or control additional features of the decoder such as auxiliary, class, or lesser used
+lights.
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to Configure Function Menu](#configure-function-menu) :material-arrow-right-drop-circle:<br><br>Enter Force Function Sub-Menu :material-checkbox-marked-circle:|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: None<br><br>:material-arrow-down-circle: None|
+
+**Force Function Sub-Menu**
+
+!!! info ""
+    <pre class="lcd screen">
+    F00  <font class="faint">---</font>
+    &#32;
+    </pre>
+
+    Function Number. Available range from function 0 to function 28.
+
+!!! info ""
+    <pre class="lcd screen">
+    <font class="faint">F00</font>  ---
+    &#32;
+    </pre>
+
+    Function Setting.
+
+    <span class="lcd">--- </span>Function can be controlled by a ProtoThrottle button or lever
+
+    <span class="lcd">ON&#32; </span>Function forced on, regardless of any other button or control
+
+    <span class="lcd">OFF </span>Function forced off, regardless of any other button or control
+
+In the Force Function menu, the horn lever does not activate the horn function.
+Instead, it will activate the currently selected function number if the function setting is ---.
+
+!!! warning "Please Note"
+    Normally, all Force Function settings should be set to ---.  Unless you have a very specific reason for setting
+    it to something else, leave it at the default value.  Otherwise, functions
+    may no longer be automatically controlled by the throttle.
+
+|     | Force<br>Function |     |
+|----:|:----------:|:----|
+|Cycle through Function Numbers :material-arrow-right-drop-circle:<br><br>Save functions settings and :material-checkbox-marked-circle:<br>return to Force Function menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Cycle through Function Settings<br><br>:material-arrow-down-circle: Cycle through Function Settings|
+
+---
+
+<div style="float: right; padding-left: 10px"><pre class="lcd screen">
+  CONFIG
+&#257-  FUNC
+</pre></div>
+## Configure Function Menu
+
+The Configure Function menu sets the DCC function to be sent for each control on the throttle and action performed by the throttle.  This is where most of the customization takes place.
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to Notch Configuration Menu](#configure-function-menu) :material-arrow-right-drop-circle:<br><br>Enter Configure Function Sub-Menu :material-checkbox-marked-circle:|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: None<br><br>:material-arrow-down-circle: None|
+
+**Configure Function Sub-Menu**
+
+!!! info ""
+    <pre class="lcd screen">
+    HORN&#32;&#32;&#32;&#32;
+    <font class="faint">F02</font>
+    </pre>
+
+    Control Name. The name of the ProtoThrottle button or handle to which a function can be assigned.
+
+    <span class="lcd">HORN </span>Horn lever  
+    <span class="lcd">BELL </span>Bell lbutton  
+    <span class="lcd">BRAKE </span>Brake lever, when brake is activated  
+    <span class="lcd">BRK OFF </span>Brake lever, when in the full left position  
+    <span class="lcd">AUX </span>Auxiliary button  
+
+    ==Fix Me!  Add rest of settings==
+
+!!! info ""
+    <pre class="lcd screen">
+    <font class="faint">HORN&#32;&#32;&#32;&#32;</font>
+    F02
+    </pre>
+
+    Function Number. The function to be activated when the associated
+    ProtoThrottle button is pressed or control is moved. Available settings
+    are none (F--) and functions 0 (F00) to 28 (F28).
+
+    Additional settings are also available for select controls:
+
+    <span class="lcd">MOM </span>Momentary Function. The function is only active while the button is pressed.  Available on the Up and Down button assignments.  
+    <span class="lcd">LAT </span>Latching Function. The function toggles on and off with each press of the button.  Available on the Up and Down button assignments.  
+    <span class="lcd">EMRG BRK </span>Activate the emergency brake.  Available on the Up, Down, and Auxiliary button assignments.  
+    <span class="lcd">BRK TEST </span>Active the brake test special function.  Available on the Up and Down button assignments.  
+
+|     | Config<br>Function |     |
+|----:|:----------:|:----|
+|Cycle through Control Names :material-arrow-right-drop-circle:<br><br>Save functions settings and :material-checkbox-marked-circle:<br>return to Configure Function menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Function Number<br><br>:material-arrow-down-circle: Decrease Function Number|
+
+---
+
+<div style="float: right; padding-left: 10px"><pre class="lcd screen">
+   NOTCH
+&#257-   CFG
+</pre></div>
+## Notch Configuration Menu
+
+The Notch Configuration menu allows you to set the DCC speed step sent for each notch setting on the throttle.  This, in conjunction with the decoder's speed table, can be used to fine-tune the speed of the locomotive and its response to the throttle.
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to Options Menu](#options-menu) :material-arrow-right-drop-circle:<br><br>Enter Notch Configuration Sub-Menu :material-checkbox-marked-circle:|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: None<br><br>:material-arrow-down-circle: None|
+
+**Notch Configuration Sub-Menu**
+
+!!! info ""
+    <pre class="lcd screen">
+    NOTCH #&#32;
+    <font class="faint"> 102</font>
+    </pre>
+
+    Throttle Notch Number.
+
+!!! info ""
+    <pre class="lcd screen">
+    <font class="faint">NOTCH #&#32;</font>
+     102
+    </pre>
+
+    Speed Step. The speed step to send when the throttle is in the selected
+    Notch Number. Range from 1 to 126 (128 speed step mode only). Idle is
+    always speed step zero.
+
+|     | Notch<br>Config |     |
+|----:|:----------:|:----|
+|Cycle through Notch Numbers :material-arrow-right-drop-circle:<br><br>Save notch settings and :material-checkbox-marked-circle:<br>return to Notch Configuration menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Speed Step<br><br>:material-arrow-down-circle: Decrease Speed Step|
+
+---
+
+<div style="float: right; padding-left: 10px"><pre class="lcd screen">
+ OPTIONS
+&#257-
+</pre></div>
+## Options Menu
+
+The Options menu configures various settings specific to each configuration.  These options include brake handle and reverser lever behavior, and emergency stop.
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to System Menu](#system-menu) :material-arrow-right-drop-circle:<br><br>Enter Options Sub-Menu :material-checkbox-marked-circle:|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: None<br><br>:material-arrow-down-circle: None|
+
+**Options Sub-Menu**
+
