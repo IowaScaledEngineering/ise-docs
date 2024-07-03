@@ -408,7 +408,7 @@ that were previously saved using the Save Configuration screen.
 
 |     | Navigation |     |
 |----:|:----------:|:----|
-|[Advance to Save Configuration Menu](#save-configuration-menu) :material-arrow-right-drop-circle:<br><br>Load Selected Configuration :material-checkbox-marked-circle:<br>(and return to Main Screen)|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Configuration Number<br><br>:material-arrow-down-circle: Decrease Configuration Number|
+|[Advance to Save Configuration Menu](#save-configuration-menu) :material-arrow-right-drop-circle:<br><br>Load Selected Configuration :material-checkbox-marked-circle:<br>and return to Main Screen|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Configuration Number<br><br>:material-arrow-down-circle: Decrease Configuration Number|
 
 ---
 
@@ -451,7 +451,7 @@ it into the throttle first before “saving” it to another slot.
 
 |     | Navigation |     |
 |----:|:----------:|:----|
-|[Advance to Set Locomotive Menu](#set-locomotive-menu) :material-arrow-right-drop-circle:<br><br>Save Selected Configuration :material-checkbox-marked-circle:<br>(and return to Main Screen)|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Configuration Number<br><br>:material-arrow-down-circle: Decrease Configuration Number|
+|[Advance to Set Locomotive Menu](#set-locomotive-menu) :material-arrow-right-drop-circle:<br><br>Save Selected Configuration :material-checkbox-marked-circle:<br>and return to Main Screen|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Configuration Number<br><br>:material-arrow-down-circle: Decrease Configuration Number|
 
 ---
 
@@ -486,7 +486,7 @@ short address value (<128).  Then, cycle through the first digit until the
 
 |     | Set<br>Locomotive |     |
 |----:|:----------:|:----|
-|Move Digit Selector to the next digit :material-arrow-right-drop-circle:<br><br>Save locomotive address and :material-checkbox-marked-circle:<br> return to Set Locomotive Menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase selected digit<br><br>:material-arrow-down-circle: Decrease selected digit|
+|Move Digit Selector to the next digit :material-arrow-right-drop-circle:<br><br>Save locomotive address and return :material-checkbox-marked-circle:<br>to Set Locomotive Menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase selected digit<br><br>:material-arrow-down-circle: Decrease selected digit|
 
 ---
 
@@ -539,7 +539,7 @@ Instead, it will activate the currently selected function number if the function
 
 |     | Force<br>Function |     |
 |----:|:----------:|:----|
-|Cycle through Function Numbers :material-arrow-right-drop-circle:<br><br>Save functions settings and :material-checkbox-marked-circle:<br>return to Force Function menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Cycle through Function Settings<br><br>:material-arrow-down-circle: Cycle through Function Settings|
+|Cycle through Function Numbers :material-arrow-right-drop-circle:<br><br>Save settings and return :material-checkbox-marked-circle:<br>to Force Function menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Cycle through Function Settings<br><br>:material-arrow-down-circle: Cycle through Function Settings|
 
 ---
 
@@ -592,7 +592,7 @@ The Configure Function menu sets the DCC function to be sent for each control on
 
 |     | Config<br>Function |     |
 |----:|:----------:|:----|
-|Cycle through Control Names :material-arrow-right-drop-circle:<br><br>Save functions settings and :material-checkbox-marked-circle:<br>return to Configure Function menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Function Number<br><br>:material-arrow-down-circle: Decrease Function Number|
+|Cycle through Control Names :material-arrow-right-drop-circle:<br><br>Save settings and return :material-checkbox-marked-circle:<br>to Configure Function menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Function Number<br><br>:material-arrow-down-circle: Decrease Function Number|
 
 ---
 
@@ -630,7 +630,7 @@ The Notch Configuration menu allows you to set the DCC speed step sent for each 
 
 |     | Notch<br>Config |     |
 |----:|:----------:|:----|
-|Cycle through Notch Numbers :material-arrow-right-drop-circle:<br><br>Save notch settings and :material-checkbox-marked-circle:<br>return to Notch Configuration menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Speed Step<br><br>:material-arrow-down-circle: Decrease Speed Step|
+|Cycle through Notch Numbers :material-arrow-right-drop-circle:<br><br>Save settings and :material-checkbox-marked-circle:<br>return to Notch Configuration menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase Speed Step<br><br>:material-arrow-down-circle: Decrease Speed Step|
 
 ---
 
@@ -647,4 +647,160 @@ The Options menu configures various settings specific to each configuration.  Th
 |[Advance to System Menu](#system-menu) :material-arrow-right-drop-circle:<br><br>Enter Options Sub-Menu :material-checkbox-marked-circle:|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: None<br><br>:material-arrow-down-circle: None|
 
 **Options Sub-Menu**
+
+!!! info ""
+    <pre class="lcd screen">
+    VAR BRK&#32;
+         OFF
+    </pre>
+
+    Variable Brake.  When set to ON, the brake effect will be proportional
+    to the brake handle position.  It is recommended to disable the emergency
+    brake when variable braking is enabled.  When set to OFF, the brake will be
+    a simple on/off function.
+
+!!! info ""
+    <pre class="lcd screen">
+    BRK TYPE
+       PULSE
+    </pre>
+
+    Brake Type.  Only shown if variable brake is ON.
+
+    <span class="lcd">PULSE </span>Pulse Braking.  The brake function will
+    be pulsed at a duty cycle corresponding to the brake handle position,
+    simulating varying amounts of braking force.
+    
+    <span class="lcd">STEP </span>Step braking.  This feature is for use
+    with TCS WOWSound decoders only.  As the brake handle is moved to the
+    right, a greater percentage of the brake is applied.  To disengage the
+    brake, fully release the brake handle completely to the left.  Also, the
+    emergency brake feature must be disabled for step braking to work
+    correctly.
+
+    ![](img/step-braking.png)
+
+!!! info ""
+    <pre class="lcd screen">
+    BRK RATE
+        0.5s
+    </pre>
+
+    Brake Pulse Rate.  Only shown if variable brake is ON and brake type is PULSE.
+
+    This sets the rate (0.2 -1.0 second) at which brake commands are sent
+    during pulse braking.  A smaller value results in smoother braking but
+    can result in a less responsive DCC system due to more commands being
+    sent on the throttle bus.
+
+!!! info ""
+    <pre class="lcd screen">
+    BRK ESTP
+         ON
+    </pre>
+
+    E-Stop on Brake Handle.
+
+    When set to ON, the brake handle can set emergency stop for the selected
+    locomotive when moved completely to the right.  When set to OFF, the
+    brake handle will not cause an emergency stop to be set.
+
+!!! info ""
+    <pre class="lcd screen">
+    REV SWAP
+         OFF
+    </pre>
+
+    Reverser Swap.
+
+    When set to ON, the reverser directions are swapped.  This can be used
+    to correct for a locomotive whose direction is set incorrectly or when
+    changing the leading end of a back-to-back consist.  When set to OFF,
+    the reverser directions are normal.
+
+|     | Options |     |
+|----:|:----------:|:----|
+|Cycle through Options :material-arrow-right-drop-circle:<br><br>Save settings and return :material-checkbox-marked-circle:<br>to Options menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase or set option value<br><br>:material-arrow-down-circle: Decrease or set option value|
+
+---
+
+<div style="float: right; padding-left: 10px"><pre class="lcd screen">
+  SYSTEM
+&#257-
+</pre></div>
+## System Menu
+
+The System menu configures various throttle behaviors.  These include the ability to lock out certain menus, turn on advanced features, and set the battery warning levels.
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to Communication Configuration Menu](#communication-configuration-menu) :material-arrow-right-drop-circle:<br><br>Enter System Sub-Menu :material-checkbox-marked-circle:|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: None<br><br>:material-arrow-down-circle: None|
+
+**System Sub-Menu**
+
+!!! info ""
+    <pre class="lcd screen">
+    MENU LCK
+         OFF
+    </pre>
+
+    Menu Lock.  When set to ON, only the following menus are available:
+    ENGINE, SPECIAL FUNCS, LOAD CNF, SET LOCO, FORCE FUNC, and
+    SYSTEM.
+
+!!! info ""
+    <pre class="lcd screen">
+    ADV FUNC
+         OFF
+    </pre>
+
+    Advanaced Functions.  When set to ON, advanced functions in the throttle are enabled. These
+    include the Threshold Calibration menu and the Transmit Interval and
+    Transmit Holdoff settings in the Preferences menu.
+
+!!! info ""
+    <pre class="lcd screen">
+    BAT OKAY
+        2.2V
+    </pre>
+
+    Battery OK Voltage. The voltage above which the batteries are considered good.  <span class="lcd">&#265;</span>
+
+!!! info ""
+    <pre class="lcd screen">
+    BAT WARN
+        2.0V
+    </pre>
+
+    Battery Warning Voltage. The batteries are low when the voltage is between the OK and Warning levels.  <span class="lcd">&#266;</span>
+
+!!! info ""
+    <pre class="lcd screen">
+    BAT CRIT
+        1.8V
+    </pre>
+
+    The batteries need to be replaced when the voltage is between the Warning and Critical levels.  <span class="lcd">&#267;</span>
+
+    When the voltage falls below the Critical level, <span class="lcd">LOW BATTERY</span> will be displayed and operation of the throttle will not be possible.
+
+|     | System |     |
+|----:|:----------:|:----|
+|Cycle through System settings :material-arrow-right-drop-circle:<br><br>Save settings and return :material-checkbox-marked-circle:<br>to System menu|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: Increase or set option value<br><br>:material-arrow-down-circle: Decrease or set option value|
+
+---
+
+<div style="float: right; padding-left: 10px"><pre class="lcd screen">
+    COMM
+&#257-   CFG
+</pre></div>
+## Communication Configuration Menu
+
+The Communication Configuration menu adjusts various settings related to the wireless communication between the throttle and the receiver.  This is where the throttle ID, base address, fast clock time source, and transmit timing can be adjusted.
+
+|     | Navigation |     |
+|----:|:----------:|:----|
+|[Advance to Preferences Menu](#preferences-menu) :material-arrow-right-drop-circle:<br><br>Enter Communication Configuration Sub-Menu :material-checkbox-marked-circle:|<pre class="screen">LCD<br> SCREEN <br></pre> |:material-arrow-up-circle: None<br><br>:material-arrow-down-circle: None|
+
+**Communication Configuration Sub-Menu**
 
