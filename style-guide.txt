@@ -1,0 +1,67 @@
+Rule #1: Follow all rules
+Rule #2: All rules are meant to be broken
+
+--- STYLE ---
+- Number ranges
+
+	Use "X to Y" instead of "X-Y".  If abbreviated units are used,
+	include the units with each number.  Example: 5V to 24V.  If spelled
+	out units are used, include at the end.  Example 5 to 24 volts.
+
+- Section dividers
+	Use a horizontal line (---) between each major (H2) section
+
+--- FORMAT ---
+
+Start with Heading 1 formatted as:
+# <product name> User Manual ![](img/<filename>-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
+Logo is optional, but preferred if one is available for the product
+
+H2 Overview General overview of what this thing is and does If available. 
+Keep it simple.  This text should match what is on the product page.  Link
+to the store where possible.  Use short links to make future store changes
+easier to fix.  Exmaple: https://www.iascaled.com/store/CKT-BD1-CMRI (i.e. 
+no categories preceding the product code).
+
+Include a photo or application image.  Keep it simple.
+
+End with H3 sections "Features" and "Typical Applications" (if applicable). 
+Match the product page.  List of features should list most important ones
+first.  Optionally bold the first several to call them out.  Bold ones
+should be first (i.e. important).
+
+---
+H2 Quick Start Guide
+Free-form text to help the user get started quickly.
+
+---
+H2 Other Sections as Needed
+Any other necessary documentation
+
+--- H2 Specifications
+List of electrical and mechanical specifications.  Next to last section. 
+Things like (in this order):
+
+Input Power
+Input Supply Current
+Product specific specs
+Size.  Eexample: 2.0"(L) x 1.5"(W) x 0.875"(H)
+
+Bold the spec name.  Regular text for the value.
+
+---
+H2 Open Source
+Last section.  Boilerplate open source text following this template:
+
+Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
+adapt, improve, and share with others.  
+
+The design of the PRODUCT_CODE hardware is open source hardware, and is made available under the
+terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/). 
+Design files can be found in the [product_code](https://github.com/IowaScaledEngineering/product_code) project on 
+GitHub.
+
+The firmware for the PRODUCT_CODE is free software: you can redistribute it and/or modify it under the 
+terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the 
+License](https://www.gnu.org/licenses/gpl.html), or any later version. Firmware for the PRODUCT_CODE can be 
+found in the [product_code](https://github.com/IowaScaledEngineering/product_code) project on GitHub.
