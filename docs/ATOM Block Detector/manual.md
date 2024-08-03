@@ -1,7 +1,7 @@
 ---
 title: User Manual
 ---
-# CKT-BD1 (ATOM) User Manual ![](img/atom-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
+# ATOM User Manual ![](img/atom-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 ## Overview
 
