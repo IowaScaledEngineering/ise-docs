@@ -22,10 +22,37 @@ professionally recorded and edited built-in sounds provide a basic sound
 landscape for most situations, but custom sounds can also be loaded using a
 microSD card.  The possibilities are only limited by your imagination!
 
+### Features
+
+* True motion-detecting operation: only squeals when something is moving
+* Simple, discrete under-track installation
+* Professionally recorded and edited flange squeal sounds play randomly
+* Sounds fade smoothly when activated or deactivated
+* Custom sounds can be loaded using a microSD card
+* Comes complete with sensor, speaker, and control board
+* Powered from 5V to 24V DC
+* Additional [motion sensors](https://www.iascaled.com/store/CKT-MOTION) available
+
+### Typical Applications
+
+* Mainline curves
+* Yards
+* Tight industrial trackage
+
 ![](img/install2.png)
 
+---
+
+## Quick Start Guide
+
+### Power
+
+The Squealer can be powered from 5V to 24V DC, applied through connector J1
+(positive to VIN, negative to GND).  Alternatively, the mini USB jack can be
+used to power the Squealer, either from a USB charging block or a laptop/PC.
+
 ![](img/install1.png){align=right}
-## Installation
+### Sensor Installation
 
 1.  Drill a 1/16" pilot hole down through the benchwork
 
@@ -34,14 +61,6 @@ microSD card.  The possibilities are only limited by your imagination!
 3.  Align the motion sensor with the top of the ties.  Use a piece of paper
 towel or tapered shim and gently wedge into the hole to hold the sensor in
 place
-
-## Power
-
-The Squealer can be powered from 5V to 24V DC, applied through connector J1
-(positive to VIN, negative to GND).  Alternatively, the mini USB jack can be
-used to power the Squealer, either from a USB charging block or a laptop/PC.
-
-## Sensor
 
 The motion sensor is powered from the Squealer board.  The red wire from the
 motion sensor connects to J2 in any of the RED terminals.  Similarly, the
@@ -67,7 +86,7 @@ close to where the sound is triggered.  More than that, and you will likely
 be happier having multiple Squealer modules spaced around, connected to the
 nearest sensors.
 
-## Speaker
+### Speaker Installation
 
 The speaker attaches to connector J6 (SPK OUT) on the board.  The plastic
 speaker enclosure can be mounted above or below the layout.  For better
@@ -75,6 +94,8 @@ sound fidelity, bore a 3/8" hole in the scenery or benchwork, and position
 the speaker enclosure with the opening on the side facing up.  Camouflage
 the hole with scenery.  However, this is user preference and may involve
 some experimentation.
+
+---
 
 ## Operation
 
@@ -89,7 +110,7 @@ built into the program, so sound may not play immediately.  However, the
 blue LED on the Squealer board will always indicate the current detection
 status.
 
-## Volume
+### Volume Control
 
 The volume has 30 levels and comes preset at level 20.  Level 0 is mute. 
 There are ten levels above 20 to amplify custom audio tracks with low gain,
@@ -99,6 +120,8 @@ To change volume, press the VOL UP or VOL DN button.  The amber LED will
 blink briefly in response to pressing the button.  When setting volume level
 20, the amber LED will blink somewhat longer than normal to indicate it is
 the default level.
+
+---
 
 ## Custom Sounds
 
@@ -118,6 +141,17 @@ following requirements:
 The Squealer will load all valid files found on the microSD card and begin
 playing them in random order.
 
+---
+
+## Specifications
+
+**Input Power:**  5 to 24 volts DC  
+**Size (Control Board):** 3.75"(L) x 2.25"(W) x 0.5"(H)  
+**Size (Speaker):** 1.25"(L) x 1.25"(W) x 1"(H)  
+**Size (Motion Sensor):** 2.25"(L) x 0.25"(W) x 0.25"(H)
+
+---
+
 ## Open Source 
 
 Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
@@ -125,15 +159,16 @@ adapt, improve, and share with others.
 
 The design of the Squealer hardware is open source hardware, and is made
 available under the terms of the 
-[Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
-
-The firmware for the Squealer is free software: you can redistribute
-it and/or modify it under the terms of the GNU General Public License as
-published by the Free Software Foundation, either [version 3 of the License](https://www.gnu.org/licenses/gpl.html), or any later version.
-
+[Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/). 
 Design files can be found in the [ckt-soundplay](https://github.com/IowaScaledEngineering/ckt-soundplay), 
 [snd-squeal](https://github.com/IowaScaledEngineering/snd-squeal), 
 [ckt-motion](https://github.com/IowaScaledEngineering/ckt-motion), 
 [ckt-irsense](https://github.com/IowaScaledEngineering/ckt-irsense), 
 and [ckt-dingdong](https://github.com/IowaScaledEngineering/ckt-dingdong)
 projects on GitHub.
+
+The firmware for the Squealer is free software: you can redistribute it and/or modify it under the 
+terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the 
+License](https://www.gnu.org/licenses/gpl.html), or any later version. Firmware for the
+Squealer can be found in the [snd-squeal](https://github.com/IowaScaledEngineering/snd-squeal)
+and [ckt-motion](https://github.com/IowaScaledEngineering/ckt-motion) projects on GitHub.
