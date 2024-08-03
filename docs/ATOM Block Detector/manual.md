@@ -21,6 +21,7 @@ with the DCCOD.
 ![](img/ckt-bd1.jpg)
 
 ### Features
+
 * Isolated, current-transformer based detection for DCC
 * Highly sensitive (~1mA, equivalent to a 10k ohms)
 * Simple single button sensitivity adjustment
@@ -30,6 +31,7 @@ with the DCCOD.
 * Powered from 5V to 24V
 
 ### Typical Applications
+
 * Detect block occupancy for signal systems
 * Activate grade crossing signals
 * Trigger sounds
