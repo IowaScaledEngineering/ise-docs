@@ -26,6 +26,7 @@ with the DCCOD.
 * Simple single button sensitivity adjustment
 * Two opposite polarity, open-collector outputs (40V / 250mA capable)
 * Optional built-in 10k output pull-up resistors
+* 0.4s turn on and 2.5s turn off delay to eliminate glitching
 * Powered from 5V to 24V
 
 ### Typical Applications
