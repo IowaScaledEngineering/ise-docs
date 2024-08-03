@@ -9,7 +9,18 @@ title: User Manual
 self-contained sound modules that play ambient sound effects for your model
 railroad.
 
-## Installation
+### Features
+
+* Easy to install and use
+* Powered from 5V to 24V DC
+
+### Typical Applications
+* Triggered sounds effects
+* Ambient layout sound
+
+---
+
+## Quick Start Guide
 
 The SoundBytes module can be hidden under the layout, or above the layout
 in a building or scenery.  Since each layout is different, experiment
@@ -20,7 +31,7 @@ the module to the underside of the layout.  Apply the tape to one of the
 smooth sides of the black speaker enclosure and attach it to the benchwork
 or underside of the track base.
 
-## Power
+### Power
 
 Power should be clean 5V to 24V DC.  This can come from a wall wart, an
 auxiliary bus on the layout, or a [DCC power adapter](https://www.iascaled.com/store/CKT-DCCPWR). 
@@ -34,6 +45,8 @@ cause damage.
     Do not use an old power pack!  These will
     [damage](https://www.iascaled.com/blog/your-old-power-pack-isnt-a-dc-supply/)
     modern electronics.
+
+---
 
 ## Triggering
 
@@ -52,24 +65,36 @@ sound, again depending on the model.  See the table below for more details.
 | [Transformer Hum](https://www.iascaled.com/store/SND-HUM) | Play humming sound   | N/A |
 | [Outhouse](https://www.iascaled.com/store/SND-OUTHOUSE)   | Play sound clip once | N/A |
 
+---
+
 ## Volume Control
 
 The volume is adjustable using the square, white potentiometer on top of the
 board.  Turn it with a small screwdriver to adjust the volume up or down.
+
+---
+
+## Specifications
+
+**Input Power:** 5 to 24 volts DC  
+**Input Supply Current (idle):** 20mA  
+**Input Supply Current (playing):** 80mA  
+**Input Supply Current (max):** 160mA  
+
+---
 
 ## Open Source 
 
 Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
 adapt, improve, and share with others.  
 
-The design of the SoundBytes hardware is open source hardware, and is made
-available under the terms of the 
-[Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
+The design of the SoundBytes hardware is open source hardware, and is made available under the
+terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/). 
+Design files can be found in the [ckt-dingdong](https://github.com/IowaScaledEngineering/ckt-dingdong) project on 
+GitHub.
 
-The firmware for the SoundBytes is free software: you can redistribute
-it and/or modify it under the terms of the GNU General Public License as
-published by the Free Software Foundation, either [version 3 of the
-License](https://www.gnu.org/licenses/gpl.html), or any later version.
+The firmware for the SoundBytes is free software: you can redistribute it and/or modify it under the 
+terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the 
+License](https://www.gnu.org/licenses/gpl.html), or any later version. Firmware for the SoundBytes can be 
+found in the [ckt-dingdong](https://github.com/IowaScaledEngineering/ckt-dingdong) project on GitHub.
 
-Design files can be found in the [ckt-dingdong](https://github.com/IowaScaledEngineering/ckt-dingdong)
-project on GitHub.
