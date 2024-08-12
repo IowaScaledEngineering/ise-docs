@@ -5,7 +5,8 @@ title: User Manual
 
 ## Overview
 
-The Iowa Scaled Engineering [ATOM](https://www.iascaled.com/store/CKT-BD1) is a reliable, easy-to-install,
+The Iowa Scaled Engineering [ATOM](https://www.iascaled.com/store/CKT-BD1)
+(CKT-BD1) is a reliable, easy-to-install,
 single-channel DCC block detector.  Compatible with a wide variety of other
 block detectors on the market, the ATOM provides two open collector outputs
 (one for detection, one for no detection) with optional pull-up resistors
@@ -13,7 +14,7 @@ and easy pushbutton sensitivity adjustment.  Since it's based on a current
 transformer, the detector maintains isolation between your track and signal
 systems.
 
-For those invested in C/MRI, we offer an alternate version ([CKT-BD1-CMRI](https://www.iascaled.com/store/CKT-BD1-CMRI))
+For those invested in C/MRI, we offer an [alternate version](https://www.iascaled.com/store/CKT-BD1-CMRI) (CKT-BD1-CMRI)
 that replaces the screw terminals with a plug that connects directly into
 Dr.  Chubb's detector motherboard (ODMB) and provides full compatibility
 with the DCCOD.
@@ -148,6 +149,8 @@ copper wire is recommended.
 
 **Input Power:**  5 to 24 volts DC  
 **Input Supply Current:**  5.5 milliamps (typical)  
+**Outputs:**  Open drain, max 40V / 250mA  
+**Pullups:**  Optional 10k to +V (solder jumpers)  
 **Turn On Delay:**  0.4 seconds  
 **Turn Off Delay:**  2.5 seconds  
 **Sensitivity:**  1mA at DCC frequencies  
