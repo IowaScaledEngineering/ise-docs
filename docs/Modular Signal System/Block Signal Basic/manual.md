@@ -113,17 +113,17 @@ The Block Signal Basic has four configuration option solder jumpers.  In order t
 
 ### Jumper A - Approach Lighting
 
-By default, the Block Signal Basic keeps both signals lit at all times.  Some prototype signals are only lit when a train is approaching the signal, a feature appropriately enough called "approach lighting."  The Cascade Basic can emulate this behaviour if Jumper A is soldered.  Any train in the adjacent block will cause the signal to illuminate, otherwise it will remain dark.
+By default, the Block Signal Basic keeps both signals lit at all times.  Some prototype signals are only lit when a train is approaching the signal, a feature appropriately enough called "approach lighting."  The Block Signal Basic can emulate this behaviour if Jumper A is soldered.  Any train in the adjacent block will cause the signal to illuminate, otherwise it will remain dark.
 
 ### Jumper B - Four Aspect Signaling
 
 US and Canadian ABS signal prototypes can roughly be divided into two categories - three aspect signaling and four aspect signaling.  Three aspect signaling means that there are only three aspects - clear, approach, and stop.  Four aspect signaling introduces a fourth aspect - flashing yellow (advance appraoch), meaning the next block will be yellow (approach).  Generally four aspect signaling on ABS and APB came later, as train speeds increased and more warning was needed to slow before reaching a stop or restricting (ie. red) signal.
 
-By default, the Cascade Basic defaults to only three aspect signaling, as getting three blocks between trains on our often small layouts can be difficult.  However, on larger layouts and modular setups, four aspect signaling is often desired and can be enabled by soldering Jumper B.
+By default, the Block Signal Basic defaults to only three aspect signaling, as getting three blocks between trains on our often small layouts can be difficult.  However, on larger layouts and modular setups, four aspect signaling is often desired and can be enabled by soldering Jumper B.
 
 ### Jumper C - Searchlight Emulation
 
-By default, the Cascade Basic is set up to emulate the operation of typical signal heads with three independent sets of lights, arranged either vertically orin a triangle on most railroads.  (Or, in the case of Pennsylvania position lights or B&O/N&W color position lights, drive two lights around the outside of a disk.)  Regardless, the logic will fade one in as the other fades out.
+By default, the Block Signal Basic is set up to emulate the operation of typical signal heads with three independent sets of lights, arranged either vertically orin a triangle on most railroads.  (Or, in the case of Pennsylvania position lights or B&O/N&W color position lights, drive two lights around the outside of a disk.)  Regardless, the logic will fade one in as the other fades out.
 
 Searchlight-type signals, such as the Union Switch & Signal types H, H2 and H5 as well as the General Railway Signaling SA type, used a signal lamp with a set of mechanically-changed color filters inside known as roundels.  Three roundels were mounted on an armature that could be moved by two electromagnetic coils.  When unenergized, the arm sat in the middle and placed the red filter in front of the single lamp.  Green would be on one side, and yellow on the other side.  By energizing the coils, it would pull the arm either left or right and place either yellow or green in front of the lamp.
 

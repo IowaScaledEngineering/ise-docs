@@ -1,7 +1,7 @@
 ---
 title: User Manual
 ---
-# Atlas Signal System Adapter ![](../img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
+# Atlas Adapter User Manual ![](../img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 ## Overview
 
