@@ -1,20 +1,16 @@
 ---
 title: User Manual
 ---
-# MSS-DEBUG v1.0 User Manual
+# Debugger User Manual ![](../img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 ## Overview
 
-The MSS-DEBUG is a diagnostic tool designed to help users debug [Modular Signal System (MSS)](https://modularsignalsystem.info/) setups, from testing hardware already installed on layout modules to developing new MSS hardware.  It provides a handheld, stand-alone way to see which MSS signal wires are active on the bus, or manually activate individual signal wires and test how installed MSS signaling modules react.
+The Iowa Scaled Engineering [SimpleSig Debugger](https://www.iascaled.com/store/MSS-CROSSOVER) is a diagnostic tool designed to help users debug [Modular Signal System (MSS)](https://modularsignalsystem.info/) setups, from testing hardware already installed on layout modules to developing new MSS hardware.  It provides a handheld, stand-alone way to see which MSS signal wires are active on the bus, or manually activate individual signal wires and test how installed MSS signaling modules react.
 
 ![](img/mss-debug.jpg)
 
----
 
-## Specifications
-
-**Key Features:**
-
+### Features
 * Diagnostic LEDs indicate status of all six MSS signal lines
     * Local Block Occupancy
     * Approach Occupancy In (to node)
@@ -24,15 +20,18 @@ The MSS-DEBUG is a diagnostic tool designed to help users debug [Modular Signal 
     * Diverging Approach In/Out (to/from node)
 * Switches allow user to toggle each signal line to test module response
 * Provides +12V bus pull-up bias voltage from 3x AAA batteries for testing bus segments without
-pull-ups (such as the MSS-CROSSOVER module)
-* Compliant with MSS 1.x and 2.x standards.  
+pull-ups (such as the [Crossover Detector](/Modular Signal System/Crossover/manual/) module)
+* Compliant with MSS 1.x, 2.x, and proposed 3.x standards.  (Draft MSS 3.x support added in version 2.0 of the Debugger)
 
-**Power:**  3x AAA batteries  
-**Size:** 3.25" (L) x 1.9" (W)  
+### Typical Applications
+
+* Testing installation of MSS hardware on modules before connecting them into a larger layout
+* Development and testing of your own MSS-compatible hardware
+* Debugging MSS signal issues by examining what signals are being sent and received
 
 ---
 
-## Usage
+## Usage Guide
 
 Install 3x AAA batteries in the back battery holder. Turn on the power switch (lower left corner, up is on). The green power LED D1 should light. If it does not, the batteries are either dead or the MSS-DEBUG's power supply is defective.
 
@@ -62,16 +61,22 @@ For the purposes of the descriptions below, "to the right" is defined as to the 
 
 ## Modular Signal System Draft Spec 3.0 Compatibility
 
-There is a draft Modular Signal System specification version 3.0 that reverses the polarity of the "Approach Diverging" line and breaks backwards compatibility.  The debugger currently does not support 3.x fully because of this, though all of the other signals remain the same and will work just fine.
+There is a draft Modular Signal System specification version 3.0 that reverses the polarity of the "Approach Diverging" line and breaks backwards compatibility.  Starting with version 2.0 of the Debugger, launched in late 2024, it supports both MSS 2 and MSS 3-style "Approach Diverging" lines.  A switch at the bottom of the device allows the user to switch between version 2 and version 3.
+
+---
+
+## Specifications
+
+**Power:**  3x AAA batteries  
+**MSS Standard Compatibility:** 1.x, 2.x, and proposed 3.x (3.x support available in version 2.0 and later Debuggers only)  
+**Size:** 3.5" (L) x 2.0" (W)  
 
 ---
 
 ## Open Source 
 
-Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify, adapt, improve, and share with others.  
+Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify, adapt, improve, and share with others.
 
-The design of the MSS-DEBUG hardware is open source hardware, and is made available under the
-terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
+The design of the MSS-DEBUG hardware is open source hardware, and is made available under the terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  Design files can be found in the [mss-debug](https://github.com/IowaScaledEngineering/mss-debug) project on  GitHub.
 
-Design files can be found in the [mss-debug](https://github.com/IowaScaledEngineering/mss-debug) project on 
-GitHub.
+

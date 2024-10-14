@@ -1,47 +1,45 @@
 ---
 title: User Manual
 ---
-# MSS-ATLASADAPTER v1.1 User Manual
+# Atlas Signal System Adapter ![](../img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 ## Overview
 
-The MSS-ATLASADAPTER is designed to allow users of the Atlas All Scales Signal System to bridge to standard [Modular Signal System (MSS)](https://modularsignalsystem.info/) modules.  This gives users the capability of extending their signals using a variety of vendors' MSS modules without needing to tear out and replace their existing investment in Atlas boards.  It's not really intended for modular users, but rather focused at home layouts that already have an Atlas system in place.
+The SimpleSig Atlas Signal System Adapter is designed to allow users of the Atlas All Scales Signal System to bridge to standard [Modular Signal System (MSS)](https://modularsignalsystem.info/) modules.  This gives users the capability of extending their signals using a variety of vendors' MSS modules without needing to tear out and replace their existing investment in Atlas boards.  It's not really intended for modular users, but rather focused at home layouts that already have an Atlas system in place.
 
 MSS provides a number of advantages over the Atlas system:
 
-* As a standardized system, interoperable modules are available from a variety of different vendors, or you can build your own to the specification
+* As an open standard, interoperable modules are available from a variety of different vendors, or you can build your own to the specification
 * MSS only requires one cable and one set of modules to handle bi-directional signaling, rather than separate modules and separate wiring for each direction
 * MSS detects the whole train even without resistor-equipped axles by using a combination of optical and current detection
 
 ![](img/mss-atlasadapter.jpg)
 
----
+### Features
 
-## Specifications
-
-**Key Features:**
-
-* Combines two directional Atlas All Scales Signal System buses into a single MSS-compatible connection
-* Powered from 6V to 24V of AC, DC, or DCC
+* Combines two directional Atlas All Scales Signal System buses into a single bidirectional MSS-compatible connection
+* Powered from 8V to 24V DC, AC, or DCC power.
+* Compatible with Modular Signaling System standards 1.x, 2.x, and (proposed) 3.x
 * Onboard diagnostic LEDs help debug problems between the two systems
 * Robust, protected bus interfaces assure reliable operation
+* Preserves your existing investment in the Atlas system
 
-**Input Power:**  6 to 24 volts DC, AC, or DCC  (must be shared with the Atlas modules)  
-**Input Current:**  <100mA maximum  
-**MSS Standard Compatibility:** 1.x, 2.x, and (proposed) 3.x  
+### Typical Applications
+
+* Expand your existing Atlas signal system installation using using standard ISE SimpleSig or other Modular Signal System-compatible modules
 
 ---
 
 ## Quick Start Guide
 
 !!! info "Please Note"
-    Since the wiring nomenclature gets a bit confusing in terms of directions, looking at the wiring diagram below is highly recommended rather than just relying on the text.    
+    Since the wiring nomenclature gets a bit confusing in terms of directions, looking at the wiring diagram below is highly recommended rather than just relying on the text.
 
-Step 1: The Atlas adapter needs 6V to 24V of DC, AC, or DCC power, and it must be the same power supply that is used to power the Atlas modules, since the Atlas signal bus does not carry a ground wire.  
+Step 1: The Atlas adapter needs 6V to 24V of DC, AC, or DCC power, and it must be the same power supply that is used to power the Atlas modules, since the Atlas signal bus does not carry a ground wire.
 
 Step 2: Connect J1 on the adapter to J2 on the last Atlas Universal Signal Control Board (USCB) for signals headed away from the connection point.  Likewise, connect J2 on the adapter board to J1 on the last Atlas USCB for signals headed towards the connection point.  Connections should be made with standard 4 or 6 wire, "straight through" RJ11 cables.
 
-Step 3: Using a normal (NOT crossover) cable, connect the adapter board's MSS port to the next MSS cascade (signal) module.  The MSS cascade module does not need current detection for the block between it and the last Atlas module - it will get that block's occupancy from the previous Atlas module and the detector attached to it via the MSS interface.
+Step 3: Using the provided short RJ45 cable, connect the adapter board's MSS port to the next MSS signal module.  This wire should be wired normally, not as a crossover cable. The MSS signal module does not need current detection for the block between it and the last Atlas module - it will get that block's occupancy from the previous Atlas module and the detector attached to it via the MSS interface.
 
 ---
 
@@ -67,14 +65,22 @@ For describing the purpose and meaning of the diagnostic LEDs on the board, we'l
 
 ---
 
+## Specifications
+
+**Input Power:**  5 to 24 volts DC, AC, or DCC  
+**Input Supply Current:**  30 milliamps @ 12V (typical)  
+**MSS Standard Compatibility:** 1.x, 2.x, and (proposed) 3.x  
+**Size:**  2.75"(L) x 2.5"(W) x 0.5"(H)  
+
+---
+
 ## Open Source 
 
 Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
-adapt, improve, and share with others.  
+adapt, improve, and share with others.
 
 The design of the MSS-ATLASADAPTER hardware is open source hardware, and is made available under the
-terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
-
+terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/). 
 Design files can be found in the [mss-atlasadapter](https://github.com/IowaScaledEngineering/mss-atlasadapter) project on 
 GitHub.
 

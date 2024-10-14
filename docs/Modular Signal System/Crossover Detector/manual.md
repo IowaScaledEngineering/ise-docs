@@ -1,45 +1,38 @@
 ---
 title: User Manual
 ---
-# MSS-CROSSOVER v2.0 User Manual
+# Crossover Detector ![](../img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 ## Overview
 
-The MSS-CROSSOVER is complete “crossover” unit described in the [Modular Signal System (MSS)](https://modularsignalsystem.info/) standard, providing MSS-compliant current-based block detection for model railroad layout modules.  It contains an integrated
-DCC block detector, a universal (DC/AC/DCC) power supply directly compatible with Free-Mo accessory power bus, and a 
-robust MSS bus interface protected against static discharge, overcurrent, ground loop, and reverse polarity events.
+The Iowa Scaled Engineering [SimpleSig Crossover Detector](https://www.iascaled.com/store/MSS-CROSSOVER) is a Modular Signaling System (MSS)-compliant current-based block detector for model railroad layout modules.  It is a complete “crossover” unit described in the [Modular Signal System (MSS)](https://modularsignalsystem.info/) standard.
 
-It is intended for use on modules that require block detection to participate in layouts where MSS signaling is in use, but 
-the module itself does not have signals.
+It is intended for use on modules that require block detection to participate in layouts where MSS signaling is in use, but the module itself does not have signals.
 
 ![](img/mss-crossover.jpg)
 
----
 
-## Specifications
+### Features
 
-**Key Features:**
-
+* Rock solid DCC current detection based on our [ATOM detectors](/ATOM Block Detector/manual/)
 * Single button sensitivity adjustment (no fiddling with tiny potentiometers!)
 * Isolated using a current transformer
 * Highly sensitive (1mA, or ~10k ohms) yet resistant to false detection
-* Powered from 5V to 24V of AC, DC, or DCC
+* Powered from 5V to 24V of AC, DC, or DCC, compatible with Free-Mo accessory power bus
 * Onboard detection indicator LED
 * 0.4s turn on and 2.5s turn off delay to eliminate glitching
+* Robust, isolated MSS bus interface to protect against static discharge, overcurrent, ground loop, and reverse polarity issues
 
-**Input Power:**  5 to 24 volts DC, AC, or DCC  
-**Input Supply Current:**  20 milliamps (max)  
-**Turn On Delay:**  0.4 seconds  
-**Turn Off Delay:**  2.5 seconds  
-**Sensitivity:**  1mA at DCC frequencies  
-**MSS Standard Compatibility:** 1.x, 2.x, and (proposed) 3.x
+### Typical Applications
+
+* Providing MSS block detection on FreeMo and FreeMoN modules for modules without signals, but wanting to participate in signaled setups
 
 ---
 
 ## Quick Start Guide
 
 The Crossover needs 5V to 24V of DC, AC, or DCC power.  In a typical modular setup, this will come from the 
-accessory power bus, but can come from anywhere convenient.  Connect power to the terminal block labeled "POWER" (J1). 
+accessory power bus.  Connect power to the terminal block labeled "POWER" (J1). 
 Polarity is not important.
 
 If power is correctly connected, the green PWR LED should light.
@@ -87,18 +80,21 @@ Unlike many MSS detection solutions, the Iowa Scaled Engineering MSS-CROSSOVER v
 
 ---
 
+## Specifications
+
+**Input Power:**  5 to 24 volts DC, AC, or DCC  
+**Input Supply Current:**  20 milliamps (max)  
+**Turn On Delay:**  0.4 seconds  
+**Turn Off Delay:**  2.5 seconds  
+**Sensitivity:**  1mA at DCC frequencies  
+**MSS Standard Compatibility:** 1.x, 2.x, and (proposed) 3.x
+
+---
+
 ## Open Source 
 
-Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
-adapt, improve, and share with others.  
+Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify, adapt, improve, and share with others.
 
-The design of the MSS-CROSSOVER hardware is open source hardware, and is made available under the
-terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  
-Design files can be found in the [mss-crossover](https://github.com/IowaScaledEngineering/mss-crossover) project on 
-GitHub.
+The design of the MSS-CROSSOVER hardware is open source hardware, and is made available under the terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  Design files can be found in the [mss-crossover](https://github.com/IowaScaledEngineering/mss-crossover) project on  GitHub.
 
-The firmware for the MSS-CROSSOVER is free software: you can redistribute it and/or modify it under the 
-terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the 
-License](https://www.gnu.org/licenses/gpl.html), or any later version. Firmware for the MSS-CROSSOVER is shared with
-the CKT-BD1, and can be found in the [ckt-bd1](https://github.com/IowaScaledEngineering/ckt-bd1)
-project on GitHub.
+The firmware for the MSS-CROSSOVER is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the  License](https://www.gnu.org/licenses/gpl.html), or any later version. Firmware for the MSS-CROSSOVER is shared with the CKT-BD1, and can be found in the [ckt-bd1](https://github.com/IowaScaledEngineering/ckt-bd1) project on GitHub.
