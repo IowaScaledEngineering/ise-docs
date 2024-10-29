@@ -38,7 +38,8 @@ Free-form text to help the user get started quickly.
 H2 Other Sections as Needed
 Any other necessary documentation
 
---- H2 Specifications
+---
+H2 Specifications
 List of electrical and mechanical specifications.  Next to last section. 
 Things like (in this order):
 
