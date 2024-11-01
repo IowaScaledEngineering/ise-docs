@@ -137,9 +137,9 @@ as the "A" signal, and similarly for the "B" side.
 
 In the case of a manual interlocking, connect pushbuttons (typically mounted
 on the fascia) to the **Inputs** terminal block.  One pushbutton for the "A"
-approach should connect between the **A** terminal and a **GND** terminal. 
-The other pushbutton for the "B" approach connects between the **B**
-terminal and the **GND** terminal.
+approach connects between the **A** terminal and a **GND** terminal.  The
+other pushbutton for the "B" approach connects between the **B** terminal
+and a **GND** terminal.  Leave the **D** terminal empty.
 
 ![](img/ckt-iiab-inputs.jpg)
 
