@@ -5,30 +5,47 @@ title: User Manual
 
 ## Overview
 
+![](img/title.jpg){align=right style="width: 40%; min-width:200px; margin-top:0px; margin-bottom: 0px"}
 The Iowa Scaled Engineering [Interlocking In A Box](https://www.iascaled.com/store/CKT-IIAB)
-is a complete solution for signaling a simple automatic interlocking
-(diamond) where one track crosses another at grade.  It provides all the
-necessary sensors and signal logic to drive the signals of your choice on
-one operational main track crossing an inactive (dummy) track.
+is a simple solution for an automatic or manual interlocking (diamond) where
+one track crosses another at grade.  No local operator or dispatcher
+intervention is required to safely manage operation across the diamond.  In
+essence, it operates on a first come, first served basis.  Providing all the
+necessary sensors and signal logic, the Interlocking In A Box drives signals
+of your choice on one operational main track crossing an inactive (dummy)
+track.
 
-Both a fully automatic and a manual interlocking can be simulated with the
-Interlocking In A Box.  With an automatic interlocking, sensors detect the
-arrival of a train on the approach to the diamond.  If the diamond is not
-already occupied, or once it becomes unoccupied, the approach signal turns
-green allowing the train to cross the diamond.
+At an automatic interlocking, sensors detect the arrival of a train on the
+approach to the diamond.  If the diamond is already occupied by a crossing
+train, the signal remains red until that train clears the diamond.  Then the
+signl at the diamond turns green allowing the train to cross.
 
-With a manual interlocking, an approaching train is not automatically
-detected.  On the prototype, to cross the diamond the conductor must press a
-button in a trackside box or, in some cases, manually operate a gate
-protecting the diamond.  In the model railroad world, this action can be
-replicated with pushbuttons on the fascia, indicating to the Interlocking In
-A Box that a train is waiting to cross the diamond.
+For a manual interlocking, an approaching train is not detected
+automatically.  Instead, to cross the diamond, the conductor must press a
+button or flip a lever typically located in a trackside box.  Signal logic
+will then verify that the crossing track is clear of any conflicting traffic
+and then the signal turns green.
+
+Once a train is cleared and proceeds across the diamond, the signal
+automatically returns to red again and the process is allowed to repeat.
+
+**FIX ME** Insert diagram here
+
+When set up for an automatic interlocking, the Interlocking In A Box comes
+with TrainSpotter optical detectors to sense the presence of a train on the
+approach and in the diamond.  Since these are optical detectors, no
+resistive wheelsets are required, simplifying the installation.  To use it
+as a manual interlocking, the approach detectors can be replaced with
+pushbuttons.  In both case, conflicting traffic on the diamond can be
+simulated through an adjustable, and randomized, delay.  This delay causes
+an arriving train to wait some period of time before the signal turns green,
+adding some variety to the operations.
 
 !!! note "Please Note"
     The Interlocking In A Box is meant for use with a single operational
-    track that crosses an inoperable track at a diamond crossing.  For two
-    active tracks crossing each other, look for a future "Pro" version with
-    more functionality.
+    track that crosses an inoperable track(s) at a diamond crossing.  For a
+    crossing of two active tracks, or active double track, look for a future
+    "Pro" version with more functionality.
 
 ![](img/ckt-iiab.jpg)
 
@@ -47,7 +64,8 @@ A Box that a train is waiting to cross the diamond.
 
 ### Typical Applications
 
-* Automatic interlockings
+* Automatic interlocking
+* Manual interlocking
 
 ---
 
@@ -56,7 +74,7 @@ A Box that a train is waiting to cross the diamond.
 !!! warning "Please Note"
     All wiring and setup of the board should be done with the power off.  This significantly reduces the chances of accidentally slipping and causing a short circuit that damages the board, the block detectors, or the signals.
 
-**Insert diagram here**
+**FIX ME Insert diagram here**
 
 The two approaches to the diamond are called A and B, respectively.  Both
 operate identically, but be sure to keep the inputs and outputs consistent
@@ -170,15 +188,117 @@ The Interlocking In A Box allows you to customize some delay times and light
 options to suit your prototype and operating needs.  These options are set
 using the DIP switches on the main board.
 
-### Delay ![](img/ckt-iiab-delay.jpg){align=right style="width:30%; margin-top:0px; margin-left:20px; margin-bottom:10px"}
+### Delay
 
-**FIX ME**
+![](img/ckt-iiab-delay.jpg){align=right style="width:30%; margin-top:0px; margin-left:20px; margin-bottom:10px"}
 
-### Timeout ![](img/ckt-iiab-timeout.jpg){align=right style="width:30%; margin-top:0px; margimargin-left:20px; margin-bottom:10px"}
+The delay setting controls how long the Interlocking In A Box waits from the
+time a train is detected until it gets a green signal.  This allows you to
+simulate traffic on the opposing track or just simply add some wait time to
+your operations.
 
-**FIX ME**
+The delay time can be fixed or random.  In the case of fixed delays, the
+same delay will always be used.  Every time a train arrives, the
+Interlocking In A Box will wait the selected amount of time.  Simple
+randomized delays pick a delay time from a selectable range of times. 
+Prototypical randomized delays are a bit more complicated, but better
+represent what would be experienced on the prototype.  In this case, the
+Interlocking In A Box first randomly determines, based on a selectable
+probability, if a delay will be applied this time or not.  In the event of
+no delay, the signal will turn green almost immediately.  On the other hand,
+when a delay is applied, the delay time will be randomly selected from a
+programmable range.  This behavior better mimics what would be seen on the
+prototype where a train gets the signal almost immediately when no opposing
+traffic is present, but has to wait some time, possibly a significant time,
+when there is opposing traffic.
 
-### Searchlight Emulation ![](img/ckt-iiab-searchlight.jpg){align=right style="width:30%; margin-top:0px; margin-left:20px; margin-bottom:10px"}
+To select fixed delays, set the **RANDOMIZED** switch to OFF.  Then, set the
+**A**, **B**, **C**, and **D** switches as shown in the table below to get
+the desired delay time.
+
+**Fixed Delays**
+
+| Delay Time |  D  |  C  |  B  |  A  |
+| ---------- | :-: | :-: | :-: | :-: |
+| 0 sec      | OFF | OFF | OFF | OFF |
+| 5 sec      | OFF | OFF | OFF | ON  |
+| 10 sec     | OFF | OFF | ON  | OFF |
+| 15 sec     | OFF | OFF | ON  | ON  |
+| 20 sec     | OFF | ON  | OFF | OFF |
+| 25 sec     | OFF | ON  | OFF | ON  |
+| 30 sec     | OFF | ON  | ON  | OFF |
+| 35 sec     | OFF | ON  | ON  | ON  |
+| 40 sec     | ON  | OFF | OFF | OFF |
+| 45 sec     | ON  | OFF | OFF | ON  |
+| 50 sec     | ON  | OFF | ON  | OFF |
+| 55 sec     | ON  | OFF | ON  | ON  |
+| 60 sec     | ON  | ON  | OFF | OFF |
+| 65 sec     | ON  | ON  | OFF | ON  |
+| 70 sec     | ON  | ON  | ON  | OFF |
+| 75 sec     | ON  | ON  | ON  | ON  |
+
+To select randomized delays, set the **RANDOMIZED** switch to ON.  Then, set
+the **A**, **B**, **C**, and **D** switches according to the tables below,
+depending on whether you want simple or prototypical random delays.
+
+**Simple Random Delays**
+
+| Delay Range  |  D  |  C  |  B  |  A  |
+| ------------ | :-: | :-: | :-: | :-: |
+| 0 to 10 sec  | OFF | OFF | OFF | OFF |
+| 5 to 20 sec  | OFF | OFF | OFF | ON  |
+| 15 to 30 sec | OFF | OFF | ON  | OFF |
+| 30 to 60 sec | OFF | OFF | ON  | ON  |
+
+**Prototypical Random Delays**
+
+| Probability | Delay Range    |  D  |  C  |  B  |  A  |
+| ----------- | -------------- | :-: | :-: | :-: | :-: |
+| 10%         | 15 to 30 sec   | OFF | ON  | OFF | OFF |
+| 30%         | 15 to 30 sec   | OFF | ON  | OFF | ON  |
+| 70%         | 15 to 30 sec   | OFF | ON  | ON  | OFF |
+| 10%         | 30 to 60 sec   | OFF | ON  | ON  | ON  |
+| 30%         | 30 to 60 sec   | ON  | OFF | OFF | OFF |
+| 70%         | 30 to 60 sec   | ON  | OFF | OFF | ON  |
+| 10%         | 60 to 120 sec  | ON  | OFF | ON  | OFF |
+| 30%         | 60 to 120 sec  | ON  | OFF | ON  | ON  |
+| 70%         | 60 to 120 sec  | ON  | ON  | OFF | OFF |
+| 10%         | 180 to 300 sec | ON  | ON  | OFF | ON  |
+| 30%         | 180 to 300 sec | ON  | ON  | ON  | OFF |
+| 70%         | 180 to 300 sec | ON  | ON  | ON  | ON  |
+
+### Timeout
+
+![](img/ckt-iiab-timeout.jpg){align=right style="width:30%; margin-top:0px; margimargin-left:20px; margin-bottom:10px"}
+
+The timeout is used to cleanly handle some special situations.  One such
+situation is when a train pulls up to the diamond, triggering a TrainSpotter
+detector on the approach, but then backs away, never crossing the diamond. 
+In this case, when the TrainSpotter detector is uncovered, the timeout timer
+starts running.  If the diamond detector is not triggered before time runs
+out, then the Interlocking In A Box will reset and the signal will return to
+red.  This prevents locking up the diamond indefinitely.
+
+Another situation where the timeout is used is when the diamond detector is
+uncovered before the TrainSpotter detector on the opposite approach is
+triggered.  This is similar to above, where a train approaches, enters the
+diamond, but then backs out without fully crossing to the other side.  In
+this case, when the diamond detector is uncovered and the timeout time
+expires, the system will be reset.
+
+The timeout time is set using the **E** and **F** switches according to the
+following table.
+
+| Timeout Time |  F  |  E  |
+| ------------ | :-: | :-: |
+| 15 sec       | OFF | OFF |
+| 30 sec       | OFF | ON  |
+| 45 sec       | ON  | OFF |
+| 60 sec       | ON  | ON  |
+
+### Searchlight Emulation
+
+![](img/ckt-iiab-searchlight.jpg){align=right style="width:30%; margin-top:0px; margin-left:20px; margin-bottom:10px"}
 
 By default, the Interlocking In A Box is set up to emulate the operation of
 typical signal heads with two independent sets of lights.  Or, in the case of
@@ -235,7 +355,7 @@ against overcurrent that will destroy the LEDs.
 ## Specifications
 
 **Input Power:**  6 to 24 volts DC, AC, or DCC  
-**Input Supply Current:**  100 milliamps @ 12V (typical)  **FIX ME**  
+**Input Supply Current:**  10 milliamps @ 12V (typical)  
 **Size:**  3.75"(L) x 2.25"(W) x 0.5"(H) (main board)
 
 ---
@@ -245,11 +365,11 @@ against overcurrent that will destroy the LEDs.
 Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
 adapt, improve, and share with others.
 
-The design of the MSS-SIDING hardware is open source hardware, and is made available under the
+The design of the CKT-IIAB hardware is open source hardware, and is made available under the
 terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/). 
-Design files can be found in the [mss-siding](https://github.com/IowaScaledEngineering/mss-siding) project on 
+Design files can be found in the [mss-siding](https://github.com/IowaScaledEngineering/ckt-iiab) project on 
 GitHub.
 
-The firmware for the MSS-SIDING is free software: you can redistribute it and/or modify it under the 
+The firmware for the CKT-IIAB is free software: you can redistribute it and/or modify it under the 
 terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the 
 License](https://www.gnu.org/licenses/gpl.html), or any later version.
