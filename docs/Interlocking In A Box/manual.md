@@ -12,7 +12,7 @@ one track crosses another at grade.  No local operator or dispatcher
 intervention is required to safely manage operation across the diamond.  In
 essence, it operates on a first come, first served basis.  Providing all the
 necessary sensors and signal logic, the Interlocking In A Box drives signals
-of your choice on one operational main track crossing an inactive (dummy)
+of your choice on one operational track crossing a modeled, but inoperable
 track.
 
 At an automatic interlocking, sensors detect the arrival of a train on the
@@ -43,9 +43,10 @@ adding some variety to the operations.
 
 !!! note "Please Note"
     The Interlocking In A Box is meant for use with a single operational
-    track that crosses an inoperable track(s) at a diamond crossing.  For a
-    crossing of two active tracks, or active double track, look for a future
-    "Pro" version with more functionality.
+    track that crosses modeled, but inoperable track(s), at a diamond
+    crossing.  For a crossing where both tracks are operational, or for use
+    with double track, look for a future "Pro" version with more
+    functionality.
 
 ![](img/ckt-iiab.jpg)
 
@@ -74,11 +75,11 @@ adding some variety to the operations.
 !!! warning "Please Note"
     All wiring and setup of the board should be done with the power off.  This significantly reduces the chances of accidentally slipping and causing a short circuit that damages the board, the block detectors, or the signals.
 
-**FIX ME Insert diagram here**
+![](img/ckt-iiab-install.png)
 
 The two approaches to the diamond are called A and B, respectively.  Both
 operate identically, but be sure to keep the inputs and outputs consistent
-when istalling on the layout.
+when installing on the layout.
 
 ### Install Signals
 
@@ -146,8 +147,10 @@ and a **GND** terminal.  Leave the **D** terminal empty.
 ### Connect Power
 
 Connect power to the board - it requires 6V to 24V of DC, AC, or DCC power. 
-This power can come from an accessory power bus, or from the track bus
-directly (but before any block detectors).
+This power can come from a dedicated power supply, an accessory power bus,
+or from the track bus directly (but before any block detectors).
+
+![](img/ckt-iiab-power.jpg)
 
 ### Initial Testing
 
