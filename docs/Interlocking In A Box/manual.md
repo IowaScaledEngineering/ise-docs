@@ -75,11 +75,11 @@ adding some variety to the operations.
 !!! warning "Please Note"
     All wiring and setup of the board should be done with the power off.  This significantly reduces the chances of accidentally slipping and causing a short circuit that damages the board, the block detectors, or the signals.
 
-![](img/ckt-iiab-install.png)
+[![](img/ckt-iiab-install.png)](img/ckt-iiab-install.png)
 
 The two approaches to the diamond are called A and B, respectively.  Both
-operate identically, but be sure to keep the inputs and outputs consistent
-when installing on the layout.
+operate identically, but be sure to keep the A inputs with the A outputs and
+B inputs with B outputs when installing on the layout.
 
 ### Install Signals
 
