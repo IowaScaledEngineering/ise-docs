@@ -8,38 +8,35 @@ title: User Manual
 ![](img/title.jpg){align=right style="width: 40%; min-width:200px; margin-top:0px; margin-bottom: 0px"}
 The Iowa Scaled Engineering [Interlocking In A Box](https://www.iascaled.com/store/CKT-IIAB)
 is a simple solution for an automatic or manual interlocking (diamond) where
-one track crosses another at grade.  No local operator or dispatcher
-intervention is required to safely manage operation across the diamond.  In
-essence, it operates on a first come, first served basis.  Providing all the
-necessary sensors and signal logic, the Interlocking In A Box drives signals
-of your choice on one operational track crossing a modeled, but inoperable
-track.
+one track crosses another at grade.  Stand-alone automatic interlockings
+were common, particularly on grainger roads in the midwestern US where
+competing branchlines criss-crossed running to every little dot on the map. 
+Some of the larger ones had towers and operators controlling them, but many
+were simpler operations that involved automatic signals where the first
+train to approach - or the first crew to unlock the cabinet and push the
+button in manual cases - would get a signal to cross.  The Interlocking In A
+Box helps add this sort of operational interest to your layout - a way to
+slow down your operators from just barreling across that diamond without a
+care in the world.
 
-At an automatic interlocking, sensors detect the arrival of a train on the
-approach to the diamond.  If the diamond is already occupied by a crossing
-train, the signal remains red until that train clears the diamond.  Then the
-signl at the diamond turns green allowing the train to cross.
-
-For a manual interlocking, an approaching train is not detected
-automatically.  Instead, to cross the diamond, the conductor must press a
-button or flip a lever typically located in a trackside box.  Signal logic
-will then verify that the crossing track is clear of any conflicting traffic
-and then the signal turns green.
-
-Once a train is cleared and proceeds across the diamond, the signal
-automatically returns to red again and the process is allowed to repeat.
+This version concentrates on the core use case - a simple, single track
+crossing, where one track is real and the crossing track isn't, and the goal
+is to force your crews to slow down, wait to get the light, and then
+proceed.  It's designed to be easy to install and configure - the sensors
+just plug in, configuration of delays is done by switches on the board, and
+signals just connect into the terminal blocks.
 
 **FIX ME** Insert diagram here
 
 When set up for an automatic interlocking, the Interlocking In A Box comes
-with TrainSpotter optical detectors to sense the presence of a train on the
-approach and in the diamond.  Since these are optical detectors, no
+with three TrainSpotter optical detectors to sense the presence of a train
+on the approaches and in the diamond.  Since these are optical detectors, no
 resistive wheelsets are required, simplifying the installation.  To use it
 as a manual interlocking, the approach detectors can be replaced with
-pushbuttons.  In both case, conflicting traffic on the diamond can be
-simulated through an adjustable, and randomized, delay.  This delay causes
-an arriving train to wait some period of time before the signal turns green,
-adding some variety to the operations.
+pushbuttons mounted on the fascia.  In both case, conflicting traffic on the
+diamond can be simulated through an adjustable, and randomized, delay.  This
+delay causes an arriving train to wait some period of time before the signal
+turns green, adding some variety to the operations.
 
 !!! note "Please Note"
     The Interlocking In A Box is meant for use with a single operational
