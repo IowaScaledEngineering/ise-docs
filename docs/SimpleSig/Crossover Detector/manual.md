@@ -66,7 +66,7 @@ on the track, either there's a flaw in the wiring, or you may have leakage curre
 
 If the red **DETECT** light is off as expected, then place a locomotive or resistor-equipped piece of rolling stock on the track.  The **DETECT** light should come on.  Remove the equipment and verify that the red **DETECT** light goes off after approximately 2.5 seconds.  
 
-Congratulations!  You've now successfully installed the MSS-CROSSOVER v2.0!
+Congratulations!  You've now successfully installed the Crossover Detector!
 
 ---
 
@@ -96,7 +96,7 @@ In cases were you may need to trigger detection in a block manually, such as usi
 
 ## Robust Design
 
-Unlike many MSS detection solutions, the Iowa Scaled Engineering MSS-CROSSOVER v2.0 is specifically designed to withstand the rigors of modular layout use.  Modules are constantly being hauled around, subjected to static electricity, plugged into unknown MSS busses, and powered from long, noisy leads off unknown power supplies.  Our design is intended to protect the users against these dangers with ESD supression, overcurrent and reverse polarity protection, and isolation between the detector itself and the MSS bus to prevent ground loops from forming.
+Unlike many MSS detection solutions, the Iowa Scaled Engineering Crossover Detector is specifically designed to withstand the rigors of modular layout use.  Modules are constantly being hauled around, subjected to static electricity, plugged into unknown MSS busses, and powered from long, noisy leads off unknown power supplies.  Our design is intended to protect the users against these dangers with ESD supression, overcurrent and reverse polarity protection, and isolation between the detector itself and the MSS bus to prevent ground loops from forming.
 
 ---
 
