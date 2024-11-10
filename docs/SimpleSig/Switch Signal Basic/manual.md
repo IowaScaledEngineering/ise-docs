@@ -97,7 +97,7 @@ Use one of the included 8 foot cables to connect the TrainSpotter to the **IR** 
 
 For modular installations, the optical detector must be installed for compliance with the standard in order to detect non-resistored cars.
 
-For home layout use, the TrainSpotter may be omitted if all of your cars have resistor-equipped axles and you want to depend entirely upon current detection.  However, if you choose to omit the TrainSpotter, please connect the ATOM detector for block A into the **IR** connector on the main board instead of the **BD1 A** input.
+For home layout use, the TrainSpotter may be omitted if all of your cars have resistor-equipped axles and you want to depend entirely upon current detection.  However, if you choose to omit the TrainSpotter, trains entering from the A end will not drop the signal to red until they reach block B or C.  This can be fixed by making the turnout its own block with its own ATOM detector and wiring that into the **IR** connector on the board.
 
 ![](img/mss-switch-ir-connections.png)
 
