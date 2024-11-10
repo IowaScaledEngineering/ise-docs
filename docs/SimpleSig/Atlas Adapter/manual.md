@@ -5,7 +5,7 @@ title: User Manual
 
 ## Overview
 
-The SimpleSig Atlas Adapter is designed to allow users of the Atlas All Scales Signal System to bridge to standard [Modular Signal System (MSS)](/SimpleSig/introduction/) modules.  This gives you the ability to extend your Atlas signals using a variety of vendors' MSS modules without needing to tear out and replace your existing investment in Atlas boards.  It's not really intended for modular users, but rather focused at home layouts that already have an Atlas system in place.
+The SimpleSig Atlas Adapter is designed to allow users of the Atlas All Scales Signal System to bridge to standard [Modular Signal System (MSS)](/SimpleSig/introduction/) modules, such as Iowa Scaled Engineering's SimpleSig line.  This gives you the ability to extend your Atlas signals using a variety of vendors' MSS modules without needing to tear out and replace your existing investment in Atlas boards.  It's not really intended for modular users, but rather focused at home layouts that already have an Atlas system in place.
 
 MSS provides a number of advantages over the Atlas system:
 
@@ -41,7 +41,7 @@ MSS provides a number of advantages over the Atlas system:
 ### Step 1
  The Atlas Adapter needs 6V to 24V of DC, AC, or DCC power, and it must be the same power supply that is used to power the Atlas modules, since the Atlas signal bus does not carry a ground wire.  Connect power to the terminals marked "POWER" on the PCB.
 
-![](img/mss-atlasadapter-power.jpg)
+![](img/mss-atlasadapter-power.png)
 
 ---
 
@@ -79,6 +79,8 @@ Using the provided short RJ45 cable, connect the adapter board's MSS port to the
 ## Diagnostic LEDs
 
 For describing the purpose and meaning of the diagnostic LEDs on the board, we'll use the [Simplified Wiring Diagram](img/atlas-mss-wiring-diagram.png) from above as a reference.  Each of the Atlas and MSS boards is numbered.  Atlas boards along the bottom will be described as "eastbound" and carry a #E designation, meaning a train moving from left to right (or east if this were a map) would be seeing those signals.  Atlas boards along the top will be described as "westbound" and carry a #W designation, meaning a train moving right to left (or west if this were a map) would see signals controlled by those boards.
+
+![](img/mss-atlasadapter-diag-leds.png)
 
 | Direction | LED&nbsp;Name/Color | If Indicator is On |
 |-------------------|--------------------|-----------------|
