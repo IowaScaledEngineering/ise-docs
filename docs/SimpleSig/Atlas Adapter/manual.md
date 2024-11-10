@@ -38,28 +38,28 @@ MSS provides a number of advantages over the Atlas system:
 !!! info "Please Note"
     Since the wiring nomenclature gets a bit confusing in terms of directions, looking at the wiring diagram below is highly recommended rather than just relying on the text.
 
-### Step 1
+### Step 1 - Power
  The Atlas Adapter needs 6V to 24V of DC, AC, or DCC power, and it must be the same power supply that is used to power the Atlas modules, since the Atlas signal bus does not carry a ground wire.  Connect power to the terminals marked "POWER" on the PCB.
 
 ![](img/mss-atlasadapter-power.png)
 
 ---
 
-### Step 2
+### Step 2 - Atlas Upstream
 Connect J1 on the Atlas Adapter board to J2 on the last Atlas Universal Signal Control Board (USCB) for signals headed away from the connection point, as shown in blue below.  Connections should be made with standard 4 or 6 wire, "straight through" RJ11 cables, same as is used to connect the Atlas USCB modules.
 
 ![](img/mss-atlasadapter-step2.jpg)
 
 ---
 
-### Step 3
+### Step 3 - Atlas Downstream
 Connect J2 on the Atlas Adapter board to J2 to J1 on the last Atlas USCB for signals headed towards the connection point, as shown in blue below.  Connections should be made with standard 4 or 6 wire, "straight through" RJ11 cables, same as is used to connect the Atlas USCB modules.
 
 ![](img/mss-atlasadapter-step3.jpg)
 
 ---
 
-### Step 4
+### Step 4 - MSS
 Using the provided short RJ45 cable, connect the adapter board's MSS port to the next MSS signal module as shown below in orange.  (Note that this is a normally-wired network cable and not a crossover cable normally used with MSS.) 
 
 ![](img/mss-atlasadapter-step4.jpg)
