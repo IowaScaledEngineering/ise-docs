@@ -147,7 +147,7 @@ Congratulations!  You've now successfully installed and verified your Switch Sig
 
 ---
 
-### Step 7 Connect MSS
+### Step 7 - Connect MSS
 
 Now in order for the signals to interoperate with other SimpleSig or Modular Signal System-compatible products, you need to connect each signal module to the next via crossover cables.  **The golden rule of the Modular Signal System is that there must be an odd number of "crossovers" between signal boards.**
 
