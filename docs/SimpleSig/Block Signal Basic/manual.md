@@ -40,6 +40,9 @@ The Iowa Scaled Engineering [Block Signal Basic](https://www.iascaled.com/store/
 
 ### Step 1 - Signals
 
+!!! info "Common Anode vs Common Cathode"
+    The Block Signal Basic supports both common anode (positive) and common cathode (negative) signals, but all of the signals connected must be of one type or the other.  Mixing common anode and common cathode signals on the same Switch Signal Basic is not supported.
+
 Most applications will want to use two signals - a single-headed LED signal in each direction.
 
 LED signals with the usual red/yellow/green leads can be wired into the terminal blocks.  The common wire should be connected to the terminal block labeled **SIGNAL COMMON**, and the individual color leads should be attached to the respective **R** (red), **Y** (yellow), and **G** (green) positions on the **SIGNAL A** and **SIGNAL B** terminal blocks.
@@ -141,7 +144,7 @@ By default, the Block Signal Basic keeps both signals lit at all times.  Some pr
 
 US and Canadian ABS signal prototypes can roughly be divided into two categories - three indication signaling and four indication signaling.  Three aspect signaling means that there are only three indications - clear, approach, and stop.  Four indication signaling introduces advance approach (flashing yellow), meaning the next block will be approach (constant yellow).  Generally four indication signaling on ABS and APB came later, as train speeds increased and more warning was needed to slow before reaching a stop (ie. red) signal.
 
-By default, the Block Signal Basic defaults to only three indication signaling, as getting three blocks between trains on our often small layouts can be difficult.  However, on larger layouts and modular setups, four indication signaling is often desired and can be enabled by soldering Jumper B.
+The Block Signal Basic defaults to only three indication signaling, as getting three blocks between trains on our often small layouts can be difficult.  However, on larger layouts and modular setups, four indication signaling is often desired and can be enabled by soldering Jumper B.
 
 ### Jumper C - Searchlight Emulation
 
@@ -164,7 +167,7 @@ Currently, jumper D is reserved for new features and future enhancements to the 
 The Block Signal Basic includes resistors to protect your signals against excessive current that will destroy them.  There may be use cases where your signals already have resistors installed, or you want to change the resistor values used, and you need to bypass the resistors on the board.  There are solder jumpers provided to let you do that, but be **very sure** that you know what you're doing before using them.
 
 !!! warning "Don't Destroy Your Signals!"
-    Be sure you really need to do this before even considering bypassing the onboard current limiting resistors for the signals.  You must then install external resistors or the current will blow up your signal LEDs!
+    Be sure you really need to do this before even considering bypassing the onboard current limiting resistors for the signals.  You must install external resistors before bypassing the onboard resistors, or the current will blow up your signal LEDs!
 
 JP1-JP3 bypass the resistors for Signal A red, yellow, and green respectively.  JP4-JP6 bypass the resistors for Signal B red, yellow, and green, respectively.
 
