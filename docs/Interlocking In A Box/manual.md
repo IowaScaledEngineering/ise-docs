@@ -78,7 +78,13 @@ The two approaches to the diamond are called A and B, respectively.  Both
 operate identically, but be sure to keep the A inputs with the A outputs and
 B inputs with B outputs when installing on the layout.
 
-### Install Signals
+### Step 1 - Signals
+
+!!! info "Common Anode vs Common Cathode"
+    The Interlocking In A Box supports both common anode (positive) and
+    common cathode (negative) signals, but all of the signals connected must
+    be of one type or the other.  Mixing common anode and common cathode
+    signals on the same Interlocking In A Box is not supported.
 
 Most applications will want to use two signals, one on each approach to the
 diamond.  Three aspect signals can be used, but the Interlocking In A Box will
@@ -110,7 +116,7 @@ additional resistors are needed externally.  If your signals already have
 resistors built in, you will likely need to remove them or disable the
 onboard resistors.  See the section below.
 
-### Install the Diamond TrainSpotter Detector ![](img/ckt-irsense-installation.png){align=right style="width:20%; margin-left:20px; margin-bottom:10px"}
+### Step 2 - Diamond Detector ![](img/ckt-irsense-installation.png){align=right style="width:20%; margin-left:20px; margin-bottom:10px"}
 
 The TrainSpotter provides optical detection.  One TrainSpotter is always
 installed in the diamond to detect when a train crosses the diamond.  Use
@@ -119,7 +125,7 @@ one of the included 8 foot cables to connect the TrainSpotter to the
 
 ![](img/ckt-iiab-sensors.jpg)
 
-### Install the Approach Detectors
+### Step 3 - Approach Detectors
 
 #### Automatic Interlocking
 
@@ -141,7 +147,7 @@ and a **GND** terminal.  Leave the **D** terminal empty.
 
 ![](img/ckt-iiab-inputs.jpg)
 
-### Connect Power
+### Step 4 - Connect Power
 
 Connect power to the board - it requires 6V to 24V of DC, AC, or DCC power. 
 This power can come from a dedicated power supply, an accessory power bus,
@@ -149,7 +155,7 @@ or from the track bus directly (but before any block detectors).
 
 ![](img/ckt-iiab-power.jpg)
 
-### Initial Testing
+### Step 5 - Initial Testing
 
 Apply power and check that the green power LED glows on the main board. 
 This verifies that the Interlocking In A Box is getting good power. 
@@ -337,8 +343,9 @@ know what you're doing before using them.
 
 !!! warning "Don't Destroy Your Signals!"
     Be sure you really need to do this before even considering bypassing the
-    onboard current limiting resistors for the signals.  You must then install
-    external resistors or the current will blow up your signal LEDs!
+    onboard current limiting resistors for the signals.  You must install
+    external resistors before bypassing the onboard resistors, or the
+    current will blow up your signal LEDs!
 
 JP1 and JP2 on the back side bypass the resistors for Signal A red and green
 respectively.  JP3 and JP4 bypass the resistors for Signal B red and green
