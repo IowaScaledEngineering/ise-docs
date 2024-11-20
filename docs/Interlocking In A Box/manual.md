@@ -377,7 +377,7 @@ against overcurrent that will destroy the LEDs.
 ## Specifications
 
 **Input Power:**  6 to 24 volts DC, AC, or DCC  
-**Input Supply Current:**  14 milliamps @ 12V (typical)  
+**Input Supply Current:**  25 milliamps @ 12V (typical)  
 **Size:**  3.75"(L) x 2.25"(W) x 0.5"(H) (main board)
 
 ---
