@@ -5,38 +5,39 @@ title: User Manual
 
 ## Overview
 
-![](img/title.jpg){align=right style="width: 40%; min-width:200px; margin-top:0px; margin-bottom: 0px"}
 The Iowa Scaled Engineering [Interlocking In A Box](https://www.iascaled.com/store/CKT-IIAB)
-is a simple solution for an automatic or manual interlocking (diamond) where
-one track crosses another at grade.  Stand-alone automatic interlockings
-were common, particularly on grainger roads in the midwestern US where
-competing branchlines criss-crossed running to every little dot on the map. 
-Some of the larger ones had towers and operators controlling them, but many
-were simpler operations that involved automatic signals where the first
-train to approach - or the first crew to unlock the cabinet and push the
-button in manual cases - would get a signal to cross.  The Interlocking In A
-Box helps add this sort of operational interest to your layout - a way to
-slow down your operators from just barreling across that diamond without a
-care in the world.
+is a simple solution for adding automatic or manual interlocking signals
+where one track crosses another at grade (a diamond).  Stand-alone automatic
+interlockings were common, particularly on grainger roads in the midwestern
+US where competing branchlines criss-crossed running to every little dot on
+the map.  Some of the larger ones had towers and operators controlling them,
+but many were simpler operations that involved automatic signals where the
+first train to approach - or the first crew to unlock the cabinet and push
+the button in manual cases - would get a signal to cross.  The Interlocking
+In A Box helps add this sort of operational interest to your layout - a way
+to slow down your operators from just barreling across that diamond without
+a care in the world.
 
 This version concentrates on the core use case - a simple, single track
-crossing, where one track is real and the crossing track isn't, and the goal
-is to force your crews to slow down, wait to get the light, and then
-proceed.  It's designed to be easy to install and configure - the sensors
-just plug in, configuration of delays is done by switches on the board, and
-signals just connect into the terminal blocks.
+crossing where one track is an operational part of the layout and the
+crossing track is not - and the goal is to force your crews to slow down,
+wait to get the light, and then proceed.  It's designed to be easy to
+install and configure - the sensors just plug in, configuration of delays is
+done by switches on the board, and signals just connect into the terminal
+blocks.
 
-**FIX ME** Insert diagram here
+![](img/ckt-iiab-basic.png)
 
 When set up for an automatic interlocking, the Interlocking In A Box comes
 with three TrainSpotter optical detectors to sense the presence of a train
 on the approaches and in the diamond.  Since these are optical detectors, no
 resistive wheelsets are required, simplifying the installation.  To use it
 as a manual interlocking, the approach detectors can be replaced with
-pushbuttons mounted on the fascia.  In both case, conflicting traffic on the
-diamond can be simulated through an adjustable, and randomized, delay.  This
-delay causes an arriving train to wait some period of time before the signal
-turns green, adding some variety to the operations.
+pushbuttons or other momentary switches mounted on the fascia.  In both
+cases, conflicting traffic on the diamond can be simulated through an
+adjustable, and randomized, delay.  This delay causes an arriving train to
+wait some period of time before receiving a clear signal to cross the
+diamond, adding some variety to the operations.
 
 !!! note "Please Note"
     The Interlocking In A Box is meant for use with a single operational
@@ -52,18 +53,18 @@ turns green, adding some variety to the operations.
 * Simulates a manual or automatic interlocking at a diamond 
 * Designed for simplicity and to cover most use cases
 * Triggered by either TrainSpotter sensors (automatic interlocking) or pushbuttons (manual interlocking)
-* Controls a 2-aspect signal, typically displaying red and green, in each direction
+* Controls a 2-aspect signal capable of displaying stop and clear (typically red and green) in each direction on one track
 * Optional delay time (fixed or randomized) between arrival and green signal
 * Compatible with both common anode (positive) and common cathode (negative) signals
 * Realistic signal fading during changes for both tri-light and searchlight style signals
 * Simple plug-and-play compatibility with most Atlas HO and N scale signals
+* 5V output for powering fixed aspect heads, such as red signals on the non-operational crossing track
 * Includes control board and TrainSpotter optical detector(s)
 * Powered from 6V to 24V DC, AC, or DCC power.
 
 ### Typical Applications
 
-* Automatic interlocking
-* Manual interlocking
+* Adding signals to simple single track diamonds replicating automatic or manual interlockings
 
 ---
 
@@ -100,7 +101,7 @@ and **G** (green) positions on the **Signal A** and **Signal B** terminal blocks
 If you are using signals from Atlas, they will plug directly into the
 off-white connectors marked **Signal A** and **Signal B**.  If the signal leads
 aren't long enough to reach the main board, Iowa Scaled Engineering offers
-extension cables.
+[extension cables](https://www.iascaled.com/store/ACC-ATLASEXT).
 
 ![](img/ckt-iiab-signal-atlas.jpg)
 
@@ -114,14 +115,21 @@ The Interlocking In A Box powers the signals from 5 volts and has 330 ohm
 resistors on each of the signal outputs to protect the signal LEDs, so no
 additional resistors are needed externally.  If your signals already have
 resistors built in, you will likely need to remove them or disable the
-onboard resistors.  See the section below.
+onboard resistors.  See the section below on [Bypassing the LED Resistors](#bypassing-the-led-resistors).
+
+To power signals permanently displaying a single aspect, such as distant
+signals, or dummy signals on the crossing track, you can use the **5V** and
+**GND** terminals.  You **must** use current limiting resistors in this case
+to prevent blowing up your signal LEDs!
+
+![](img/ckt-iiab-5v.jpg)
 
 ### Step 2 - Diamond Detector ![](img/ckt-irsense-installation.png){align=right style="width:20%; margin-left:20px; margin-bottom:10px"}
 
 The TrainSpotter provides optical detection.  One TrainSpotter is always
-installed in the diamond to detect when a train crosses the diamond.  Use
-one of the included 8 foot cables to connect the TrainSpotter to the
-**Diamond** connector on the main board.
+installed in, or very near, the diamond to detect when a train crosses the
+diamond.  Use one of the included 8 foot cables to connect the TrainSpotter
+to the **Diamond** connector on the main board.
 
 ![](img/ckt-iiab-sensors.jpg)
 
@@ -139,11 +147,12 @@ as the "A" signal, and similarly for the "B" side.
 
 #### Manual Interlocking
 
-In the case of a manual interlocking, connect pushbuttons (typically mounted
-on the fascia) to the **Inputs** terminal block.  One pushbutton for the "A"
-approach connects between the **A** terminal and a **GND** terminal.  The
-other pushbutton for the "B" approach connects between the **B** terminal
-and a **GND** terminal.  Leave the **D** terminal empty.
+In the case of a manual interlocking, connect pushbuttons or other momentary
+switches (typically mounted on the fascia) to the **Inputs** terminal block. 
+One pushbutton for the "A" approach connects between the **A** terminal and
+a **GND** terminal.  The other pushbutton for the "B" approach connects
+between the **B** terminal and a **GND** terminal.  Leave the **D** terminal
+empty.  Do not use the **5V** terminal for these switches.
 
 ![](img/ckt-iiab-inputs.jpg)
 
@@ -157,23 +166,29 @@ or from the track bus directly (but before any block detectors).
 
 ### Step 5 - Initial Testing
 
+Start with all the DIP switches set to **OFF**.  You can adjust these settings
+later after verifying everything is hooked up correctly.
+
 Apply power and check that the green power LED glows on the main board. 
 This verifies that the Interlocking In A Box is getting good power. 
 Immediately after power up, the signals will display both red and green in
 sequence.  This is normal and verifies that the signals are connected
 correctly.  The status LED on the main board will also flash through a
-sequence of color.  Once that finishes, the Interlocking In A Box is ready.
+sequence of colors.  Once that finishes, the Interlocking In A Box is ready.
 
 !!! note "Please Note"
     The status LED on the main board provides diagnostic information. 
     Normally, you can ignore this.  But, in the event you need technical
-    support, you may be asked for what this LED is displaying.
+    support, you may be asked what this LED is displaying.
 
 Place your hand over the TrainSpotter detector on one approach to the
-diamond.  Verify the red light on the detector comes on and the signal on
-that approach turns green.  Remove your hand and verify that the red light
-on the TrainSpotter detector turns off.  Note that the approach signal
-should remain green.
+diamond.  Verify the red light on the detector comes on, the status LED on
+the main board turns green, and the signal on the approach turns green.  If
+the signal does not turn green, check the opposite approach in case the
+signal connections are swapped.
+
+Remove your hand and verify that the red light on the TrainSpotter detector
+turns off.  Note that the approach signal should remain green.
 
 Next, place your hand over the diamond TrainSpotter detector.  Verify that
 the red light on the detector comes on and the approach signal turns red. 
@@ -362,7 +377,7 @@ against overcurrent that will destroy the LEDs.
 ## Specifications
 
 **Input Power:**  6 to 24 volts DC, AC, or DCC  
-**Input Supply Current:**  10 milliamps @ 12V (typical)  
+**Input Supply Current:**  14 milliamps @ 12V (typical)  
 **Size:**  3.75"(L) x 2.25"(W) x 0.5"(H) (main board)
 
 ---
@@ -374,9 +389,10 @@ adapt, improve, and share with others.
 
 The design of the CKT-IIAB hardware is open source hardware, and is made available under the
 terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/). 
-Design files can be found in the [mss-siding](https://github.com/IowaScaledEngineering/ckt-iiab) project on 
+Design files can be found in the [ckt-iiab](https://github.com/IowaScaledEngineering/ckt-iiab) project on 
 GitHub.
 
 The firmware for the CKT-IIAB is free software: you can redistribute it and/or modify it under the 
 terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the 
-License](https://www.gnu.org/licenses/gpl.html), or any later version.
+License](https://www.gnu.org/licenses/gpl.html), or any later version.  Firmware for the ckt-iiab can be 
+found in the [ckt-iiab](https://github.com/IowaScaledEngineering/ckt-iiab) project on GitHub.
