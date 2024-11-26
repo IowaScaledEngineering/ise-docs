@@ -1,7 +1,7 @@
 ---
-title: Tips and Tricks
+title: MSS Tips & Tricks
 ---
-# Debugger User Manual ![](../img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
+# MSS Tips & Tricks ![](../img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 ## Overview
 
