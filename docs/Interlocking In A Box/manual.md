@@ -239,23 +239,23 @@ the desired delay time.
 
 **Fixed Delays**
 
-| Delay Time |  D  |  C  |  B  |  A  |
+| Delay Time |  A  |  B  |  C  |  D  |
 | ---------- | :-: | :-: | :-: | :-: |
 | 0 sec      | OFF | OFF | OFF | OFF |
-| 5 sec      | OFF | OFF | OFF | ON  |
-| 10 sec     | OFF | OFF | ON  | OFF |
-| 15 sec     | OFF | OFF | ON  | ON  |
-| 20 sec     | OFF | ON  | OFF | OFF |
-| 25 sec     | OFF | ON  | OFF | ON  |
+| 5 sec      | ON  | OFF | OFF | OFF |
+| 10 sec     | OFF | ON  | OFF | OFF |
+| 15 sec     | ON  | ON  | OFF | OFF |
+| 20 sec     | OFF | OFF | ON  | OFF |
+| 25 sec     | ON  | OFF | ON  | OFF |
 | 30 sec     | OFF | ON  | ON  | OFF |
-| 35 sec     | OFF | ON  | ON  | ON  |
-| 40 sec     | ON  | OFF | OFF | OFF |
+| 35 sec     | ON  | ON  | ON  | OFF |
+| 40 sec     | OFF | OFF | OFF | ON  |
 | 45 sec     | ON  | OFF | OFF | ON  |
-| 50 sec     | ON  | OFF | ON  | OFF |
-| 55 sec     | ON  | OFF | ON  | ON  |
-| 60 sec     | ON  | ON  | OFF | OFF |
-| 65 sec     | ON  | ON  | OFF | ON  |
-| 70 sec     | ON  | ON  | ON  | OFF |
+| 50 sec     | OFF | ON  | OFF | ON  |
+| 55 sec     | ON  | ON  | OFF | ON  |
+| 60 sec     | OFF | OFF | ON  | ON  |
+| 65 sec     | ON  | OFF | ON  | ON  |
+| 70 sec     | OFF | ON  | ON  | ON  |
 | 75 sec     | ON  | ON  | ON  | ON  |
 
 To select randomized delays, set the **RANDOMIZED** switch to ON.  Then, set
@@ -264,28 +264,28 @@ depending on whether you want simple or prototypical random delays.
 
 **Simple Random Delays**
 
-| Delay Range  |  D  |  C  |  B  |  A  |
+| Delay Range  |  A  |  B  |  C  |  D  |
 | ------------ | :-: | :-: | :-: | :-: |
 | 0 to 10 sec  | OFF | OFF | OFF | OFF |
-| 5 to 20 sec  | OFF | OFF | OFF | ON  |
-| 15 to 30 sec | OFF | OFF | ON  | OFF |
-| 30 to 60 sec | OFF | OFF | ON  | ON  |
+| 5 to 20 sec  | ON  | OFF | OFF | OFF |
+| 15 to 30 sec | OFF | ON  | OFF | OFF |
+| 30 to 60 sec | ON  | ON  | OFF | OFF |
 
 **Prototypical Random Delays**
 
-| Probability | Delay Range    |  D  |  C  |  B  |  A  |
+| Probability | Delay Range    |  A  |  B  |  C  |  D  |
 | ----------- | -------------- | :-: | :-: | :-: | :-: |
-| 10%         | 15 to 30 sec   | OFF | ON  | OFF | OFF |
-| 30%         | 15 to 30 sec   | OFF | ON  | OFF | ON  |
+| 10%         | 15 to 30 sec   | OFF | OFF | ON  | OFF |
+| 30%         | 15 to 30 sec   | ON  | OFF | ON  | OFF |
 | 70%         | 15 to 30 sec   | OFF | ON  | ON  | OFF |
-| 10%         | 30 to 60 sec   | OFF | ON  | ON  | ON  |
-| 30%         | 30 to 60 sec   | ON  | OFF | OFF | OFF |
+| 10%         | 30 to 60 sec   | ON  | ON  | ON  | OFF |
+| 30%         | 30 to 60 sec   | OFF | OFF | OFF | ON  |
 | 70%         | 30 to 60 sec   | ON  | OFF | OFF | ON  |
-| 10%         | 60 to 120 sec  | ON  | OFF | ON  | OFF |
-| 30%         | 60 to 120 sec  | ON  | OFF | ON  | ON  |
-| 70%         | 60 to 120 sec  | ON  | ON  | OFF | OFF |
-| 10%         | 180 to 300 sec | ON  | ON  | OFF | ON  |
-| 30%         | 180 to 300 sec | ON  | ON  | ON  | OFF |
+| 10%         | 60 to 120 sec  | OFF | ON  | OFF | ON  |
+| 30%         | 60 to 120 sec  | ON  | ON  | OFF | ON  |
+| 70%         | 60 to 120 sec  | OFF | OFF | ON  | ON  |
+| 10%         | 180 to 300 sec | ON  | OFF | ON  | ON  |
+| 30%         | 180 to 300 sec | OFF | ON  | ON  | ON  |
 | 70%         | 180 to 300 sec | ON  | ON  | ON  | ON  |
 
 ### Timeout
@@ -310,11 +310,11 @@ expires, the system will be reset.
 The timeout time is set using the **E** and **F** switches according to the
 following table.
 
-| Timeout Time |  F  |  E  |
+| Timeout Time |  E  |  F  |
 | ------------ | :-: | :-: |
 | 15 sec       | OFF | OFF |
-| 30 sec       | OFF | ON  |
-| 45 sec       | ON  | OFF |
+| 30 sec       | ON  | OFF |
+| 45 sec       | OFF | ON  |
 | 60 sec       | ON  | ON  |
 
 ### Searchlight Emulation
