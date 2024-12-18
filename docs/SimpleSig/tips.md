@@ -1,82 +1,66 @@
 ---
 title: MSS Tips & Tricks
 ---
-# MSS Tips & Tricks ![](../img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
-
-## Overview
-
-The Iowa Scaled Engineering [SimpleSig Debugger](https://www.iascaled.com/store/MSS-CROSSOVER) is a diagnostic tool designed to help users debug [Modular Signal System (MSS)](https://modularsignalsystem.info/) setups, from testing hardware already installed on layout modules to developing new MSS hardware.  It provides a handheld, stand-alone way to see which MSS signal wires are active on the bus, or manually activate individual signal wires and test how installed MSS signaling modules react.
-
-![](img/mss-debug.jpg)
+# MSS FAQ & Tips ![](../img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 
-### Features
-* Diagnostic LEDs indicate status of all six MSS signal lines
-    * Local Block Occupancy
-    * Approach Occupancy In (to node)
-    * Advance Approach Occupancy In (to node)
-    * Advance Occupancy Out (from node)
-    * Advance Approach Occupancy Out (from node)
-    * Diverging Approach In/Out (to/from node)
-* Switches allow user to toggle each signal line to test module response
-* Provides +12V bus pull-up bias voltage from 3x AAA batteries for testing bus segments without
-pull-ups (such as the [Crossover Detector](/Modular Signal System/Crossover/manual/) module)
-* Compliant with MSS 1.x, 2.x, and proposed 3.x standards.  (Draft MSS 3.x support added in version 2.0 of the Debugger)
 
-### Typical Applications
+## Frequently Asked Questions
 
-* Testing installation of MSS hardware on modules before connecting them into a larger layout
-* Development and testing of your own MSS-compatible hardware
-* Debugging MSS signal issues by examining what signals are being sent and received
+### Is MSS Related to LCC?
 
----
+No.  The Modular Signal System (MSS) is designed to be plug-and-play between signal modules and not require any sort of complex configuration nor a computer to control the system.
 
-## Usage Guide
+Layout Command Control (LCC) can be used to implement signaling as well, but requires significantly more effort to configure and usually will require a computer to actually run the signaling logic.  However, it is capable of significantly more complex signal arrangements, and duplicating prototype signaling almost exactly.
 
-Install 3x AAA batteries in the back battery holder. Turn on the power switch (lower left corner, up is on). The green power LED D1 should light. If it does not, the batteries are either dead or the MSS-DEBUG's power supply is defective.
+That's not to say that the two cannot play together.  At the Railroad Hobby Show (Springfield, MA) in 2024, Ken Cameron demonstrated a complex junction module that used LCC and JMRI for the interlocking plant itself, but had MSS connections in each direction to send signal information to adjoining modules.
 
-One or both of the bus connections should be connected. Which ones you connect will depend on the problem you're trying to solve.
+### What Prototype Does MSS Model?
 
-In order to test a node without being connected to a larger MSS network, connect the right side MSS bus connector marked “To Node” to the MSS node you wish to monitor/control using a “straight through / normal” ethernet cable, such as the short 1' cable that is provided with the debugger.
+The basic signal setup created by MSS is close to "flat pair" automatic block signaling.  It's a stand-alone system designed to provide realistic signal indications that most modelers will be familiar with, while discarding all the complexity of exactly modeling any prototype or the need for a computer or dispatcher.
 
-In order to see the signals being received at a node, connect the left side MSS bus connector (marked “To Bus”) to the crossover cable where the node would normally plug in. (You may then optionally connect through to the node with a straight-through cable to see what the node is sending.) This is useful for debugging what signals a node is receiving, and why it may be misbehaving.
+ABS did not typically have multiple-headed signals at the ends of sidings (or sidings with detection, for that matter), so most MSS implementations bring it concepts from later systems such as APB and CTC to provide signal indications that would be more familiar to a modern modeler.  There's absolutely no requirement to use these, however, and more prototypical "straight ABS" systems can be achieved.
 
-## Using the Lights and Switches
+On a single track, here's an example set of signal indications as a train moves from left to right.  This example shows four indication signaling.  We know that model railroads usually have shorter runs than the prototype, so having four indications may be too many for the number of blocks between your major locations.  Our boards can be set up for either three indication (clear, approach, stop) or four indication (clear, approach, advance approach, stop) signaling as is appropriate for your layout.
 
-![The Debugger PCB showing LED locations](img/mss-debug-pcb.png)
+Step 1:
+![](./img/train-sequence-1.png)
 
-For the purposes of the descriptions below, "to the right" is defined as to the node that would be connected to the right port with a straight-through cable - the one marked *TO NODE >>>*.  "To the left" is defined as the next node down the line, connected to the *<<< TO BUS* port.
+Step 2:
+![](./img/train-sequence-2.png)
 
-| MSS&nbsp;Bus&nbsp;Signal<br/>LED&nbsp;Name/Color | If Indicator is On | If Switch is On | 
-|-------------------|--------------------|-----------------|
-| *Local Block Occupancy*<br/>Red (D4) |Current track block is showing occupancy |Simulate occupancy in the current track block | 
-| *Approach In*<br/>Amber (D3) |The node to the left is sending an approach signal to the node on the right. Typically this means that the next block down the line to the left is occupied. |Simulate occupancy in the adjoining block one to the left. Normally this would trigger an "approach" indication for a cascade module's signal.| 
-| *Advance Approach In*<br/>White (D2) |The node to the left is sending an advance approach signal to the node on the right. Typically this means that the second block down the line to the left is occupied. |Simulate occupancy in the adjoining block two to the left. Normally this would trigger an "advance approach" indication for a cascade module's signal if it's set up for 4 indication signaling. | 
-| *Diverging Approach In/Out*<br/>Blue (D7) |If connected to a complex cascade module, indicates the switch is set to the diverging route. In all spec-compliant implementations, the “Approach In” LED should also be lit. |Simulate a diverging route set at the next node to the left. The “Approach In” or “Approach Out” - as appropriate - switch should also be set except when testing invalid bus signal combinations. | 
-| *Approach Out*<br/>Amber (D6) |The node to the right is sending an approach signal to the node to the left. This typically means that the next block down the line to the right is occupied. |Simulate occupancy in the next block to the right. |
-| *Advance Approach Out*<br/>White (D5) |The node to the right is sending an advance approach signal to the node to the left. This typically means that the second block down the line to the right is occupied. |Simulate occupancy in the second block down the line to the right. | 
+Step 3:
+![](./img/train-sequence-3.png)
 
+Step 4:
+![](./img/train-sequence-4.png)
+
+Step 5:
+![](./img/train-sequence-5.png)
+
+
+There's no reason that MSS cannot be extended to more accurately represent more complicated signal regimes as well.  Some can be done within the standard as it exists today, whereas some may require some additional extensions that build upon the basic standard.
 
 ---
 
-## Modular Signal System Draft Spec 3.0 Compatibility
+### Basic Signal Terminology
 
-There is a draft Modular Signal System specification version 3.0 that reverses the polarity of the "Approach Diverging" line and breaks backwards compatibility.  Starting with version 2.0 of the Debugger, launched in late 2024, it supports both MSS 2 and MSS 3-style "Approach Diverging" lines.  A switch at the bottom of the device allows the user to switch between version 2 and version 3.
+#### Heads vs. Masts
 
----
+In North American signaling practice, we frequently talk about "heads" and "masts".  A head is a mechanism capable of displaying one aspect at a time.  A mast is a set of heads - each of which can be displaying different aspects - that should be considered together to determine the name and indication of the signal.  In general, North American signals have one to three heads on any given mast.  I'm sure somebody will come up with a four or even five head prototype - because there's a prototype for everything - but these would be exceedingly uncommon.
 
-## Specifications
+#### Aspect, Name, and Indication
 
-**Power:**  3x AAA batteries  
-**MSS Standard Compatibility:** 1.x, 2.x, and proposed 3.x (3.x support available in version 2.0 and later Debuggers only)  
-**Size:** 3.5" (L) x 2.0" (W)  
+Signals have three fundamental properties:  aspect, name, and indication.  These are frequently confused and often used rather loosely in conversation, but they have formal and distinct meanings.
 
----
+**Aspect** is what you physically see.  For a single-headed signal, that might be green, yellow, flashing red.  For a double-headed signal, that might be red over flashing yellow.  Signals may have other attributes beyond just the lights or semaphore position, such as number or milepost plates, lettered plates with A or G or D on them, whether it's a signal on a pole or a dwarf mounted near the ground, etc.  These additional elements can change how the aspects translate to the indication.
 
-## Open Source 
+**Name** is the formal rulebook name of a set of aspects.  Typically this will correspond to a operating rule that describes exactly what the crew is expected to do when faced with this indication.  Multiple different combinations of aspects can all fall under the same name and indication.  For example, on BNSF a single flashing yellow and a yellow-over-yellow are both "Approach Medium" and have the same indication.
 
-Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify, adapt, improve, and share with others.
+**Indication** is what the aspects tell the train crew to do.  As an example, at a single-headed ABS permissive signal, red might mean come to a full stop and proceed at restricted speed if clear.  A single head displaying a green aspect almost universally means proceed at maximum authorized speed.  A single red aspect on a mast with a numberboard is usually a permissive signal, and means "stop, then proceed at restricted speed." However, that same single red aspect on a mast without a numberboard is an absolute signal, and means "stop" with no option to proceed without either dispatcher permission or a change in aspect.
 
-The design of the MSS-DEBUG hardware is open source hardware, and is made available under the terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  Design files can be found in the [mss-debug](https://github.com/IowaScaledEngineering/mss-debug) project on  GitHub.
+While the meaning of single-headed signals is relatively uniform, combinations of aspects on multiple heads will vary from prototype to prototype.  Some railroads in some eras even had different rules for the same aspects displayed on a high signal vs. a dwarf signal.
+
+As an example, let's take the indication of "Advance Approach," which means to proceed prepared to pass the next signal not exceeding some set speed and, if approaching a switch, be prepared to enter the diverging route not exceeding the prescribed speed for the turnout.  Western US roads typically used aspects of yellow over yellow for this, whereas eastern US roads tended to use yellow over green.  BNSF actually splits this into three different names - Approach Limited (yellow over flashing green), meaning the "set speed" above is 60 MPH; Advance Approach (yellow over green), meaning the "set speed" is 50 MPH; and Approach Medium (yellow over yellow) which sets the speed to 40 MPH.
 
 
