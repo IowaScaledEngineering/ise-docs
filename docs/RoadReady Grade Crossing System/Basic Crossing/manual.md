@@ -1,11 +1,11 @@
 ---
 title: User Manual
 ---
-# Basic Crossing Controller Manual (CKT-XING-BASIC v1.0)
+# RoadRead Basic Crossing Controller Manual (CKT-XING-BASIC v1.0)
 
 ## Overview
 
-The Basic Crossing Controller (CKT-XING-BASIC) is designed as a simple way to control model railroad grade crossing lights and provide a bell.  It includes two TrainSpotter optical detectors, and has a built-in SoundBytes crossing bell that includes all seven of our standard North American crossing bell sounds.  It will drive any number of common anode (common positive) LED crossing signals, the most common type found on the market today.  The crossing will start when one of the detectors senses something in front of it, and will continue for a selectable time after all sensors are again clear.
+The RoadRead Basic Crossing Controller (CKT-XING-BASIC) is designed as a simple way to control model railroad grade crossing lights and provide a bell.  It includes two TrainSpotter optical detectors, and has a built-in SoundBytes crossing bell that includes all seven of our standard North American crossing bell sounds.  It will drive any number of common anode (common positive) LED crossing signals, the most common type found on the market today.  The crossing will start when one of the detectors senses something in front of it, and will continue for a selectable time after all sensors are again clear.
 
 Additional TrainSpotter sensors can be connected for additional tracks, or for additional detection distance from the crossing.
 
@@ -65,10 +65,10 @@ The basic crossing controller has two configuration options:  how long the cross
 
 | X | Y | Turn-off Delay |
 |---|---|----------------|
-| 0 | 0 | 5 seconds | 
-| 0 | 1 | 10 seconds | 
-| 1 | 0 | 15 seconds | 
-| 1 | 1 | 30 seconds | 
+| 0 | 0 | 0.5 seconds | 
+| 0 | 1 | 2 seconds | 
+| 1 | 0 | 5 seconds | 
+| 1 | 1 | 10 seconds | 
 
 | A | B | C | Bell Sound |
 |---|---|---|----------------|
@@ -90,7 +90,7 @@ The basic crossing controller has two configuration options:  how long the cross
 Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
 adapt, improve, and share with others.  
 
-The design of the MSS-CROSSOVER hardware is open source hardware, and is made available under the
+The design of the CKT-XING-BASIC hardware is open source hardware, and is made available under the
 terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).
 
 The firmware for the CKT-XING-BASIC is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the  License](https://www.gnu.org/licenses/gpl.html), or any later version.
