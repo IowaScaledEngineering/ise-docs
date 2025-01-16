@@ -4,7 +4,10 @@ title: User Manual
 # Interlocking In A Box ![](img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}<br>User Manual
 
 ## Overview
-
+<figure class="inline end" style="width: 400px" markdown>
+![](img/title.jpg)
+<figcaption>An automatic interlocking in Elgin, TX</figcaption>
+</figure>
 The Iowa Scaled Engineering [Interlocking In A Box](https://www.iascaled.com/store/CKT-IIAB)
 is a simple solution for adding automatic or manual interlocking signals
 where one track crosses another at grade (a diamond).  Stand-alone automatic
@@ -50,7 +53,7 @@ diamond, adding some variety to the operations.
 
 ### Features
 
-* Simulates a manual or automatic interlocking at a diamond 
+* Simulates an automatic or manual interlocking at a diamond 
 * Designed for simplicity and to cover most use cases
 * Triggered by either TrainSpotter sensors (automatic interlocking) or pushbuttons (manual interlocking)
 * Controls a 2-aspect signal capable of displaying stop and clear (typically red and green) in each direction on one track
@@ -277,16 +280,16 @@ depending on whether you want simple or prototypical random delays.
 | ----------- | -------------- | :-: | :-: | :-: | :-: |
 | 10%         | 15 to 30 sec   | OFF | OFF | ON  | OFF |
 | 30%         | 15 to 30 sec   | ON  | OFF | ON  | OFF |
-| 70%         | 15 to 30 sec   | OFF | ON  | ON  | OFF |
+| 75%         | 15 to 30 sec   | OFF | ON  | ON  | OFF |
 | 10%         | 30 to 60 sec   | ON  | ON  | ON  | OFF |
 | 30%         | 30 to 60 sec   | OFF | OFF | OFF | ON  |
-| 70%         | 30 to 60 sec   | ON  | OFF | OFF | ON  |
+| 75%         | 30 to 60 sec   | ON  | OFF | OFF | ON  |
 | 10%         | 60 to 120 sec  | OFF | ON  | OFF | ON  |
 | 30%         | 60 to 120 sec  | ON  | ON  | OFF | ON  |
-| 70%         | 60 to 120 sec  | OFF | OFF | ON  | ON  |
+| 75%         | 60 to 120 sec  | OFF | OFF | ON  | ON  |
 | 10%         | 180 to 300 sec | ON  | OFF | ON  | ON  |
 | 30%         | 180 to 300 sec | OFF | ON  | ON  | ON  |
-| 70%         | 180 to 300 sec | ON  | ON  | ON  | ON  |
+| 75%         | 180 to 300 sec | ON  | ON  | ON  | ON  |
 
 ### Timeout
 
