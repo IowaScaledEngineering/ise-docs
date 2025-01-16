@@ -10,7 +10,7 @@ sound.  It includes two TrainSpotter optical detectors, and has a built-in Sound
 
 Additional TrainSpotter detectors can be connected for additional tracks, or for additional detection distance from the crossing.
 
-Note:  This basic controller does not include any control for crossing gates, and does not implement approach sensors.
+Note: This basic controller is only an island circuit, meaning it does not implement approach sensors.  While it flashes crossing lights and plays a bell sound, it does not control crossing gates.
 
 ![](img/ckt-xing-basic.jpg)
 
