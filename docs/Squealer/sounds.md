@@ -1,7 +1,7 @@
 ---
 title: Sound Clips
 ---
-# Sound Clips ![](img/squealer-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
+# Squealer Sound Clips ![](img/squealer-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 Iowa Scaled Engineering has been built around the concept of open source and
 the resulting community and sharing that underpins that concept.  In that

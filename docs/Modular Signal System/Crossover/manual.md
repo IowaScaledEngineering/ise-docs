@@ -1,11 +1,11 @@
 ---
 title: User Manual
 ---
-# MSS-CROSSOVER v2.0 User Manual
+# MSS Crossover Detector ![](img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}<br>User Manual
 
 ## Overview
 
-The MSS-CROSSOVER is complete “crossover” unit described in the [Modular Signal System (MSS)](https://modularsignalsystem.info/) standard, providing MSS-compliant current-based block detection for model railroad layout modules.  It contains an integrated
+The MSS-CROSSOVER is complete “crossover” detector described in the [Modular Signal System (MSS)](https://modularsignalsystem.info/) standard, providing MSS-compliant current-based block detection for model railroad layout modules.  It contains an integrated
 DCC block detector, a universal (DC/AC/DCC) power supply directly compatible with Free-Mo accessory power bus, and a 
 robust MSS bus interface protected against static discharge, overcurrent, ground loop, and reverse polarity events.
 

@@ -1,7 +1,7 @@
 ---
 title: User Manual
 ---
-# MSS-DEBUG v1.0 User Manual
+# MSS Debugger User Manual ![](img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 ## Overview
 

@@ -1,11 +1,11 @@
 ---
 title: User Manual
 ---
-# RoadRead Basic Crossing Controller Manual (CKT-XING-BASIC v1.0)
+# RoadReady Basic Crossing Controller ![](img/roadready-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}<br>User Manual
 
 ## Overview
 
-The RoadRead Basic Crossing Controller (CKT-XING-BASIC) is designed as a simple way to control model railroad grade crossing lights and provide a bell.  It includes two TrainSpotter optical detectors, and has a built-in SoundBytes crossing bell that includes all seven of our standard North American crossing bell sounds.  It will drive any number of common anode (common positive) LED crossing signals, the most common type found on the market today.  The crossing will start when one of the detectors senses something in front of it, and will continue for a selectable time after all sensors are again clear.
+The RoadReady Basic Crossing Controller (CKT-XING-BASIC) is designed as a simple way to control model railroad grade crossing lights and provide a bell.  It includes two TrainSpotter optical detectors, and has a built-in SoundBytes crossing bell that includes all seven of our standard North American crossing bell sounds.  It will drive any number of common anode (common positive) LED crossing signals, the most common type found on the market today.  The crossing will start when one of the detectors senses something in front of it, and will continue for a selectable time after all sensors are again clear.
 
 Additional TrainSpotter sensors can be connected for additional tracks, or for additional detection distance from the crossing.
 

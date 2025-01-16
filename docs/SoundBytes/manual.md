@@ -1,7 +1,7 @@
 ---
 title: User Manual
 ---
-# User Manual ![](img/soundbytes-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
+# SoundBytes User Manual ![](img/soundbytes-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 ## Overview
 
