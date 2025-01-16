@@ -6,28 +6,28 @@ title: User Manual
 ## Overview
 
 The [RoadReady Basic Crossing Controller](https://www.iascaled.com/store/CKT-XING-BASIC) (CKT-XING-BASIC) is a simple way to control model railroad grade crossing lights and provide a bell
-sound.  It includes two TrainSpotter optical detectors, and has a built-in SoundBytes crossing bell that includes all seven of our standard North American crossing bell sounds.  It will drive any number of common anode (common positive) LED crossing signals, the most common type found on the market today.  The crossing will start when one of the detectors senses something in front of it, and will continue for a selectable time after all sensors are again clear.
+sound.  It includes two TrainSpotter optical detectors, and has a built-in SoundBytes crossing bell that includes all seven of our standard North American crossing bell sounds.  It will drive any number of common anode (common positive) LED crossing signals, the most common type found on the market today.  The crossing will start when one of the detectors senses something in front of it, and will continue for a selectable time after all detectorss are again clear.
 
-Additional TrainSpotter sensors can be connected for additional tracks, or for additional detection distance from the crossing.
+Additional TrainSpotter detectors can be connected for additional tracks, or for additional detection distance from the crossing.
 
 Note:  This basic controller does not include any control for crossing gates, and does not implement approach sensors.
 
 ![](img/ckt-xing-basic.jpg)
 
----
+### Features
 
-## Key Features
-* Universal Power - works from 6V to 24V DC, AC, or DCC
 * Works with common anode (common positive) LED grade crossing signals
 * Seven different built-in crossing bell sounds
-* Plug-and-play sensors and speaker connections - no fiddly terminal blocks!
+* Plug-and-play detectors and speaker connections - no fiddly terminal blocks!
 * Configurable turn-off delay after sensors clear
 * Easy expansion with additional sensors for more tracks
 * Robust, protected signal output drivers will handle 1 amp of current
+* Includes control board, two (2) TrainSpotter optical detectors, and speaker
+* Universal Power - works from 6V to 24V DC, AC, or DCC
 
 ---
 
-## Installation Guide
+## Quick Start Guide
 
 Step 1: Mount the module to the layout and connect power to the power terminal block.  6 to 24 volts of power is needed, but this can be DC, AC, or DCC.  The module itself will use up to 150 milliamps while playing sound, plus whatever power the LEDs in the signals draw.
 

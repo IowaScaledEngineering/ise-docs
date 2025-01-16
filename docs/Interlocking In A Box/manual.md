@@ -25,7 +25,7 @@ This version concentrates on the core use case - a simple, single track
 crossing where one track is an operational part of the layout and the
 crossing track is not - and the goal is to force your crews to slow down,
 wait to get the light, and then proceed.  It's designed to be easy to
-install and configure - the sensors just plug in, configuration of delays is
+install and configure - the detectorss just plug in, configuration of delays is
 done by switches on the board, and signals just connect into the terminal
 blocks.
 
@@ -55,7 +55,7 @@ diamond, adding some variety to the operations.
 
 * Simulates an automatic or manual interlocking at a diamond 
 * Designed for simplicity and to cover most use cases
-* Triggered by either TrainSpotter sensors (automatic interlocking) or pushbuttons (manual interlocking)
+* Triggered by either TrainSpotter optical detectors (automatic interlocking) or pushbuttons (manual interlocking)
 * Controls a 2-aspect signal capable of displaying stop and clear (typically red and green) in each direction on one track
 * Optional delay time (fixed or randomized) between arrival and green signal
 * Compatible with both common anode (positive) and common cathode (negative) signals
