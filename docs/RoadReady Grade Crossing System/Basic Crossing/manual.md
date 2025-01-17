@@ -7,27 +7,30 @@ title: User Manual
 
 The [RoadReady Basic Crossing Controller](https://www.iascaled.com/store/CKT-XING-BASIC) (CKT-XING-BASIC)
 is a simple way to control model railroad grade crossing lights and play a
-bell sound.  It includes two TrainSpotter optical detectors, and has a
-built-in SoundBytes crossing bell that includes all seven of our standard
-North American crossing bell sounds.  It will drive any number of common
+bell sound.  It includes two TrainSpotter optical detectors, and has all
+seven of our standard SoundBytes crossing bell sounds built in.  It will drive any number of common
 anode (common positive) LED crossing signals, the most common type found on
 the market today.  The crossing will start when one of the detectors senses
-something in front of it, and will continue for a selectable time after all
-detectorss are again clear.
+a train above it, and will continue for a selectable time after all
+detectors are clear.
 
-Additional TrainSpotter detectors can be connected for additional tracks, or for additional detection distance from the crossing.
+Additional TrainSpotter detectors can be connected for additional tracks, or
+for additional detection distance from the crossing.
 
-Note: This basic controller is only an island circuit, meaning it does not implement approach sensors.  While it flashes crossing lights and plays a bell sound, it does not control crossing gates.
+Note: This basic controller is only an island circuit, meaning it does not
+implement approach sensors.  It is intended for a crossing with lights and
+bell only and cannot control crossing gates.
 
 ![](img/ckt-xing-basic.jpg)
 
 ### Features
 
-* Works with common anode (common positive) LED grade crossing signals
-* Seven different built-in crossing bell sounds
 * Plug-and-play detectors and speaker connections - no fiddly terminal blocks!
-* Configurable turn-off delay after sensors clear
-* Easy expansion with additional sensors for more tracks
+* Rock solid TrainSpotter optical detection - works in any ambient lighting conditions
+* Seven different built-in prototypical crossing bell sounds
+* Configurable turn-off delay after detectors clear
+* Easy expansion with additional detectors for more tracks
+* Works with common anode (common positive) LED grade crossing signals
 * Robust, protected signal output drivers will handle 1 amp of current
 * Includes control board, two (2) TrainSpotter optical detectors, and speaker
 * Universal Power - works from 6V to 24V DC, AC, or DCC
