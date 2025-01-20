@@ -9,7 +9,7 @@ The Iowa Scaled Engineering [Block Signal Advanced](https://www.iascaled.com/sto
 
 It is fully compatible with the [Modular Signal System (MSS)](/SimpleSig/introduction/) standards, and provides what the MSS standard calls a "cascade."
 
-![](img/mss-cascade-advanced.jpg)
+![](img/mss-cascade-adv.png)
 
 
 ### Features
@@ -31,8 +31,6 @@ It is fully compatible with the [Modular Signal System (MSS)](/SimpleSig/introdu
 * Add operating ABS-style block signals at a block boundary where more advanced indications are needed, such as at the signal before a complex cascade where approach diverging aspects need to be displayed
 * Perfect for locations where non-standard aspects are needed, such as the ability to display restricting at the end of ABS
 * Great for easily signaling home layouts as well as Free-Mo and Free-MoN modules
-
-
 ---
 
 ## Quick Start Guide
@@ -46,9 +44,9 @@ It is fully compatible with the [Modular Signal System (MSS)](/SimpleSig/introdu
 ### Step 1 - Signals
 
 !!! info "Common Anode vs Common Cathode"
-    The Block Signal Basic supports both common anode (positive) and common cathode (negative) signals, but all of the signals connected must be of one type or the other.  Mixing common anode and common cathode signals on the same Switch Signal Basic is not supported.
+    The Block Signal Advanced supports both common anode (positive) and common cathode (negative) signals, but all of the signals connected must be of one type or the other.  Mixing common anode and common cathode signals on the same Block Signal Advanced is not supported.
 
-Most applications will want to use two signals - a single-headed LED signal in each direction.
+Most applications will want to use two signals - one facing each way at the block boundary.  These signals can be either single or double-headed, depending on the need.  The Block Signal Advanced comes set up by default for both signals to be double-headed, but can be configured to operate a single-headed signal in either (or both) directions.  Double-headed signals will be most appropriate for the signal one block ahead of the point end of a switch (such as would be controlled by the [Switch Signal Basic](/Switch Signal Basic/manual/)), but can be used in other situations depending on the prototype.  If using a single-headed signal, it's advised to connect it to the upper head port.
 
 LED signals with the usual red/yellow/green leads can be wired into the terminal blocks.  The common wire should be connected to the terminal block labeled **SIGNAL COMMON**, and the individual color leads should be attached to the respective **R** (red), **Y** (yellow), and **G** (green) positions on the **SIGNAL A** and **SIGNAL B** terminal blocks.
 
@@ -62,7 +60,7 @@ Set the **COMMON** switch to **ANODE / +** if your signals are common anode / co
 
 ![](img/mss-cascade-basic-cacc-switch.png)
 
-The Block Signal Basic powers the signals from 5 volts and has 330 ohm resistors on each of the signal outputs to protect the signal LEDs, so no additional resistors are needed externally.  If your signals are too bright with the built-in resistors, additional resistors can be added to each of the signal output lines.  If your signals already have resistors built in, you will likely need to remove them or disable the onboard resistors.  See [Bypassing the LED Resistors](#bypassing-the-led-resistors) in the Advanced Use Cases section below.  
+The Block Signal Basic powers the signals from 5 volts and has 330 ohm resistors on each of the signal outputs to protect the signal LEDs, so no additional resistors are needed externally.  If your signals are too bright with the built-in resistors, additional resistors can be added to each of the signal output lines.  If your signals already have resistors built in, you will likely need to remove them or disable the onboard resistors.  See [Bypassing the LED Resistors](#bypassing-the-led-resistors) in the Advanced Use Cases section below.
 
 ---
 
@@ -139,29 +137,83 @@ If you do not have any more signal boards in a given direction down the track, j
 
 ## Options
 
-![](../img/mss-cascade-basic-option-jumpers.png){align=right} The Block Signal Basic has four configuration option solder jumpers.  In order to enable each option, use a soldering iron and a small amount of solder (or a conductive ink pen) to bridge the corresponding jumper.
+![](../img/mss-cascade-basic-option-jumpers.png){align=right} The Block Signal Advanced has five configuration option switches.
 
-### Jumper A - Approach Lighting
+### Switch A - Approach Lighting
 
-By default, the Block Signal Basic keeps both signals lit at all times.  Some prototype signals are only lit when a train is approaching the signal, a feature appropriately enough called "approach lighting."  The Block Signal Basic can emulate this behaviour if Jumper A is soldered.  Any train in the adjacent block will cause the signal to illuminate, otherwise it will remain dark.
+By default, the Block Signal Advanced keeps both signals lit at all times.  Some prototype signals are only lit when a train is approaching the signal, a feature appropriately enough called "approach lighting."  If you want your signals to only be lit only when a train is occupying either adjacent block and dark otherwise, set switch A to on.
 
-### Jumper B - Four Indication Signaling
+### Switch B - Reserved
 
-US and Canadian ABS signal prototypes can roughly be divided into two categories - three indication signaling and four indication signaling.  Three aspect signaling means that there are only three indications - clear, approach, and stop.  Four indication signaling introduces advance approach (flashing yellow), meaning the next block will be approach (constant yellow).  Generally four indication signaling on ABS and APB came later, as train speeds increased and more warning was needed to slow before reaching a stop (ie. red) signal.
+Switch B is reserved for new features and future enhancements to the firmware.
 
-The Block Signal Basic defaults to only three indication signaling, as getting three blocks between trains on our often small layouts can be difficult.  However, on larger layouts and modular setups, four indication signaling is often desired and can be enabled by soldering Jumper B.
+### Switch C - Searchlight Emulation
 
-### Jumper C - Searchlight Emulation
-
-By default, the Block Signal Basic is set up to emulate the operation of typical signal heads with three independent sets of lights, arranged either vertically or in a triangle configuration on most railroads.  (Or, in the case of Pennsylvania position lights or B&O/N&W color position lights, drive two lights around the outside of a disk.)  Regardless, the logic will fade one in as the other fades out.
+By default (switch C is OFF), the Block Signal Advanced is set up to emulate the operation of typical signal heads with three independent sets of lights, arranged either vertically or in a triangle configuration on most railroads.  (Or, in the case of Pennsylvania position lights or B&O/N&W color position lights, drive two lights around the outside of a disk.)  Regardless, the logic will fade one in as the other fades out.
 
 Searchlight-type signals, such as the Union Switch & Signal types H, H2 and H5 as well as the General Railway Signaling SA type, used a signal lamp with a set of mechanically-changed color filters inside known as roundels.  Three roundels were mounted on an armature that could be moved by two electromagnetic coils.  When unenergized, the arm sat in the middle and placed the red filter in front of the single lamp.  Green would be on one side, and yellow on the other side.  By energizing the coils, it would pull the arm either left or right and place either yellow or green in front of the lamp.
 
-This leads to interesting effects when changing aspects.  When going between yellow and green, you'll get a couple quick red flashes as the armature moves from one side through the red glass in the center to the other side, and then usually bounces once or twice.  Going from red to either yellow or green will result in a bit of flickering as well as the armature bounces around before settling.  The Block Signal Basic emulates this rather precisely.  If Jumper C is enabled, this bouncing and flashing will be reflected in the signal output giving a very prototypical appearance to model searchlight signals.
+This leads to interesting effects when changing aspects.  When going between yellow and green, you'll get a couple quick red flashes as the armature moves from one side through the red glass in the center to the other side, and then usually bounces once or twice.  Going from red to either yellow or green will result in a bit of flickering as well as the armature bounces around before settling.  The Block Signal Advanced emulates this rather precisely.  If Switch C is ON, this bouncing and flashing will be reflected in the signal output giving a very prototypical appearance to model searchlight signals.
 
-### Jumper D - Reserved
+### Switch D - Reserved
 
-Currently, jumper D is reserved for new features and future enhancements to the firmware.
+Switch D is reserved for new features and future enhancements to the firmware.
+
+### Switch E - Configuration Mode
+
+Normally, switch E should be kept in the OFF position.  To enter configuration mode, switch E will be turned ON.  See [Programming Signal Aspects] below for more details.
+
+---
+
+## Programming Signal Aspects
+
+One of the best features of the Block Signal Advanced is the ability program the specific signal aspects for each signal for each condition that MSS is capable of sending.
+
+In order to unlock configuration mode, set switch E to ON.  The mock signal in the middle of the board should light up, as well as a blue LED indicating whether the A or B signal is being configured and a yellow LED indicating which condition is being configured.
+
+The Block Signal Advanced supports six potential conditions, as listed below, along with their default upper and lower head aspects.
+
+| Condition    | MSS Signals        | Upper  | Lower |
+| ------------ | ------------------ | ------ | ------ |
+| Stop (S)     | S=1 A=X AA=X AD=X  | Red    | Red    |
+| Approach (A) | S=0 A=1 AA=X AD=0  | Yellow | Red    |
+| Advance Approach (AA) | S=0 A=0 AA=1 AD=0  | Fl Yellow | Red    |
+| Approach Diverging & Advance Approach (AD+AA) | S=0 A=X AA=1 AD=1  | Yellow | Yellow    |
+| Approach Diverging (AD) | S=0 A=X AA=0 AD=1  | Yellow | Yellow    |
+| Clear (CLR) | S=0 A=0 AA=0 AD=0  | Green | Red    |
+
+To change which signal is being configured (A or B), press the left button under the **SIGNAL  A/B** lights, and the blue light should switch between signal A and B.
+
+To change which condition is being configured, push the right button under the various yellow condition LEDs until the one you want to configure is lit.
+
+Once you have selected the signal and the condition to be set, push the buttons next to the two heads on the board until the aspect you want appears.  The upper button cycles the upper head and the lower button cycles the lower head.  Aspects will cycle through red, flashing red, yellow, flashing yellow, green, flashing green, and dark for each press of the button.  Changes are saved immediately.
+
+Once you have configured each condition and signal the way you want it, set switch E back to OFF in order to prevent accidental changes.  The configuration LEDs should turn back off.
+
+### Some Signal Options
+
+The aspects programmed in from the factory are generally appropriate for most western US railroads approaching the point-end of a control point.  Let's look at some reasons you may want to change these.
+
+Eastern US railroads often used yellow over yellow for advance approach rather than flashing yellow over red.  Likewise, they often used yellow over green for approach diverging.
+
+Some prototypes with higher speed mainline turnouts used yellow over green or yellow over flashing green on the approach signal to indicate that the turnout was thrown diverging, but that a higher speed was authorized on the diverging route.  However, in those cases, if the signal two blocks down was set to stop (meaning both approach diverging and advance approach are set), you may only want to show a regular approach diverging indication (yellow over yellow) to still warn crews that they should be prepared to slow by the next signal.
+
+Given that prototype sidings are usually multiple blocks apart, it's quite typical that only a signal direction will have a double-headed signal.  Only the direction headed towards the switch would need to display indications giving crews notice of whether they were about to enter the diverging route.  The signal going in the other direction may not have another switch for several blocks and thus would only need the indications that are possible to display on a single signal head.  If all four indications are desired (stop, approach, advance approach, clear), then just connecting that to the upper head outputs works fine.  However, if you want only three indications, you could configure the upper head to show green in the case of advance approach.
+
+Other railroads didn't use double headed signals at all on the approach to sidings.  Some roads would use a single-headed signal, and just display a flashing yellow for both advance approach and for approach diverging.
+
+At the end of signaled track, particularly where the main line terminates into a yard, it's typical to put a restricting indication.  The exact behavior depends upon the railroad rulebook, but typically this is a flashing red over red that tells a crew they need to be down to restricted speed (be able to stop in half the available sight distance) but they don't actually need to stop at the signal.  The Block Signal Advance could easily be configured to display that indication instead of stop, and by putting permanent detection on that side of the block boundary, that indication would trickle back to approaching signals as well.
+
+
+
+
+
+
+
+### Factory Reset
+
+To reset all signal configurations to factory default, make sure switch E is off.  Then hold down both the left and right buttons and, while keeping them held, flip switch E to on.  Wait one second, release both buttons and set switch E back to off.  This will restore the default configuration for all signal indications.
+
 
 ---
 
@@ -169,7 +221,7 @@ Currently, jumper D is reserved for new features and future enhancements to the 
 
 ### Bypassing the LED Resistors
 
-The Block Signal Basic includes resistors to protect your signals against excessive current that will destroy them.  There may be use cases where your signals already have resistors installed, or you want to change the resistor values used, and you need to bypass the resistors on the board.  There are solder jumpers provided to let you do that, but be **very sure** that you know what you're doing before using them.
+The Block Signal Advanced includes resistors to protect your signals against excessive current that will destroy them.  There may be use cases where your signals already have resistors installed, or you want to change the resistor values used, and you need to bypass the resistors on the board.  There are solder jumpers provided to let you do that, but be **very sure** that you know what you're doing before using them.
 
 !!! warning "Don't Destroy Your Signals!"
     Be sure you really need to do this before even considering bypassing the onboard current limiting resistors for the signals.  You must install external resistors before bypassing the onboard resistors, or the current will blow up your signal LEDs!
@@ -182,8 +234,8 @@ If you just wish to dim your signals further, we recommend adding additional res
 
 ## Specifications
 
-**Input Power:**  5 to 24 volts DC, AC, or DCC  
-**Input Supply Current:**  50 milliamps (typical)  
+**Input Power:**  8 to 24 volts DC, AC, or DCC  
+**Input Supply Current:**  75 milliamps (typical)  
 **MSS Standard Compatibility:** 1.x, 2.x, and (proposed) 3.x  
 **Size:**  3.25"(L) x 3.0"(W) x 0.5"(H) (main board)
 

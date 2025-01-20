@@ -3,6 +3,37 @@ title: MSS Tips & Tricks
 ---
 # MSS FAQ & Tips ![](../img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
+## System Planning and Setup
+
+### Signal Placement
+
+The very first thing you'll need to decide is signal placement - where do you want signals?
+
+
+
+### Power
+
+MSS requires that either all signals share a power supply, or if running on different power supplies, those power supplies are either isolated or share a common ground connection.
+
+For modular setups like FreeMo and FreeMoN, power is drawn from the accessory power bus.
+
+For home layouts, we highly recommend a dedicated DC accessory power supply rather than trying to power accessories off old power packs (which can damage modern electronics with their horrific power).  This could be something as simple as our [12V / 3A Power Supply](https://www.iascaled.com/store/PSU-12V3A) or something larger for bigger layouts with more demands.  Industrial switch power supplies, such as the Mean Well LRS-150-12 (12 volts at up to 12.5 amps), are both affordable and efficient ways to power model railroad accessories.  Be aware, however, that properly sized wires and fuses are a necessity with these.  They can put out enough power to cause actual damage or fire in the case of a short circuit.
+
+### Cables
+
+Personally, my recommendation is to buy a good set of modular jack crimpers and make your own cables.  Cat5e cable and modular ends are cheap, and since MSS neither passes high speed signals nor large currents, the extra cheap CCA (copper-clad aluminum) cable is more than adequate.  (Note - for actual network applications I strongly recommend against CCA cable.)  By making your own cables, you can make them exactly to the lengths you need and run them through smaller holes if needed, since you can thread the cable through before attaching the connector.
+
+
+
+If you would prefer to buy pre-made cables, Iowa Scaled Engineering plans to stock a number of high quality cables for purchase alongside our SimpleSig products.  If you'd prefer to source them yourself and save a few bucks, we recommend cables from Monoprice.  They're inexpensive and of good quality.
+
+* [Monoprice Cat5e Normal Cables](https://www.monoprice.com/product?p_id=11353)  
+* [Monoprice Cat5e Crossover Cables](https://www.monoprice.com/product?p_id=287)
+
+!!! warning "Crossover Cables"
+    Some crossover cables cross over all four pairs, not just the pairs expected for MSS.  These are often called "Cat6" or "gigabit" crossover cables, and will not work.
+
+
 
 
 ## Frequently Asked Questions
