@@ -41,7 +41,7 @@ The Iowa Scaled Engineering [Block Signal Basic](https://www.iascaled.com/store/
 ### Step 1 - Signals
 
 !!! info "Common Anode vs Common Cathode"
-    The Block Signal Basic supports both common anode (positive) and common cathode (negative) signals, but all of the signals connected must be of one type or the other.  Mixing common anode and common cathode signals on the same Switch Signal Basic is not supported.
+    The Block Signal Basic supports both common anode (positive) and common cathode (negative) signals, but all of the signals connected must be of one type or the other.  Mixing common anode and common cathode signals on the same Block Signal Basic is not supported.
 
 Most applications will want to use two signals - a single-headed LED signal in each direction.
 
