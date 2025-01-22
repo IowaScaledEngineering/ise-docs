@@ -11,7 +11,7 @@ title: User Manual
 The Iowa Scaled Engineering [Interlocking In A Box](https://www.iascaled.com/store/CKT-IIAB)
 is a simple solution for adding automatic or manual interlocking signals
 where one track crosses another at grade (a diamond).  Stand-alone automatic
-interlockings were common, particularly on grainger roads in the midwestern
+interlockings were common, particularly on granger roads in the midwestern
 US where competing branchlines criss-crossed running to every little dot on
 the map.  Some of the larger ones had towers and operators controlling them,
 but many were simpler operations that involved automatic signals where the
@@ -25,7 +25,7 @@ This version concentrates on the core use case - a simple, single track
 crossing where one track is an operational part of the layout and the
 crossing track is not - and the goal is to force your crews to slow down,
 wait to get the light, and then proceed.  It's designed to be easy to
-install and configure - the detectorss just plug in, configuration of delays is
+install and configure - the detectors just plug in, configuration of delays is
 done by switches on the board, and signals just connect into the terminal
 blocks.
 
