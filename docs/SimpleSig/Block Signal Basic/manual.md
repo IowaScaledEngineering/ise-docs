@@ -5,7 +5,7 @@ title: User Manual
 
 ## Overview
 
-The Iowa Scaled Engineering [Block Signal Basic](https://www.iascaled.com/store/MSS-CASCADE-BASIC) is a complete solution for adding basic ABS block signals at a track block boundary.  It is fully compatible with the [Modular Signal System (MSS)](/SimpleSig/introduction/) standards, and provides what the MSS standard calls a "cascade."
+The Iowa Scaled Engineering [Block Signal Basic](https://www.iascaled.com/store/MSS-CASCADE-BASIC) is a complete solution for adding basic ABS block signals at a track block boundary.  It is fully compatible with the [Modular Signal System (MSS)](../introduction.md) standards, and provides what the MSS standard calls a "cascade."
 
 ![](img/mss-cascade-basic.jpg)
 
@@ -108,7 +108,7 @@ Apply power and check that the green power LED glows on the Block Signal Basic a
 
 Place your hand over the TrainSpotter sensor.  Verify the red light on the sensor comes on and both signals drop to red.  Remove your hand and verify both return to green.  (If this is a home setup with no TrainSpotter sensor installed, skip this step.)
 
-Turn on track power and make sure nothing is in either of the track blocks and that the red detection LED is OFF on all detectors (ATOMs and the TrainSpotter).  If any ATOMs show detection, very carefully check that the track blocks are correctly isolated and there is nothing on the track.  If you are absolutely sure of this, you may need to [run a self-calibration on that ATOM](/ATOM%20Block%20Detector/manual/#operation) to cancel out leakage current.  If a calibration is run and the red detection light does not go off, you almost certainly have a wiring error in your DCC track wiring with that detector.
+Turn on track power and make sure nothing is in either of the track blocks and that the red detection LED is OFF on all detectors (ATOMs and the TrainSpotter).  If any ATOMs show detection, very carefully check that the track blocks are correctly isolated and there is nothing on the track.  If you are absolutely sure of this, you may need to [run a self-calibration on that ATOM](../../ATOM%20Block%20Detector/manual.md/#operation) to cancel out leakage current.  If a calibration is run and the red detection light does not go off, you almost certainly have a wiring error in your DCC track wiring with that detector.
 
 With track power still on, place a locomotive on the block in front of the A end signal.  Verify that the ATOM detector shows detection (red light) and that the B end signal drops to red.  Remove the locomotive and verify that approximately ~3 seconds later, the red light on the ATOM detector goes out and the B signal returns to green.  Repeat the process by placing the locomotive in front of the B signal and verify the B block detector triggers and that the A signal drops to red.  This will verify that your detectors are properly tuned and connected.
 
@@ -124,7 +124,7 @@ For home layouts, this typically means you should connect one signal board to th
 
 For modular layouts, it's generally recommended that except for very short modules, "straight through" (normal) ethernet cables should be used from the signal board to the ends of the module, where the signal bus terminates at a coupler or jack.  The modules then get joined together using crossover cables. 
 
-For more information about crossover cables, be sure to see the [Tips and Tricks page](/SimpleSig/tips).
+For more information about crossover cables, be sure to see the [Tips and Tricks page](../tips.md).
 
 If you do not have any more signal boards in a given direction down the track, just leave the connector open.
 
@@ -134,7 +134,7 @@ If you do not have any more signal boards in a given direction down the track, j
 
 ## Options
 
-![](../img/mss-cascade-basic-option-jumpers.png){align=right} The Block Signal Basic has four configuration option solder jumpers.  In order to enable each option, use a soldering iron and a small amount of solder (or a conductive ink pen) to bridge the corresponding jumper.
+![](img/mss-cascade-basic-option-jumpers.png){align=right} The Block Signal Basic has four configuration option solder jumpers.  In order to enable each option, use a soldering iron and a small amount of solder (or a conductive ink pen) to bridge the corresponding jumper.
 
 ### Jumper A - Approach Lighting
 

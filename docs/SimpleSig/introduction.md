@@ -1,7 +1,7 @@
 ---
 title: Introduction
 ---
-# Introduction to SimpleSig & MSS ![](./img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
+# Introduction to SimpleSig & MSS ![](img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 SimpleSig is Iowa Scaled Engineering's line of signaling products for model railroads based on the Modular Signal System (MSS) standard.  SimpleSig products are intended to be robust, easy to use, MSS-compatible components, though we do have a few accessories and stand-alone signal products that will be added to the line as well.
 
@@ -29,13 +29,13 @@ The worst part of explaining MSS to newcomers is getting the terminology down.  
 
 When you hear **cascade**, think **signal**.  All of our modules that provide cascade functionality will have "signal" in the name.
 
-A basic cascade, such as our [Block Signal Basic](/SimpleSig/Block Signal Basic/manual) is just going to provide a pair of automatic block signals at a block boundary.
+A basic cascade, such as our [Block Signal Basic](Block Signal Basic/manual.md) is just going to provide a pair of automatic block signals at a block boundary.
 
 ### Complex Cascades
 
 Complex cascades build on basic cascades.  Again, when you hear **cascade**, think **signal**.  Complex cascades are complex arrangements of signals, such as around the ends of sidings, at diamonds, or at crossovers between double track mainlines.  Whereas basic cascades just provide two signals at a block boundary, complex cascades model complex trackwork and route the MSS bus to follow whatever route is selected.
 
-The end of a siding is an excellent example of a complex cascade.  Our [Switch Signal Basic](/SimpleSig/Switch Signal Basic/manual) provides just such a module.
+The end of a siding is an excellent example of a complex cascade.  Our [Switch Signal Basic](Switch Signal Basic/manual.md) provides just such a module.
 
 When the turnout is lined for the main, you want the MSS bus from the point end of the turnout connected to the MSS bus following the main track.  You also want to make sure the signal at the end of the siding is displaying stop since the turnout is set against it, and then send the appropriate signals down the siding MSS bus to indicate to display approach, advance approach, etc.
 
@@ -47,7 +47,7 @@ MSS depends upon **crossovers** so that the outputs of one signal module get wir
 
 The simplest form of a crossover is a single "crossover" network cable.  These are different from regular network cables where rather than going straight through, and instead they swap pins 1 & 2 and pins 3 & 6.  These were used in the not-so-good old days of networking to make sure that the receive and transmit ethernet pairs were connected correctly.  They're a bit more uncommon now, but still readily available from many sources including Monoprice and Amazon.
 
-A slightly more complex form of "crossover" is what we at ISE refer to as a [Crossover Detector](/SimpleSig/Crossover Detector/manual/).  These are devices which do cross over the signal wires, but also provide a DCC block detector.  Crossover Detectors are very important on modules in FreeMo and FreeMoN setups that do not have signals themselves, but need to have block detection to participate in MSS-enabled setups.  They are not particularly useful for home layouts where the user can install a single block detector to cover the entire block, rather than needing one for each layout module.
+A slightly more complex form of "crossover" is what we at ISE refer to as a [Crossover Detector](Crossover Detector/manual.md).  These are devices which do cross over the signal wires, but also provide a DCC block detector.  Crossover Detectors are very important on modules in FreeMo and FreeMoN setups that do not have signals themselves, but need to have block detection to participate in MSS-enabled setups.  They are not particularly useful for home layouts where the user can install a single block detector to cover the entire block, rather than needing one for each layout module.
 
 ### The Golden Rule of MSS
 

@@ -5,7 +5,7 @@ title: User Manual
 
 ## Overview
 
-The Iowa Scaled Engineering [SimpleSig Crossover Detector](https://www.iascaled.com/store/MSS-CROSSOVER) is a Modular Signaling System (MSS)-compliant current-based block detector for model railroad layout modules.  It is a complete “crossover” unit described in the [Modular Signal System (MSS)](/SimpleSig/introduction/) standard.
+The Iowa Scaled Engineering [SimpleSig Crossover Detector](https://www.iascaled.com/store/MSS-CROSSOVER) is a Modular Signaling System (MSS)-compliant current-based block detector for model railroad layout modules.  It is a complete “crossover” unit described in the [Modular Signal System (MSS)](../introduction.md) standard.
 
 It is intended for use on modules that require block detection to participate in layouts where MSS signaling is in use, but the module itself does not have signals.
 
@@ -14,7 +14,7 @@ It is intended for use on modules that require block detection to participate in
 
 ### Features
 
-* Rock solid DCC current detection based on our [ATOM detectors](/ATOM Block Detector/manual/)
+* Rock solid DCC current detection based on our [ATOM detectors](../../ATOM Block Detector/manual.md)
 * Single button sensitivity adjustment (no fiddling with tiny potentiometers!)
 * Isolated using a current transformer
 * Highly sensitive (1mA, or ~10k ohms) yet resistant to false detection

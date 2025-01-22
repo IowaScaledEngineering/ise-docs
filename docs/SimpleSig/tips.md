@@ -1,7 +1,7 @@
 ---
 title: MSS Tips & Tricks
 ---
-# MSS FAQ & Tips ![](../img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
+# MSS FAQ & Tips ![](img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
 ## System Planning and Setup
 

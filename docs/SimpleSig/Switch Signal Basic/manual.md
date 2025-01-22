@@ -5,7 +5,7 @@ title: User Manual
 
 ## Overview
 
-The Iowa Scaled Engineering [SimpleSig Switch Signal Basic](https://www.iascaled.com/store/MSS-SWITCH) is complete solution for adding basic ABS-style block signals at the end of a siding or other junction between signaled tracks.  It provides what's known as a "complex cascade" in [Modular Signal System (MSS)](/SimpleSig/introduction/) terms.
+The Iowa Scaled Engineering [SimpleSig Switch Signal Basic](https://www.iascaled.com/store/MSS-SWITCH) is complete solution for adding basic ABS-style block signals at the end of a siding or other junction between signaled tracks.  It provides what's known as a "complex cascade" in [Modular Signal System (MSS)](../introduction.md) terms.
 
 ![](img/mss-switch.png)
 
@@ -131,7 +131,7 @@ Do not connect any MSS cables yet!  First we're going to make sure that the Swit
 
 Apply power and check that the green **POWER ON** LED glows on the main board and on any attached ATOM current-based block detectors.  This verifies that the Switch Signal Basic and associated detectors are getting good power.
 
-Turn on track power and make sure nothing is in any of the track blocks and that the red detection LED is OFF on all detectors (ATOMs and the TrainSpotter).  If any ATOMs show detection, very carefully check that the track blocks are correctly isolated and there is nothing on the track.  If you are absolutely sure of this, you may need to [run a self-calibration on that ATOM](/ATOM%20Block%20Detector/manual/#operation) to cancel out leakage current.  If a calibration is run and the red detection light does not go off, you almost certainly have a wiring error in your DCC track wiring with that detector.
+Turn on track power and make sure nothing is in any of the track blocks and that the red detection LED is OFF on all detectors (ATOMs and the TrainSpotter).  If any ATOMs show detection, very carefully check that the track blocks are correctly isolated and there is nothing on the track.  If you are absolutely sure of this, you may need to [run a self-calibration on that ATOM](../..//ATOM%20Block%20Detector/manual.md/#operation) to cancel out leakage current.  If a calibration is run and the red detection light does not go off, you almost certainly have a wiring error in your DCC track wiring with that detector.
 
 Set the turnout to the main and verify that Signal A (the points end) displays green over red, Signal B displays green, and Signal C displays red.  Set the turnout to the siding and verify that Signal A displays red over green, Signal B displays red, and Signal C displays green.  This confirms that the turnout position wiring is correct and that the signals are installed correctly.
 

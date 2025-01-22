@@ -20,7 +20,7 @@ The Iowa Scaled Engineering [SimpleSig Debugger](https://www.iascaled.com/store/
     * Diverging Approach In/Out (to/from node)
 * Switches allow user to toggle each signal line to test module response
 * Provides +12V bus pull-up bias voltage from 3x AAA batteries for testing bus segments without
-pull-ups (such as the [Crossover Detector](/Modular Signal System/Crossover/manual/) module)
+pull-ups (such as the [Crossover Detector](../Crossover Detector/manual.md) module)
 * Compliant with MSS 1.x, 2.x, and proposed 3.x standards.  (Draft MSS 3.x support added in version 2.0 of the Debugger)
 
 ### Typical Applications

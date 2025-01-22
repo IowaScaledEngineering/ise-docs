@@ -7,7 +7,7 @@ title: User Manual
 
 The Iowa Scaled Engineering [Block Signal Advanced](https://www.iascaled.com/store/MSS-CASCADE-ADVANCED) is a complete solution for adding ABS block signals at a track block boundary.  It is more capable than our Block Signal Basic, able to display configurable aspects on single or double-headed signals.
 
-It is fully compatible with the [Modular Signal System (MSS)](/SimpleSig/introduction/) standards, and provides what the MSS standard calls a "cascade."
+It is fully compatible with the [Modular Signal System (MSS)](../introduction.md) standards, and provides what the MSS standard calls a "cascade."
 
 ![](img/mss-cascade-adv.png)
 
@@ -46,7 +46,7 @@ It is fully compatible with the [Modular Signal System (MSS)](/SimpleSig/introdu
 !!! info "Common Anode vs Common Cathode"
     The Block Signal Advanced supports both common anode (positive) and common cathode (negative) signals, but all of the signals connected must be of one type or the other.  Mixing common anode and common cathode signals on the same Block Signal Advanced is not supported.
 
-Most applications will want to use two signals - one facing each way at the block boundary.  These signals can be either single or double-headed, depending on the need.  The Block Signal Advanced comes set up by default for both signals to be double-headed, but can be configured to operate a single-headed signal in either (or both) directions.  Double-headed signals will be most appropriate for the signal one block ahead of the point end of a switch (such as would be controlled by the [Switch Signal Basic](/Switch Signal Basic/manual/)), but can be used in other situations depending on the prototype.  
+Most applications will want to use two signals - one facing each way at the block boundary.  These signals can be either single or double-headed, depending on the need.  The Block Signal Advanced comes set up by default for both signals to be double-headed, but can be configured to operate a single-headed signal in either (or both) directions.  Double-headed signals will be most appropriate for the signal one block ahead of the point end of a switch (such as would be controlled by the [Switch Signal Basic](../Switch Signal Basic/manual.md)), but can be used in other situations depending on the prototype.  
 
 If using a single-headed signal, connect it to the upper head port.
 
@@ -101,7 +101,7 @@ The Block Signal Advanced requires 8V to 24V of DC, AC, or DCC power to operate.
 
 For home setups, it is recommended to power it from an accessory power bus, but it can be powered from the track bus directly (but before any block detectors, otherwise the current draw of the board will activate the block detector).  Note: all signal modules need to get their power from the same power source.
 
-![](img/mss-cascade-basic-power.png)
+![](img/mss-cascade-adv-power.png)
 
 ---
 
@@ -113,7 +113,7 @@ Apply power and check that the green power LED glows on the Block Signal Advance
 
 Place your hand over the TrainSpotter sensor.  Verify the red light on the sensor comes on and both signals drop to red over red (or just red for single-headed signals).  Remove your hand and verify both return to green over red (or just green).  (If this is a home setup with no TrainSpotter sensor installed, skip this step.)
 
-Turn on track power and make sure nothing is in either of the track blocks and that the red detection LED is OFF on all detectors (ATOMs and the TrainSpotter).  If any ATOMs show detection, very carefully check that the track blocks are correctly isolated and there is nothing on the track.  If you are absolutely sure of this, you may need to [run a self-calibration on that ATOM](/ATOM%20Block%20Detector/manual/#operation) to cancel out leakage current.  If a calibration is run and the red detection light does not go off, you almost certainly have a wiring error in your DCC track wiring with that detector.
+Turn on track power and make sure nothing is in either of the track blocks and that the red detection LED is OFF on all detectors (ATOMs and the TrainSpotter).  If any ATOMs show detection, very carefully check that the track blocks are correctly isolated and there is nothing on the track.  If you are absolutely sure of this, you may need to [run a self-calibration on that ATOM](../../ATOM%20Block%20Detector/manual.md/#operation) to cancel out leakage current.  If a calibration is run and the red detection light does not go off, you almost certainly have a wiring error in your DCC track wiring with that detector.
 
 With track power still on, place a locomotive on the block in front of the A end signal.  Verify that the ATOM detector shows detection (red light) and that the B end signal drops to red over red (or just red if using a single-headed signal).  Remove the locomotive and verify that approximately ~3 seconds later, the red light on the ATOM detector goes out and the B signal returns to green over red (or just green).  Repeat the process by placing the locomotive in front of the B signal and verify the B block detector triggers and that the A signal drops to red.  This will verify that your detectors are properly tuned and connected.
 
@@ -129,7 +129,7 @@ For home layouts, this typically means you should connect one signal board to th
 
 For modular layouts, it's generally recommended that except for very short modules, "straight through" (normal) ethernet cables should be used from the signal board to the ends of the module, where the signal bus terminates at a coupler or jack.  The modules then get joined together using crossover cables. 
 
-For more information about crossover cables, be sure to see the [Tips and Tricks page](/SimpleSig/tips).
+For more information about crossover cables, be sure to see the [Tips and Tricks page](../tips.md).
 
 If you do not have any more signal boards in a given direction down the track, just leave the connector open.
 
@@ -141,7 +141,7 @@ If you do not have any more signal boards in a given direction down the track, j
 
 The Block Signal Advanced has five configuration option switches.
 
-![](../img/mss-cascade-adv-option-switches.png)
+![](img/mss-cascade-adv-option-switches.png)
 
 ### Switch A - Approach Lighting
 
@@ -190,15 +190,15 @@ Note:  MSS Lines indicates the logical state of the MSS signal wires on the bus.
 
 To change which signal is being configured (A or B), press the left button under the **SIGNAL  A/B** lights, and the blue light should switch between signal A and B.
 
-![](../img/mss-cascade-adv-signal-switch.png)
+![](img/mss-cascade-adv-signal-switch.png)
 
 To change which condition is being configured, push the right button under the various yellow condition LEDs until the one you want to configure is lit.
 
-![](../img/mss-cascade-adv-signal-state-switch.png)
+![](img/mss-cascade-adv-signal-state-switch.png)
 
 Once you have selected the signal and the condition to be set, push the buttons next to the two heads on the board until the aspect you want appears.  The upper button cycles the upper head and the lower button cycles the lower head.  Aspects will cycle through red, flashing red, yellow, flashing yellow, green, flashing green, and dark for each press of the button.  Changes are saved immediately.
 
-![](../img/mss-cascade-adv-signal-heads.png)
+![](img/mss-cascade-adv-signal-heads.png)
 
 Once you have configured each condition and signal the way you want it, set switch E back to OFF in order to prevent accidental changes.  The configuration LEDs should turn back off.
 

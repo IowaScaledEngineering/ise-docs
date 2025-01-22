@@ -5,7 +5,7 @@ title: User Manual
 
 ## Overview
 
-The SimpleSig Atlas Adapter is designed to allow users of the Atlas All Scales Signal System to bridge to standard [Modular Signal System (MSS)](/SimpleSig/introduction/) modules, such as Iowa Scaled Engineering's SimpleSig line.  This gives you the ability to extend your Atlas signals using a variety of vendors' MSS modules without needing to tear out and replace your existing investment in Atlas boards.  It's not really intended for modular users, but rather focused at home layouts that already have an Atlas system in place.
+The SimpleSig Atlas Adapter is designed to allow users of the Atlas All Scales Signal System to bridge to standard [Modular Signal System (MSS)](../introduction.md) modules, such as Iowa Scaled Engineering's SimpleSig line.  This gives you the ability to extend your Atlas signals using a variety of vendors' MSS modules without needing to tear out and replace your existing investment in Atlas boards.  It's not really intended for modular users, but rather focused at home layouts that already have an Atlas system in place.
 
 MSS provides a number of advantages over the Atlas system:
 
