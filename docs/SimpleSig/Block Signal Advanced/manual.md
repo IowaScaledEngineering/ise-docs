@@ -7,7 +7,7 @@ title: User Manual
 
 The Iowa Scaled Engineering [Block Signal Advanced](https://www.iascaled.com/store/MSS-CASCADE-ADVANCED) is a complete solution for adding ABS block signals at a track block boundary.  It is more capable than our Block Signal Basic, able to display configurable aspects on single or double-headed signals.
 
-It is fully compatible with the [Modular Signal System (MSS)](../introduction.md) standards, and provides what the MSS standard calls a "cascade."
+It is fully compatible with the [Modular Signal System (MSS)](../index.md) standards, and provides what the MSS standard calls a "cascade."
 
 ![](img/mss-cascade-adv.png)
 

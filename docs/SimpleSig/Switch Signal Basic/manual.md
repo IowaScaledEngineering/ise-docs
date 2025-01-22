@@ -5,7 +5,7 @@ title: User Manual
 
 ## Overview
 
-The Iowa Scaled Engineering [SimpleSig Switch Signal Basic](https://www.iascaled.com/store/MSS-SWITCH) is complete solution for adding basic ABS-style block signals at the end of a siding or other junction between signaled tracks.  It provides what's known as a "complex cascade" in [Modular Signal System (MSS)](../introduction.md) terms.
+The Iowa Scaled Engineering [SimpleSig Switch Signal Basic](https://www.iascaled.com/store/MSS-SWITCH) is complete solution for adding basic ABS-style block signals at the end of a siding or other junction between signaled tracks.  It provides what's known as a "complex cascade" in [Modular Signal System (MSS)](../index.md) terms.
 
 ![](img/mss-switch.png)
 
