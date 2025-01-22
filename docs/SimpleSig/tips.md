@@ -5,12 +5,6 @@ title: MSS Tips & Tricks
 
 ## System Planning and Setup
 
-### Signal Placement
-
-The very first thing you'll need to decide is signal placement - where do you want signals?
-
-
-
 ### Power
 
 MSS requires that either all signals share a power supply, or if running on different power supplies, those power supplies are either isolated or share a common ground connection.
@@ -23,8 +17,6 @@ For home layouts, we highly recommend a dedicated DC accessory power supply rath
 
 Personally, my recommendation is to buy a good set of modular jack crimpers and make your own cables.  Cat5e cable and modular ends are cheap, and since MSS neither passes high speed signals nor large currents, the extra cheap CCA (copper-clad aluminum) cable is more than adequate.  (Note - for actual network applications I strongly recommend against CCA cable.)  By making your own cables, you can make them exactly to the lengths you need and run them through smaller holes if needed, since you can thread the cable through before attaching the connector.
 
-
-
 If you would prefer to buy pre-made cables, Iowa Scaled Engineering plans to stock a number of high quality cables for purchase alongside our SimpleSig products.  If you'd prefer to source them yourself and save a few bucks, we recommend cables from Monoprice.  They're inexpensive and of good quality.
 
 * [Monoprice Cat5e Normal Cables](https://www.monoprice.com/product?p_id=11353)  
@@ -33,8 +25,12 @@ If you would prefer to buy pre-made cables, Iowa Scaled Engineering plans to sto
 !!! warning "Crossover Cables"
     Some crossover cables cross over all four pairs, not just the pairs expected for MSS.  These are often called "Cat6" or "gigabit" crossover cables, and will not work.
 
+For those who would prefer to build their own, crossover cables should be wired as shown on the following diagram:
+
+![](./img/crossover-wiring.png)
 
 
+---
 
 ## Frequently Asked Questions
 
@@ -52,35 +48,9 @@ The basic signal setup created by MSS is close to "flat pair" automatic block si
 
 ABS did not typically have multiple-headed signals at the ends of sidings (or sidings with detection, for that matter), so most MSS implementations bring it concepts from later systems such as APB and CTC to provide signal indications that would be more familiar to a modern modeler.  There's absolutely no requirement to use these, however, and more prototypical "straight ABS" systems can be achieved.
 
-On a single track, here's an example set of signal indications as a train moves from left to right.  This example shows four indication signaling.  We know that model railroads usually have shorter runs than the prototype, so having four indications may be too many for the number of blocks between your major locations.  Our boards can be set up for either three indication (clear, approach, stop) or four indication (clear, approach, advance approach, stop) signaling as is appropriate for your layout.
-
-Step 1:
-![](./img/train-sequence-1.png)
-
-Step 2:
-![](./img/train-sequence-2.png)
-
-Step 3:
-![](./img/train-sequence-3.png)
-
-Step 4:
-![](./img/train-sequence-4.png)
-
-Step 5:
-![](./img/train-sequence-5.png)
-
-
 There's no reason that MSS cannot be extended to more accurately represent more complicated signal regimes as well.  Some can be done within the standard as it exists today, whereas some may require some additional extensions that build upon the basic standard.
 
----
-
-### Basic Signal Terminology
-
-#### Heads vs. Masts
-
-In North American signaling practice, we frequently talk about "heads" and "masts".  A head is a mechanism capable of displaying one aspect at a time.  A mast is a set of heads - each of which can be displaying different aspects - that should be considered together to determine the name and indication of the signal.  In general, North American signals have one to three heads on any given mast.  I'm sure somebody will come up with a four or even five head prototype - because there's a prototype for everything - but these would be exceedingly uncommon.
-
-#### Aspect, Name, and Indication
+### What's The Difference Between Aspect, Name, and Indication?
 
 Signals have three fundamental properties:  aspect, name, and indication.  These are frequently confused and often used rather loosely in conversation, but they have formal and distinct meanings.
 

@@ -9,11 +9,11 @@ SimpleSig is Iowa Scaled Engineering's line of signaling products for model rail
 
 The Modular Signal System (MSS) is a way to bring signal operation to model railroads without all the complexity of computers, programming, etc.  It provides an approximation of a basic North American Automatic Block Signal system that is both easy to understand and easy to implement.  The simplest version is just a matter of installing signal and signal modules, detectors, and then linking the whole thing together with standard "crossover" type ethernet cables.
 
-MSS was designed to be incredibly simple to set up and robust because of its roots in the Free-Mo modular community  The initial standard was put forth by Gregg Fuhriman back around 2004, and it first got widespread exposure in the Feburary 2005 issue of Railmodel Journal.  What Gregg and team have developed is nothing short of brilliant in its elegant simplicity.  Being able to just plug one signaled module into the next and have them "just work" was the key to success.
+MSS was designed to be robust and incredibly simple to set up because of its roots in the Free-Mo modular community  The initial standard was put forth by Gregg Fuhriman back around 2004, and it first got widespread exposure in the Feburary 2005 issue of Railmodel Journal.  What Gregg and team have developed is nothing short of brilliant in its elegant simplicity.  Being able to just plug one signaled module into the next and have them "just work" was the key to success.
 
 The standard itself is open and [available for download](http://www.modularsignalsystem.info/ModularSignalSystemStandardV2.0.2.pdf).  Because of the elegant simplicity of the system, it's easy to design your own MSS-compatible components if you're so inclined.  However, the open standard also means that there's a number of manufacturers all supporting it, and a number of other open source designs available online if you'd rather build your own.
 
-MSS is not going to model your prototype’s strangest interlockings and aspect rules straight out of the box, though realistically with a bit of custom work you can likely get very close.  Because our SimpleSig products are all open source, they're easy to customize yourself if you have any programming experience, or we're always happy to consider customization projects for a nominal charge.
+MSS is not going to model your prototype’s strangest interlockings and aspect rules straight out of the box, though realistically with a bit of custom work you can likely get close.  Because our SimpleSig products are all open source, they're easy to customize yourself if you have any programming experience, or we're always happy to consider customization projects for a nominal charge.
 
 ## Where Can I Learn More About MSS?
 
@@ -23,7 +23,7 @@ I highly recommend folks take a look at the [Modular Signal System](https://modu
 
 ## The Components of An MSS System
 
-Honestly, the worst part of explaining MSS to newcomers is getting the terminology down.  It makes sense if you're either building it or really thinking about how it works electrically, but from a newcomer's standpoint, it's somewhat confusing. Once you get the general terms down it starts to make sense.
+The worst part of explaining MSS to newcomers is getting the terminology down.  It makes sense if you're either building it or really thinking about how it works electrically, but from a newcomer's standpoint, it's somewhat confusing. Once you get the general terms down it starts to make sense.
 
 ### Cascades
 
@@ -79,9 +79,7 @@ A typical home layout, on the other hand, would not use the Crossover Detectors.
 
 ![](./img/mss-crossover-cascade-simple.png)
 
----
 
-## What Does ISE Offer?
 
 
 
