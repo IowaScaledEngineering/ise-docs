@@ -34,13 +34,26 @@ For those who would prefer to build their own, crossover cables should be wired 
 
 ## Frequently Asked Questions
 
+### How Many ATOM Block Detectors Do I Need?
+
+Modular users need one ATOM DCC block detector for each track block on the module.  So, for example, a Block Signal Basic installed on a module would require two - one for the A side, one for the B side.  This is because blocks are isolated at the ends of modules, and current detection is needed for each piece of track.
+
+Because home layouts have continuous track blocks between signals, only one ATOM DCC block detector is needed.  It can be attached to the SimpleSig module at either end of a track block.  In the diagram below, note that only one ATOM is attached to each Block Signal Basic because the block between the two is continuous.
+
+For our SimpleSig product kits that include ATOM DCC block detectors, there are often two versions:  **For Modules** kits includes block detectors for each adjacent block.  **For Layouts** kits include one less block detector to save you a bit of money on a part you are unlikely to use.
+
+![](./img/how-many-atoms.png)
+
+
+
+
 ### Is MSS Related to LCC?
 
 No.  The Modular Signal System (MSS) is designed to be plug-and-play between signal modules and not require any sort of complex configuration nor a computer to control the system.
 
 Layout Command Control (LCC) can be used to implement signaling as well, but requires significantly more effort to configure and usually will require a computer to actually run the signaling logic.  However, it is capable of significantly more complex signal arrangements, and duplicating prototype signaling almost exactly.
 
-That's not to say that the two cannot play together.  At the Railroad Hobby Show (Springfield, MA) in 2024, Ken Cameron demonstrated a complex junction module that used LCC and JMRI for the interlocking plant itself, but had MSS connections in each direction to send signal information to adjoining modules.
+That's not to say that the two cannot play together.  At the Railroad Hobby Show (Springfield, MA) in 2024 and 2025, Ken Cameron demonstrated a complex junction module that used LCC and JMRI for the interlocking plant itself, but had MSS connections in each direction to send signal information to adjoining modules.
 
 ### What Prototype Does MSS Model?
 
