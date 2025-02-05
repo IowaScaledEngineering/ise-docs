@@ -38,13 +38,13 @@ For those who would prefer to build their own, crossover cables should be wired 
 
 Modular users need one ATOM DCC block detector for each track block on the module.  So, for example, a Block Signal Basic installed on a module would require two - one for the A side, one for the B side.  This is because blocks are isolated at the ends of modules, and current detection is needed for each piece of track.
 
-Because home layouts have continuous track blocks between signals, only one ATOM DCC block detector is needed.  It can be attached to the SimpleSig module at either end of a track block.  In the diagram below, note that only one ATOM is attached to each Block Signal Basic because the block between the two is continuous.
+[![](./img/mss-detectors-module.png)](./img/mss-detectors-module.png)
 
-For our SimpleSig product kits that include ATOM DCC block detectors, there are often two versions:  **For Modules** kits includes block detectors for each adjacent block.  **For Layouts** kits include one less block detector to save you a bit of money on a part you are unlikely to use.
+Because home and club layouts usually have continuous track blocks between signals, only one ATOM DCC block detector is needed.  It can be attached to the SimpleSig module at either end of a track block.  In the diagram below, note that only one ATOM is attached to each Block Signal Basic because the block between the two is continuous.  The module not connected to the detector receives then the occupancy information over the MSS bus.
 
-![](./img/how-many-atoms.png)
+[![](./img/mss-detectors-layout.png)](./img/mss-detectors-layout.png)
 
-
+For our SimpleSig product kits that include ATOM DCC block detectors, there are often two versions:  Kits labeled **For Modules** includes block detectors for each adjacent block.  Kits labeled **For Layouts** include one less block detector to save you a bit of money on a part you are unlikely to use.
 
 
 ### Is MSS Related to LCC?
