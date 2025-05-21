@@ -382,7 +382,7 @@ Finally, on master MSS-XCADE boards, there are configuration switches that can b
 
 ## MSSPort Object
 
-The MSSPort object models the inputs and outputs from an MSS bus.  There's no need to interact with the port at an individual wire level.  These things are handled behind the scenes.  What you will (usually) deal with are "indications", which are what the wires on the port are indicating you should do, represented by MSSPortIndication_t types.
+The MSSPort object models the inputs and outputs from an MSS bus.  There's no need to interact with the port at an individual wire level.  These things are handled behind the scenes.  What you will (usually) deal with are "indications", which are what the wires on the port are indicating you should do, represented by [MSSPortIndication_t](#MSSPortIndication_t) types.
 
 **void MSSPort::setLocalOccupancy(bool localOccupancy)**
 
@@ -455,6 +455,17 @@ SignalAspect_t SignalHead::getAspect()**
 
 setAspect() allows you to set the currently displayed aspect on a signal head.  Likewise, getAspect allows you to get back the aspect currently displayed.  Both use a SignalAspect_t type.
 
+**SignalAspect_t** values are:
+* ASPECT_OFF - Head remains off / unlit
+* ASPECT_GREEN - Solid green (or clear aspect for semaphores)
+* ASPECT_FL_GREEN - Flashing green aspect
+* ASPECT_YELLOW - Solid yellow (or approach aspect for semaphores)
+* ASPECT_FL_YELLOW - Flashing yellow aspect
+* ASPECT_RED - Solid red (or stop aspect for semaphores)
+* ASPECT_FL_RED - Flashing red
+* ASPECT_LUNAR - Unused (as of yet) lunar aspect, for four aspect signals
+
+
 **void SignalHead::setSignalHeadType(SignalHeadType_t headType)**
 
 setSignalHeadType allows you to configure a given head as either a standard three-light or a searchlight.  This will affect whether lights fade one to the other, or if you get the distinctive "red flash" and "bounce" of a searchlight mechanism.  The default is a standard three-light head.
@@ -523,6 +534,89 @@ The final option, mastLit, allows for approach lighting.  If set to true (the de
 
 Unless you're doing funky speed signal stuff, I recommend just going with DIVERGING_FULL_SPEED if setting by indication, and NOT_SPECIFIED if setting based on an MSS port.  Honestly this is about the fourth attempt
 
+**Writing Your Own Rules**
+
+So you don't like my default aspects?  Great!  Build your own...  and here's how.  *(If you're using three-headed signals, I don't blame you for not liking mine.  They're probably junk and you should send me a better set of defaults.)*
+
+You can set your own sets of rules using following functions:
+
+**void SignalMast::setSingleHeadRules(const IndicationRule_t* indicationRules, uint16_t indicationRulesLen)  
+void SignalMast::setDoubleHeadRules(const IndicationRule_t* indicationRules, uint16_t indicationRulesLen)  
+void SignalMast::setTripleHeadRules(const IndicationRule_t* indicationRules, uint16_t indicationRulesLen)**
+
+indicationRules is a const pointer to an array of IndicationRule_t structures, and indicationRulesLen is the number of elements in that array.
+
+So how do you create rules?  Rules are defined as an array of IndicationRule_t structures, with each entry being a rule.  
+
+Each IndicationRule_t structure consists of:
+* [MSSPortIndication_t](#MSSPortIndication_t) indication
+* uint8_t divergingMask
+* [SignalAspect_t](#SignalAspect_t) head1Aspect
+* [SignalAspect_t](#SignalAspect_t) head2Aspect
+* [SignalAspect_t](#SignalAspect_t) head3Aspect
+
+The indication and divergingMask are used to match against the current inputs, and then head1Aspect, head2Aspect, and head3Aspect are used to set heads 1, 2, and 3 as applicable (a single-head with only use head 1, a double-head will use 1 & 2, a triple-head will use all three).  They're executed in order, and the first match for indication and diverging status wins.
+
+Here's an example of the default 2-headed rules, based on general western US route signaling:
+
+```
+const IndicationRule_t doubleHead4IndicationWesternUS[] = 
+{
+	{ INDICATION_STOP,                  SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_RED,       ASPECT_RED,       ASPECT_OFF       },
+	{ INDICATION_APPROACH,              SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_YELLOW,    ASPECT_RED,       ASPECT_OFF       },
+	{ INDICATION_APPROACH_DIVERGING,    SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_YELLOW,    ASPECT_YELLOW,    ASPECT_OFF       },
+	{ INDICATION_ADVANCE_APPROACH,      SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_FL_YELLOW, ASPECT_RED,       ASPECT_OFF       },
+	{ INDICATION_APPROACH_DIVERGING_AA, SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_FL_YELLOW, ASPECT_RED,       ASPECT_OFF       },
+	{ INDICATION_CLEAR,                 SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_GREEN,     ASPECT_RED,       ASPECT_OFF       },
+
+	{ INDICATION_STOP,                  SignalMast::DIVMASK_ALL_DIVERGING, ASPECT_RED,       ASPECT_RED,       ASPECT_OFF       },
+	{ INDICATION_APPROACH,              SignalMast::DIVMASK_ALL_DIVERGING, ASPECT_RED,       ASPECT_YELLOW,    ASPECT_OFF,      },
+	{ INDICATION_APPROACH_DIVERGING,    SignalMast::DIVMASK_ALL_DIVERGING, ASPECT_RED,       ASPECT_YELLOW,    ASPECT_OFF,      },
+
+	{ INDICATION_ADVANCE_APPROACH,      SignalMast::DIVMASK_DIV_FULL_SPD,  ASPECT_RED,       ASPECT_FL_YELLOW, ASPECT_OFF,      },
+	{ INDICATION_ADVANCE_APPROACH,      SignalMast::DIVMASK_DIV_NO_FULL ,  ASPECT_RED,       ASPECT_YELLOW,    ASPECT_OFF,      },
+	{ INDICATION_APPROACH_DIVERGING_AA, SignalMast::DIVMASK_DIV_FULL_SPD,  ASPECT_RED,       ASPECT_FL_YELLOW, ASPECT_OFF,      },
+	{ INDICATION_APPROACH_DIVERGING_AA, SignalMast::DIVMASK_DIV_NO_FULL ,  ASPECT_RED,       ASPECT_YELLOW,    ASPECT_OFF,      },
+	{ INDICATION_CLEAR,                 SignalMast::DIVMASK_DIV_FULL_SPD,  ASPECT_RED,       ASPECT_GREEN,     ASPECT_OFF,      },
+	{ INDICATION_CLEAR,                 SignalMast::DIVMASK_DIV_NO_FULL ,  ASPECT_RED,       ASPECT_YELLOW,    ASPECT_OFF,      }
+};
+```
+
+Let's say we'd rather use eastern US signal rules, where INDICATION_APPROACH_DIVERGING should be yellow over green, and INDICATION_ADVANCE_APPROACH would be yellow over yellow.
+
+At the top of our sketch, we'd put in something like this as a global variable.  It's constant data, so we shouldn't be able to change it, and that allows the processor to (hopefully) put it in a constant data section of the program and not burn up RAM with it.  It's also why it's done as a simple struct and not objects, so that it doesn't have any sort of runtype behaviour and hopefully won't use up RAM.
+
+```
+const IndicationRule_t myNewEasternDoubleHeadSignalRules[] = 
+{
+	{ INDICATION_STOP,                  SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_RED,       ASPECT_RED,       ASPECT_OFF       },
+	{ INDICATION_APPROACH,              SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_YELLOW,    ASPECT_RED,       ASPECT_OFF       },
+	{ INDICATION_APPROACH_DIVERGING,    SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_YELLOW,    ASPECT_GREEN,     ASPECT_OFF       },
+	{ INDICATION_ADVANCE_APPROACH,      SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_YELLOW,    ASPECT_YELLOW,    ASPECT_OFF       },
+	{ INDICATION_APPROACH_DIVERGING_AA, SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_YELLOW,    ASPECT_YELLOW,    ASPECT_OFF       },
+	{ INDICATION_CLEAR,                 SignalMast::DIVMASK_NOT_DIVERGING, ASPECT_GREEN,     ASPECT_RED,       ASPECT_OFF       },
+
+	{ INDICATION_STOP,                  SignalMast::DIVMASK_ALL_DIVERGING, ASPECT_RED,       ASPECT_RED,       ASPECT_OFF       },
+	{ INDICATION_APPROACH,              SignalMast::DIVMASK_ALL_DIVERGING, ASPECT_RED,       ASPECT_YELLOW,    ASPECT_OFF       },
+	{ INDICATION_APPROACH_DIVERGING,    SignalMast::DIVMASK_ALL_DIVERGING, ASPECT_RED,       ASPECT_YELLOW,    ASPECT_OFF       },
+	{ INDICATION_ADVANCE_APPROACH,      SignalMast::DIVMASK_ALL_DIVERGING, ASPECT_RED,       ASPECT_FL_YELLOW, ASPECT_OFF       },
+	{ INDICATION_APPROACH_DIVERGING_AA, SignalMast::DIVMASK_ALL_DIVERGING, ASPECT_RED,       ASPECT_FL_YELLOW, ASPECT_OFF       },
+	{ INDICATION_CLEAR,                 SignalMast::DIVMASK_ALL_DIVERGING, ASPECT_RED,       ASPECT_GREEN,     ASPECT_OFF       },
+};
+```
+
+Note how I've changed the aspects on heads 1 and 2 for INDICATION_APPROACH_DIVERGING and INDICATION_ADVANCE_APPROACH in the not diverging case, and I've made all the diverging aspects the same because apparently I don't care about diverging being a lower speed class.
+
+Within the setup() function, we'd assign those as the the rules for our signal masts by doing:
+
+```
+signalMastA.addSignalHeads(&xcade.signals.A1, &xcade.signals.A2);
+signalMastA.setDoubleHeadRules(doubleHeadNewRules, sizeof(doubleHeadNewRules)/sizeof(doubleHeadNewRules[0]));
+```
+
+Note the sizeof() trick at the end.  That's a convenient way of saying "number of items in this list" - dividing the size of the whole list structure by the size of one list element.  Note that this only works if the compiler knows how big things are, so you can't do it on naked pointers.
+
+Any rules not overridden remain the defaults.  And yes, every SignalMast can have different rules if you want.
 
 ---
 
