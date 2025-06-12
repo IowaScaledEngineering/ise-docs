@@ -3,9 +3,17 @@ title: User Manual
 ---
 # ProtoThrottle User Manual ![](img/pt-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
 
+## Download
+
+[PDF Manual](mrbw-cst-manual-v1.2A.pdf) - for on-screen viewing
+
+[Printable Manual](mrbw-cst-manual-v1.2A-imposed.pdf) - must be printed double sided (flip on short edge)
+
+[Menu Map](mrbw-cst-menu-v1.2.pdf) - legal size
+
 !!! note warning
-    This online ProtoThrottle manual is a work in progress.  For the complete
-    manual, please download the PDF version from the [product page](https://www.iascaled.com/store/MRBW-CST).
+    This online ProtoThrottle manual below is a work in progress.  In the
+    meantime, for the complete manual, please see the PDF versions above.
 
 ## Overview
 
@@ -132,7 +140,7 @@ supported DCC command stations.
         &#254;
         </pre>
 
-    See [Set Locomotive Menu](#set-locomotive-cenu) for how to set a short (primary) address. 
+    See [Set Locomotive Menu](#set-locomotive-menu) for how to set a short (primary) address. 
 
 **NOTE: The ProtoThrottle function settings are set to standard DCC function numbers by default.
 If you need to change any function number, the steps are explained below:**
