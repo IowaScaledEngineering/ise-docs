@@ -676,9 +676,9 @@ The main MSS-XCADE has an RGB LED (WS2812B) attached and marked "STATUS".  Devel
 
 There's no object for it within the XCade object, or anywhere else.  It can be exercised using the built-in function in the ESP Arduino wrapper library:
 
-**rgbLedWrite(RGB_LED_GPIO, red, green, blue);**
+**rgbLedWrite(XCADE_RGB_LED, red, green, blue);**
 
-RGB_LED_GPIO is defined as 45 in the mss-xcade.h header, and red, green, and blue are values between 0-255.
+XCADE_RGB_LED is defined as 45 in the mss-xcade.h header, and red, green, and blue are values between 0-255.
 
 ---
 
