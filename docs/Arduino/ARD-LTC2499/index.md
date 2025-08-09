@@ -23,7 +23,7 @@ The ARD-LTC2499 can be purchased from the [Iowa Scaled Engineering store](https:
 * 128 bytes of onboard EEPROM for storing configuration or calibration values
 * Read-only 6-byte EUI-48-compatible globally unique ID
 * Arduino software library for easy use
-* Version 2 compatible with 3.3V & 5V I2C interfaces
+* Compatible with 3.3V & 5V I2C interfaces
 
 ### Typical Applications
 
@@ -38,7 +38,7 @@ The Golden Rule: When in doubt, check the [LTC2499 datasheet](https://www.analog
 
 Mount the board on to your choice of Arduino and then configure it before applying power.
 
-The older version 1.x ARD-LTC2499 boards had jumpers instead of switches.  See the "[Legacy Configuration](#older-version-1x-boards-pre-2025)" section further down.
+The older version 1.x ARD-LTC2499 boards had jumpers instead of switches.  See the [Legacy Configuration](#configuring-older-1x-boards) section further down.
 
 
 ### Power Switch
@@ -59,6 +59,7 @@ If the green power LED does not come on once you power up the board, the power s
 
 For each address line (CA0, CA1, and CA2), there are a pair of switchess marked H and L that allow you to set that line high (set the H switch on and the L switch off), low (set the L switch on and the H switch off) or floating (set both H and L switches off).  If you're only using a single ARD-LTC2499 and don't have anything else on the I2C bus, then the default will work fine and there's no need to change it.  However, if you do have other devices on the I2C bus, or you want to run multiple ARD-LTC2499 shields, you will need to configure each of them for a unique address.
 
+The table below shows the combiantions and how they correspond to both the 7-bit I2C address and the define you'll pass into the library.
 
 | CA0    | CA1    | CA2    | 7-bit I2C Address | Ard2499 Library Define       |
 |--------|--------|--------|-------------------|----------------------|
@@ -92,7 +93,7 @@ For each address line (CA0, CA1, and CA2), there are a pair of switchess marked 
 
 ### EEPROM Address
 
-Each ARD-LTC2499 board also comes with a 24AA025E48 EEPROM that provides both non-volatile storage and the globally unique ID number.  This can be useful for uniquely identifying a particular board for calibration reasons, or for storing calibration data on the board itself.  Just like the LTC2499, the EEPROM also needs a unique address on the I2C bus.  Here you only have four choices, however.  The table below shows the combiantions and how they correspond to both 7-bit I2C address and the define you'll pass into the library.
+Each ARD-LTC2499 board also comes with a 24AA025E48 EEPROM that provides both non-volatile storage and the globally unique ID number.  This can be useful for uniquely identifying a particular board for calibration reasons, or for storing calibration data on the board itself.  Just like the LTC2499, the EEPROM also needs a unique address on the I2C bus.  Here you only have four choices, however.  The table below shows the combiantions and how they correspond to both the 7-bit I2C address and the define you'll pass into the library.
 
 For a switch to be "Low" it should be set to "ON".  If a switch is "OFF" that address bit will be "High", because it's pulled up by onboard resistors.
 
@@ -130,7 +131,7 @@ The final step, of course, is to install the Ard2499 library that allows you to 
 
 Full details on how to install the library and work with the interface are available in the [Developer's Guide](/Arduino/ARD-LTC2499/library/).
 
-We recommend running "ard2499_example" example sketch that comes with it first to just verify connectivity and that everything works.
+We recommend running the "ard2499_example" example sketch that comes with it first to just verify connectivity and that everything works.
 
 ----
 
@@ -237,12 +238,12 @@ Component Parts Datasheets:
 Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
 adapt, improve, and share with others.
 
-The design of the CKT-BD1 hardware is open source hardware, and is made available under the
+The design of the ARD-LTC2499 hardware is open source hardware, and is made available under the
 terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/). 
-Design files can be found in the [ckt-bd1](https://github.com/IowaScaledEngineering/ckt-bd1) project on 
+Design files can be found in the [ard-ltc2499](https://github.com/IowaScaledEngineering/ard-ltc2499) project on 
 GitHub.
 
-The firmware for the CKT-BD1 is free software: you can redistribute it and/or modify it under the 
+The firmware for the ARD-LTC2499 is free software: you can redistribute it and/or modify it under the 
 terms of the GNU General Public License as published by the Free Software Foundation, either [version 3 of the 
-License](https://www.gnu.org/licenses/gpl.html), or any later version. Firmware for the CKT-BD1 can be 
-found in the [ckt-bd1](https://github.com/IowaScaledEngineering/ckt-bd1) project on GitHub.
+License](https://www.gnu.org/licenses/gpl.html), or any later version. Firmware for the ARD-LTC2499 can be 
+found in the [ard-ltc2499](https://github.com/IowaScaledEngineering/ard-ltc2499) project on GitHub.
