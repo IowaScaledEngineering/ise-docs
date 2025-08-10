@@ -129,7 +129,7 @@ These may be used in single-ended mode, where their voltage is measured against 
 
 The final step, of course, is to install the Ard2499 library that allows you to control the board.  You're of course welcome to write your own to talk directly to the hardware, but our library should help save time in getting things up and running.
 
-Full details on how to install the library and work with the interface are available in the [Developer's Guide](/Arduino/ARD-LTC2499/library/).
+Full details on how to install the library and work with the interface are available in the [Developer's Guide](library.md).
 
 We recommend running the "ard2499_example" example sketch that comes with it first to just verify connectivity and that everything works.
 
