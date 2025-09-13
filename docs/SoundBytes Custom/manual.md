@@ -5,20 +5,34 @@ title: User Manual
 
 ## Overview
 
-The SoundBytes Custom is a flexible, triggerable sound player.  It plays
-sounds from a microSD card based on trigger events that can come from
-sensors, switches, etc.
+The SoundBytes Custom is a programmable sound player that plays sounds from
+a microSD card in response to various trigger events.  Up to four triggers
+can come from sensors, switches, detectors, Arduinos, etc. and each trigger
+can play a different sound.  It supports various playback modes ranging from
+ambient background sounds, triggered sound effects, and a special
+beginning-middle-end mode for repeating effects with lead-in and lead-out
+sound clips.
+
+Complete with control board, speaker, and microSD card, the SoundBytes
+Custom is a turney solution for adding sound to your model railroad, module,
+diarama, or other display.
 
 ### Features
 
-* Custom sounds can be loaded using a microSD card
-* Comes complete with speaker and control board
-* Powered from 5V to 24VDC
+* Custom sounds loaded using a microSD card
+* Four independent triggers with individual sounds
+* Features four playback modes: ambient, one-shot, continuous, and beginning-middle-end
+* Triggerable by a switch, pushbutton, Arduino, or any other [open-collector](http://localhost:8000/Tips%20and%20Tricks/Articles/opencollector/) output
+* Compatible with [TrainSpotter](https://www.iascaled.com/trainspotter) and [ATOM](https://www.iascaled.com/atom) detectors
+* Comes complete with speaker, control board, and microSD card
+* Powered from 5V to 24V DC
 
 ### Typical Applications
 
-* Ambient sound
-* Sound effects
+* Ambient background sound:  
+  Examples: nature sounds, farm animals, traffic
+* Triggered sound effects:  
+  Examples: FIXME...
 
 ---
 
