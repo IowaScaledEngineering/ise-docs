@@ -99,7 +99,6 @@ in folders, with specific folder names, on the microSD card.  See the
 The microSD card must be formatted as FAT and the sounds must also meet the following requirements:
 
 * WAV file named with .wav extension (e.g. mp3 or other formats will not work)
-* Place .wav file(s) in the main directory of the microSD card (all other sub-directories and their contents are ignored)
 * 16-bit, mono format
 * 8, 16, 32, or 44.1kHz sample rate
 
@@ -115,9 +114,9 @@ in the [Modes of Operation](#modes-of-operation) section.
 !!! warning "Filename Extensions"
     Windows defaults to hiding filename extensions when viewing files on the
     microSD card.  The ".opt" extension in the option filename must be
-    present and cannot not be followed by any other characters.  The best way to
+    present and cannot be followed by any other characters.  The best way to
     verify this is by turning off the hiding of filename extensions in
-    Windows Explorer: under Options, select the View tab and then uncheck
+    Windows Explorer.  Do this under Options, select the View tab and then uncheck
     the box for "Hide extensions for known file types".
 
 ---
@@ -141,8 +140,9 @@ played randomly.
 !!! note "Please Note"
     If a folder named **ambient** is found on the microSD card, then Ambient
     Mode will be selected.  This takes precedence over any other mode of
-    operation below, regardless of any other folders present on the microSD
-    card.
+    operation below, regardless if any other folders are present on the
+    microSD card.  All four trigger inputs will behave the same in Ambient
+    Mode.
 
 ### Triggered Mode
 
