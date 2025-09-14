@@ -29,10 +29,8 @@ diarama, or other display.
 
 ### Typical Applications
 
-* Ambient background sound:  
-  Examples: nature sounds, farm animals, traffic
-* Triggered sound effects:  
-  Examples: FIXME...
+* Ambient background sounds  
+* Triggered sound effects  
 
 ---
 
@@ -106,8 +104,8 @@ The microSD card must be formatted as FAT and the sounds must also meet the foll
 
 For some modes of operation, additional files (option files) are required to
 be present on the microSD card to select the mode and/or configure the
-behavior of the sound player.  These option files must have specific - and
-exact - filenames.  The contents of the files, however, does not matter -
+behavior of the sound player.  These option files must have specific, and
+exact, filenames.  The contents of the files, however, does not matter -
 they can be empty.  Details of the specific option files needed can be found
 in the [Modes of Operation](#modes-of-operation) section.
 
@@ -129,7 +127,7 @@ In Ambient Mode, the SoundBytes Custom will continuously play the sound
 files in random order.  When triggered, by any input, the volume will be
 unmuted allowing the sound to play through the speaker.  After the trigger
 goes away, the volume will be muted.  Even while muted, the sound files
-continue to play internally, even though no sound it emitted by the speaker. 
+continue to play internally, even though no sound is emitted by the speaker. 
 This provides a level of inherent randomization to the sound once the
 module is triggered.
 
@@ -146,20 +144,20 @@ played randomly.
 
 ### Triggered Mode
 
-If the device is not in Ambient Mode, then it defaults to triggered mode. 
+If the device is not in [Ambient Mode](#ambient-mode), then it defaults to triggered mode. 
 In triggered mode, the playback of sounds depends upon the state of the four
 trigger inputs.  Each trigger input can activate a different set of sounds,
 each with different behaviors as detailed below.
 
 For triggered mode, folders named **event1**, **event2**, **event3**, and/or
 **event4** should be present on the microSD card.  The specific trigger input
-activated determines which folder, and the sounds contained within, which
+activated determines the folder, and the sounds contained within, which
 will be played.  For example, if the IN3 trigger input is activated, then
 the sounds from the **event3** folder will be played.
 
 !!! note "Please Note"
-    Only one trigger can be active at the same time and only the sound(s)
-    for the first trigger will play.
+    Only one trigger will be detected and acted upon at the same time.  Only
+    the sound(s) for the first trigger will play.
 
 #### One-Shot Mode
 
@@ -178,17 +176,19 @@ and then re-activating it.
 #### Continuous Mode
 
 When initially triggered, Continuous Mode will randomly play a sound file
-from the event folder.  After finished playing, if the trigger is still
-active, then either the same - or a newly selected - sound file will be played. 
-This repeats indefinitely while the trigger input is active.
+from the corresponding event folder.  After finished playing, if the trigger
+is still active, then either the same sound file will be repeated or a newly
+selected sound file will be played (this behavior is determined by the
+option files below).  Sounds continue repeating indefinitely while the
+trigger input is active.
 
 ##### Option Files
 
 | Option File     | Description |
 | --------------- | ----------- |
 | continuous.opt  | Must be present to select Continuous Mode. |
-| shuffle.opt     | Determines the behavior when a sound file finishes playing and the trigger is still active.  If present, randomly selected files will be played in succession.  If not present, then the first randomly selected file will be repeated in a loop. |
-| level.opt       | If present, then playback stops immediately when the trigger is released.  Otherwise, playback continuues through the end of the currently playing sound file. |
+| shuffle.opt     | (Optional) Determines the behavior when a sound file finishes playing and the trigger is still active.  If this option file is present, then a randomly selected file will be played next.  If not present, then the first selected file will be repeated in a loop. |
+| level.opt       | (Optional) If this option file is present, then playback stops immediately when the trigger is released.  Otherwise, playback continuues through the end of the currently playing sound file. |
 
 #### Beginning-Middle-End Mode
 
