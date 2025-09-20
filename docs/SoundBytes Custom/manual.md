@@ -164,7 +164,7 @@ the sounds from the **event3** folder will be played.
 In One-Shot Mode, a randomly selected sound file from the event folder will
 be played.  Playback will end when the sound file completes playing,
 regardless of the state of the trigger input.  Playback will not repeat
-automatically, but can be retriggered by first releasing the trigger input
+automatically, but can be retriggered by releasing the trigger input
 and then re-activating it.
 
 ##### Option Files
