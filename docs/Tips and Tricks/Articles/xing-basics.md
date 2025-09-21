@@ -19,17 +19,30 @@ The crossbuck sign became common in the early 20th century, replacing a myriad o
 
 For modern crossings, a passive crossing sign is often good enough if traffic is low, visibility is good, and trains are infrequent.  This will consist of a standard crossbuck and the small blue emergency notification system contact sign, and there will be a circular yellow warning sign ahead of it as well as pavement markings in many cases.  As a note to those modeling, the 2000 edition of the MUTCD specified that 2-inch reflective strips were to be applied to the backs of crossbucks as well as the front and back of the support posts, further enhancing visibility.
 
+[![A Passive Crossing](img-gcb/passive-xing.jpg)](img-gcb/passive-xing.jpg)
+*Passive grade crossing protection near Garlock, CA.  Photo by Horst Frank, and used under a Creative Commons Attribution-Share Alike 2.0 license*
+
 ### Active Protection
 
-For crossings that need additional protection, we move up to what's known as "active crossing protection."  The first active crossing protection was human-powered.  There would be a small gatekeeper shack near the crossing, and upon the approach of a train, the gatekeeper would go out and flag the crossing.  With particularly hazardous crossings, this sometimes involved manually-operated mechanical gates.  These were first patented in 1867 in the US.  Usually because of the sheer weight, this involved a large counterweight and a crank mechanism.   These gates were usually four quadrant, completely closing off the crossing.
+For crossings that need additional protection, we move up to what's known as "active crossing protection."  The first active crossing protection was human-powered.  There would be a small gatekeeper shack near the crossing, and upon the approach of a train, the gatekeeper would go out and flag the crossing.  With particularly hazardous crossings, this sometimes involved manually-operated mechanical gates.  These were first patented in 1867 in the US.  Usually because of the sheer weight of large, wooden gates, this involved a large counterweight and a crank mechanism.   These gates would completely closing off the crossing, and were often four quadrant with entry and exit gates for both lanes, requiring the gatekeeper to walk around and lower each one.
+
+[![Manual Gate](img-gcb/manual-gate.jpg)](img-gcb/manual-gate.jpg)
+*A large manual crossing gate still in use in 2025 on the Conway Scenic Railroad in New Hampshire.*
 
 Since labor was expensive and prone to failures (like failing to notice a train, or nodding off), automated systems were pursued.  Electrical track circuits had been invented in 1872 as a way to detect the presence of a train in a block of track.  The very earliest warning devices were just a bell mounted to a pole, triggered by these simple track circuits.  In 1930, a survey by the American Association of Railroads found 60 different types of railroad signals in service on their member roads.  As a result, they started a committee to standardize.  That committee recommended picking two types of common signals – the wig-wag and the two horizontal red light signal, what we today would identify as a railroad crossing signal.
 
-The magnetic flagman, otherwise commonly known as a “wig-wag” signal, consisted of a round banner with a red light in the middle that would swing back and forth when activated.  The motion would also cause a hammer to hit a bell as it swung back and forth, giving a slow audible warning.  These were first commercialized by the Magnetic Signal Company on the West Coast in 1914, but subsequently Western Railroad Supply, Union Switch & Signal, and other smaller manufacturers got into the market as well, producing similar versions for their customers across the Midwest and East.  Some where cantilevered over the road, waving the banner under the motor.  Some were short and mounted on the roadside (or in the median), and waved the banner above the mechanism.  New wig-wag installations stopped in 1949, when new highway signal requirements rendered them obsolete.  However, existing installations were grandfathered in, and many survived into the 1980s and 1990s.  (Colorado's final wig-wag at Delhi was only removed from service in 2021.)
+[![A very non-standard Hall grade crossing signal](img-gcb/hall-signal.jpg)](img-gcb/hall-signal.jpg)
+*An example of one of the myriad of early grade crossing signals, this one seen in a 1916 Hall Switch & Signal ad using their "banjo" style signals.*
 
+The magnetic flagman, otherwise commonly known as a “wig-wag” signal, consisted of a round banner with a red light in the middle that would swing back and forth when activated.  The motion would also cause a hammer to hit a bell as it swung back and forth, giving a slow audible warning.  These were first commercialized by the Magnetic Signal Company on the West Coast in 1914, but subsequently Western Railroad Supply, Union Switch & Signal, and other smaller manufacturers got into the market as well, producing similar versions for their customers across the Midwest and East.  Some where cantilevered over the road, waving the banner under the motor.  Some were short and mounted on the roadside (or in the median), and waved the banner above the mechanism.  New wig-wag installations stopped in 1949, when new highway signal requirements rendered them obsolete.  However, existing installations were grandfathered in, and many survived into the 1980s and 1990s.  (Colorado's last wig-wag at Delhi was only removed from service in 2021.)
 
+[![Wig-wag signals](img-gcb/wigwag-signal.jpg)](img-gcb/wigwag-signal.jpg)
+*Many manufacturers made wig-wag signals in a wide variety of styles.*
 
 The first flashing red light signal – what we would recognize as a railroad crossing signal here in the US – was installed on Woodbridge Avenue in Sewaren, NJ, in 1913.  It was a simple device with tiny 5-3/8” lenses and a narrow beam width.  In 1923, they went to an 8-3/8” lens a different color of red from railroad signals, so as to allow more light through.  A 160 degree beam, created by a reflector-type assembly, came along from US&S in 1928.  Modern practice calls for 12” lamps.  The first automatic “short arm” gates – meaning they only covered a single lane – were added in July of 1936.
+
+[![1960s Signal with Black Crossbuck](img-gcb/black-xing.jpg)](img-gcb/black-xing.jpg)
+*Even after standardization, grandfathered equipment persisted.  This Rio Grande signal in 1960s Leadville still had a black crossbuck with glass "cat eye" reflectors, likely left over from before active protection was added.*
 
 Anywhere that visibility is impaired approaching a crossing, or there’s a high number of cars or trains using a crossing, or there’s significant risk due to regularly scheduled passenger trains, heavy trucks or hazmat traffic, some active warning devices are likely to be recommended.  There’s no absolute checklist for determining what devices should be used – that’s largely left to traffic engineering to determine what’s appropriate – but it can range from simple flashing lights and a bell to lights/bell/gates to something with four-quadrant gates, a divided median, and connected to local traffic signals to clear intersections and traffic ahead of train arrival.
 
@@ -49,8 +62,12 @@ These quiet zone crossings often have a flashing X signal pointed so that approa
 
 Of course, the ultimate in grade crossing protection is no grade crossing at all - meaning, a bridge.  While railroads would love to reduce the number of crossings, bridges are expensive and often impossible to fit into the existing road footprint.  So for the forseeable future, grade crossings and their protection systems will be part of our world, both model and prototype.
 
+[![Quiet Zone](img-gcb/quietzone.jpg)](img-gcb/quietzone.jpg)
+*A wayside horn and the flashing X sign to let the crew know it's functional is a modern addition to active crossing protection.  Photo by "Natfoot footnat" on Wikimedia Commons and used under a Creative Commons Attribution-Share Alike 4.0 license*
 
 ## Signal Control Logic
+
+So now that we've learned a bit about the history of grade crossing protection, let's talk about how the sensors and control systems work that trigger them.  We'll keep this up at the level of how the controls function, and not necessarily how they work under the covers or some of the other details that don't really pertain to modeling, like redundancy and event logging.
 
 ### Island-Only Crossing Circuits
 
@@ -74,7 +91,7 @@ Modern crossings usually aren't just fixed-length approach and island circuits. 
 
 So far, modeling preditors is somewhere between impractical and impossible.  Since we also usually deliver power and commands over the rails, sending out a pulse and measuring the time for a reflection is nearly impossible.  No scale drivers are inconvenienced if our signals are on a few seconds too long or endangered if they're on a bit too little.  The massive amount of added electronic complexity and installation headaches just aren't worth it.
 
-### Crossing Detection in the Model World
+## Crossing Detection in the Model World
 
 As much as many of us may be devoted to faithfully replicating the prototype, we almost all make concessions in terms of distance.  Very few of us have either large enough basements or short enough prototypes to model them at their true length.  It’s all compromises between desires, size, cost, and effort.  Or as model railroaders have long put it, “Givens and Druthers.”
 
