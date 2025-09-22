@@ -71,7 +71,7 @@ So now that we've learned a bit about the history of grade crossing protection, 
 
 ### Island-Only Crossing Circuits
 
-The simplest use a single basic track circuit to detect the presence of a train and activate the warning devices.  This is known as an “island only” system.  What’s an island?  The “island” is the part of the track that’s actually crossing the road and immediately adjacent.  If a train is present in that section of track, the warning systems need to remain active because the train is either fouling the road or could move and foul the road with insufficient time for drivers to stop.  If any rail vehicle is within in the island, the warning devices should always be activated.
+The simplest use a single basic track circuit to detect the presence of a train and activate the warning devices.  This is known as an “island only” system.  What’s an island?  The “island” is the part of the track that’s actually crossing the road and immediately adjacent.  If a train is present in that section of track, the warning systems need to remain active because the train is either fouling the road or could move and foul the road with insufficient time for drivers to stop.  If any rail vehicle is in the island, the warning devices should always be activated.
 
 [![An Island-Only Crossing](img-gcb/gcb-img1.png)](img-gcb/gcb-img1.png)
 
@@ -101,13 +101,16 @@ With crossing signals, we often want to use optical detection because it’s eas
 
 A minimum warning of 20 seconds on the prototype doesn’t seem like much, but in N scale that’s 5.5 feet at 30 scale mph.  In HO, that same 20 seconds at 30 scale mph is 10 feet!  While it’s correct, my experience is it feels far too long on the model because our distances are compressed.  Plus, that might put the start of an approach circuit squarely in the middle of yard on the opposite side of a peninsula or some such. 
 
-The RoadReady Basic is an “island only” type of controller and includes a bell, speaker, and drivers for any common anode LED crossing signals (which is pretty much all signals on the market today).  It’s active any time one of the detectors is active, and will remain active for a programmable timeout afterwards.  It only requires installation of two detectors, one on each side of the crossing.  It can also be expanded to cover as many tracks as you need just by adding more detectors.  It's designed to be realistic, yet simple to install for most model railroaders.
-
-The RoadReady Advanced includes all the same features as the basic version - island sensors, bell, speaker, and LED drivers - but also includes support for east and west approach sensors with a programmable timeout for trains that stop before the island.  It will also include drivers for gates.  It's intended for a single main track.  (The RoadReady Advanced is slated for this coming winter 2025/2026.) 
-
-The RoadReady Track Expander allows you to add one or two additional tracks with approach logic to either the base RoadReady Basic or Advanced unit.  It will be out at roughly the same time as the Advanced unit.  If you need to add a second or third mainline to your Advanced, or if you decide later you need to add approach logic to your Basic unit, the Track Expander is the thing you need.
+The RoadReady Basic is an “island only” type of controller and includes everything you need except the crossing signals themselves: a bell, speaker, and drivers for any common anode LED crossing signals (which is pretty much all signals on the market today).  It’s active any time one of the detectors is active, and will remain active for a programmable timeout afterwards.  It only requires installation of two detectors, one on each side of the crossing.  It can also be expanded to cover as many tracks as you need just by adding more detectors.  It's designed to be realistic, yet simple to install for most model railroaders.
 
 [![Model Sensor Locations](img-gcb/gcb-img3.png)](img-gcb/gcb-img3.png)
+
+The RoadReady Advanced includes all the same features as the basic version - island sensors, bell, speaker, and LED drivers - but also includes support for east and west approach sensors with a programmable timeout for trains that stop before the island.  It will also include drivers for gates.  It's intended for a single main track.
+
+The RoadReady Track Expansion Module allows you to add one or two additional tracks with approach logic to either the base RoadReady Basic or Advanced unit.  It will be out at roughly the same time as the Advanced unit.  If you need to add a second or third mainline to your Advanced, or if you decide later you need to add approach logic to your Basic unit, the Track Expander is the thing you need.
+
+!!! note info 
+    The RoadReady Advanced and RoadReady Track Expansion Module are slated for this coming winter 2025/2026.
 
 ## Learning More
 
@@ -118,4 +121,6 @@ The first – which is a set of traffic signing standards which must be adhered 
 The second document is a set of recommendations and best practices laid out by traffic experts working with the FWHA and is known as the [Highway-Rail Crossing Handbook](https://highways.dot.gov/safety/hsip/xings/highway-rail-crossing-handbook-third-edition), now up to its Third Edition.   It’s not a standard, and it’s not prescriptive.  Its focus is presenting what experts in the industry believe to be important considerations and recommendations for designing safe and effective crossings.  Again, since it’s produced by the US government, it’s publicly available here. 
 
 Another great modeling resource is the [FHWA’s Standard Highway Signs](https://mutcd.fhwa.dot.gov/kno-shs_2024.htm).  You can literally download and print all of the standard signs from beautiful vector artwork.  Additionally, the specification document for all of these signs – the Standard Highway Signs 2004 Edition and 2012 Supplement – provide guidance on exactly how each of these is laid out.  Modern modelers can’t get more accurate signs than this!
+
+For those looking for a wide variety of accurate, detailed, ready-made signs, we recommend [ScaleSigns.com](https://scalesigns.com/).
 
