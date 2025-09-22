@@ -19,7 +19,7 @@ Personally, my recommendation is to buy a good set of modular jack crimpers and 
 
 If you would prefer to buy pre-made cables, Iowa Scaled Engineering plans to stock a number of high quality cables for purchase alongside our SimpleSig products.  If you'd prefer to source them yourself and save a few bucks, we recommend cables from Monoprice.  They're inexpensive and of good quality.
 
-* [Monoprice Cat5e Normal Cables](https://www.monoprice.com/product?p_id=11353)  
+* [Monoprice Cat5e Normal Cables](https://www.monoprice.com/product?p_id=11353)
 * [Monoprice Cat5e Crossover Cables](https://www.monoprice.com/product?p_id=287)
 
 !!! warning "Crossover Cables"
@@ -29,6 +29,20 @@ For those who would prefer to build their own, crossover cables should be wired 
 
 ![](./img/crossover-wiring.png)
 
+### Handling Industry Sidings
+
+On the prototype, most industry spurs don't have any related signals.  It is certainly possible to have an industry with a full control point where it joins the mainline, but it's not common.  What's more common is either to be completely unsignalled and protected via a time lock switch, or sometimes in recent years to have a starting signal.
+
+**Option #1** - Time-locked switch, no signal.  The time-tested option and by far the most common.  This basically consists of a timer on the track switch that shunts the mainline for some number of minutes before the switch can be opened, in order to allow any conflicting movements to either see a stop signal or pass the switch.  The downside of this is that any train leaving the industry is operating under GCOR rule 10.1 or equivalent, which limits them to restricting speed until they hit the next mainline signal.
+
+**Option #2** - "Leaving Signal"  This is not a full-on control point and there's only a signal on the industrial lead, but it can display stop or approach.  Once the switch is lined - usually manually with a time lock - the signal will display approach if the block beyond the switch is clear.   They're quite common on the Union Pacific out west these days.  They don't offer dispatcher control, but they do allow the train departing the industry to immediately get up to at least approach speeds without having to operate at restricted speed all the way to the next mainline signal, as the "leaving signal" provides them an approach indication.
+
+**Option #3** - Full-on control point.  Very uncommon, only used with industries that produce a lot of traffic or in places where it's infeasible to stop to throw a switch (such as if the entrance is on a steep grade against heavy, loaded trains).  In this case, with MSS which doesn't have true control points because it doesn't have a dispatcher, it's just going to basically be a siding end switch, and something like a (Switch Signal Basic)[/SimpleSig/Switch Signal Basic/manual/] will do nicely (though you may want to ask that the aspect into the siding be customized to diverging restricted - red over flashing red - or similar).
+
+The easiest of these is a variant on #1, and is typically what we recommend.  It doesn't accomplish the time locking piece, but it does drop the mainline signals and protects against a train finding an open industry switch the hard way.  It's very easy to accomplish as long as you have a set of contacts on the switch machine or ground throw for the industry.  Connect one rail to a 2.2k-ohm resistor and then to one contact.  Then connect the other contact to the opposite rail, such that when the switch is thrown to the industry, the mainline rails will be shunted through the resistor.  It's just like a train was in the block, and will drop the signals on both ends of the block to red just like the prototype.  Here's a diagram of how to make that happen.
+
+**Option 1 Wiring Diagram**
+[![](./img/industry-siding-option-1.png)](./img/industry-siding-option-1.png)
 
 ---
 
