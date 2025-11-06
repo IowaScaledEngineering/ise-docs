@@ -22,8 +22,8 @@ diarama, or other display.
 * Custom sounds loaded using a microSD card
 * Four independent triggers with individual sounds
 * Features four playback modes: ambient, one-shot, continuous, and beginning-middle-end
-* Triggerable by a switch, pushbutton, Arduino, or any other [open-collector](http://localhost:8000/Tips%20and%20Tricks/Articles/opencollector/) output
-* Compatible with [TrainSpotter](https://www.iascaled.com/trainspotter) and [ATOM](https://www.iascaled.com/atom) detectors
+* Triggerable by a switch, pushbutton, Arduino, or any other [open-collector](/Tips%20and%20Tricks/Articles/opencollector/) output
+* Compatible with [TrainSpotter](https://www.iascaled.com/TrainSpotter) and [ATOM](https://www.iascaled.com/Atom) detectors
 * Comes complete with speaker, control board, and microSD card
 * Powered from 5V to 24V DC
 
@@ -38,11 +38,11 @@ diarama, or other display.
 
 ### Step 1 - Power
 
-The Soundbytes Custom can be powered from 5V to 24V DC, applied through connector J1
+The SoundBytes Custom can be powered from 5V to 24V DC, applied through connector J1
 (positive to VIN, negative to GND).  Alternatively, the mini USB jack can be
 used to power the Squealer, either from a USB charging block or a laptop/PC.
 
-[FIXME: power image]
+![](img/snd-player-power.jpg)
 
 ### Step 2 - Speaker
 
@@ -53,20 +53,38 @@ the speaker enclosure with the opening on the side facing up.  Camouflage
 the hole with scenery.  However, this is user preference and may involve
 some experimentation.
 
-[FIXME: speaker connection]
+![](img/snd-player-spk.jpg)
 
 ### Step 3 - Trigger Input(s)
 
-FIXME... talk in general about what the triggers look like (switch to GND). 
-Show where to connect.  Switches, pushbuttons, TrainSpotter, ATOM.  Can also
-come from Arduino or other electronic module, but must be an open collector
-(link) output.  Warning: Do not apply more than 3.3V to the INx inputs.
+Various input methods can be used to trigger the SoundBytes Custom.  In all
+cases, the input should be connected to GND to trigger the module.  This
+can be done with a switch, a push button, a
+[TrainSpotter](https://www.iascaled.com/TrainSpotter) or 
+[ATOM detector](https://www.iascaled.com/Atom),
+or many other devices.  And Aruino or other electronic module can also be
+used, but the output should be of an [open collector](/Tips and Tricks/Articles/opencollector/) style output.
+
+!!! warning "Maximum Voltage"
+    Do not apply more than 3.3V to the trigger inputs.  The SoundBytes
+    Custom may be damaged by higher voltages.
+
+The SoundBytes Custom has four trigger inputs.  These inputs are IN1, IN2,
+IN3, and IN4 on the terminal blocks around the perimeter of the board.  The
+G terminals provide a convenient GND location to which the IN terminals can
+be connected via the trigger device.
+
+![](img/snd-player-in12.jpg)
+![](img/snd-player-in34.jpg)
+
+Additionally, power and GND for powering sensors (like a TrainSpotter or ATOM
+detector) can be found on the SNS PWR and SNS GND terminal blocks,
+respectively.
 
 ### Step 4 - Sound File(s)
 
-FIXME... Add sound files can be added to microSD card.  Must meet specific
-formats and be in specific locations on the card.  See [section] below for
-details.
+Add sound files to the microSD card.  See the [Sound Files](#sound-files)
+section below for details.
 
 ---
 
@@ -159,12 +177,12 @@ the sounds from the **event3** folder will be played.
     Only one trigger will be detected and acted upon at the same time.  Only
     the sound(s) for the first trigger will play.
 
-#### One-Shot Mode
+#### One-Shot Triggered Mode
 
-In One-Shot Mode, a randomly selected sound file from the event folder will
-be played.  Playback will end when the sound file completes playing,
-regardless of the state of the trigger input.  Playback will not repeat
-automatically, but can be retriggered by releasing the trigger input
+In One-Shot Triggered Mode, a randomly selected sound file from the event
+folder will be played.  Playback will end when the sound file completes
+playing, regardless of the state of the trigger input.  Playback will not
+repeat automatically, but can be retriggered by releasing the trigger input
 and then re-activating it.
 
 ##### Option Files
@@ -173,14 +191,14 @@ and then re-activating it.
 | --------------- | ----------- |
 | (none)          | No option files should be present for One-Shot Mode |
 
-#### Continuous Mode
+#### Continuous Triggered Mode
 
-When initially triggered, Continuous Mode will randomly play a sound file
-from the corresponding event folder.  After finished playing, if the trigger
-is still active, then either the same sound file will be repeated or a newly
-selected sound file will be played (this behavior is determined by the
-option files below).  Sounds continue repeating indefinitely while the
-trigger input is active.
+When initially triggered, Continuous Triggered Mode will randomly play a
+sound file from the corresponding event folder.  After finished playing, if
+the trigger is still active, then either the same sound file will be
+repeated or a newly selected sound file will be played (this behavior is
+determined by the option files below).  Sounds continue repeating
+indefinitely while the trigger input is active.
 
 ##### Option Files
 
@@ -192,7 +210,30 @@ trigger input is active.
 
 #### Beginning-Middle-End Mode
 
-FIXME...
+For special use cases, Beginning-Middle-End Triggered Mode allows an initial
+beginning sound to be played, followed by an indefinite series of middle
+sounds, wrapping up with an end sound.  This can be used for things like
+whistles or the sound of a train approaching, passing, and leaving.
+
+When the trigger input first activates, the beginning sound is played.  If
+the trigger input is still active at the end of the beginning sounds, then
+the middle sound(s) will play in a random order.  Once the trigger input
+goes away, then the end sound will be played.  If the trigger input is not
+active at the end of the beginning sound, then the middle sound(s) will be
+skipped and the end sound played.
+
+If the sound files all have the same sample rate, then playback in
+beginning-middle-end mode is seamless.  This means transitions between the
+various sounds happen without any delays.
+
+Specific filenames are required for proper operation.  The beginning and end
+sound files must be named exactly as follows:
+
+* begin.wav: the beginning sound
+* end.wav: the end sound
+
+Any other files in the folder will be randomly played for the middle
+sound(s).
 
 ##### Option Files
 
