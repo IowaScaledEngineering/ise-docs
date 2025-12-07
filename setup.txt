@@ -6,3 +6,7 @@ Clone mkdocs-material in a location of your choosing:
 Install mkdocs-material and plugins
 	pip install -e mkdocs-material
 	pip install mkdocs-awesome-pages-plugin
+
+At least for the moment, there's a bug getting things to rebuild when a file
+updates.  The fix is:
+   pip install "click<8.3"
