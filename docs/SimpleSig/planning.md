@@ -176,7 +176,7 @@ Much like CTC is an overlay on top of ABS/APB, in the future, it should be possi
 
 ## Planning Signals For Your Layout
 
-So after pondering the Big Questions, you've decided that you want a signal system on your layout.  Excellent!  
+So after pondering the [Three Big Questions](planning.md#the-three-big-questions), you've decided that you want a signal system on your layout.  Excellent!  
 
 While the following is designed as a guide to planning for the SimpleSig system, much of it is applicable to any signal system.  
 
