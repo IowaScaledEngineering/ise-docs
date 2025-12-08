@@ -1,11 +1,85 @@
 ---
-title: MSS Tips & Tricks
+title: Frequently Asked Questions
 ---
-# MSS FAQ & Tips ![](img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
+# SimpleSig Frequently Asked Questions ![](img/simplesig-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}
+
+## SimpleSig Questions
+
+### What is SimpleSig?
+
+SimpleSig is our line of Modular Signal System-compatible products.  It’s a standardized way to add realistic, functioning ABS-like signals to model railroad modules and layouts without requiring a computer or complex programming. 
+
+It's based on the Modular Signal System standard, which was created by Gregg Fuhriman nearly 20 years ago to bring realistic signal animation to Free-Mo and Free-MoN layouts.  It needed to be simple, robust, and plug-and-play when modules were hooked up.  Our stuff works on modules, but those features also make it great for home and club layouts as well.
+
+### What is the Modular Signal System?
+
+The Modular Signal System (MSS) is a way to bring signal operation to model railroads without all the complexity of computers, programming, etc.  It provides an approximation of a basic North American Automatic Block Signal system that is both easy to understand and easy to implement.  The simplest version is just a matter of installing signal and signal modules, detectors, and then linking the whole thing together with standard "crossover" type ethernet cables.
+
+MSS was designed to be robust and incredibly simple to set up because of its roots in the Free-Mo modular community  The initial standard was put forth by Gregg Fuhriman back around 2004, and it first got widespread exposure in the Feburary 2005 issue of Railmodel Journal.  What Gregg and team have developed is nothing short of brilliant in its elegant simplicity.  Being able to just plug one signaled module into the next and have them "just work" was the key to success.
+
+The standard itself is open and [available for download](http://www.modularsignalsystem.info/ModularSignalSystemStandardV2.0.2.pdf).  Because of the elegant simplicity of the system, it's easy to design your own MSS-compatible components if you're so inclined.  However, the open standard also means that there's a number of manufacturers all supporting it, and a number of other open source designs available online if you'd rather build your own.
+
+MSS is not going to model your prototype’s strangest interlockings and aspect rules straight out of the box, though realistically with a bit of custom work you can likely get close.  Because our SimpleSig products are all open source, they're easy to customize yourself if you have any programming experience, or we're always happy to consider customization projects for a nominal charge.
+
+### Is SimpleSig Proprietary?
+
+Absolutely not!  That’s one of the key reasons we chose to embrace it.  The Modular Signal System standard is open to all, and anyone can build compatible hardware.  There’s at least four vendors making compatible products right now.
+
+### Is SimpleSig Related to LCC?
+
+No.  The Modular Signal System (MSS) is designed to be plug-and-play between signal modules and not require any sort of complex configuration nor a computer to control the system.
+
+Layout Command Control (LCC) can be used to implement signaling as well, but requires significantly more effort to configure and usually will require a computer to actually run the signaling logic.  However, it is capable of significantly more complex signal arrangements, and duplicating prototype signaling almost exactly.
+
+That's not to say that the two cannot play together.  At the Railroad Hobby Show (Springfield, MA) in 2024 and 2025, Ken Cameron demonstrated a complex junction module that used LCC and JMRI for the interlocking plant itself, but had MSS connections in each direction to send signal information to adjoining modules.
+
+### What Prototype Does SimpleSig Model?
+
+The basic signal setup created by MSS is close to "flat pair" automatic block signaling.  It's a stand-alone system designed to provide realistic signal indications that most modelers will be familiar with, while discarding all the complexity of exactly modeling any prototype or the need for a computer or dispatcher.
+
+ABS did not typically have multiple-headed signals at the ends of sidings (or sidings with detection, for that matter), so most MSS implementations bring it concepts from later systems such as APB and CTC to provide signal indications that would be more familiar to a modern modeler.  There's absolutely no requirement to use these, however, and more prototypical "straight ABS" systems can be achieved.
+
+In the future, it should be possible to add LCC support on top of SimpleSig/MSS to allow for more complex signaling, such as adding a dispatcher and true control points.  In fact, our Block Signal Custom module has the hardware for LCC to be added  in the future.  That would allow it to become a true “control point” in the CTC sense, and allow routes to be lined via JMRI.  This – at present – is a future project and there’s no timeline for that to happen.
+
+Here's a simple animation showing how 3-indication SimpleSig/MSS works with two trains.  *(Click the animation to enlarge)* SimpleSig products can also add a fourth indication - advance approach (flashing yellow) - if your layout has enough space for it to make sense, or if you're building a module.
+
+[![](img/simplesig-animation.gif)](img/simplesig-animation.gif)
+
+### Is SimpleSig Compatible with DC?
+
+Out of the box, no.  SimpleSig requires isolated current detection to function.  It includes our ATOM DCC block detectors, which only work with DCC.  If you substitute an isolated DC block detector with an open collector output, in theory it would work. However, we do not offer such a product.
+
+### Is SimpleSig Compatible with Dead Rail?
+
+SimpleSig requires isolated current detection through the track to function.  There's no feasible way to make it work with dead rail systems.
 
 ## System Planning and Setup
 
-### Power
+### Where Do I Start?
+
+If you're talking about a home or club layout, that's a big answer.  Fortunately, we now have a guide to help you think through what you need to do to get going with signals.  Check out [Planning for Signals](planning.md).
+
+### What Module Do I Need?
+
+Here's a guide of "my track looks like this, what module do I need to signal it?"  
+
+For modular users, this should be pretty straight-forward in terms of matching your track configuration with the appropriate solution below.
+
+For home users, once you've gone through the steps of breaking down your track plan and identifying junctions and intermediate signal locations, this should also be helpful.  Be sure to go through the [Planning For Signals](planning.md) document to learn how to plan out where to place signals on your layout.
+
+| Track / Signal Configuration | Signal Node |
+| ---------------------------- | ----------- |
+| ![](img/mss-det.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Crossover Detector**](Crossover%20Detector/manual.md)<br>*(modules without signals only, not useful for home layouts)*<br>For modules that want to participate in signaled FreeMo or FreeMoN layouts, but don't have signals themselves.  This provides simple current detection to make modules compliant. |
+| ![](img/mss-bsb.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Basic**](Block%20Signal%20Basic/manual.md)<br>Simple intermediate signals with a single head and using the conventional clear / approach / advance approach / stop indications. |
+| ![](img/mss-bsa.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Advanced**](Block%20Signal%20Advanced/manual.md) <br>Intermediate signals with one or two heads that need to display more advanced indications, such as approach diverging ahead of a home signal, or which need customized aspects. |
+| ![](img/mss-ssb.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Switch Signal Basic**](Switch%20Signal%20Basic/manual.md)<br>Diverging signaled routes, such as at the end of a siding or at one point of a wye. |
+| ![](img/mss-bsc-1xover.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Custom**](Block%20Signal%20Custom/index.md)<br>*(Single Crossover Configuration)*<br>The Block Signal Custom comes with a number of factory-programmed configurations, including a single crossover between double tracks. |
+| ![](img/mss-bsc-2xover.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Custom**](Block%20Signal%20Custom/index.md)<br>*(Double Crossover Configuration)*<br>The Block Signal Custom comes with a number of factory-programmed configurations, including a double crossover between double tracks where the crossover tracks can be used simultaneously. |
+| ![](img/mss-bsc-2xover-b.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Custom**](Block%20Signal%20Custom/index.md)<br>*(Compact Double Crossover Configuration)*<br>The Block Signal Custom comes with a number of factory-programmed configurations, including a compact double crossover between double tracks where the crossover tracks pass over each other on a diamond.  These are used where track space is at a premium. |
+| ![](img/mss-bsc-diamond.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Custom**](Block%20Signal%20Custom/index.md)<br>*(Single Track Diamond Configuration)*<br>The Block Signal Custom comes with a number of factory-programmed configurations, including an automatic interlocking between two single-track main lines. |
+| ![](img/mss-spaghetti.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Custom**](Block%20Signal%20Custom/index.md)<br>*(Custom firmware)*<br>The Block Signal Custom can be programmed in Arduino for any sort of track spaghetti you can dream up.  By using expansion modules, it can handle up to 32 signal heads, 16 tracks entering the plant, 40 current or IR detectors, and 24 turnout position inputs.  |
+
+### How Do I Power It?
 
 MSS requires that either all signals share a power supply, or if running on different power supplies, those power supplies are either isolated or share a common ground connection.
 
@@ -13,7 +87,7 @@ For modular setups like FreeMo and FreeMoN, power is drawn from the accessory po
 
 For home layouts, we highly recommend a dedicated DC accessory power supply rather than trying to power accessories off old power packs (which can damage modern electronics with their horrific power).  This could be something as simple as our [12V / 3A Power Supply](https://www.iascaled.com/store/PSU-12V3A) or something larger for bigger layouts with more demands.  Industrial switch power supplies, such as the Mean Well LRS-150-12 (12 volts at up to 12.5 amps), are both affordable and efficient ways to power model railroad accessories.  Be aware, however, that properly sized wires and fuses are a necessity with these.  They can put out enough power to cause actual damage or fire in the case of a short circuit.
 
-### Cables
+### What Cables Should I Use?
 
 Personally, my recommendation is to buy a good set of modular jack crimpers and make your own cables.  Cat5e cable and modular ends are cheap, and since MSS neither passes high speed signals nor large currents, the extra cheap CCA (copper-clad aluminum) cable is more than adequate.  (Note - for actual network applications I strongly recommend against CCA cable.)  By making your own cables, you can make them exactly to the lengths you need and run them through smaller holes if needed, since you can thread the cable through before attaching the connector.
 
@@ -29,7 +103,13 @@ For those who would prefer to build their own, crossover cables should be wired 
 
 ![](./img/crossover-wiring.png)
 
-### Handling Industry Sidings
+### What Signals Should I Use?
+
+That's completely up to you.  The SimpleSig product line is compatible with pretty much any LED color light signals, and can drive common anode or common cathode signals.  The short version is use the type you want!
+
+The one thing it isn't compatible with is old bulb-based signals.  Bulbs draw a huge amount of current - far more than the SimpleSig boards can drive.
+
+### How Do I Handle Industry Tracks?
 
 On the prototype, most industry spurs don't have any related signals.  It is certainly possible to have an industry with a full control point where it joins the mainline, but it's not common.  What's more common is either to be completely unsignalled and protected via a time lock switch, or sometimes in recent years to have a starting signal.
 
@@ -44,10 +124,6 @@ The easiest of these is a variant on #1, and is typically what we recommend.  It
 **Option 1 Wiring Diagram**
 [![](./img/industry-siding-option-1.png)](./img/industry-siding-option-1.png)
 
----
-
-## Frequently Asked Questions
-
 ### How Many ATOM Block Detectors Do I Need?
 
 Modular users need one ATOM DCC block detector for each track block on the module.  So, for example, a Block Signal Basic installed on a module would require two - one for the A side, one for the B side.  This is because blocks are isolated at the ends of modules, and current detection is needed for each piece of track.
@@ -59,23 +135,6 @@ Because home and club layouts usually have continuous track blocks between signa
 [![](./img/mss-detectors-layout.png)](./img/mss-detectors-layout.png)
 
 For our SimpleSig product kits that include ATOM DCC block detectors, there are often two versions:  Kits labeled **For Modules** includes block detectors for each adjacent block.  Kits labeled **For Layouts** include one less block detector to save you a bit of money on a part you are unlikely to use.
-
-
-### Is MSS Related to LCC?
-
-No.  The Modular Signal System (MSS) is designed to be plug-and-play between signal modules and not require any sort of complex configuration nor a computer to control the system.
-
-Layout Command Control (LCC) can be used to implement signaling as well, but requires significantly more effort to configure and usually will require a computer to actually run the signaling logic.  However, it is capable of significantly more complex signal arrangements, and duplicating prototype signaling almost exactly.
-
-That's not to say that the two cannot play together.  At the Railroad Hobby Show (Springfield, MA) in 2024 and 2025, Ken Cameron demonstrated a complex junction module that used LCC and JMRI for the interlocking plant itself, but had MSS connections in each direction to send signal information to adjoining modules.
-
-### What Prototype Does MSS Model?
-
-The basic signal setup created by MSS is close to "flat pair" automatic block signaling.  It's a stand-alone system designed to provide realistic signal indications that most modelers will be familiar with, while discarding all the complexity of exactly modeling any prototype or the need for a computer or dispatcher.
-
-ABS did not typically have multiple-headed signals at the ends of sidings (or sidings with detection, for that matter), so most MSS implementations bring it concepts from later systems such as APB and CTC to provide signal indications that would be more familiar to a modern modeler.  There's absolutely no requirement to use these, however, and more prototypical "straight ABS" systems can be achieved.
-
-There's no reason that MSS cannot be extended to more accurately represent more complicated signal regimes as well.  Some can be done within the standard as it exists today, whereas some may require some additional extensions that build upon the basic standard.
 
 ### What's The Difference Between Aspect, Name, and Indication?
 

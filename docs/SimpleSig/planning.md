@@ -1,8 +1,8 @@
 ---
-title: 1 - Getting Started
+title: Planning For Signals
 ---
 
-# Getting Started with Signals
+# Planning For Signals
 
 We frequently get asked, "I want to put signals on my layout, what do I need?"  
 
@@ -98,15 +98,33 @@ The first variant of ABS appeared in 1872, with a simple system that would warn 
 
 ABS does not convey authority to occupy track.  Trains still needed authority to enter and travel over a section of track.  This could be done by timetable & train orders, or in later years by track warrants.  ABS is about if the track ahead is safe to enter.  It's designed to be an extra layer to prevent accidents if something goes wrong, such as a train being in the wrong place at the wrong time, or a broken rail ahead.  That's why you'll see a lot of clear (green) indications in ABS territory - clear track is safe to enter.
 
+Here's a look at how basic ABS operates on a single track line between sidings.  As you can see, stop signals (red) guard the block being occupied by the train.  Signals a block away in both direction display approach, telling any other train seeing that signal that they have one clear block ahead before they will encouter a stop signal.  Beyond that, it's green as far as the eye can see.
+
+[![](img/abs.png)](img/abs.png)
+
+ABS in single track territory has a flaw, however.  In theory, two trains heading toward each other on a single track should not happen, as they should not both have authority to enter the same section of track.  However, with all the humans in the loop - the crews, the dispatcher, the station operators, etc. - mistakes happen.  
+
+In many cases, the signal system would allow one or both trains to see the occupied track ahead and come to a controlled stop.  However, the problem is one of timing.  There's a case where both trains pass an approach signal at the same time, so both crews assume they have one clear block to come to a controlled stop.  However, since both passed their approach signals at the same time, they're now in the same block together and a wreck is a very likely possibility.
+
+This diagram shows the problem:
+
+[![](img/abs-problem.png)](img/abs-problem.png)
+
+Several clever modifications were made to ABS over the years to try to alleviate the problem, such as two yellows before a red, offset signals, and more.  But none truly solved the problem without other drawbacks.  
+
 #### Absolute Permissive Block Signaling
 
-Absolute Permissive Block Signaling (APB) is really an improvement on ABS, but a big one in terms of safety and what we’d see trackside.  
+Absolute Permissive Block Signaling (APB) is an improvement on ABS to prevent this possibility of collision.  General Railway Signal pioneered it around 1910, and it was a big improvement in terms of safety and what we’d see trackside.  
 
-In ABS territory, two trains heading at each other on single track each other wouldn't be aware of it until they were a block or two apart and started seeing approach or stop indications.  This shouldn't happen because no two trains should have authority to enter a single section of track at each other, but humans make mistakes. Signals should make sure those mistakes aren't expensive or deadly.  There are a number of clever ways to configure ABS to make this safer, such as offsetting block signals for each direction, but none of them were perfect and could still wind up with accidents.  At the very least, it was going to wind up with long backup move for one of them to clear the main line.
-
-Absolute Permissive Block signals were meant to solve this problem.  When a train left a station and entered a region of single track, all of the block signals in the opposite direction to the next siding would "tumble down".  Any opposing train trying to leave that station would see a stop signal before entering the single track, thus eliminating the problem.  
+When a train left a station and entered a region of single track, all of the block signals in the opposite direction to the next siding would "tumble down" to red.  They would only go green again once the train had passed them.  Any opposing train trying to leave that station would see a stop signal before entering the single track, thus eliminating the problem.  If the opposing train did get by, it would tumble all of the signals in the opposite direction to red, and both trains would be looking at miles of stop signals before they saw each other.
 
 Again, like its older sibling ABS, APB does not grant crews authority to enter a section of track.  Only authorization from a dispatcher can do that.
+
+Here's three diagrams showing how APB works.  In the first, our eastbound train is just about to enter a single track section.  While the signals just before the siding show the track isn't clear, he's not on the single track yet and nothing has tumbled down.  In the second, our train has entered the single track, and an opposing westbound is holding at the far station.  When our eastbound arrives, it will stop because of the red signal, line the switch to the siding, and move out of the way of the westbound.
+
+The final diagram shows the situation if the westbound passes the absolute signal and tumbles the opposing direction to red.
+
+[![](img/apb.png)](img/apb.png)
 
 #### Centralized Traffic Control
 
@@ -118,6 +136,12 @@ CTC first appeared on the New York Central in Ohio back in 1927.  It adds anothe
 
 That sits on top of ABS or APB, however, where just because the dispatcher selected a route doesn’t mean you’ll get a clear signal unless the track is also clear.  If the dispatcher tries to line one train into the path of another, the ABS/APB parts of the system will still ensure safety.
 
+Let's look at similar diagrams for how our east and westbound trains might act under CTC.
+
+[![](img/ctc.png)](img/ctc.png)
+
+In the first image, our eastbound is sitting at the control point.  Normally control points show stop all the way around.  Only when the dispatcher lines a route and that route is safe to travel will the signals show something other than stop.  In the second image, the dispatcher has given the train a route eastward on to the single track.  Like APB, everything against us tumbles down to the next control point.  In the third image, you can see that a westbound has appeared.  In this case, neither crew needs to do anything except follow signals - the dispatcher has already changed the switch to diverging and lined our eastbound into the siding to get out of the way.
+
 #### Picking Your Signal System
 
 Every prototype had their own nuances to the big three categories (ABS, APB, and CTC), and there were always weird exceptions.  Many tens of thousands of signal engineers and maintainers have made lifelong careers thinking about this stuff and making absolutely sure it performs safely and reliably, and tuning it to their employer's particular needs.  We’ve barely scratched the surface.  But, at the end of the day, these are model railroads.  If something doesn’t go quite right, usually the worst outcome is a bit of cursing.
@@ -128,7 +152,7 @@ All require a commitment to creating track blocks and installing detectors, logi
 
 ABS and ABS-like systems are by far the easiest and the most common.  There's quite a few ways to do this, but it can be accomplished without any computers, done in phases, and the results are easily understood by nearly anybody operating on your layout.  It's by far the easiest of the three.
 
-APB is harder.  It's actually probably the least modeled of the three, at least as a standaline system.  We as modelers tend to compress our spaces between towns and even our towns themselves, resulting in a huge number of backup moves.  We also tend to create trackwork that the prototype would move heaven and earth - in many cases, a lot of earth - to avoid.  The combination of those elements means that the tumble-down logic can get screwed up in a hurry.
+APB is harder.  It's actually probably the least modeled of the three, at least as a standaline system.  We as modelers tend to compress our spaces between towns and even our towns themselves, resulting in a huge number of backup moves.  We also tend to create trackwork that the prototype would move heaven and earth - in many cases, a lot of earth - to avoid.  The combination of those elements means that the tumble-down logic can get screwed up in a hurry.  If a local just has to run around his train using a switch at the end of the siding, he's going to tumble all the signals beyond that.  They won't clear again until another train travels over the single track beyond in the correct direction.
 
 CTC requires a true commitment.  Setting up the logic can be complicated and will almost inevitably require a computer.  You'll need to either build a dispatcher's CTC panel, or use something like JMRI's PanelPro or CATS to do it virtually.  If you run operating sessions, it requires someone attentive to be a dedicated dispatcher.  Behind the scenes, you'll almost certainly have JMRI or some completely custom software running the show on a computer.
 
@@ -138,7 +162,7 @@ CTC requires a true commitment.  Setting up the logic can be complicated and wil
 
 Our SimpleSig line is “ABS-like” in that that provides ABS-style signal indications of how much track is clear ahead – 3 or more blocks gives you a clear signal, 2 gives you a clear or advance approach (your choice), 1 gives you approach, and something immediately ahead gives you a stop.  
 
-The part where it’s “ABS-like” is that in places where normally you would have a control point, such as at junctions or the ends of sidings, the standard usually just routes ABS signals through the route selected.  So at the end of a siding, you’d only get a red signal if the switch was set against you or there was a train in the way.  Otherwise, you'd see greens for a clear route, etc.
+The part where it’s “ABS-like” is that in places where normally you would have a control point, such as at junctions or the ends of sidings, the standard just routes ABS signals through the route selected.  So at the end of a siding, you’d only get a red signal if the switch was set against you or there was a train in the way.  Otherwise, you'd see greens for a clear route, etc.  For a graphic demonstrating what I mean, see [What Prototype Does SimpleSig Model?](tips.md#what-prototype-does-simplesig-model) in the FAQ.
 
 We think it's a pretty good balance of operation and simplicity for what most modelers are looking for.  It combines useful, prototypical signal indications that your visitors and operators will understand with simple, plug-and-play installation.  
 
@@ -148,15 +172,15 @@ It's also based on the Modular Signal System standard, so you can mix-and-match 
 
 In the future, it may be possible to do APB signaling.  One of the other vendors is working on an optional extension to the standard that would allow this.   
 
-Much like CTC is an overlay on top of ABS/APB, in the future, it should be possible to add LCC support on top of a SimpleSig setup.  This would allow for junction tower or CTC-type control, where a dispatcher (through JMRI) would be responsible for routing and controlling trains at junctions.   The hardware is present on our largest junction control board, but the software to make it work is very much a future project with no timeline.  Ideally, the system could be toggled between basic ABS-like operation when folks just want to run trains and watch signals change, and full CTC when a dispatcher was available for a real operating session.
+Much like CTC is an overlay on top of ABS/APB, in the future, it should be possible to add LCC support on top of a SimpleSig setup.  This would allow for junction tower or CTC-type control, where a dispatcher (through JMRI) would be responsible for routing and controlling trains at junctions. Ideally, the system could be toggled between basic ABS-like operation when folks just want to run trains and watch signals change, and full CTC when a dispatcher was available for a real operating session. The hardware is present on our largest junction control board, but the software to make it work is very much a future project with no timeline.  
 
 ## Planning Signals For Your Layout
 
 So after pondering the Big Questions, you've decided that you want a signal system on your layout.  Excellent!  
 
-A successful signal system comes down to good planning.  As I hinted above, it's massively easier to do if you plan for it before you start laying track, and definitely before you do scenery.  It's possible to retrofit in to an existing layout, and I've done it a couple times on other layouts, but it adds a whole other pile of headaches.
-
 While the following is designed as a guide to planning for the SimpleSig system, much of it is applicable to any signal system.  
+
+A successful signal system comes down to good planning.  As I hinted above, it's massively easier to do if you plan for it before you start laying track, and definitely before you do scenery.  It's possible to retrofit in to an existing layout, and I've done it a couple times on other layouts, but it adds a whole other pile of headaches.
 
 *I’m going to be honest - the closer your track plan is to something a prototype railroad would do, the easier this is going to be.  The closer you are to having more spaghetti than an Italian restaurant, the harder.  Modelers do lots of things that would never – or very rarely – happen on a signaled, prototype mainline.  There’s going to be some cases where I have no advice to give, because the track scenario is something that a prototype railroad would simply not do, or that linear reality would not allow.*
 
@@ -223,17 +247,17 @@ Once you've figured out where the signals should go, it's time to actually start
 
 The signal configuration you want to use and what signal node you'll use to control them are very much inter-related.  Each SimpleSig node drives a set number of signal heads in a given configuration.  The documentation will show you where to place them.  If you want to go outside the standard configurations, the Block Signal Custom will allow you to do that, but you're going to be doing your own programming.
 
-Using the [*What Module Do I Need?*](/SimpleSig/Planning%20For%20Signals/index.md#what-module-do-i-need) chart, we can start turning our control points into signal configurations.
+Using the [*What Module Do I Need?*](tips.md#what-module-do-i-need) chart, we can start turning our control points into signal configurations.
 
-Let's do the easy interlocking plants first.  For the diverging signaled routes at east and west Amargosa, Brazos Jct, Chisum, and Escalante, we'll just use a [Switch Signal Basic](/SimpleSig/Switch%20Signal%20Basic/manual.md) to split one route into two.  That'll put a double-headed signal on the point end, and two single-headed signals on the frog end.
+Let's do the easy interlocking plants first.  For the diverging signaled routes at east and west Amargosa, Brazos Jct, Chisum, and Escalante, we'll just use a [Switch Signal Basic](Switch%20Signal%20Basic/manual.md) to split one route into two.  That'll put a double-headed signal on the point end, and two single-headed signals on the frog end.
 
-At the Deadwood Crossover, you'll see a [Block Signal Custom](/SimpleSig/Block%20Signal%20Custom/manual.md).  This would use the built-in double crossover configuration, and since each track coming in can have a main and a diverging route, it needs a double-headed signal.  So we'll drop a double-headed signal at each of the four tracks entering the plant.  *(Note:  As of late 2025, the Block Signal Custom is still very much in development.  We anticipate its release in early 2026.)*
+At the Deadwood Crossover, you'll see a [Block Signal Custom](Block%20Signal%20Custom/index.md).  This would use the built-in double crossover configuration, and since each track coming in can have a main and a diverging route, it needs a double-headed signal.  So we'll drop a double-headed signal at each of the four tracks entering the plant.  *(Note:  As of late 2025, the Block Signal Custom is still very much in development.  We anticipate its release in early 2026.)*
 
-What's left are the intermediates.  The easy answer is that they're all [Block Signal Basics](/SimpleSig/Block%20Signal%20Basic/manual.md) and they have one head each direction.  That certainly will work.
+What's left are the intermediates.  The easy answer is that they're all [Block Signal Basics](Block%20Signal%20Basic/manual.md) and they have one head each direction.  That certainly will work.
 
 However, in modern US signaling, the intermediate signal before the home signal at an interlocking plant can often have multiple heads as well.  That allows it to communicate aspects such as approach diverging (broadly yellow/yellow in the west, yellow/green in the east), alerting the crew that they'll be taking the diverging route at the next home signal and need to get their speed in order to do so. 
 
-For our terrible layout, we'll say we want to use double-headed intermediates between Escalante and Amargosa.  It's a long straightaway and train speeds might be high, so crews might need an extra heads up that they'll need to slow down.  For that, you'd need a [Block Signal Advanced](/SimpleSig/Block%20Signal%20Advanced/manual.md) so that you could drive two heads in each direction and and correctly interpret the approach diverging signals coming in.
+For our terrible layout, we'll say we want to use double-headed intermediates between Escalante and Amargosa.  It's a long straightaway and train speeds might be high, so crews might need an extra heads up that they'll need to slow down.  For that, you'd need a [Block Signal Advanced](Block%20Signal%20Advanced/manual.md) so that you could drive two heads in each direction and and correctly interpret the approach diverging signals coming in.
 
 Next, let's connect up our nodes to have a plan on how we're going to wire this.  I've drawn thick red lines showing how the ports connect.  *The key takeaway from wiring for SimpleSig / MSS is that the wires follow the tracks.  You'll notice there's pretty much a one-to-one correspondence between the wires between the nodes and the tracks in the diagram.  That's how the nodes know what the next signal down the line in each direction is - because the wire follows the track!*
 
@@ -263,7 +287,7 @@ Here's our diagram with a bunch of purple lines and dots added to show our bound
 
 Personally, I like to label all of the track blocks with some sort of descriptive code.  That way I can use that same code on wire markers and terminal blocks under the layout, which helps me keep things straight.
 
-Remember that on any non-modular layout, each block only needs a single current detector, and all power feeders for one rail of that block must pass through that detector.  For a more detailed explanation and diagrams, see the [How Many ATOM Block Detectors Do I Need](/SimpleSig/tips/#how-many-atom-block-detectors-do-i-need) and the [wiring diagram for the Crossover Detector](http://localhost:8000/SimpleSig/Crossover%20Detector/manual/#step-2-track-wiring).  While that shows a Crossover Detector, the principle is the same - combine all the track feeders for a block into a sub-bus, and then pass one leg of that sub-bus through the detector on the way to the main track power bus.
+Remember that on any non-modular layout, each block only needs a single current detector, and all power feeders for one rail of that block must pass through that detector.  For a more detailed explanation and diagrams, see the [How Many ATOM Block Detectors Do I Need](tips.md#how-many-atom-block-detectors-do-i-need) and the [wiring diagram for the Crossover Detector](Crossover%20Detector/manual.md#step-2-track-wiring).  While that shows a Crossover Detector, the principle is the same - combine all the track feeders for a block into a sub-bus, and then pass one leg of that sub-bus through the detector on the way to the main track power bus.
 
 ### Step 6 - Build It!
 
@@ -275,17 +299,3 @@ Likewise for signals.  Once you get a signal module installed, check that it fun
 
 The trick is to test at every little step, so that bugs have fewer places to hide.  It's a lot easier to find a bug when you've got a limited number of things to check than if you build the whole system, then power it up and nothing works, or worse...
 
-
-## What Module Do I Need?
-
-| Track / Signal Configuration | Signal Node |
-| ---------------------------- | ----------- |
-| ![](img/mss-det.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Crossover Detector**](/SimpleSig/Crossover%20Detector/manual.md)<br>*(modules without signals only, not useful for home layouts)*<br>For modules that want to participate in signaled FreeMo or FreeMoN layouts, but don't have signals themselves.  This provides simple current detection to make modules compliant. |
-| ![](img/mss-bsb.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Basic**](/SimpleSig/Block%20Signal%20Basic/manual.md)<br>Simple intermediate signals with a single head and using the conventional clear / approach / advance approach / stop indications. |
-| ![](img/mss-bsa.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Advanced**](/SimpleSig/Block%20Signal%20Advanced/manual.md) <br>Intermediate signals with one or two heads that need to display more advanced indications, such as approach diverging ahead of a home signal, or which need customized aspects. |
-| ![](img/mss-ssb.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Switch Signal Basic**](/SimpleSig/Switch%20Signal%20Basic/manual.md)<br>Diverging signaled routes, such as at the end of a siding or at one point of a wye. |
-| ![](img/mss-bsc-1xover.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Custom**](/SimpleSig/Block%20Signal%20Custom/manual.md)<br>*(Single Crossover Configuration)*<br>The Block Signal Custom comes with a number of factory-programmed configurations, including a single crossover between double tracks. |
-| ![](img/mss-bsc-2xover.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Custom**](/SimpleSig/Block%20Signal%20Custom/manual.md)<br>*(Double Crossover Configuration)*<br>The Block Signal Custom comes with a number of factory-programmed configurations, including a double crossover between double tracks where the crossover tracks can be used simultaneously. |
-| ![](img/mss-bsc-2xover-b.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Custom**](/SimpleSig/Block%20Signal%20Custom/manual.md)<br>*(Compact Double Crossover Configuration)*<br>The Block Signal Custom comes with a number of factory-programmed configurations, including a compact double crossover between double tracks where the crossover tracks pass over each other on a diamond.  These are used where track space is at a premium. |
-| ![](img/mss-bsc-diamond.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Custom**](/SimpleSig/Block%20Signal%20Custom/manual.md)<br>*(Single Track Diamond Configuration)*<br>The Block Signal Custom comes with a number of factory-programmed configurations, including an automatic interlocking between two single-track main lines. |
-| ![](img/mss-spaghetti.png){align=center style="width: 200px; margin-top:0px; margin-bottom: 0px"} | [**Block Signal Custom**](/SimpleSig/Block%20Signal%20Custom/manual.md)<br>*(Custom firmware)*<br>The Block Signal Custom can be programmed in Arduino for any sort of track spaghetti you can dream up.  By using expansion modules, it can handle up to 32 signal heads, 16 tracks entering the plant, 40 current or IR detectors, and 24 turnout position inputs.  |
