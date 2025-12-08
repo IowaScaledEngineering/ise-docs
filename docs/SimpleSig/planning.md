@@ -6,7 +6,7 @@ title: Planning For Signals
 
 We frequently get asked, "I want to put signals on my layout, what do I need?"  
 
-**There is no simple answer to that question.**  
+**There is no short answer to that question.**  
 
 Within those simple twelve words are a nearly endless number of assumptions about those signals and an equally abundant number of questions about the details.  It's far too long of a discussion to have at a show, trying to shout across the table and over the ambient noise.  
 
