@@ -140,7 +140,7 @@ Let's look at similar diagrams for how our east and westbound trains might act u
 
 [![](img/ctc.png)](img/ctc.png)
 
-In the first image, our eastbound is sitting at the control point.  Normally control points show stop all the way around.  Only when the dispatcher lines a route and that route is safe to travel will the signals show something other than stop.  In the second image, the dispatcher has given the train a route eastward on to the single track.  Like APB, everything against us tumbles down to the next control point.  In the third image, you can see that a westbound has appeared.  In this case, neither crew needs to do anything except follow signals - the dispatcher has already changed the switch to diverging and lined our eastbound into the siding to get out of the way.
+In the first image, our eastbound is sitting at the control point.  Normally control points show stop all the way around.  Only when the dispatcher lines a route and that route is safe to travel will the signals show something other than stop.  In the second image, the dispatcher has given the train a route eastward on to the single track.  Like APB, everything against us tumbles down to the next control point.  In the third image, you can see a number of things - the eastbound has cleared the western control point, and the signals have defaulted back to stop; the dispatcher has lined a route for the eastbound into the siding on the right; and that a westbound has appeared, which is why our eastbound is going in the siding.  In this case, neither crew needs to do anything except follow signals - the dispatcher has already changed the switch to diverging and lined our eastbound into the siding to get out of the way.
 
 #### Picking Your Signal System
 
@@ -206,15 +206,15 @@ Here's the result - see how much clutter this removes?
 
 [![](img/tswrr-linear-2.png)](img/tswrr-linear-2.png)
 
-### Step 2 – Identify Junctions
+### Step 2 – Identify Interlocking Plants
 
-Once you have a relatively good line diagram of your track plan, it should start to immediately become apparent where the junctions / control points should be.  Generally these are going to be spots where main tracks join in some way.  A very simple example might be the end of a siding.  A more complex example would be a crossover between two main tracks, or a wye leading to a branch (signaled or not).  Basically, anywhere main tracks split or join should be identified.  This is a little bit of “you’ll know it when you see it.”
+Once you have a relatively good line diagram of your track plan, it should start to immediately become apparent where the interlocking plants should be.  Generally these are going to be spots where main tracks join in some way.  A very simple example might be the end of a siding.  A more complex example would be a crossover between two main tracks, or a wye leading to a branch (signaled or not).  Basically, anywhere main tracks split or join should be identified.  This is a little bit of “you’ll know it when you see it.”
 
-Within the boundary of these spaces – usually called “interlocking plants” or just “plants” – switches can be moved and routes set to allow trains to move between tracks.  Typically this would be done by a dispatcher (CTC) or tower operator for large junctions, or sometimes with crews manually throwing switches (siding ends and simple junctions in ABS/APB territory).  
+Within the boundary of these spaces – usually called “interlocking plants” or just “plants” – switches can be moved and routes set to allow trains to move between tracks.  In CTC territory, these are also often referred to as "control points" - places the dispatcher can set routes for trains.  Typically this would be done by a dispatcher (CTC) or tower operator for large junctions, or sometimes with crews manually throwing switches (siding ends and simple junctions in ABS/APB territory).
 
 Signals are placed where each track enters the “plant”.  These are known as home signals, and are almost always absolutes (meaning they cannot be passed if showing stop without specific permission given by the dispatcher or operator).  Absolute signals for almost all US and Canadian railroads are denoted by not having a mile marker plate on the signal.
 
-Here's our linear diagram again, with the control points marked out in red.
+Here's our linear diagram again, with the interlocking plants marked out in red.
 
 [![](img/tswrr-linear-ctrlpts.png)](img/tswrr-linear-ctrlpts.png)
 
