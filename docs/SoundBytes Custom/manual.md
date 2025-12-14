@@ -3,6 +3,10 @@ title: User Manual
 ---
 # SoundBytes Custom User Manual
 
+!!! note "Please Note"
+    This is a future product and subject to change.  Release date is targeted for January 2026 and
+    will be officially announced in our email [newsletter](https://www.iascaled.com/store/). 
+
 ## Overview
 
 The SoundBytes Custom is a programmable sound player that plays sounds from
