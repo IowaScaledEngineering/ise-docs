@@ -13,8 +13,8 @@ So what things do we think should be in a basic model railroader's electronic to
 
 * [Digital multimeter (DMM)](dmm.md)
 * Precision screwdrivers
-* Wire clippers
+* Wire cutters
 * Wire strippers
 * Soldering iron
-* Solder & soldering supplied
+* Solder & soldering supplies
 
