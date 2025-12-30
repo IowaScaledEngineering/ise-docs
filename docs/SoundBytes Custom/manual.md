@@ -99,6 +99,15 @@ SoundBytes Custom is ready.  If no microSD card in inserted, or no valid
 sound files are found on the card, the blue and orange LEDs will blink
 alternately.
 
+!!! note "Note"
+    When removing the microSD card to update the files, the recommended
+    procedure is to first power down the SoundBytes Custom, remove the card,
+    make your changes, re-insert the card, and then re-apply power. 
+    There is a small (but not zero) chance that removing or inserting the
+    card while the SoundBytes Custom is powered will corrupt the contents of
+    the card.  In any case, the SoundBytes Custom must be rebooted (powered
+    on) after the card is re-inserted.
+
 ### Volume Control
 
 The volume has 30 levels and comes preset at level 20.  Level 0 is mute. 
@@ -116,11 +125,16 @@ Sounds can be loaded using a microSD card.  The sound files need to be put
 in folders, with specific folder names, on the microSD card.  See the 
 [Modes of Operation](#modes-of-operation) section for details.
 
-The microSD card must be formatted as FAT and the sounds must also meet the following requirements:
+The sounds must meet the following requirements:
 
 * WAV file named with .wav extension (e.g. mp3 or other formats will not work)
 * 16-bit, mono format
 * 8, 16, 32, or 44.1kHz sample rate
+
+!!! note "Note"
+    The microSD card must also be formatted as FAT.  Most cards come
+    from the factory pre-formatted, including the card supplied with the
+    SoundBytes Custom, so no additional formatting is required.
 
 ### Option Files
 
@@ -146,23 +160,29 @@ in the [Modes of Operation](#modes-of-operation) section.
 ### Ambient Mode
 
 In Ambient Mode, the SoundBytes Custom will continuously play the sound
-files in random order.  When triggered, by any input, the volume will be
-unmuted allowing the sound to play through the speaker.  After the trigger
-goes away, the volume will be muted.  Even while muted, the sound files
-continue to play internally, even though no sound is emitted by the speaker. 
-This provides a level of inherent randomization to the sound once the
-module is triggered.
+files in random order.  When triggered by any input (all four trigger
+inputs behave the same in Ambient Mode) the volume will be
+unmuted with a brief fade in, allowing the sound to play through the
+speaker.  After the trigger goes away, the volume will be muted with a brief
+fade out.
+
+Even while muted, the sound files continue to play internally,
+even though no sound is emitted by the speaker.  This provides a level of
+inherent randomization to the sound once the module is triggered.
+
+!!! note "Continuous Play"
+    If you want the sound to play continuously anytime the SoundBytes Custom
+    is powered, then simply connect one of the trigger inputs to the G (GND)
+    terminal with a wire.
 
 To configure Ambient Mode, a folder named **ambient** should be present in
 the root directory of the microSD card.  The sounds in this folder will be
-played randomly.
+played in a random order.
 
-!!! note "Please Note"
-    If a folder named **ambient** is found on the microSD card, then Ambient
-    Mode will be selected.  This takes precedence over any other mode of
-    operation below, regardless if any other folders are present on the
-    microSD card.  All four trigger inputs will behave the same in Ambient
-    Mode.
+Whenever a folder named **ambient** is found on the microSD card and valid
+files are present within it, Ambient Mode will be selected regardless
+of any other folders or files present on the card.  This means Ambient
+Mode takes precedence over the other modes of operation below.
 
 ### Triggered Mode
 
@@ -177,7 +197,7 @@ activated determines the folder, and the sounds contained within, which
 will be played.  For example, if the IN3 trigger input is activated, then
 the sounds from the **event3** folder will be played.
 
-!!! note "Please Note"
+!!! note "Note"
     Only one trigger will be detected and acted upon at the same time.  Only
     the sound(s) for the first trigger will play.
 
@@ -210,7 +230,7 @@ indefinitely while the trigger input is active.
 | --------------- | ----------- |
 | continuous.opt  | Must be present to select Continuous Mode. |
 | shuffle.opt     | (Optional) Determines the behavior when a sound file finishes playing and the trigger is still active.  If this option file is present, then a randomly selected file will be played next.  If not present, then the first selected file will be repeated in a loop. |
-| level.opt       | (Optional) If this option file is present, then playback stops immediately when the trigger is released.  Otherwise, playback continuues through the end of the currently playing sound file. |
+| level.opt       | (Optional) If this option file is present, then the volume is immediately muted with a brief fade out and playback stops when the trigger is released.  Otherwise, playback continuues through the end of the currently playing sound file. |
 
 #### Beginning-Middle-End Mode
 
