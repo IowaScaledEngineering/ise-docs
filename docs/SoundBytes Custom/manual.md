@@ -160,8 +160,9 @@ in the [Modes of Operation](#modes-of-operation) section.
 ### Ambient Mode
 
 In Ambient Mode, the SoundBytes Custom will continuously play the sound
-files in random order.  When triggered by any input (all four trigger
-inputs behave the same in Ambient Mode) the volume will be
+files in random order, looping forever.  By default, the volume is muted so
+no sound actually plays out the speaker.  When triggered by any input (all
+four trigger inputs behave the same in Ambient Mode) the volume will be
 unmuted with a brief fade in, allowing the sound to play through the
 speaker.  After the trigger goes away, the volume will be muted with a brief
 fade out.
