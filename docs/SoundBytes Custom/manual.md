@@ -224,6 +224,11 @@ repeated or a newly selected sound file will be played (this behavior is
 determined by the option files below).  Sounds continue repeating
 indefinitely while the trigger input is active.
 
+!!! note "Note"
+    Playback in Continuous Triggered Mode is not seamless.  There will be a
+    gap between sound files.  For true seamless playback,
+    [Beginning-Middle-End Mode](#beginning-middle-end-mode) is a better option.
+
 ##### Option Files
 
 | Option File     | Description |
