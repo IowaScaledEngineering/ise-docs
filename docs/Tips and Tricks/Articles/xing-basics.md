@@ -71,7 +71,7 @@ So now that we've learned a bit about the history of grade crossing protection, 
 
 ### Island-Only Crossing Circuits
 
-The simplest use a single basic track circuit to detect the presence of a train and activate the warning devices.  This is known as an “island only” system.  What’s an island?  The “island” is the part of the track that’s actually crossing the road and immediately adjacent.  If a train is present in that section of track, the warning systems need to remain active because the train is either fouling the road or could move and foul the road with insufficient time for drivers to stop.  If any rail vehicle is in the island, the warning devices should always be activated.
+The simplest grade crossings use a single basic track circuit to detect the presence of a train and activate the warning devices.  This is known as an “island only” system.  What’s an island?  The “island” is the part of the track that’s actually crossing the road and immediately adjacent.  If a train is present in that section of track, the warning systems need to remain active because the train is either fouling the road or could move and foul the road with insufficient time for drivers to stop.  If any rail vehicle is in the island, the warning devices should always be activated.
 
 [![An Island-Only Crossing](img-gcb/gcb-img1.png)](img-gcb/gcb-img1.png)
 
