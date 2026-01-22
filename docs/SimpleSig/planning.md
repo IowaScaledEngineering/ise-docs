@@ -22,7 +22,7 @@ It's about trade-offs - givens & druthers in model railroader-ese.  We'll explor
 
 This is, by far, the most important question and the one you should start with.  You need to decide what purpose the signals on your layout serve and how you want them to operate.
 
-Are they just a scenery element, and never change?  Do you just want to see a signals change, maybe in response to a train going by or a turnout changing?  Do you want to see your signals operate based on the movement of trains across the layout?  Do you want a system that models every prototype detail, up to and including tower operators and/or a dispatcher that can control movements using the signal system?
+Are they just a scenery element, and never change?  Do you just want to see a signal change, maybe in response to a train going by or a turnout changing?  Do you want to see your signals operate based on the movement of trains across the layout?  Do you want a system that models every prototype detail, up to and including tower operators and/or a dispatcher that can control movements using the signal system?
 
 **Big Question 2: How much time and money do I want to spend on signals?**
 
@@ -34,7 +34,7 @@ Note: Doing this all while you're designing or building the layout initially is 
 
 **Big Question 3: How comfortable am I with electronics?**
 
-Signal systems - even those like ours where we have tried to make them simple - still require basic electrical skills like being able to follow a wiring diagram and likely take simple measurement with a meter.
+Signal systems - even those like ours where we have tried to make them simple - still require basic electrical skills like being able to follow a wiring diagram and likely take simple measurements with a meter.
 
 Be honest with yourself here.  Nothing is more frustrating than getting in way over your head.  If you're not confident, start small, or ask a friend who is comfortable to help you through the parts that are confusing.
 
@@ -54,7 +54,7 @@ Except for distant signals - constant yellows that warn trains they're approachi
 
 #### Time-Based Animation
 
-At one end of the scale are those who want to simply have a signal that changes color in response to a train going by.  I call these "time-based animation" because they're a timer - once a train passes, the signal eventually goes from red to yellow to green again.  That's what someone standing trackside would see on a block signal, but it's not driven by time - it's driven by the fact the train has exited the blocks ahead and the track is once again clear.
+At one end of the scale are those who want to simply have a signal that changes color in response to a train going by.  I call these "time-based animation" because they're a timer - once a train passes, the signal eventually goes from red to yellow to green again.  That's what someone standing trackside would see on a block signal, but there it's not driven by time - it's driven by the fact the train has exited the blocks ahead and the track is once again clear.
 
 As such, these don’t really have any equivalent on the prototype at all, but are an easy way to make your scene a little more animated.  This is largely for folks who don’t want to build out an entire signal system, but want to see their signals change as if they were a trackside railfan. 
 
@@ -74,7 +74,7 @@ Railroad operations started from times in a published timetable, showing when tr
 
 Train order signals are signals located at stations along the line where trains need to receive orders.  Usually they were a double-headed mechanical semaphore located right outside the station operator's bay window, but in later years they were often color light signals, particularly on western US roads.  Some only had two indications - good to go or stop and receive orders - and some had three.
 
-These signals weren't part of a system, and did not have any knowledge of track occupancy or the next signal down the line, but this use case is absolutely prototypical for some eras.  With in the US, timetable and train order authority largely died in the 1970s.  In Canada, it lasted a bit longer - at least until the mid-1980s.  
+These signals weren't part of a system, and did not have any knowledge of track occupancy or the next signal down the line, but this use case is absolutely prototypical for some eras.  Within the US, timetable and train order authority largely died in the 1970s.  In Canada, it lasted a bit longer - at least until the mid-1980s.  
 
 On a model railroad, these can be controlled with simple rotary or toggle switches.  If a layout operates with a dispatcher, those can be wired back to the dispatcher's office, or if they're merely a scenic element they can be controlled right at the fascia.  Again, no complicated electronics needed.
 
@@ -98,7 +98,7 @@ The first variant of ABS appeared in 1872, with a simple system that would warn 
 
 ABS does not convey authority to occupy track.  Trains still needed authority to enter and travel over a section of track.  This could be done by timetable & train orders, or in later years by track warrants.  ABS is about if the track ahead is safe to enter.  It's designed to be an extra layer to prevent accidents if something goes wrong, such as a train being in the wrong place at the wrong time, or a broken rail ahead.  That's why you'll see a lot of clear (green) indications in ABS territory - clear track is safe to enter.
 
-Here's a look at how basic ABS operates on a single track line between sidings.  As you can see, stop signals (red) guard the block being occupied by the train.  Signals a block away in both direction display approach, telling any other train seeing that signal that they have one clear block ahead before they will encouter a stop signal.  Beyond that, it's green as far as the eye can see.
+Here's a look at how basic ABS operates on a single track line between sidings.  As you can see, stop signals (red) guard the block being occupied by the train.  Signals a block away in both directions display approach, telling any other train seeing that signal that they have one clear block ahead before they will encouter a stop signal.  Beyond that, it's green as far as the eye can see.
 
 [![](img/abs.png)](img/abs.png)
 
@@ -116,7 +116,7 @@ Several clever modifications were made to ABS over the years to try to alleviate
 
 Absolute Permissive Block Signaling (APB) is an improvement on ABS to prevent this possibility of collision.  General Railway Signal pioneered it around 1910, and it was a big improvement in terms of safety and what we’d see trackside.  
 
-When a train left a station and entered a region of single track, all of the block signals in the opposite direction to the next siding would "tumble down" to red.  They would only go green again once the train had passed them.  Any opposing train trying to leave that station would see a stop signal before entering the single track, thus eliminating the problem.  If the opposing train did get by, it would tumble all of the signals in the opposite direction to red, and both trains would be looking at miles of stop signals before they saw each other.
+When a train left a station and entered a region of single track, all of the block signals in the opposite direction to the next siding would "tumble down" to red.  They would only go green again once the train had passed them.  Any opposing train trying to leave the next station would see a stop signal before entering the single track, thus eliminating the problem.  If the opposing train did get by, it would tumble all of the signals in the opposite direction to red, and both trains would be looking at miles of stop signals before they saw each other.
 
 Again, like its older sibling ABS, APB does not grant crews authority to enter a section of track.  Only authorization from a dispatcher can do that.
 
@@ -148,11 +148,11 @@ Every prototype had their own nuances to the big three categories (ABS, APB, and
 
 Here’s the part where tradeoffs are made between Big Question 1, 2, and 3.  You have to ask yourself, “How much time and money am I willing to invest in signals, and what do I want to get out of them?”
 
-All require a commitment to creating track blocks and installing detectors, logic, wiring, and signals, as well as doing some planning first.
+Other than the [Simple Use Cases](#simple-use-cases), all require a commitment to creating track blocks and installing detectors, logic, wiring, and signals, as well as doing some planning first.
 
 ABS and ABS-like systems are by far the easiest and the most common.  There's quite a few ways to do this, but it can be accomplished without any computers, done in phases, and the results are easily understood by nearly anybody operating on your layout.  It's by far the easiest of the three.
 
-APB is harder.  It's actually probably the least modeled of the three, at least as a standaline system.  We as modelers tend to compress our spaces between towns and even our towns themselves, resulting in a huge number of backup moves.  We also tend to create trackwork that the prototype would move heaven and earth - in many cases, a lot of earth - to avoid.  The combination of those elements means that the tumble-down logic can get screwed up in a hurry.  If a local just has to run around his train using a switch at the end of the siding, he's going to tumble all the signals beyond that.  They won't clear again until another train travels over the single track beyond in the correct direction.
+APB is harder.  It's actually probably the least modeled of the three, at least as a standalone system.  We as modelers tend to compress our spaces between towns and even our towns themselves, resulting in a huge number of backup moves.  We also tend to create trackwork that the prototype would move heaven and earth - in many cases, a lot of earth - to avoid.  The combination of those elements means that the tumble-down logic can get screwed up in a hurry.  If a local just has to run around his train using a switch at the end of the siding, he's going to tumble all the signals beyond that.  They won't clear again until another train travels over the single track beyond in the correct direction.
 
 CTC requires a true commitment.  Setting up the logic can be complicated and will almost inevitably require a computer.  You'll need to either build a dispatcher's CTC panel, or use something like JMRI's PanelPro or CATS to do it virtually.  If you run operating sessions, it requires someone attentive to be a dedicated dispatcher.  Behind the scenes, you'll almost certainly have JMRI or some completely custom software running the show on a computer.
 
@@ -160,7 +160,7 @@ CTC requires a true commitment.  Setting up the logic can be complicated and wil
 
 #### SimpleSig for Home Layouts
 
-Our SimpleSig line is “ABS-like” in that that provides ABS-style signal indications of how much track is clear ahead – 3 or more blocks gives you a clear signal, 2 gives you a clear or advance approach (your choice), 1 gives you approach, and something immediately ahead gives you a stop.  
+Our SimpleSig line is “ABS-like” in that it provides ABS-style signal indications of how much track is clear ahead – 3 or more blocks gives you a clear signal, 2 gives you a clear or advance approach (your choice), 1 gives you approach, and something immediately ahead gives you a stop.  
 
 The part where it’s “ABS-like” is that in places where normally you would have a control point, such as at junctions or the ends of sidings, the standard just routes ABS signals through the route selected.  So at the end of a siding, you’d only get a red signal if the switch was set against you or there was a train in the way.  Otherwise, you'd see greens for a clear route, etc.  For a graphic demonstrating what I mean, see [What Prototype Does SimpleSig Model?](tips.md#what-prototype-does-simplesig-model) in the FAQ.
 
@@ -172,7 +172,7 @@ It's also based on the Modular Signal System standard, so you can mix-and-match 
 
 In the future, it may be possible to do APB signaling.  One of the other vendors is working on an optional extension to the standard that would allow this.   
 
-Much like CTC is an overlay on top of ABS/APB, in the future, it should be possible to add LCC support on top of a SimpleSig setup.  This would allow for junction tower or CTC-type control, where a dispatcher (through JMRI) would be responsible for routing and controlling trains at junctions. Ideally, the system could be toggled between basic ABS-like operation when folks just want to run trains and watch signals change, and full CTC when a dispatcher was available for a real operating session. The hardware is present on our largest junction control board, but the software to make it work is very much a future project with no timeline.  
+Much like CTC is an overlay on top of ABS/APB, in the future, it should be possible to add LCC support on top of a SimpleSig setup.  This would allow for junction tower or CTC-type control, where a dispatcher (through JMRI) would be responsible for routing and controlling trains at junctions. Ideally, the system could be toggled between basic ABS-like operation when folks just want to run trains and watch signals change, and full CTC when a dispatcher was available for a real operating session. The hardware is present on our largest junction control board, but the software to make it work is very much a future project with no current timeline.  
 
 ## Planning Signals For Your Layout
 
@@ -257,7 +257,7 @@ What's left are the intermediates.  The easy answer is that they're all [Block S
 
 However, in modern US signaling, the intermediate signal before the home signal at an interlocking plant can often have multiple heads as well.  That allows it to communicate aspects such as approach diverging (broadly yellow/yellow in the west, yellow/green in the east), alerting the crew that they'll be taking the diverging route at the next home signal and need to get their speed in order to do so. 
 
-For our terrible layout, we'll say we want to use double-headed intermediates between Escalante and Amargosa.  It's a long straightaway and train speeds might be high, so crews might need an extra heads up that they'll need to slow down.  For that, you'd need a [Block Signal Advanced](Block%20Signal%20Advanced/manual.md) so that you could drive two heads in each direction and and correctly interpret the approach diverging signals coming in.
+For our terrible layout, we'll say we want to use double-headed intermediates between Escalante and Amargosa.  It's a long straightaway and train speeds might be high, so crews might need an extra heads up that they'll need to slow down.  For that, you'd need a [Block Signal Advanced](Block%20Signal%20Advanced/manual.md) so that you could drive two heads in each direction and correctly interpret the approach diverging signals coming in.
 
 Next, let's connect up our nodes to have a plan on how we're going to wire this.  I've drawn thick red lines showing how the ports connect.  *The key takeaway from wiring for SimpleSig / MSS is that the wires follow the tracks.  You'll notice there's pretty much a one-to-one correspondence between the wires between the nodes and the tracks in the diagram.  That's how the nodes know what the next signal down the line in each direction is - because the wire follows the track!*
 
@@ -267,7 +267,7 @@ Next, let's connect up our nodes to have a plan on how we're going to wire this.
 
 Okay, you’ve got your signals located and picked the signal node to control each.  Now it’s time to step back from thinking like a scaled-down railroader and switch to thinking like a guy with a layout who needs to put in sensors for detection.  This is where that “commitment of time and money” thing starts to get real.
 
-One question you need to answer is are you going to put resistor-equipped axles on all your cars?”  It’s a trade-off.  If you do, then current detection will pick up a car, no matter where it is on your mainline, and you don’t need to install optical detectors.  The trade off, of course, is that every car has to have at least one axle with a resistor on it.  Personally I recommend two axles per car for reliable detection, at 7.5k ohms each.  If you don’t add resistor axles on all of your cars, then you’ll need a combination of optical and current detection to make signals work reasonably well.  The current detectors track the locomotives, and the optical detectors make sure the signal remains red until the cars have cleared the block.
+One question you need to answer is "are you going to put resistor-equipped axles on all your cars?”  It’s a trade-off.  If you do, then current detection will pick up a car, no matter where it is on your mainline, and you don’t need to install optical detectors.  The trade off, of course, is that every car has to have at least one axle with a resistor on it.  Personally I recommend two axles per car for reliable detection, at 7.5k ohms each.  If you don’t add resistor axles on all of your cars, then you’ll need a combination of optical and current detection to make signals work reasonably well.  The current detectors track the locomotives, and the optical detectors make sure the signal remains red until the cars have cleared the block.
 
 For this, grab a pen or pencil in a different color from your track plan.  I use a red pen, personally.  We’re going to use that red (or other) pen to indicate where our block boundaries will be, and where our sensors will be located (if we’re using them).  I'm going to use purple in our diagram since we haven't used that as a color yet.
 
@@ -287,7 +287,7 @@ Here's our diagram with a bunch of purple lines and dots added to show our bound
 
 Personally, I like to label all of the track blocks with some sort of descriptive code.  That way I can use that same code on wire markers and terminal blocks under the layout, which helps me keep things straight.
 
-Remember that on any non-modular layout, each block only needs a single current detector, and all power feeders for one rail of that block must pass through that detector.  For a more detailed explanation and diagrams, see the [How Many ATOM Block Detectors Do I Need](tips.md#how-many-atom-block-detectors-do-i-need) and the [wiring diagram for the Crossover Detector](Crossover%20Detector/manual.md#step-2-track-wiring).  While that shows a Crossover Detector, the principle is the same - combine all the track feeders for a block into a sub-bus, and then pass one leg of that sub-bus through the detector on the way to the main track power bus.
+Remember that on any non-modular layout, each block only needs a single current detector, and all power feeders for one rail of that block must pass through that detector.  For a more detailed explanation and diagrams, see the [How Many ATOM Block Detectors Do I Need](tips.md#how-many-atom-block-detectors-do-i-need) and the [wiring diagram for the Crossover Detector](Crossover%20Detector/manual.md#step-2-track-wiring).  While that shows a Crossover Detector (used for modular setups), the principle is the same - combine all the track feeders for a block into a sub-bus, and then pass one leg of that sub-bus through the detector on the way to the main track power bus.
 
 ### Step 6 - Build It!
 
@@ -295,7 +295,7 @@ The secret to a successful build is to work in stages and check your work at eve
 
 For example, as you get each track block wired through its detector, power things up and check that the detector picks up things in the track block where it should, and doesn't pick up when nothing is in the block.  If you have one mis-behaving, there's a 99.9% chance you've forgotten a gap, or you have a feeder mis-wired, or something along those lines.  Stop and track it down.
 
-Likewise for signals.  Once you get a signal module installed, check that it functions correctly.  Put a locomotive on one side and verify the detector picks it up and the signal drops to red.  If you have more signal modules wired up to it, run that locomotive down to the next block and verify the signal drops to yellow, and so on.  
+Likewise for signals.  Once you get a signal module installed, check that it functions correctly.  Put a locomotive on one side and verify the detector picks it up and the signal drops to red.  If you have more signal modules wired up to it, run that locomotive down to the next block and verify the signal changes to yellow, and so on.  
 
 The trick is to test at every little step, so that bugs have fewer places to hide.  It's a lot easier to find a bug when you've got a limited number of things to check than if you build the whole system, then power it up and nothing works, or worse...
 
