@@ -11,7 +11,7 @@ edit, and (hopefully) share the results with others.
 
 These files are provided as-is and in raw form.  They are in stereo WAV
 format sampled at 44.1kHz and will need to be edited and re-mixed into an
-approrpate format for uploading to the SD Card on the Squealer.  See [Custom
+appropriate format for uploading to the SD Card on the Squealer.  See [Custom
 Sounds](manual.md#custom-sounds) in the instruciton manual for more
 details.
 
