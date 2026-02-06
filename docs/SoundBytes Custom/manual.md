@@ -18,7 +18,7 @@ cause a different series of sounds to play.  These events can come from
 sensors, switches, various detectors, Arduinos, etc.
 
 Complete with control board, speaker, and microSD card, the SoundBytes
-Custom is a turney solution for adding sound to your model railroad, module,
+Custom is a turnkey solution for adding sound to your model railroad, module,
 diarama, or other display.
 
 ### Features
@@ -45,7 +45,7 @@ diarama, or other display.
 
 The SoundBytes Custom is powered from 5V to 24V DC, applied through connector J1
 (positive to VIN, negative to GND).  Alternatively, the mini USB jack can be
-used to power the Squealer, either from a USB charging block or a laptop/PC.  
+used to power the SoundBytes Custom, either from a USB charging block or a laptop/PC.  
 
 ![](img/snd-player-power.jpg)
 
@@ -56,7 +56,7 @@ To power the SoundBytes Custom directly from the DCC bus, a
 
 The speaker attaches to connector J6 (SPK OUT) on the board.  It can be
 mounted above or below the layout.  When mounting it below, a hole can be
-bored in the scneery or benchwork and covered, for better sound fidelity. 
+bored in the scenery or benchwork and covered, for better sound fidelity. 
 This may involve some experimentation.
 
 ![](img/snd-player-spk.jpg)
@@ -78,7 +78,7 @@ or other electronic module can also be used, but the output should be of an
 The SoundBytes Custom has four event inputs.  These are IN1, IN2, IN3, and
 IN4 on the terminal blocks around the perimeter of the board.  The G
 terminals provide a convenient GND location to which the IN terminals can be
-connected via siwtches, push buttons, etc..
+connected via switches, push buttons, etc.
 
 ![](img/snd-player-in12.jpg)
 ![](img/snd-player-in34.jpg)
@@ -97,7 +97,7 @@ section below for details.
 ## Operation
 
 After powering up, the blue LED will blink four times to indicate the
-SoundBytes Custom is ready.  However, if no microSD card in inserted, or no valid
+SoundBytes Custom is ready.  However, if no microSD card is inserted, or no valid
 sound files are found on the card, the blue and orange LEDs will instead blink
 alternately.
 
@@ -109,9 +109,9 @@ but these levels should be used with caution as they may cause distortion.
 
 To change volume, press the VOL UP or VOL DN button.  The amber LED will
 blink briefly in response to pressing the button.  When setting volume level
-20, the amber LED will blink somewhat longer than normal to indicate it is
-the default level.  When at the minimum or maximum volume levels, the amber
-LED will blink rapidly.
+20, the amber LED will blink longer than normal to indicate it is the
+default level.  When at the minimum or maximum volume levels, the amber LED
+will blink rapidly.
 
 ### Sound Files
 
@@ -190,7 +190,7 @@ In One-Shot Mode, when the input is activated (connected to GND), a randomly
 selected sound file from the corresponding event folder will be played. 
 Playback will end when the sound file completes playing, regardless of the
 state of the input.  Playback will not repeat automatically, but can be
-restarted by deactivating the input (dicconnecting from GND) and then
+restarted by deactivating the input (disconnecting from GND) and then
 reactivating it.
 
 ##### Option Files
@@ -203,10 +203,10 @@ reactivating it.
 
 When initially activated by connecting the input to GND, Continuous Mode
 will randomly play a sound file from the corresponding event folder.  After
-finished playing, if the inpupt is still active (connected to GND), then
-either the same sound file will be repeated or a newly selected sound file
-will be played (this behavior is determined by the option files below). 
-Sounds continue repeating indefinitely while the input is connected to GND.
+playing, if the input is still active (connected to GND), then either the
+same sound file will be repeated or a newly selected sound file will be
+played (this behavior is determined by the option files below).  Sounds
+continue repeating indefinitely while the input is connected to GND.
 
 ##### Option Files
 
@@ -214,7 +214,7 @@ Sounds continue repeating indefinitely while the input is connected to GND.
 | --------------- | ----------- |
 | continuous.opt  | Must be present to select Continuous Mode. |
 | shuffle.opt     | (Optional) Determines the behavior when a sound file finishes playing and the input is still active.  If this option file is present, then a randomly selected file will be played next.  If not present, then the first selected file will be repeated in a loop. |
-| level.opt       | (Optional) If this option file is present, then playback stops immediately when the input is deactivated.  Otherwise, playback continuues through the end of the currently playing sound file. |
+| level.opt       | (Optional) If this option file is present, then playback stops immediately when the input is deactivated.  Otherwise, playback continues through the end of the currently playing sound file. |
 
 #### Beginning-Middle-End Mode
 
