@@ -59,7 +59,7 @@ If the green power LED does not come on once you power up the board, the power s
 
 For each address line (CA0, CA1, and CA2), there are a pair of switchess marked H and L that allow you to set that line high (set the H switch on and the L switch off), low (set the L switch on and the H switch off) or floating (set both H and L switches off).  If you're only using a single ARD-LTC2499 and don't have anything else on the I2C bus, then the default will work fine and there's no need to change it.  However, if you do have other devices on the I2C bus, or you want to run multiple ARD-LTC2499 shields, you will need to configure each of them for a unique address.
 
-The table below shows the combiantions and how they correspond to both the 7-bit I2C address and the define you'll pass into the library.
+The table below shows the combinations and how they correspond to both the 7-bit I2C address and the define you'll pass into the library.
 
 | CA0    | CA1    | CA2    | 7-bit I2C Address | Ard2499 Library Define       |
 |--------|--------|--------|-------------------|----------------------|

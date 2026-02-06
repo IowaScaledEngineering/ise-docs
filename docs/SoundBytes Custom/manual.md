@@ -10,12 +10,12 @@ title: User Manual
 ## Overview
 
 The SoundBytes Custom is a programmable sound player that plays sounds from
-a microSD card in response to various trigger events.  Up to four triggers
-can come from sensors, switches, detectors, Arduinos, etc. and each trigger
-can play a different sound.  It supports various playback modes ranging from
-ambient background sounds, triggered sound effects, and a special
+a microSD card.  It supports various modes of operation ranging from ambient
+background sound, event initiated sound effects, and a special
 beginning-middle-end mode for repeating effects with lead-in and lead-out
-sound clips.
+sound clips.  Up to four events can initiate playback and each event can
+cause a different series of sounds to play.  These events can come from
+sensors, switches, various detectors, Arduinos, etc.
 
 Complete with control board, speaker, and microSD card, the SoundBytes
 Custom is a turney solution for adding sound to your model railroad, module,
@@ -24,9 +24,9 @@ diarama, or other display.
 ### Features
 
 * Custom sounds loaded using a microSD card
-* Four independent triggers with individual sounds
 * Features four playback modes: ambient, one-shot, continuous, and beginning-middle-end
-* Triggerable by a switch, pushbutton, Arduino, or any other [open-collector](/Tips%20and%20Tricks/Articles/opencollector/) output
+* Four independent events with individual sounds
+* Playback can be initiated with switches, push buttons, an Arduino, or any device with an [open-collector](/Tips%20and%20Tricks/Articles/opencollector/) output
 * Compatible with [TrainSpotter](https://www.iascaled.com/TrainSpotter) and [ATOM](https://www.iascaled.com/Atom) detectors
 * Comes complete with speaker, control board, and microSD card
 * Powered from 5V to 24V DC
@@ -34,7 +34,8 @@ diarama, or other display.
 ### Typical Applications
 
 * Ambient background sounds  
-* Triggered sound effects  
+* Sound effects  
+* Voice narration  
 
 ---
 
@@ -42,41 +43,42 @@ diarama, or other display.
 
 ### Step 1 - Power
 
-The SoundBytes Custom can be powered from 5V to 24V DC, applied through connector J1
+The SoundBytes Custom is powered from 5V to 24V DC, applied through connector J1
 (positive to VIN, negative to GND).  Alternatively, the mini USB jack can be
-used to power the Squealer, either from a USB charging block or a laptop/PC.
+used to power the Squealer, either from a USB charging block or a laptop/PC.  
 
 ![](img/snd-player-power.jpg)
 
+To power the SoundBytes Custom directly from the DCC bus, a 
+[power adapter](https://www.iascaled.com/store/CKT-DCCPWR) is available.
+
 ### Step 2 - Speaker
 
-The speaker attaches to connector J6 (SPK OUT) on the board.  The plastic
-speaker enclosure can be mounted above or below the layout.  For better
-sound fidelity, bore a 3/8" hole in the scenery or benchwork, and position
-the speaker enclosure with the opening on the side facing up.  Camouflage
-the hole with scenery.  However, this is user preference and may involve
-some experimentation.
+The speaker attaches to connector J6 (SPK OUT) on the board.  It can be
+mounted above or below the layout.  When mounting it below, a hole can be
+bored in the scneery or benchwork and covered, for better sound fidelity. 
+This may involve some experimentation.
 
 ![](img/snd-player-spk.jpg)
 
-### Step 3 - Trigger Input(s)
+### Step 3 - Event Input(s)
 
-Various input methods can be used to trigger the SoundBytes Custom.  In all
-cases, the input should be connected to GND to trigger the module.  This
-can be done with a switch, a push button, a
-[TrainSpotter](https://www.iascaled.com/TrainSpotter) or 
-[ATOM detector](https://www.iascaled.com/Atom),
-or many other devices.  And Aruino or other electronic module can also be
-used, but the output should be of an [open collector](/Tips and Tricks/Articles/opencollector/) style output.
+Various input sources can be used to initiate sound playback on the
+SoundBytes Custom.  In all cases, the input should be connected to GND when
+you want sound to play.  This can be done with a switch, a push button, a
+[TrainSpotter](https://www.iascaled.com/TrainSpotter) or [ATOM
+detector](https://www.iascaled.com/Atom), or many other devices.  An Arduino
+or other electronic module can also be used, but the output should be of an
+[open-collector](/Tips and Tricks/Articles/opencollector/) style output.
 
 !!! warning "Maximum Voltage"
-    Do not apply more than 3.3V to the trigger inputs.  The SoundBytes
+    Do not apply more than 3.3V to the inputs.  The SoundBytes
     Custom may be damaged by higher voltages.
 
-The SoundBytes Custom has four trigger inputs.  These inputs are IN1, IN2,
-IN3, and IN4 on the terminal blocks around the perimeter of the board.  The
-G terminals provide a convenient GND location to which the IN terminals can
-be connected via the trigger device.
+The SoundBytes Custom has four event inputs.  These are IN1, IN2, IN3, and
+IN4 on the terminal blocks around the perimeter of the board.  The G
+terminals provide a convenient GND location to which the IN terminals can be
+connected via siwtches, push buttons, etc..
 
 ![](img/snd-player-in12.jpg)
 ![](img/snd-player-in34.jpg)
@@ -95,8 +97,8 @@ section below for details.
 ## Operation
 
 After powering up, the blue LED will blink four times to indicate the
-SoundBytes Custom is ready.  If no microSD card in inserted, or no valid
-sound files are found on the card, the blue and orange LEDs will blink
+SoundBytes Custom is ready.  However, if no microSD card in inserted, or no valid
+sound files are found on the card, the blue and orange LEDs will instead blink
 alternately.
 
 ### Volume Control
@@ -108,7 +110,8 @@ but these levels should be used with caution as they may cause distortion.
 To change volume, press the VOL UP or VOL DN button.  The amber LED will
 blink briefly in response to pressing the button.  When setting volume level
 20, the amber LED will blink somewhat longer than normal to indicate it is
-the default level.
+the default level.  When at the minimum or maximum volume levels, the amber
+LED will blink rapidly.
 
 ### Sound Files
 
@@ -146,12 +149,12 @@ in the [Modes of Operation](#modes-of-operation) section.
 ### Ambient Mode
 
 In Ambient Mode, the SoundBytes Custom will continuously play the sound
-files in random order.  When triggered, by any input, the volume will be
-unmuted allowing the sound to play through the speaker.  After the trigger
-goes away, the volume will be muted.  Even while muted, the sound files
-continue to play internally, even though no sound is emitted by the speaker. 
-This provides a level of inherent randomization to the sound once the
-module is triggered.
+files in a random order.  When any input is connected to GND, the volume will be
+unmuted allowing the sound to play through the speaker.  With no inputs
+connected to GND, the volume will be muted.  Even while muted, the sound files
+continue to play internally, although no sound is emitted by the speaker. 
+This provides a level of inherent randomization to the sound each time the
+volume is unmuted.
 
 To configure Ambient Mode, a folder named **ambient** should be present in
 the root directory of the microSD card.  The sounds in this folder will be
@@ -161,33 +164,34 @@ played randomly.
     If a folder named **ambient** is found on the microSD card, then Ambient
     Mode will be selected.  This takes precedence over any other mode of
     operation below, regardless if any other folders are present on the
-    microSD card.  All four trigger inputs will behave the same in Ambient
-    Mode.
+    microSD card.  All four inputs will behave the same in Ambient Mode.
 
-### Triggered Mode
+### Event Mode
 
-If the device is not in [Ambient Mode](#ambient-mode), then it defaults to triggered mode. 
-In triggered mode, the playback of sounds depends upon the state of the four
-trigger inputs.  Each trigger input can activate a different set of sounds,
-each with different behaviors as detailed below.
+If the device is not in [Ambient Mode](#ambient-mode), then it defaults to
+event mode.  In event mode, the playback of sounds depends upon the state of
+the four inputs.  Each input can activate a different set of sounds, each
+with different behaviors as detailed below.
 
-For triggered mode, folders named **event1**, **event2**, **event3**, and/or
-**event4** should be present on the microSD card.  The specific trigger input
-activated determines the folder, and the sounds contained within, which
-will be played.  For example, if the IN3 trigger input is activated, then
-the sounds from the **event3** folder will be played.
+In event mode, folders named **event1**, **event2**, **event3**, and/or
+**event4** should be present on the microSD card.  The specific input
+activated determines the folder, and the sounds contained within, which will
+be played.  For example, when the IN3 input is activated, the sounds from
+the **event3** folder will be played.
 
 !!! note "Please Note"
-    Only one trigger will be detected and acted upon at the same time.  Only
-    the sound(s) for the first trigger will play.
+    Only one event will be detected and acted upon at any time.  The sound(s) for the first
+    event detected will play until that event is complete, followed by any
+    other events that are active at that time.
 
-#### One-Shot Triggered Mode
+#### One-Shot Mode
 
-In One-Shot Triggered Mode, a randomly selected sound file from the event
-folder will be played.  Playback will end when the sound file completes
-playing, regardless of the state of the trigger input.  Playback will not
-repeat automatically, but can be retriggered by releasing the trigger input
-and then re-activating it.
+In One-Shot Mode, when the input is activated (connected to GND), a randomly
+selected sound file from the corresponding event folder will be played. 
+Playback will end when the sound file completes playing, regardless of the
+state of the input.  Playback will not repeat automatically, but can be
+restarted by deactivating the input (dicconnecting from GND) and then
+reactivating it.
 
 ##### Option Files
 
@@ -195,40 +199,40 @@ and then re-activating it.
 | --------------- | ----------- |
 | (none)          | No option files should be present for One-Shot Mode |
 
-#### Continuous Triggered Mode
+#### Continuous Mode
 
-When initially triggered, Continuous Triggered Mode will randomly play a
-sound file from the corresponding event folder.  After finished playing, if
-the trigger is still active, then either the same sound file will be
-repeated or a newly selected sound file will be played (this behavior is
-determined by the option files below).  Sounds continue repeating
-indefinitely while the trigger input is active.
+When initially activated by connecting the input to GND, Continuous Mode
+will randomly play a sound file from the corresponding event folder.  After
+finished playing, if the inpupt is still active (connected to GND), then
+either the same sound file will be repeated or a newly selected sound file
+will be played (this behavior is determined by the option files below). 
+Sounds continue repeating indefinitely while the input is connected to GND.
 
 ##### Option Files
 
 | Option File     | Description |
 | --------------- | ----------- |
 | continuous.opt  | Must be present to select Continuous Mode. |
-| shuffle.opt     | (Optional) Determines the behavior when a sound file finishes playing and the trigger is still active.  If this option file is present, then a randomly selected file will be played next.  If not present, then the first selected file will be repeated in a loop. |
-| level.opt       | (Optional) If this option file is present, then playback stops immediately when the trigger is released.  Otherwise, playback continuues through the end of the currently playing sound file. |
+| shuffle.opt     | (Optional) Determines the behavior when a sound file finishes playing and the input is still active.  If this option file is present, then a randomly selected file will be played next.  If not present, then the first selected file will be repeated in a loop. |
+| level.opt       | (Optional) If this option file is present, then playback stops immediately when the input is deactivated.  Otherwise, playback continuues through the end of the currently playing sound file. |
 
 #### Beginning-Middle-End Mode
 
-For special use cases, Beginning-Middle-End Triggered Mode allows an initial
+For special use cases, Beginning-Middle-End Mode allows an initial
 beginning sound to be played, followed by an indefinite series of middle
 sounds, wrapping up with an end sound.  This can be used for things like
 whistles or the sound of a train approaching, passing, and leaving.
 
-When the trigger input first activates, the beginning sound is played.  If
-the trigger input is still active at the end of the beginning sounds, then
-the middle sound(s) will play in a random order.  Once the trigger input
-goes away, then the end sound will be played.  If the trigger input is not
-active at the end of the beginning sound, then the middle sound(s) will be
-skipped and the end sound played.
+When the input is first activated (connected to GND), the beginning sound is
+played.  If the input is still active at the end of the beginning sounds,
+then the middle sound(s) will play in a random order.  Once the input is
+deactivated, then the end sound will play.  If the input is not active at
+the end of the beginning sound, then the middle sound(s) will be skipped and
+the end sound played.
 
 If the sound files all have the same sample rate, then playback in
 beginning-middle-end mode is seamless.  This means transitions between the
-various sounds happen without any delays.
+various sound files happen without any delays.
 
 Specific filenames are required for proper operation.  The beginning and end
 sound files must be named exactly as follows:
