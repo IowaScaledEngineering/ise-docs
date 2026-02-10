@@ -119,11 +119,16 @@ Sounds can be loaded using a microSD card.  The sound files need to be put
 in folders, with specific folder names, on the microSD card.  See the 
 [Modes of Operation](#modes-of-operation) section for details.
 
-The microSD card must be formatted as FAT and the sounds must also meet the following requirements:
+The sound files must also meet the following requirements:
 
 * WAV file named with .wav extension (e.g. mp3 or other formats will not work)
 * 16-bit, mono format
 * 8, 16, 32, or 44.1kHz sample rate
+
+!!! note "Note"
+    The microSD card should be formatted as FAT.  Most cards come
+    from the factory pre-formatted, including the card supplied with the
+    SoundBytes Custom, so no additional formatting is required.
 
 ### Option Files
 
@@ -156,15 +161,19 @@ continue to play internally, although no sound is emitted by the speaker.
 This provides a level of inherent randomization to the sound each time the
 volume is unmuted.
 
+!!! note "Continuous Play"
+    If you want the sound to play continuously any time the SoundBytes Custom
+    is powered, then simply connect one of the inputs to the G (GND)
+    terminal with a wire.
+
 To configure Ambient Mode, a folder named **ambient** should be present in
 the root directory of the microSD card.  The sounds in this folder will be
-played randomly.
+played in a random order.
 
-!!! note "Please Note"
-    If a folder named **ambient** is found on the microSD card, then Ambient
-    Mode will be selected.  This takes precedence over any other mode of
-    operation below, regardless if any other folders are present on the
-    microSD card.  All four inputs will behave the same in Ambient Mode.
+Whenever a folder named **ambient** is found on the microSD card and valid
+files are present within it, Ambient Mode will be selected regardless
+of any other folders or files present on the card.  This means Ambient
+Mode takes precedence over the other modes of operation below.
 
 ### Event Mode
 
@@ -179,7 +188,7 @@ activated determines the folder, and the sounds contained within, which will
 be played.  For example, when the IN3 input is activated, the sounds from
 the **event3** folder will be played.
 
-!!! note "Please Note"
+!!! note "Note"
     Only one event will be detected and acted upon at any time.  The sound(s) for the first
     event detected will play until that event is complete, followed by any
     other events that are active at that time.
@@ -208,13 +217,18 @@ same sound file will be repeated or a newly selected sound file will be
 played (this behavior is determined by the option files below).  Sounds
 continue repeating indefinitely while the input is connected to GND.
 
+!!! note "Note"
+    Playback in Continuous Mode is not seamless.  There will be a
+    gap between sound files.  For true seamless playback,
+    [Beginning-Middle-End Mode](#beginning-middle-end-mode) is a better option.
+
 ##### Option Files
 
 | Option File     | Description |
 | --------------- | ----------- |
 | continuous.opt  | Must be present to select Continuous Mode. |
 | shuffle.opt     | (Optional) Determines the behavior when a sound file finishes playing and the input is still active.  If this option file is present, then a randomly selected file will be played next.  If not present, then the first selected file will be repeated in a loop. |
-| level.opt       | (Optional) If this option file is present, then playback stops immediately when the input is deactivated.  Otherwise, playback continues through the end of the currently playing sound file. |
+| level.opt       | (Optional) If this option file is present, the volume will be muted with a brief fade out, and playback stopped, when the input is deactivated.  Otherwise, playback continuues through the end of the currently playing sound file when the input is deactived. |
 
 #### Beginning-Middle-End Mode
 
