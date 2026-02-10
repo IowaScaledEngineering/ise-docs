@@ -9,7 +9,7 @@ The [RoadReady Expansion Module](https://www.iascaled.com/store/CKT-XING-TXM) (C
 with both the RoadReady Basic and the RoadReady Pro.  For supporting even more tracks, RoadReady Expansion Modules can be chained together for an unlimited number of tracks.
 
 !!! note info
-    If you just want to add more "island" detectors to a RoadReady Basic, you do not need an Expansion Module.  All you need to do is add additional TrainSpotters as described in the [section of the manual](../../Basic Crossing/manual/#additional-detectors).
+    If you just want to add more "island" detectors to a RoadReady Basic, you do not need an Expansion Module.  All you need to do is add additional TrainSpotters as described in the [section of the manual](../Basic Crossing/manual.md#additional-detectors).
 
 ![](img/ckt-xing-txm.png)
 

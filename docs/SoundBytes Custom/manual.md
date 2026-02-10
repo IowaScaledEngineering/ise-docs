@@ -26,7 +26,7 @@ diarama, or other display.
 * Custom sounds loaded using a microSD card
 * Features four playback modes: ambient, one-shot, continuous, and beginning-middle-end
 * Four independent events with individual sounds
-* Playback can be initiated with switches, push buttons, an Arduino, or any device with an [open-collector](/Tips%20and%20Tricks/Articles/opencollector/) output
+* Playback can be initiated with switches, push buttons, an Arduino, or any device with an [open-collector](../Tips and Tricks/Articles/opencollector.md) output
 * Compatible with [TrainSpotter](https://www.iascaled.com/TrainSpotter) and [ATOM](https://www.iascaled.com/Atom) detectors
 * Comes complete with speaker, control board, and microSD card
 * Powered from 5V to 24V DC
@@ -69,7 +69,7 @@ you want sound to play.  This can be done with a switch, a push button, a
 [TrainSpotter](https://www.iascaled.com/TrainSpotter) or [ATOM
 detector](https://www.iascaled.com/Atom), or many other devices.  An Arduino
 or other electronic module can also be used, but the output should be of an
-[open-collector](/Tips and Tricks/Articles/opencollector/) style output.
+[open-collector](../Tips and Tricks/Articles/opencollector.md) style output.
 
 !!! warning "Maximum Voltage"
     Do not apply more than 3.3V to the inputs.  The SoundBytes
