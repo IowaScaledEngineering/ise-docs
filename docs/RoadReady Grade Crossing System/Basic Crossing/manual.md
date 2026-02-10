@@ -17,7 +17,7 @@ detectors are clear.
 Additional TrainSpotter detectors can be connected for additional tracks, or
 for additional detection distance from the crossing.
 
-Note: This basic controller is only an island circuit, meaning it does not
+Note: This basic controller is only an [island circuit](/Tips%20and%20Tricks/Articles/xing-basics/#island-only-crossing-circuits), meaning it does not
 implement approach sensors.  It is intended for a crossing with lights and
 bell only and cannot control crossing gates.
 
