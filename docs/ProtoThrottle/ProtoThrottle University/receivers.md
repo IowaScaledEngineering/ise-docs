@@ -53,5 +53,3 @@ Product Page: [MRBW-WIFI](https://www.iascaled.com/store/MRBW-WIFI)
 ### Setup
 
 ### Troubleshooting
-
-## Why not 
