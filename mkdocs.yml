@@ -58,6 +58,7 @@ theme:
 plugins:
   - search
   - awesome-pages
+  - mkdocs-video
   
 copyright: 
     Copyright 2023 - <a href="https://www.iascaled.com/" target="_blank" rel="noopener">Iowa Scaled Engineering
