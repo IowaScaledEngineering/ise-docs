@@ -70,8 +70,9 @@ Once you get the esp32 board support installed, you'll want to select the correc
 
 The key to controlling the MSS-XCADE board is the library written around it.  This makes it easy to control without having to know exactly where each wire goes on the board.  You can write software thinking about signal concepts, not about hardware schematics.  It also has some examples with it to show you how various things are done.
 
-I haven't made the MSS-CADE control library accessible through the general Arduino library manager, because it's a very specialized application.  You can easily download the latest 
-Download the latest MSS-XCADE library zip file from the IowaScaledEngineering/mss-xcade-lib project. You can get the most recent zip file [from here](https://github.com/IowaScaledEngineering/mss-xcade-lib/archive/refs/heads/master.zip). Use Sketch->Include Library->Add .ZIP Library and select the zip file you just downloaded.
+You should now be able to install release versions of the MSS-XCADE control library from the Arduino library manager.  Just search for mss-xcade within the library manager.  
+
+If you prefer to grab the latest and greatest source, you can also easily download the latest MSS-XCADE library zip file from the IowaScaledEngineering/mss-xcade-lib project. You can get the most recent zip file [from here](https://github.com/IowaScaledEngineering/mss-xcade-lib/archive/refs/heads/master.zip). Use Sketch->Include Library->Add .ZIP Library and select the zip file you just downloaded.
 
 
 ### Sketch Fundamentals
