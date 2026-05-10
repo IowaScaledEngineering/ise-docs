@@ -5,9 +5,10 @@ title: Soldering
 
 ## Overview
 
-Nearly every model railroader will need to solder electrical connections.  Let's face it, electricity makes our models go, even if you're running just straight DC or even dead rail.  Plus, there's the more mechanical uses of soldering, such as hand-laying trackwork or making some repairs on brass models.  Soldering is a fundamental skill needed for model railroading.
+Nearly every model railroader will need to solder electrical connections.  Let's face it, electricity makes our models go, even if you're running just straight DC or dead rail.  Plus, there's the more mechanical uses of soldering, such as hand-laying trackwork or making some repairs on brass models.  Soldering is a fundamental skill needed for model railroading.
 
-There's three key pieces to making successful solder joints:
+There are three key pieces to making successful solder joints:
+
 * The right soldering iron & tip
 * The right solder and flux
 * Clean work pieces and good technique
@@ -23,10 +24,11 @@ For electronics work, you really want a soldering station.  It should have a goo
 A nice-to-have feature is a system that powers down the tip while the handpiece is in the holder.  Soldering tips degrade with time and use, and they degrade much, much faster when they're at operating temperature.  By allowing the tip to drop to an idling temperature (often around 150-200C) while it's in the stand, this helps prolong the life of your soldering tips.
 
 Modern soldering handpiece tech basically comes in two categories:
+
 * Passive replacable tip that fits over a separate, fixed heating element in the handpiece
 * Cartridge that fits into the handpiece that contains the heating element and temp sensor
 
-Older designs like the Hakko 936/937/FX888 and Weller WE1010 series use this passive tip design.  They have a ceramic heat element that stays in the handpiece, and then slip a replacable metal tip over it.  This works fine, because there's a gap between the heating element and the tip itself, they're often slow to heat up and struggle to hold a constant working temperature when soldering larger workpieces.  They have the advantage of being inexpensive, however, are often "good enough" if you're not working on high end equipment all day, every day.  
+Older designs like the Hakko 936/937/FX888 and Weller WE1010 series use this passive tip design.  They have a ceramic heat element that stays in the handpiece, and then slip a replacable metal tip over it.  This works fine, but because there's a gap between the heating element and the tip itself, they're often slow to heat up and struggle to hold a constant working temperature when soldering larger workpieces.  They have the advantage of being inexpensive, however, are often "good enough" if you're not working on high end equipment all day, every day.  
 
 Cartridge-based tips are what nearly all production soldering systems use these days.  With these, the tip that does the soldering has an integrated heating element and plugs into the handpiece.  Because the heating element is directly and tightly coupled to the tip, they heat very quickly (often in a few seconds) and hold temperature extremely well because they can quickly transfer a lot of heat directly to the tip.  
 
@@ -50,7 +52,7 @@ One place I would not cheap out is on the tips, which are known typically as "90
 
 [![The Geeboon TC22](img-tools/tools-solder-tc22.jpg){ align=right width=300 }](img-tools/tools-solder-tc22.jpg)
 
-If you get into the $100 range, I would look at the Geeboon TC22.  While looking a budget-friendly cartridge-based soldering iron for recommendations, this one just kept coming up in online reviews.  It's a base, handpiece, and stand that use standard JBC-style cartridges.  (JBC makes high end production soldering stations.) So I ordered one off Amazon with a T245/C245 handpiece for $93.  
+If you get into the $100 range, I would look at the Geeboon TC22.  While looking for a budget-friendly cartridge-based soldering iron for recommendations, this one just kept coming up in online reviews.  It's a base, handpiece, and stand that use standard JBC-style cartridges.  (JBC makes high end production soldering stations.) So I ordered one off Amazon with a T245/C245 handpiece for $93.  
 
 All I can say is that I'm seriously impressed so far.  It heats incredibly quickly - not quite Metcal fast.  It senses when the iron is in the stand and puts it into sleep, where it allows the iron to cool in order to prolong the tip life.  After ten minutes of being in the stand, it will also shut the iron off completely so it doesn't remain hot if you go off and leave the power on.  All of those times and temperatures are programmable.  
 
@@ -60,7 +62,7 @@ The one I got came with some huge honking tip, but I also ordered a 2.2mm chisel
 
 #### High End Choice
 
-Here there's a lot of personal preference, but get ready to spend some money.  Fully outfitted with the soldering station, handpieces, and some tips, you're probably looking at 600-1200 in this range for new stuff.  However, equipment in this range is a serious industrial grade tool and holds up well from years of constant, daily use.  If you can find some used equipment, it's often just fine and can save you substantial cash.
+Here there's a lot of personal preference, but get ready to spend some money.  Fully outfitted with the soldering station, handpieces, and some tips, you're probably looking at $600-$1200 in this range for new stuff.  However, equipment in this range is a serious industrial grade tool and holds up well from years of constant, daily use.  If you can find some used equipment, it's often just fine and can save you substantial cash.
 
 [![Metcal MX-5210](img-tools/tools-solder-mx5210.jpg){ align=right width=300 }](img-tools/tools-solder-mx5210.jpg)
 
@@ -68,7 +70,7 @@ Metcal and Thermaltronics are great.  That's what we use.  The downside is that 
 
 My go-to tip style is a 1.8mm chisel tip for most work - a Thermaltronics M7CH176 or Metcal STTC-137, which operate at 390-413C.  When I need to solder terminal blocks or larger stuff that really sucks up the heat, I switch to a Thermaltronics M8CH176 (equivalent to Metcal STTC-837).  It's still a 1.8mm chisel tip, but operates at a higher temperature that helps get things going faster.  It makes fast, quality joints with lead-free solder even with things with large thermal mass.  We also have a variety of other tips, such as smaller chisel tips and bent sharp tips, for doing more delicate stuff.
 
-(Note that Metcal and Thermaltronics offer both high frequency and low frequency soldering systems.  They're not compatible.  The high frequency systems like ours, run at 13.56MHz and heat faster withs smaller cartridges.  The low frequency systems are a little slower to heat, but significantly cheaper.  In fact, Thermaltronics just launched what I would describe as a "mid-range" low frequency system with the TMT-1000 at $160, but I have not tried one yet.)
+(Note that Metcal and Thermaltronics offer both high frequency and low frequency soldering systems.  They're not compatible.  The high frequency systems like ours, run at 13.56MHz and heat faster with smaller cartridges.  The low frequency systems are a little slower to heat, but significantly cheaper.  In fact, Thermaltronics just launched what I would describe as a "mid-range" low frequency system with the TMT-1000 at $160, but I have not tried one yet.)
 
 Having now used the JBC-style cartridges with our mid-range pick, I'd also look at JBC stations for a high end pick.  Something like the CD-1BQF or CDE-1BQA can actually deliver a lot more power to the tip than our Metcal/Thermaltronics setups.  
 
@@ -92,7 +94,7 @@ What about Wellers?  In my opinion, their low and mid-range options are highly o
 
 [![Kester K100LD Wire Solder](img-tools/tools-solder-k100ld.jpg){ align=right width=250 }](img-tools/tools-solder-k100ld.jpg)
 
-For electronics work, you want a small diameter rosin-core wire solder.  That means is that it's a small wire made out of the soldering alloy with a core in the middle of rosin flux to clean the joint and assure good contact as you solder. 
+For electronics work, you want a small diameter rosin-core wire solder.  That means that it's a small wire made out of the soldering alloy with a core in the middle of rosin flux to clean the joint and assure good contact as you solder. 
 
 If you're doing electronics work, there's pretty much three characteristics you need to consider when choosing a wire solder:
 
@@ -111,7 +113,7 @@ There's another type of leaded electronics solder called 60/40, which is, as you
 !!! warning "About Lead in Solder"
     I'm not here to tell you to stop using leaded solder.  I have both types on my bench, and still use both.  Lead is bad for biology, there's no doubt about that.  It causes a host of developmental, neurological, cardiovascular, reproductive, and other issues.  It does so insideously by accumulating in bones and organs and persists over decades, slowly causing damage.  Just be aware of it.
 
-    When doing electronics soldering, the only real way you get lead in your system is by ingesting it.  It doesn't come through your skin, and at the temperatures you're soldering, it doesn't vaporize.  (Lead vaporizes at 1750C, and it would be rare to solder over 450C.)  The biggest danger is surface contamination - dust and particles that come off the surface or get wiped off the iron and then get on your skin and transferring to whatever you're eating and ingested.  Which means yes, wash your hands when you're done handling it and clean any surfaces you were soldering on before you drop down your sandwich on the bench.
+    When doing electronics soldering, the only real way you get lead in your system is by ingesting it.  It doesn't come through your skin, and at the temperatures you're soldering, it doesn't vaporize.  (Lead vaporizes at 1750C, and it would be rare to solder over 450C.)  The biggest danger is surface contamination - dust and particles that come off the surface or get wiped off the iron and then get on your skin and transferring to whatever you're eating and ingesting.  Which means yes, wash your hands when you're done handling it and clean any surfaces you were soldering on before you drop your sandwich down on the bench.
 
     So why still use it?  Lead-free takes a certain amount of skill to make a good joint because it takes more heat, and it just never wets as well.  Leaded works beautifully where you can't get a hot enough or clean enough workpiece.  You can make decent joints on some really crap materials.  Plus, it's more ductile and less prone to brittle fracture in applications where fatigue is an issue.  However, if you're just learning now, I'd start with lead free and just learn the techniques to work with it.  It's come a very long way since the early days, where it was terrible to use.
 
@@ -175,7 +177,7 @@ For model railroaders, solder paste isn't as important.  It's basically a whole 
 
 There are some cases where it's handy, though, particularly if you are working on making a joint that would need you to have a couple extra arms to hold everything in place.  You can put a little paste on a joint first, then set the pieces together and heat them until everything melts.  
 
-Here's the downsides - it's expensive (a 500 gram jar of Kester NXG1 that we use costs roughly $250 these days), it has a definitely lifespan (usually about six months), and almost all formulations have to be refrigerated.   There are some formulations that you can get in much smaller syringes, and Chip Quik offers some formulations that are advertised as room temperature stable.  For example, Chip Quik's TS391SNL is a half ounce (15 gram) syringe filled with SAC305 paste with a no-clean flux that is specified to have a life greater than a year stored at room temp.
+Here's the downsides - it's expensive (a 500 gram jar of Kester NXG1 that we use costs roughly $250 these days), it has a definite lifespan (usually about six months), and almost all formulations have to be refrigerated.   There are some formulations that you can get in much smaller syringes, and Chip Quik offers some formulations that are advertised as room temperature stable.  For example, Chip Quik's TS391SNL is a half ounce (15 gram) syringe filled with SAC305 paste with a no-clean flux that is specified to have a life greater than a year stored at room temp.
 
 ## Supporting Supplies
 
