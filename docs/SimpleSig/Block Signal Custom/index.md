@@ -6,6 +6,9 @@ title: User Manual
 !!! warning
     This is an advanced product designed as a hardware platform for users comfortable with programming and debugging C++ code in the Arduino environment who want to signal complex trackwork.  It is not "plug and play" and will completely frustrate and befuddle the average modeler.   By default, it will just sit there doing nothing.  It will only do something once you write software to make it work.
 
+The Block Signal Custom is the hardware at the heart of our [Block Signal Pro kits](../Block%20Signal%20Pro%20Kits/index.md).  This documentation is for those who want to buy the bare hardware to develop their own complex signal applications.  For those using the kits, please refer to the specific kit documentation.
+
+
 ## Overview
 
 The Iowa Scaled Engineering [Block Signal Custom](https://www.iascaled.com/store/MSS-XCADE) is designed to allow advanced users to create their own MSS-compatible signal logic for complex interlocking scenarios.  It's based around an ESP32-S2 and programmable through the Arduino environment using the onboard USB port, balancing computing power with user-friendliness.
