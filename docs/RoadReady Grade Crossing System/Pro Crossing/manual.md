@@ -5,21 +5,9 @@ title: User Manual
 
 ## Overview
 
-The [RoadReady Pro Crossing Controller](https://www.iascaled.com/store/CKT-XING-ADV) (CKT-XING-ADV)
-is a simple way to control model railroad grade crossing lights and play a
-bell sound.  It includes two [TrainSpotter](https://www.iascaled.com/TrainSpotter) optical detectors, and has all
-seven of our standard SoundBytes crossing bell sounds built in.  It will drive any number of common
-anode (common positive) LED crossing signals, the most common type found on
-the market today.  The crossing will start when one of the detectors senses
-a train above it, and will continue for a selectable time after all
-detectors are clear.
+The [RoadReady Pro Crossing Controller](https://www.iascaled.com/store/CKT-XING-ADV) (CKT-XING-ADV) is a more advanced and prototypical version of our RoadReady Basic Crossing Controller. 
 
-Additional TrainSpotter detectors can be connected for additional tracks, or
-for additional detection distance from the crossing.
-
-Note: This basic controller is only an [island circuit](../../Tips and Tricks/Articles/xing-basics.md#island-only-crossing-circuits), meaning it does not
-implement approach sensors.  It is intended for a crossing with lights and
-bell only and cannot control crossing gates.
+The Pro version of the controller keeps all the features of the Basic model, and adds the ability to have [approach circuit logic](../../Tips and Tricks/Articles/xing-basics.md#adding-approach-circuits) for up to two tracks and operate two or four quadrant gates.
 
 ![](img/ckt-xing-adv.png)
 
@@ -28,11 +16,16 @@ bell only and cannot control crossing gates.
 * Plug-and-play detectors and speaker connections - no fiddly terminal blocks!
 * Rock solid TrainSpotter optical detection - works in any ambient lighting conditions
 * Seven different built-in prototypical crossing bell sounds
-* Configurable turn-off delay after detectors clear
-* Easy expansion with additional detectors for more tracks
+* [Approach circuit logic](../../Tips and Tricks/Articles/xing-basics.md#adding-approach-circuits) for up to two tracks
+* Gate control for two-quadrant or four-quadrant gates using servos or motors
+* Configurable approach and island timeouts
+* Lamp or LED emulation for the crossing signals
+* A constant output in addition to left/right flashers, active when the lights are on
+* Easy expansion with additional detectors for an additional track
 * Works with common anode (common positive) LED grade crossing signals
 * Robust, protected signal output drivers will handle 1 amp of current
-* Includes control board, two (2) TrainSpotter optical detectors, and speaker
+* Includes control board, four TrainSpotter optical detectors, cables, and speaker
+* Expandable with four more TrainSpotters for a second track, or with a Track Expansion Module for even more tracks.
 * Universal Power - works from 6V to 24V DC, AC, or DCC
 
 ---
@@ -126,9 +119,14 @@ If the gates are reversed (they go up when they should come down, down when they
 
 If you are using 9G-type servos, on servo will attach to each set of header pins, with the negative/ground lead towards the top of the header (marked GND) and the signal wire towards the bottom (marked PWM).  Again, the two servos driving 2-quadrant gates or the main 4-quadrant gates connect to the MAIN GATES pins.  If installing 4-quadrant gates, the exit gate servos attach to the AUX GATES pins.
 
-The servo drivers are set to take 2 seconds from the up to down position (or vice versa).
+The servo drivers are set to take 3 seconds from the up to down position (or vice versa).
+
+Servo cables are polarized, and you need to attach them correctly.  Usually they have a black or brown wire to indicate the negative power supply lead.  This should be on the pin towards the middle of the board, next to the **GND** label.
 
 [![](img/ckt-xing-adv-gate-servos.png)](img/ckt-xing-adv-gate-servos.png)
+
+!!! note warning Adjusting Servos
+    By default, the servos start out with both the up and down positions set to the same value.  It is generally recommended that you leave one of them as set and then secure the gate mechanism after the board has had the chance to power up.   Then adjust the opposite end slowly, as servos can generate a lot of force and rip delicate signal mechanisms apart.
 
 ---
 
