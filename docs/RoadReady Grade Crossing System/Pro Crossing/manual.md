@@ -5,7 +5,7 @@ title: User Manual
 
 ## Overview
 
-The [RoadReady Pro Crossing Controller](https://www.iascaled.com/store/CKT-XING-ADV) (CKT-XING-ADV) is a more advanced and prototypical version of our RoadReady Basic Crossing Controller. 
+The [RoadReady Pro Crossing Controller](https://www.iascaled.com/store/CKT-XING-ADV) (CKT-XING-ADV) is a more advanced and prototypical version of our [RoadReady Basic Crossing Controller](../Basic Crossing/manual.md). 
 
 The Pro version of the controller keeps all the features of the Basic model, and adds the ability to have [approach circuit logic](../../Tips and Tricks/Articles/xing-basics.md#adding-approach-circuits) for up to two tracks and operate two or four quadrant gates.
 
@@ -25,8 +25,8 @@ The Pro version of the controller keeps all the features of the Basic model, and
 * Works with common anode (common positive) LED grade crossing signals
 * Robust, protected signal output drivers will handle 1 amp of current
 * Includes control board, four TrainSpotter optical detectors, cables, and speaker
-* Expandable with four more TrainSpotters for a second track, or with a Track Expansion Module for even more tracks.
-* Universal Power - works from 6V to 24V DC, AC, or DCC
+* Expandable with four more TrainSpotters for a second track, or with a [Track Expansion Module](../Track Expansion Module/manual.md) for even more tracks.
+* Universal Power - works from 8V to 24V DC or DCC
 
 ---
 
@@ -48,7 +48,9 @@ The sensors for the first track should be plugged into the "TRACK A SENSORS" con
 
 Figuring out where to install the approach detectors will require some thought and probably experimentation.  Please see the [section on Approach Detector Placement](#approach-detector-placement) below.
 
-[![](img/ckt-xing-adv-sensors.png)](img/ckt-xing-adv-sensors.png)
+This diagram shows how to attach the sensors for a single track.  Additional sensors for a second track are connected to "TRACK B SENSORS" connectors instead.
+
+[![](img/ckt-xing-adv-sensors-1t.png)](img/ckt-xing-adv-sensors-1t.png)
 
 #### Step 2A - Island Detectors
 
@@ -58,11 +60,9 @@ We recommend mounting the island sensors within a a couple inches of each side o
 
 #### Step 2B - Approach Detectors
 
-The approach sensors require some planning based on your layout and operating style.  
+Mount one TrainSpotter detector on each side of the crossing.  The detectors should be located at the point where you want the crossing to start activating, based on your train speed and local layout conditions.
 
-Mount one TrainSpotter detector on each side of the crossing.  The detectors
-should be located at the point where you want the crossing to start
-activating, based on your train speed and local layout conditions.    It does not matter which detector plugs into which jack.
+The approach sensors require some planning based on your layout and operating style.  See [Approach Detector Placement](#approach-detector-placement) for a more in-depth discussion about figuring out where to place them.
 
 ![](img/ckt-xing-adv-inputs.jpg)
 
@@ -70,9 +70,9 @@ activating, based on your train speed and local layout conditions.    It does no
 
 ### Step 3 - Speaker
 
-Using the 18-inch, four wire cable, connect the speaker cube and mount it somewhere near the crossing, as high frequency sounds like bells are easy for humans to locate.  If the speaker is mounted too far from the crossing itself, the bell sound will appear to be coming from the wrong place.  Double-sided tape works great for mounting.  
+Using the 18-inch, four wire cable, connect the speaker cube to the SPEAKER output on the main board.  Mount it somewhere near the crossing, as high frequency sounds like bells are easy for humans to locate.  If the speaker is mounted too far from the crossing itself, the bell sound will appear to be coming from the wrong place.  Double-sided tape works great for mounting.  
 
-![](img/ckt-xing-basic-speaker.jpg)
+![](img/ckt-xing-adv-speaker.png)
 
 ---
 
@@ -84,10 +84,12 @@ For typical ~12V power, a 1k resistor is the minimum recommended on each negativ
 
 Each signal needs its own resistors.  LEDs do not always share current evenly, and sharing a resistor between multiple signals may lead to very uneven lighting or failure to light.
 
-!!! note warning
-    **The lack of current-limiting resistors will cause permanent damage to the LEDs in your crossing signals.  Make sure you have them installed! **
+!!! warning "Remember to Install Resistors"
+    **The lack of current-limiting resistors will cause permanent damage to the LEDs in your crossing signals.  Make sure you have them installed!**
 
 Connect the common anode (common positive) lead of your signals into the +V terminal of the "CROSSING SIGNAL OUTPUTS" terminal block.
+
+![](img/ckt-xing-adv-outputs.jpg)
 
 Connect the left and right negative leads - *making sure you have resistors on your signals* - to the L and R terminals.  The exact orientation (left or right) is not important - they're just marked that way to help the user be consistent if so desired.  Some crossings are wired so that all lights blink in the same direction at once, whereas others are wired so that signals on opposite sides of the road blink opposite.  It's entirely up to you.
 
@@ -99,11 +101,11 @@ Connect the left and right negative leads - *making sure you have resistors on y
 
 If your crossing doesn't have gates, you're already done with this step!  You can move right along to configuration.
 
-Gates are a whole sub-topic of their own.  In an effort not to clutter up the Quick Start section, all the detaila about them is in the [Gate Setup](#gate-setup) section below.
+Gates are a whole sub-topic of their own.  In an effort not to clutter up the Quick Start section, all the details about them are in the [Gate Setup](#gate-setup) section below.
 
 Unfortunately there's almost nothing standard about making gates work in the model world.  Generally, approaches fall into two categories - Circuitron Tortoise or similar DC slow motion motors and RC car/aircraft (9G or SG90) hobby servos.  The RoadReady Pro supports both, or mix and match.
 
-The MAIN GATES connections are used for 2-quadrant setups, and the main (entrance) gates on 4-quadrant setups.  The AUX GATES connections are used for the exit gates in 4-quadrant setups.
+The MAIN GATES connections are used for two quadrant setups, and the main (entrance) gates on four quadrant setups.  The AUX GATES connections are used for the exit gates in four quadrant setups.
 
 #### Step 5A - Tortoise-Type Motors
 
@@ -117,7 +119,7 @@ If the gates are reversed (they go up when they should come down, down when they
 
 #### Step 5B - Servo-Type Motors
 
-If you are using 9G-type servos, on servo will attach to each set of header pins, with the negative/ground lead towards the top of the header (marked GND) and the signal wire towards the bottom (marked PWM).  Again, the two servos driving 2-quadrant gates or the main 4-quadrant gates connect to the MAIN GATES pins.  If installing 4-quadrant gates, the exit gate servos attach to the AUX GATES pins.
+If you are using 9G-type servos, one servo will attach to each set of header pins, with the negative/ground lead towards the top of the header (marked GND) and the signal wire towards the bottom (marked PWM).  Again, the two servos driving two quadrant gates or the main four quadrant gates connect to the MAIN GATES pins.  If installing four quadrant gates, the exit gate servos attach to the AUX GATES pins.
 
 The servo drivers are set to take 3 seconds from the up to down position (or vice versa).
 
@@ -132,12 +134,9 @@ Servo cables are polarized, and you need to attach them correctly.  Usually they
 
 ### Step 6 - Configuration
 
+Because the RoadReady Pro has so many options, there's a whole [Configuration](#configuration) section devoted to them.
 
-In general, the defaults are a pretty good place to start for everything.
-
-Set switches A, B, and C to the bell sound you want for your crossing.  See [Configuration Options](#configuration-options).
-
-![](img/ckt-xing-basic-config.jpg)
+The defaults are generally reasonable to power up with the first time.  After you get the hardware working, you'll almost certainly want to set up your [bell type](#bell-type), [gate configuration](#gate-mode), and [approach](#approach-timeout) and [island](#island-timeout) timeouts based on your specific configuration.
 
 ---
 
@@ -150,7 +149,7 @@ detector stalk turn on, and the crossing should begin ringing and flashing light
 
 ## General Operation
 
-When a train triggers an approach detector, the track is marked "active".  At that point, the train must reach one of the island detectors within the Approach Timeout.  If it does, the track remains active until the island detectors are all clear and the island timeout expires.  If it does not, the track times out and becomes inactive once again.  If any island detectors triggers, regardless of approach detectors, the track will be considered active.
+When a train triggers an approach detector, the track is marked "active".  At that point, the train must reach one of the island detectors within the Approach Timeout.  If it does, the track remains active until the island detectors are all clear and the island timeout expires.  If it does not, the track times out and becomes inactive once again.  If any island detector triggers, regardless of approach detectors, the track will be considered active.
 
 If any track becomes active, the crossing starts.  Lights and the bell will start immediately.  Gates will begin to drop 2 seconds after the crossing activates, unless "Gate Mode" is set to one of the "no activation delay" modes.
 
@@ -166,7 +165,7 @@ All configuration of the RailReady Pro is done using the three buttons and array
 
 To enter configuration mode, hold down the **NEXT** key.  After approximately 2 seconds, the blue **BELL TYPE** light will illuminate.
 
-Within configuration mode, you will use the **NEXT** button to select the item you are configuring - as indicated by the blue lights - and the **UP** and **DOWN** buttons to change the value.
+Within configuration mode, you will use the **NEXT** button to select the item you are configuring - as indicated by the blue lights - and the **UP** and **DOWN** buttons to change the value, as indicated by the amber lights.
 
 To exit configuration mode, again hold down the **NEXT** key until all of the blue/amber configuration LEDs go out.
 
@@ -175,7 +174,7 @@ Note:  While the RoadReady Pro is in configuration mode, it will disable the lig
 
 ### Bell Type
 
-The RoadReady Grade Crossing Pro includes seven common railroad crossing bell recordings.  This allows you to choose which one plays when the crossing activates.
+The RoadReady Pro includes seven common railroad crossing bell recordings.  This allows you to choose which one plays when the crossing activates.
 
 If your crossing uses gates, it's possible to set if the bell plays continuously or if only while the gates are lowering.  To set this, see the [Bell Mode](#bell-mode) configuration setting.
 
@@ -290,11 +289,13 @@ This light gives you a clue what the track and sensor logic is doing.
 
 Normally, if the track is idle and waiting for a train, the LED will be off.
 
-Once a train triggers and approach sensor, the LED will begin blinking rapidly - about 2 times a second.  That means the crossing is waiting for the Approach Timeout for the train to reach one of the island detectors.
+Once a train triggers an approach sensor, the LED will begin blinking rapidly - about 2 times a second.  That means the crossing is waiting for the Approach Timeout for the train to reach one of the island detectors.
 
 Once the train enters the island, the LED will go solid on.  It will remain on until the island detectors are both not detecting and the Island Timeout has expired.
 
 The LED will go to a slow blink once the train leaves the island, indicating that the opposing approach is locked out and will not retrigger as an approach.
+
+![](img/ckt-xing-adv-trackstatus.png)
 
 ---
 
@@ -304,13 +305,13 @@ As their name suggests, approach detectors sense when a train is approaching the
 
 On the prototype here in the US, the lights must be on for at least 20 seconds before the train reaches the crossing.  Gates must be horizontal no later than 5 seconds before the crossing is occupied, and must take between 10-15 seconds to lower.  In addition, time will be added to allow for areas with high traffic needing a chance to clear, or high road speeds approaching the crossing that may need more time to stop.  
 
-Because of distance compression on our layouts, 25-30 seconds is often far too long.  As a suggestion, I would try for 10-15 seconds, but individual preference may vary.  
+Because of distance compression on our layouts, 25-30 seconds from the time the train trips an approach sensor to when it reaches the crossing is often far too long.  As a suggestion, I would try for 10-15 seconds, but individual preference may vary.  
 
-Here's a speed chart of how far a train in all the common scales moves in one second.  Based on what scale you model in and how fast you typically run, you can use this to get a rough idea of how far the approach detectors should be from your crossing.
+Here's a speed chart of how far a train in all the common scales moves in one second.  Based on your railroad's scale and how fast you typically run, you can use this to get a rough idea of how far the approach detectors should be from your crossing.
 
 [![](img/scale-speed-chart.png)](img/scale-speed-chart.png)
 
-As an example, on my N scale layout, road trains typically move at 30mph.  So if I was going to go for 12 second approach timings, I would multiply 3.3 inches per second (30 scale mph) by 12 seconds and get 39.6 inches.  That distance isn't a hard and fast rule.   On one side I have a switch in the siding at that distance, so I moved it in by a couple and it's only 37 inches out.  Close enough for a model.
+As an example, on my N scale layout, road trains typically move at 30mph.  So if I was going to go for 12 second approach timings, I would multiply 3.3 inches per second (30 scale mph) by 12 seconds and get 39.6 inches.  That distance isn't a hard and fast rule.   On one side I have a switch in the siding at that distance, so I moved it in by a couple inches and it's only 37 inches out.  Close enough for a model.
 
 If you're not sure exactly when you want your crossing to trigger, you can leave the detectors unmounted initially and try them in different spots above the layout.  Taping them to a small block of wood is often a good way to do this.  Just be very careful that none of the electronics touch anything metal or anything energized, such as the track or other wiring, as this will damage the product.
 
@@ -318,7 +319,7 @@ If you're not sure exactly when you want your crossing to trigger, you can leave
 
 ## Gate Setup
 
-The RoadReady Pro supports both 2-quadrant and 4-quadrant style gates.  
+The RoadReady Pro supports both two quadrant and four quadrant style gates.  
 
 Two quadrant are far more common, and are the type that nearly everybody is familiar with.  These have a single gate on each side that comes down across the lane entering the crossing.  
 
@@ -330,7 +331,11 @@ Four-quadrant gates are newer, and are used in quiet zones and on high speed lin
 
 ## Additional Tracks
 
-If you need more than two tracks, multiple Track Expansion Modules can be attached to the Expansion port on the RoadReady Pro.
+A second track can be added to the RoadReady Pro by adding four more sensors, available as the RoadReady Sensor Kit.
+
+[![](img/ckt-xing-adv-sensors-1t.png)](img/ckt-xing-adv-sensors-1t.png)
+
+If you need more than two tracks, multiple [Track Expansion Modules](../Track%20Expansion%20Module/manual.md) can be attached to the Expansion port on the RoadReady Pro.
 
 These can be full tracks with full approach logic and using four sensors, or just island-only tracks (such as an industry track/tracks running alongside mainlines through a crossing) using two sensors.
 
