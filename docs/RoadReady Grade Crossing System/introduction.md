@@ -27,7 +27,7 @@ Both models of our RoadReady crossing controllers offer the following features:
 
 The [RoadReady Pro](./Pro Crossing/manual.md) adds the following features:
 
-* Gate control for two-quadrant or four-quadrant gates using servos or motors
+* Crossing gate control using servos or motors for two-quadrant or four-quadrant gates
 * [Approach circuit logic](../Tips%20and%20Tricks/Articles/xing-basics.md#adding-approach-circuits) for up to two tracks
 * Configurable approach sensor timeouts
 * Lamp or LED emulation for the crossing signals

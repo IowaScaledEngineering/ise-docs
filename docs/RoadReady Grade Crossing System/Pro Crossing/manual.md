@@ -17,7 +17,7 @@ The Pro version of the controller keeps all the features of the Basic model, and
 * Rock solid TrainSpotter optical detection - works in any ambient lighting conditions
 * Seven different built-in prototypical crossing bell sounds
 * [Approach circuit logic](../../Tips and Tricks/Articles/xing-basics.md#adding-approach-circuits) for up to two tracks
-* Gate control for two-quadrant or four-quadrant gates using servos or motors
+* Crossing gate control using servos or motors for two-quadrant or four-quadrant gates
 * Configurable approach and island timeouts
 * Lamp or LED emulation for the crossing signals
 * A constant output in addition to left/right flashers, active when the lights are on
