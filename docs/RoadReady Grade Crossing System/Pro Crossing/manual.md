@@ -34,7 +34,7 @@ The Pro version of the controller keeps all the features of the Basic model, and
 
 ### Step 1 - Power
 
-Mount the module to the layout and connect power to the power terminal block.  6 to 24 volts of power is needed, but this can be DC, AC, or DCC.  The module itself will use up to 150 milliamps while playing sound, plus whatever power the LEDs in the signals draw.
+Mount the module to the layout and connect power to the power terminal block.  6 to 24 volts of power is needed, but this can be DC or DCC.  The module itself will use up to 150 milliamps while playing sound, plus whatever power the LEDs in the signals and motors/servos draw.
 
 ![](img/ckt-xing-adv-power.jpg)
 
