@@ -13,7 +13,7 @@ Please refer to your specific kit's documentation first, and it will call out th
 
 ### Step 1 - Plan Your Installation
 
-Pick the diagram above that matches your track configuration, and then refer to the [Reading the Diagrams](tips.md#reading-the-diagrams) section of the Getting Started document.  Then you can start planning block gap locations and block detector wiring, where the IR sensors will be mounted, where the signals and various boards will be located, etc.
+Pick the diagram above that matches your track configuration, and then refer to the [Reading the Diagrams](#reading-the-diagrams) section of the Getting Started document.  Then you can start planning block gap locations and block detector wiring, where the IR sensors will be mounted, where the signals and various boards will be located, etc.
 
 ### Step 2 - Install Main Board
 
@@ -63,7 +63,7 @@ They should be placed as shown on the track diagram for the configuration you'll
 
 For home layout use, the TrainSpotter may be omitted if all of your cars have resistor-equipped axles and you want to depend entirely upon current detection.  
 
-![](img/mss-switch-ir-connections.png)
+![](../Switch%20Signal%20Basic/img/mss-switch-ir-connections.png)
 
 ### Step 6 - Turnout Position GPIO Lines
 
