@@ -24,5 +24,14 @@
 }
 
 .md-nav__item--nested {
-    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.video-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.video-container iframe {
+    height: 100% !important;
 }
