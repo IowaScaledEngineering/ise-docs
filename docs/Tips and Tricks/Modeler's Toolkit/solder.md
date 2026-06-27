@@ -17,7 +17,7 @@ Since this is a series about what tools a modeler should have, we'll be talking 
 
 ## Soldering Irons
 
-If you're using an iron where the cord coming out plugs straight into the wall, or anything that could be vaguely described as a soldering "gun", put it down and no circuits get hurt.  Soldering guns are fine for attaching big wires (like 12 gauge or larger) together where you need lots of heat fast.  
+![](img-tools/solder-gun.png){align=right style="height: 200px;"} If you're using an iron where the cord coming out plugs straight into the wall, or anything that could be vaguely described as a soldering "gun", put it down and no circuits get hurt.  Soldering guns are fine for attaching big wires (like 12 gauge or larger) together where you need lots of heat fast.  
 
 For electronics work, you really want a soldering station.  It should have a good comfortable handpiece (the thing you hold - often called the "iron"), easily replacable tips and elements, temperature control, and be roughly in the 40-80W power range.  It should have a stand to keep the handpiece in while you're not using it, and that stand should have a sponge and brass wool to clean the tip.  
 
