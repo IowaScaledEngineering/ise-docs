@@ -3,32 +3,27 @@ title: User Manual
 ---
 # SoundBytes Custom User Manual
 
-!!! note "Please Note"
-    This is a future product and subject to change.  Release date is targeted for January 2026 and
-    will be officially announced in our email [newsletter](https://www.iascaled.com/store/). 
-
 ## Overview
 
-The SoundBytes Custom is a programmable sound player that plays sounds from
-a microSD card.  It supports various modes of operation ranging from ambient
-background sound, event initiated sound effects, and a special
+The SoundBytes Custom allows you to easily add sound to your model railroad,
+module, diorama, or other display.  It is a flexible sound player that plays
+sounds from a microSD card and supports various modes of operation ranging
+from ambient background sound, event initiated sound effects, and a special
 beginning-middle-end mode for repeating effects with lead-in and lead-out
-sound clips.  Up to four events can initiate playback and each event can
-cause a different series of sounds to play.  These events can come from
+sound clips.  Up to four inputs can initiate playback and each event can
+cause a different series of sounds to play.  These inputs can come from
 sensors, switches, various detectors, Arduinos, etc.
 
-Complete with control board, speaker, and microSD card, the SoundBytes
-Custom is a turnkey solution for adding sound to your model railroad, module,
-diarama, or other display.
+Complete with control board, speaker, and microSD card, the SoundBytes Custom is a full turnkey audio solution.
 
 ### Features
 
 * Custom sounds loaded using a microSD card
-* Features four playback modes: ambient, one-shot, continuous, and beginning-middle-end
-* Four independent events with individual sounds
+* Four playback modes: ambient, one-shot, continuous, and beginning-middle-end
+* Four inputs with individually assigned sounds
 * Playback can be initiated with switches, push buttons, an Arduino, or any device with an [open-collector](../Tips and Tricks/Articles/opencollector.md) output
 * Compatible with [TrainSpotter](https://www.iascaled.com/TrainSpotter) and [ATOM](https://www.iascaled.com/Atom) detectors
-* Comes complete with speaker, control board, and microSD card
+* Comes complete with speaker, control board, and 16GB microSD card
 * Powered from 5V to 24V DC
 
 ### Typical Applications
