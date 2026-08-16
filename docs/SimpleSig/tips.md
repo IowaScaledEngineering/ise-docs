@@ -15,7 +15,7 @@ It's based on the Modular Signal System standard, which was created by Gregg Fuh
 
 The Modular Signal System (MSS) is a way to bring signal operation to model railroads without all the complexity of computers, programming, etc.  It provides an approximation of a basic North American Automatic Block Signal system that is both easy to understand and easy to implement.  The simplest version is just a matter of installing signal and signal modules, detectors, and then linking the whole thing together with standard "crossover" type ethernet cables.
 
-MSS was designed to be robust and incredibly simple to set up because of its roots in the Free-Mo modular community  The initial standard was put forth by Gregg Fuhriman back around 2004, and it first got widespread exposure in the Feburary 2005 issue of Railmodel Journal.  What Gregg and team have developed is nothing short of brilliant in its elegant simplicity.  Being able to just plug one signaled module into the next and have them "just work" was the key to success.
+MSS was designed to be robust and incredibly simple to set up because of its roots in the Free-Mo modular community  The initial standard was put forth by Gregg Fuhriman back around 2004, and it first got widespread exposure in the [Feburary 2005 issue of Railmodel Journal](https://magazines.scaletrains.com/view.php?m=RMJ&f=rmj_200502.pdf&p=8).  What Gregg and team have developed is nothing short of brilliant in its elegant simplicity.  Being able to just plug one signaled module into the next and have them "just work" was the key to success.
 
 The standard itself is open and [available for download](http://www.modularsignalsystem.info/ModularSignalSystemStandardV2.0.2.pdf).  Because of the elegant simplicity of the system, it's easy to design your own MSS-compatible components if you're so inclined.  However, the open standard also means that there's a number of manufacturers all supporting it, and a number of other open source designs available online if you'd rather build your own.
 
@@ -57,7 +57,7 @@ SimpleSig requires isolated current detection through the track to function.  Th
 
 ### Where Do I Start?
 
-If you're talking about a home or club layout, that's a big answer.  Fortunately, we now have a guide to help you think through what you need to do to get going with signals.  Check out [Planning for Signals](planning.md).
+If you're talking about a home or club layout, that's a big answer.  Fortunately, we now have a guide to help you think through what you need to do to get going with signals.  Check out [Planning for Signals](./Articles/planning.md).
 
 ### What Module Do I Need?
 
@@ -65,7 +65,7 @@ Here's a guide of "my track looks like this, what module do I need to signal it?
 
 For modular users, this should be pretty straight-forward in terms of matching your track configuration with the appropriate solution below.
 
-For home users, once you've gone through the steps of breaking down your track plan and identifying junctions and intermediate signal locations, this should also be helpful.  Be sure to go through the [Planning For Signals](planning.md) document to learn how to plan out where to place signals on your layout.
+For home users, once you've gone through the steps of breaking down your track plan and identifying junctions and intermediate signal locations, this should also be helpful.  Be sure to go through the [Planning For Signals](./Articles/planning.md) document to learn how to plan out where to place signals on your layout.
 
 | Track / Signal Configuration | Signal Node |
 | ---------------------------- | ----------- |
@@ -150,4 +150,12 @@ While the meaning of single-headed signals is relatively uniform, combinations o
 
 As an example, let's take the indication of "Advance Approach," which means to proceed prepared to pass the next signal not exceeding some set speed and, if approaching a switch, be prepared to enter the diverging route not exceeding the prescribed speed for the turnout.  Western US roads typically used aspects of yellow over yellow for this, whereas eastern US roads tended to use yellow over green.  BNSF actually splits this into three different names - Approach Limited (yellow over flashing green), meaning the "set speed" above is 60 MPH; Advance Approach (yellow over green), meaning the "set speed" is 50 MPH; and Approach Medium (yellow over yellow) which sets the speed to 40 MPH.
 
+### How do I make it work with specific signals?
+
+Because some railroads - particularly the eastern US railroads - had some unusual signals, we're building out articles exploring how to make it work with some of the more challenging types of signals.  Each of these is more in-depth than can be answered in a short FAQ entry.
+
+* [Baltimore & Ohio Color Position Lights](./Articles/bo-cpls.md)
+* Norfolk & Western Color Position Lights
+* Pennsylvania Position Lights
+* Semaphores (multiple prototypes)
 
