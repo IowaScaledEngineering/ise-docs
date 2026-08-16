@@ -100,7 +100,7 @@ ABS does not convey authority to occupy track.  Trains still needed authority to
 
 Here's a look at how basic ABS operates on a single track line between sidings.  As you can see, stop signals (red) guard the block being occupied by the train.  Signals a block away in both directions display approach, telling any other train seeing that signal that they have one clear block ahead before they will encouter a stop signal.  Beyond that, it's green as far as the eye can see.
 
-[![](img/abs.png)](img/abs.png)
+[![](img-plan/abs.png)](img-plan/abs.png)
 
 ABS in single track territory has a flaw, however.  In theory, two trains heading toward each other on a single track should not happen, as they should not both have authority to enter the same section of track.  However, with all the humans in the loop - the crews, the dispatcher, the station operators, etc. - mistakes happen.  
 
@@ -108,7 +108,7 @@ In many cases, the signal system would allow one or both trains to see the occup
 
 This diagram shows the problem:
 
-[![](img/abs-problem.png)](img/abs-problem.png)
+[![](img-plan/abs-problem.png)](img-plan/abs-problem.png)
 
 Several clever modifications were made to ABS over the years to try to alleviate the problem, such as two yellows before a red, offset signals, and more.  But none truly solved the problem without other drawbacks.  
 
@@ -124,7 +124,7 @@ Here's three diagrams showing how APB works.  In the first, our eastbound train 
 
 The final diagram shows the situation if the westbound passes the absolute signal and tumbles the opposing direction to red.
 
-[![](img/apb.png)](img/apb.png)
+[![](img-plan/apb.png)](img-plan/apb.png)
 
 #### Centralized Traffic Control
 
@@ -138,7 +138,7 @@ That sits on top of ABS or APB, however, where just because the dispatcher selec
 
 Let's look at similar diagrams for how our east and westbound trains might act under CTC.
 
-[![](img/ctc.png)](img/ctc.png)
+[![](img-plan/ctc.png)](img-plan/ctc.png)
 
 In the first image, our eastbound is sitting at the control point.  Normally control points show stop all the way around.  Only when the dispatcher lines a route and that route is safe to travel will the signals show something other than stop.  In the second image, the dispatcher has given the train a route eastward on to the single track.  Like APB, everything against us tumbles down to the next control point.  In the third image, you can see a number of things - the eastbound has cleared the western control point, and the signals have defaulted back to stop; the dispatcher has lined a route for the eastbound into the siding on the right; and that a westbound has appeared, which is why our eastbound is going in the siding.  In this case, neither crew needs to do anything except follow signals - the dispatcher has already changed the switch to diverging and lined our eastbound into the siding to get out of the way.
 
@@ -162,7 +162,7 @@ CTC requires a true commitment.  Setting up the logic can be complicated and wil
 
 Our SimpleSig line is “ABS-like” in that it provides ABS-style signal indications of how much track is clear ahead – 3 or more blocks gives you a clear signal, 2 gives you a clear or advance approach (your choice), 1 gives you approach, and something immediately ahead gives you a stop.  
 
-The part where it’s “ABS-like” is that in places where normally you would have a control point, such as at junctions or the ends of sidings, the standard just routes ABS signals through the route selected.  So at the end of a siding, you’d only get a red signal if the switch was set against you or there was a train in the way.  Otherwise, you'd see greens for a clear route, etc.  For a graphic demonstrating what I mean, see [What Prototype Does SimpleSig Model?](tips.md#what-prototype-does-simplesig-model) in the FAQ.
+The part where it’s “ABS-like” is that in places where normally you would have a control point, such as at junctions or the ends of sidings, the standard just routes ABS signals through the route selected.  So at the end of a siding, you’d only get a red signal if the switch was set against you or there was a train in the way.  Otherwise, you'd see greens for a clear route, etc.  For a graphic demonstrating what I mean, see [What Prototype Does SimpleSig Model?](../tips.md#what-prototype-does-simplesig-model) in the FAQ.
 
 We think it's a pretty good balance of operation and simplicity for what most modelers are looking for.  It combines useful, prototypical signal indications that your visitors and operators will understand with simple, plug-and-play installation.  
 
@@ -194,17 +194,17 @@ In general, what we care about - at least for signaling – is the tracks that a
 
 Here's an example showing the Terrible & Southwestern Railroad.  It's so named because I created it in about five minutes and it's... terrible.  Its purpose is to serve as an example of how to work through the process of figuring out signals.
 
-[![](img/tswrr-plan.png)](img/tswrr-plan.png)
+[![](img-plan/tswrr-plan.png)](img-plan/tswrr-plan.png)
 
 Fortunately the stations are named alphabetically (funny how that worked out), so let's just start between Escalante and Amargosa and work counter-clockwise around the layout.   The mainline is represented by the line down the middle.  If you have multiple main tracks, that's okay too.  Then we draw all of the diverging tracks in the correct direction.  I've also added little factory icons to remind us where the industry sidings are.
 
-[![](img/tswrr-linear-1.png)](img/tswrr-linear-1.png)
+[![](img-plan/tswrr-linear-1.png)](img-plan/tswrr-linear-1.png)
 
 Now that we have the track plan, we can remove all the tracks that aren't going to be signaled.  That pretty much removes the industry sidings.  The one exception might be the branch up to the Folsom Canyon Mine.  Since this appaears to be the major source of traffic on the line, Brazos Junction is probably signaled to allow ore trains to enter and exit the main line easily.
 
 Here's the result - see how much clutter this removes?
 
-[![](img/tswrr-linear-2.png)](img/tswrr-linear-2.png)
+[![](img-plan/tswrr-linear-2.png)](img-plan/tswrr-linear-2.png)
 
 ### Step 2 – Identify Interlocking Plants
 
@@ -216,7 +216,7 @@ Signals are placed where each track enters the “plant”.  These are known as 
 
 Here's our linear diagram again, with the interlocking plants marked out in red.
 
-[![](img/tswrr-linear-ctrlpts.png)](img/tswrr-linear-ctrlpts.png)
+[![](img-plan/tswrr-linear-ctrlpts.png)](img-plan/tswrr-linear-ctrlpts.png)
 
 ### Step 3 - Place Intermediates
 
@@ -238,7 +238,7 @@ Intermediate signals are generally what’s known as “permissive.”  When sho
 
 For the T&SW, I've added a few here, shown by the green boxes.
 
-![](img/tswrr-linear-intermediates.png)
+![](img-plan/tswrr-linear-intermediates.png)
 
 
 ### Step 4 - Signals & Signal Nodes
@@ -247,21 +247,21 @@ Once you've figured out where the signals should go, it's time to actually start
 
 The signal configuration you want to use and what signal node you'll use to control them are very much inter-related.  Each SimpleSig node drives a set number of signal heads in a given configuration.  The documentation will show you where to place them.  If you want to go outside the standard configurations, the Block Signal Custom will allow you to do that, but you're going to be doing your own programming.
 
-Using the [*What Module Do I Need?*](tips.md#what-module-do-i-need) chart, we can start turning our control points into signal configurations.
+Using the [*What Module Do I Need?*](../tips.md#what-module-do-i-need) chart, we can start turning our control points into signal configurations.
 
-Let's do the easy interlocking plants first.  For the diverging signaled routes at east and west Amargosa, Brazos Jct, Chisum, and Escalante, we'll just use a [Switch Signal Basic](Switch%20Signal%20Basic/manual.md) to split one route into two.  That'll put a double-headed signal on the point end, and two single-headed signals on the frog end.
+Let's do the easy interlocking plants first.  For the diverging signaled routes at east and west Amargosa, Brazos Jct, Chisum, and Escalante, we'll just use a [Switch Signal Basic](../Switch Signal Basic/manual.md) to split one route into two.  That'll put a double-headed signal on the point end, and two single-headed signals on the frog end.
 
-At the Deadwood Crossover, you'll see a [Block Signal Custom](Block%20Signal%20Custom/index.md).  This would use the built-in double crossover configuration, and since each track coming in can have a main and a diverging route, it needs a double-headed signal.  So we'll drop a double-headed signal at each of the four tracks entering the plant.  *(Note:  As of late 2025, the Block Signal Custom is still very much in development.  We anticipate its release in early 2026.)*
+At the Deadwood Crossover, you'll see a [Block Signal Custom](../Block Signal Custom/index.md).  This would use the built-in double crossover configuration, and since each track coming in can have a main and a diverging route, it needs a double-headed signal.  So we'll drop a double-headed signal at each of the four tracks entering the plant.  *(Note:  As of late 2025, the Block Signal Custom is still very much in development.  We anticipate its release in early 2026.)*
 
-What's left are the intermediates.  The easy answer is that they're all [Block Signal Basics](Block%20Signal%20Basic/manual.md) and they have one head each direction.  That certainly will work.
+What's left are the intermediates.  The easy answer is that they're all [Block Signal Basic](../Block Signal Basic/manual.md) units, and they have one head each direction.  That certainly will work.
 
 However, in modern US signaling, the intermediate signal before the home signal at an interlocking plant can often have multiple heads as well.  That allows it to communicate aspects such as approach diverging (broadly yellow/yellow in the west, yellow/green in the east), alerting the crew that they'll be taking the diverging route at the next home signal and need to get their speed in order to do so. 
 
-For our terrible layout, we'll say we want to use double-headed intermediates between Escalante and Amargosa.  It's a long straightaway and train speeds might be high, so crews might need an extra heads up that they'll need to slow down.  For that, you'd need a [Block Signal Advanced](Block%20Signal%20Advanced/manual.md) so that you could drive two heads in each direction and correctly interpret the approach diverging signals coming in.
+For our terrible layout, we'll say we want to use double-headed intermediates between Escalante and Amargosa.  It's a long straightaway and train speeds might be high, so crews might need an extra heads up that they'll need to slow down.  For that, you'd need a [Block Signal Advanced](../Block Signal Advanced/manual.md) so that you could drive two heads in each direction and correctly interpret the approach diverging signals coming in.
 
 Next, let's connect up our nodes to have a plan on how we're going to wire this.  I've drawn thick red lines showing how the ports connect.  *The key takeaway from wiring for SimpleSig / MSS is that the wires follow the tracks.  You'll notice there's pretty much a one-to-one correspondence between the wires between the nodes and the tracks in the diagram.  That's how the nodes know what the next signal down the line in each direction is - because the wire follows the track!*
 
-[![](img/tswrr-linear-nodes-signals.png)](img/tswrr-linear-nodes-signals.png)
+[![](img-plan/tswrr-linear-nodes-signals.png)](img-plan/tswrr-linear-nodes-signals.png)
 
 ### Step 5 - Planning Blocks
 
@@ -283,11 +283,11 @@ Interlocking plant block boundaries are a bit tougher.  You'll need to consult t
 
 Here's our diagram with a bunch of purple lines and dots added to show our boundaries:
 
-[![](img/tswrr-linear-detectors.png)](img/tswrr-linear-detectors.png)
+[![](img-plan/tswrr-linear-detectors.png)](img-plan/tswrr-linear-detectors.png)
 
 Personally, I like to label all of the track blocks with some sort of descriptive code.  That way I can use that same code on wire markers and terminal blocks under the layout, which helps me keep things straight.
 
-Remember that on any non-modular layout, each block only needs a single current detector, and all power feeders for one rail of that block must pass through that detector.  For a more detailed explanation and diagrams, see the [How Many ATOM Block Detectors Do I Need](tips.md#how-many-atom-block-detectors-do-i-need) and the [wiring diagram for the Crossover Detector](Crossover%20Detector/manual.md#step-2-track-wiring).  While that shows a Crossover Detector (used for modular setups), the principle is the same - combine all the track feeders for a block into a sub-bus, and then pass one leg of that sub-bus through the detector on the way to the main track power bus.
+Remember that on any non-modular layout, each block only needs a single current detector, and all power feeders for one rail of that block must pass through that detector.  For a more detailed explanation and diagrams, see the [How Many ATOM Block Detectors Do I Need](../tips.md#how-many-atom-block-detectors-do-i-need) and the [wiring diagram for the Crossover Detector](../Crossover%20Detector/manual.md#step-2-track-wiring).  While that shows a Crossover Detector (used for modular setups), the principle is the same - combine all the track feeders for a block into a sub-bus, and then pass one leg of that sub-bus through the detector on the way to the main track power bus.
 
 ### Step 6 - Build It!
 

@@ -456,6 +456,7 @@ SignalAspect_t SignalHead::getAspect()**
 
 setAspect() allows you to set the currently displayed aspect on a signal head.  Likewise, getAspect allows you to get back the aspect currently displayed.  Both use a SignalAspect_t type.
 
+[](){ #SignalAspect_t }
 **SignalAspect_t** values are:
 * ASPECT_OFF - Head remains off / unlit
 * ASPECT_GREEN - Solid green (or clear aspect for semaphores)
@@ -465,7 +466,6 @@ setAspect() allows you to set the currently displayed aspect on a signal head.  
 * ASPECT_RED - Solid red (or stop aspect for semaphores)
 * ASPECT_FL_RED - Flashing red
 * ASPECT_LUNAR - Unused (as of yet) lunar aspect, for four aspect signals
-
 
 **void SignalHead::setSignalHeadType(SignalHeadType_t headType)**
 
