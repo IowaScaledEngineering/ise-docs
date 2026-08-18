@@ -7,7 +7,7 @@ title: B&O Color Position Lights
 
 [![A B&O Color Position Light](img-bocpl/bo-cpl.jpg){ align="right" width="300"}](img-bocpl/bo-cpl.jpg)
 
-Western US and Canadian railroads tended to use fairly consistent signaling.  The individual indications for a set of might be different, but in general the actual signal technology was relatively common - one to three signal heads on a mast, each displaying a color, and the stack-up of colors translated into a rule the crew needed to follow.  
+Western US and Canadian railroads tended to use fairly consistent signaling.  The individual indications for a road might be a little different from the next, but the actual signal technology was relatively common among them - one to three signal heads on a mast, each displaying a color, and the stack-up of colors translated into a rule the crew needed to follow.  
 
 However, the eastern US brought forth three unusual systems, each of which used heads with multiple lights on and around a target, known as a "position light signal" for obvious reasons.  Multiple lights were arranged vertically, horizontally, or on diagonals to emulate the physical orientation of semaphore blades they were intended to replace.  Multiple lamps forming up a single aspect also provided redundancy in an era where bulbs were relatively dim and had short operational lives.
 
@@ -15,7 +15,9 @@ The first of these position light signals came from the Pennsylvania in 1915, wh
 
 Being the last major system developed, the CPL system was the best considered and easiest to understand (at least in the author's opinion).  It felt engineered to the task and stood the test of decades of use with little change, as opposed to other signal systems which kept sprouting more heads and had new combinations of aspects tacked on to tackle unanticipated problems.  The CPL system communicated both the clear blocks ahead and speed expectations to the crew in a single signal head, and could handle everything from simple single track to complex interlockings with all manner of crossovers and diverging routes.
 
-Today, only a very small number of these amazing signals remain.  The few that survive in service are largely scattered around Ohio, with a few survivors across southern Indiana.  Nearly all of them have been upgraded to modern color light signals, with one or more of the familiar 3-light vertical heads stacked on a mast.  
+B&O color position lights stretched across the B&O system, from New York to Chicago and St. Louis.  Some even found their way on to other railroads.  The B&O controlled the Chicago & Alton from 1931 to 1947, and as such applied their own engineering standards.  CPLs were installed along the route from Chicago to St. Louis, and as the line changed hands over the years, the signals worked their way on to subsequent owners - GM&O, Illinois Central, Southern Pacific, and finally Union Pacific.  
+
+Today, only a very small number of these amazing signals remain.  Those that survive in service are largely scattered around Ohio, with a few more survivors across southern Indiana.  Nearly all of them have been upgraded to modern color light signals, with one or more of the familiar 3-light vertical heads stacked on a mast.  The few that remain are certainly on borrowed time, so if you see one, appreciate it while you can!
 
 ## The Prototype
 
@@ -25,9 +27,9 @@ The B&O CPL consists of a single head, and that head may be surrounded by up to 
 
 The main target shows how many blocks ahead are safe to occupy.  The B&O system is purely a three indication system, meaning you have one block of warning before a stop indication.  It didn't use any sort of equivalent for "advance approach" for a second block of warning.  There is a medium clear - an aspect commonly used as a second block of warning on eastern US roads - but the best I can tell, the B&O didn't use it that way.  
 
-Two red lights arranged horizontally means stop, the next block is not clear.  Two yellow lights on a diagonal from lower left to upper right means one block ahead is clear to occupy.  Two green lights horizontally means that two or more blocks ahead are clear.  
+Two red lights arranged horizontally means stop, the next block is not clear.  Two yellow lights on a diagonal from lower left to upper right means one block ahead is clear to occupy.  Two green lights vertically means that two or more blocks ahead are clear.  
 
-Some signals include a second diagonal aspect using lunar lights from upper left to lower right to indicate restricting - pass signal prepared to stop in half your sight distance, because an unknown amount of track ahead is clear.  This would be used when exiting signaled track, such as entering a yard or unsignaled branch, or in cases where you wanted 
+Some signals include a second diagonal aspect using lunar lights from upper left to lower right to indicate restricting - pass signal prepared to stop in half your sight distance, because an unknown amount of track ahead is clear.  This would be used when exiting signaled track, such as entering a yard or unsignaled branch.
 
 ### The Marker Lights
 
@@ -75,11 +77,11 @@ Could we just apply constant power to the upper marker and call it good?  Maybe.
 
 There's two options to do it better.
 
-* **Option 1 - Block Signal Basic with Diodes**  This is the cheap way.  You can use a good old Block Signal Basic for block boundaries without issue.  Using two diodes and another resistor, you can make the upper marker come on any time the green or yellow aspects are activated.  Any old power diodes will do - a common 1N400x (where x is 1-7) or 1N914 will work fine.  For the resistor, I would start with 390 ohms, but you may have to go up or down to get the brightness right.   If you want to light the orbit
+* **Option 1 - Block Signal Basic with Diodes**  This is the cheap way.  You can use a good old Block Signal Basic for block boundaries without issue.  Using two diodes and three resistors, you can make the upper marker come on any time the green or yellow aspects are activated.  Any old power diodes will do - a common 1N400x (where x is 1-7) or 1N914 will work fine.  For the resistors, I would start with 330 ohms, since that's what's on the board, but you may have to go up get the brightness right.   If you want to light the marker when the signal is red as well, add a third diode and resistor to the red line.  ***Be sure to only solder jumper the red/yellow/green lines where you're adding external resistors, so that you bypass the on-board resistors!***
 
 [![Wiring Block Signal Basic to CPLs](img-bocpl/bsb-bo-cpls.png)](img-bocpl/bsb-bo-cpls.png)
 
-* **Option 2 - Block Signal Advanced** This is the more flexible way.  Use the upper head red/yellow/green wires to drive the three aspects of the main target.  Then use the extra outputs - normally there for the lower head - to drive one or more markers.  Make a note of which lower head "color" drives which marker and use the module's programmability to turn on those "colors" as needed.  For example, if the lower head yellow output is connected to the high center marker, make the lower head yellow for every MSS indication except top.  Or, if you have a signal on approach to a siding like the examples above, maybe the lower head red output is connected to the upper left marker.  In that case, turn the lower head to "red" for cases where you get an approach diverging indication.
+* **Option 2 - Block Signal Advanced** This is the more flexible way.  Use the upper head red/yellow/green wires to drive the three aspects of the main target.  Then use the extra outputs - normally there for the lower head - to drive one or more markers.  Make a note of which lower head "color" drives which marker and use the module's programmability to turn on those "colors" as needed.  For example, if the lower head yellow output is connected to the high center marker, make the lower head yellow for every MSS indication except stop.  Or, if you have a signal on approach to a siding like the examples above, maybe the lower head red output is connected to the upper left marker.  In that case, turn the lower head to "red" for cases where you get an approach diverging indication.
 
 [![Wiring Block Signal Advanced to CPLs](img-bocpl/bsa-bo-cpls.png)](img-bocpl/bsa-bo-cpls.png)
 
@@ -87,7 +89,7 @@ There's two options to do it better.
 
 In general, bigger signaled interlockings, such as would be covered by the various Block Signal Pro configurations, should be fine.  Much like option 2 above, the lower head outputs can be used to drive markers and reconfigured by the user to meet their needs.  
 
-The Switch Signal Basic, which is designed to be our (relatively) low cost siding end module, needs a little more work.  Steering diodes and resistors, like we used above, can work fine for the two signals at the frog end of the switch.  There's no clean way to handle the high and lower marker lights on the point end mast, however.  One needs to be activated when the switch is thrown diverging and not showing stop, and one needs to be activated when the switch is lined normal and not showing stop.  Like on the Block Signal Advanced, we can repurpose the lower head lines to do so, but there's no way for the user to reconfigure the aspects.  For right now, this requires a special version of firmware, but we're happy to program that on for you.  Just contact us.
+The Switch Signal Basic, which is designed to be our (relatively) low cost siding end module, needs a little more work.  Steering diodes and resistors, like we used above, can work fine for the two signals at the frog end of the switch.  There's no clean way to handle the high and lower marker lights on the point end mast, however.  One needs to be activated when the switch is thrown diverging and not showing stop, and one needs to be activated when the switch is lined normal and not showing stop.  Like on the Block Signal Advanced, we can repurpose the lower head lines to do so, but there's no way for the user to reconfigure the aspects.  For right now, this requires a special version of firmware, but we're happy to program that for you.  Just contact us.
 
 [![Connecting a SimpleSig Switch Signal Basic to CPLs](img-bocpl/bo-switch-signal.png)](img-bocpl/bo-switch-signal.png)
 
@@ -108,4 +110,4 @@ In my opinion, it's a minor limitation, but these little nuances may annoy some 
 [![Recommended Aspects for CPLs with SimpleSig](img-bocpl/bo-mss-aspects.png)](img-bocpl/bo-mss-aspects.png)
 
 !!! info A Caveat
-    I am not a professional signal engineer, nor a B&O history expert.  Nor did I grow up remotely close to any color position lights - or any position lights, for that matter.  I'm solidly a western railfan and modeler.  But I am a pretty serious amateur signal nerd, and I believe what's below is accurate to the best of my research ability.  If you do have additional expertise in B&O CPL systems, by all means, please send additional information.
+    I am not a professional signal engineer, nor a B&O history expert.  Nor did I grow up remotely close to any color position lights - or any form of position lights, for that matter.  I'm solidly a western railfan and modeler.  But I am a pretty serious amateur signal nerd, and I believe what's above is accurate to the best of my research ability.  If you do have additional expertise in B&O CPL systems, by all means, please send additional information to support@iascaled.com.
