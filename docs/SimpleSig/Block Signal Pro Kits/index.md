@@ -12,6 +12,7 @@ At the heart of all of the Block Signal Pro kits is a Block Signal Custom board,
 ## Kits Available
 
 * [Single / Double Crossover](./xover.md)
+* [Crossover w/Branch](./2to3.md)
 * Automatic Interlocking *(coming soon)*
 
 
@@ -24,17 +25,13 @@ At the heart of all of the Block Signal Pro kits is a Block Signal Custom board,
 **MSS Standard Compatibility:** 1.x, 2.x, and (proposed) 3.x  (see note 1)  
 **Size:**  5.25"(L) x 5.0"(W) x 0.5"(H) (main and expansion boards)
 
-Note 1:  The diverging approach line on the MSS-XCADE hardware is active low and pulled high.  This means it's only compatible with the draft MSS 3 specification, and not compatible with MSS 2.x implementations of diverging approach.
+Note 1:  The diverging approach line on the MSS-XCADE hardware is active low and pulled high.  This means it's only compatible with the draft MSS 3 specification, and not compatible with MSS 2.x implementations of diverging approach.  Adding switchable MSS 2 vs 3 compatibility would have added significant hardware complexity and cost.
 
 ---
 
 ## Open Source 
 
-Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
-adapt, improve, and share with others.
+Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify, adapt, improve, and share with others.
 
-The design of the MSS-XCADE hardware is open source hardware, and is made available under the
-terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/). 
-Design files can be found in the [mss-xcade](https://github.com/IowaScaledEngineering/mss-xcade) project on 
-GitHub.
+The design of the MSS-XCADE hardware is open source hardware, and is made available under the terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  Design files can be found in the [mss-xcade](https://github.com/IowaScaledEngineering/mss-xcade) and [mss-xcade-firmware](https://github.com/IowaScaledEngineering/mss-xcade-firmware) projects on GitHub.
 
