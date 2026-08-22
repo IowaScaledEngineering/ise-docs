@@ -77,7 +77,7 @@ To get started, follow the common [Quick Start Guide](common.md#quick-start-guid
 
 To get started on initial configuration, again please refer to the common instructions for [Initial Configuration](common.md#initial-configuration).  When you reach the section about configuration, select either "Single Crossover" or "Double Crossover" from the Predefined Configurations as appropriate.  Otherwise, all of the rest of the common configuration instructions apply.
 
-!!! info Start with Defaults!
+!!! info "Start with Defaults!"
     Defaults are there for a reason.  I highly recommend just starting with the defaults first, since then you have a known baseline configuration.  You can then go in and change settings one at a time and then hitting save,  allowing you to make sure each change is exactly what you want.
 
 ### Specific Configuration Options
