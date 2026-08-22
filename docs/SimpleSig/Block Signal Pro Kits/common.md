@@ -201,9 +201,18 @@ This leads to interesting effects when changing aspects.  When going between yel
 
 Most configurations have a "Status" tab on the screen.  Selecting this will allow you to see the current status of all of the board's sensors, MSS connections, and GPIO states.  This can be helpful when debugging problems.
 
+### Basic Status
+
+![](img/status-block-basic.png){align=right style="width: 300px;"}  The basic status block will give you a quick overview of the important bits of your interlocking plant - the turnout statuses and what the signals should be diplaying.  This can help you debug problems without checking all of the inputs and thinking through exactly how that all combines to make the signal indications you see.
+
+Turnouts will either indicate NORMAL (blue) or REVERSE (orange).
+
+Signals will show the aspects from each head, color-coded.  So a one-head signal may just show "GRN" or "F-GRN" (flashing green).  A two-headed signal will show "GRN / RED", meaning green on the top head and red on the lower head.  A three-headed signal will show them likewise in order from the top, such as "YLW / RED / RED".
+
+
 ### MSS Ports 
 
-![](img/status-block-mss.png){align=right style="height: 200px;"}  MSS Ports will have a block that looks like the one to the right.  It shows the indications being both received (RX:) and transmitted (TX:) on that port, in addition to the individual wire states.  
+![](img/status-block-mss.png){align=right style="width: 300px;"}  MSS Ports will have a block that looks like the one to the right.  It shows the indications being both received (RX:) and transmitted (TX:) on that port, in addition to the individual wire states.  
 
 For the RX and TX indications, the potential options are:
 
@@ -218,7 +227,7 @@ For each of the individual signals being sent and received over the Modular Sign
 
 ### Sensor Inputs
 
-![](img/status-block-sensor.png){align=right style="height: 200px;"} For the sensor inputs important to a given track configuration, the Status screen will show an array of sensor input blocks.
+![](img/status-block-sensor.png){align=right style="width: 300px;"} For the sensor inputs important to a given track configuration, the Status screen will show an array of sensor input blocks.
 
 For an sensor that is not detecting anything, the box will remain blue.  If a sensor is activated, the box will show orange.
 
@@ -226,7 +235,7 @@ If you are getting false detection from an ATOM or TrainSpotter, this is an easy
 
 ### General Purpose I/O
 
-![](img/status-block-gpio.png){align=right style="height: 170px;"} The GPIO lines are used differently for every configuration, and thus the status block requires a little more interpretation by the user.
+![](img/status-block-gpio.png){align=right style="width: 300px;"} The GPIO lines are used differently for every configuration, and thus the status block requires a little more interpretation by the user.
 
 Above each block, there will be how that GPIO line is used by the track configuration.  It will be either IN for inputs, OUT for outputs, or "N/A" if the line just isn't used.  The blocks will be colored orange if high (+5V), and blue if low / near ground (0V).  
 
