@@ -135,7 +135,11 @@ Open a browser and connect to 192.168.1.1 and you should get a screen similar to
 
 ### Basic Configuration
 
-Once you've connected, the most important thing to set is the "Predefined Configuration".  This is the built-in logic for however your track is configured.  Once you set this and hit the "Change Configuration" button at the bottom, the device will reboot into the selected configuration.  It will briefly restart the WiFi network in the process.  Depending on your device, you will probably have to reconnect to the WiFi network and then refresh your browser.
+Once you've connected, the most important thing to set is the "Predefined Configuration".  This is the built-in logic for however your track is configured.  Once you set this and hit the "Change Configuration" button at the bottom, the device will load the selected configuration.  
+
+!!! info "WiFi Name Changes" 
+    If you change the WiFi network name, it will not take effect until you restart the module, either by cycling the power or by hitting the RESET button.  This is so you don't have to re-establish your wifi connection while setting it up.
+
 
 [![Choosing the basic configuration](./img/bsp-choose-configuration.png)](./img/bsp-choose-configuration.png)
 
