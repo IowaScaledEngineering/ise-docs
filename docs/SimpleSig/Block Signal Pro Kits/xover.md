@@ -49,7 +49,7 @@ Select "Double Crossover" from the Predefined Configuration list.
 
 In extremely tight spaces, a "compact double crossover" may be used that has a diamond at the center.  These are far more common in passenter terminal yard throats or on interurban / light rail systems than they are on mainlines, due to the maintenace headaches and cost of the diamond in the middle.  Europe also uses them significantly more often due to space constraints.  
 
-They show up on model railroads with some frequency, and the support for them is only a minor modification to the standard double crossover.  To use these, select "Double Crossover" from the Predefined Configuration list, and then be sure to enable the ["Compact Double Crossover"](#compact-double-crossover-1) in the configuration.
+They show up on model railroads with some frequency, and the support for them is only a minor modification to the standard double crossover.  To use these, select "Double Crossover" from the Predefined Configuration list, and then be sure to enable the ["Compact Double Crossover"](#compact-double-crossover-option) in the configuration.
 
 [![](img/double-xover-compact.png)](img/double-xover-compact.png)
 
@@ -92,7 +92,7 @@ If Approach Lighting is turned on, normally signals will only light when somethi
 
 Note that this just modifies the behavior of "Approach Lighting".  If approach lighting is not selected, the signals will be constant lit regardless of how the two block option is set.
 
-#### Compact Double Crossover
+#### Compact Double Crossover Option
 
 (Double Crossover Only)  If using a Compact Double Crossover, enable this option.  This will cause signals to display stop if both crossover routes are lined at the same time.
 
