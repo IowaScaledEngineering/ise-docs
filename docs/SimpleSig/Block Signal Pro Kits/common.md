@@ -171,7 +171,7 @@ At the bottom of the Configuration tab are two buttons - upload and download.  T
 
 If you're having problems with your configuration, we may ask you to download the configuration file and then email it to us as an attachment.
 
-The files are just JSON, so if you're comfortable editing them directly, you're more than welcome to do so.
+The files are just JSON, so if you're comfortable editing them directly, you're more than welcome to do so.  Just be warned there's not a whole lot of error handling if you put in something that doesn't parse.
 
 ---
 
@@ -313,10 +313,42 @@ GPIO pins are named very similarly to sensor ports- GPIOn, where n is between 1-
 
 ----
 
+## Firmware Updates
+
+The firmware on the Block Signal Pro is user-upgradable using a USB mini-B cable, your computer, and Google Chrome (or web browser that supports WebSerial ports).  
+
+**Step 1** - Download the firmware binary and save it somewhere.
+
+**Step 2** -Connect your computer and the Block Signal Pro master board using a USB mini-B cable.  Turn the **BL** switch on the Block Signal Pro and press the **RESET** button.  The green lights should come on indicating that you have power, but the main **STATUS** should not start blinking.  If the **STATUS** LED is blinking, you didn't get the **BL** switch turned on before you pressed **RESET**.
+
+**Step 3** - Open Google Chrome (or other browser with WebSerial support) and go to [esptool.spacehuhn.com](https://esptool.spacehuhn.com/)
+
+[![](img/espwebtool.png)](img/espwebtool.png)
+
+**Step 4** -  Click the big **CONNECT** button and it should pop up a list of serial ports on your computer that it could connect to.  Select the one that says something about "ESP32-S2".  
+
+[![](img/espwebtool-pickport.png)](img/espwebtool-pickport.png)
+
+**Step 5** - If you're successful, the terminal at the bottom should start scrolling commands and you'll see the screen change to four address ranges with file selectors.  Change the address on the first line to 0 from 1000, and select the firmware .bin file from wherever you saved it.
+
+[![](img/espwebtool-pickfirmware.png)](img/espwebtool-pickfirmware.png)
+
+**Step 6** - Hit **PROGRAM**.  You'll get a final confirmation box.  If you're sure everything looks good - specifically which firmware file you're programming and that you've set 0 as the address on the left - hit continue.
+
+[![](img/espwebtool-confirm.png)](img/espwebtool-confirm.png)
+
+**Step 7** - If you get a screen that looks like the following, then... success!  You've successfully upgraded your firmware.  Turn the **BL** switch back to off and hit the reset button to restart the module running the new software.
+
+[![](img/espwebtool-success.png)](img/espwebtool-success.png)
+
+**If Something Went Wrong** - Don't worry.  If something went wrong in one of the above steps, no permanent damage was done.  It's nearly impossible to "brick" these boards, as the bootloader is permanent in the microcontroller and cannot be erased.  Just repeat the steps as above and try again!
+
+----
+
 ## Specifications
 
-**Input Power:**  8 to 24 volts DC, AC, or DCC  
-**Input Supply Current:** Lots of milliamps (typical)  
+**Input Power:**  8 to 24 volts DC or DCC  
+**Input Supply Current:** Varies significantly based on 
 **MSS Standard Compatibility:** 1.x, 2.x, and (proposed) 3.x  (see note 1)  
 **Size:**  5.25"(L) x 5.0"(W) x 0.5"(H) (main board)
 
@@ -326,10 +358,6 @@ Note 1:  The diverging approach line on the MSS-XCADE hardware is active low and
 
 ## Open Source 
 
-Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
-adapt, improve, and share with others.
+Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify, adapt, improve, and share with others.
 
-The design of the MSS-ATLASADAPTER hardware is open source hardware, and is made available under the
-terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/). 
-Design files can be found in the [mss-atlasadapter](https://github.com/IowaScaledEngineering/mss-atlasadapter) project on 
-GitHub.
+The design of the MSS-XCADE hardware is open source hardware, and is made available under the terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  Design files can be found in the [mss-xcade](https://github.com/IowaScaledEngineering/mss-xcade) and [mss-xcade-firmware](https://github.com/IowaScaledEngineering/mss-xcade-firmware) projects on GitHub.

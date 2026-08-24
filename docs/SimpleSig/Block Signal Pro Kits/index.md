@@ -15,13 +15,11 @@ At the heart of all of the Block Signal Pro kits is a Block Signal Custom board,
 * [Crossover w/Branch](./2to3.md)
 * Automatic Interlocking *(coming soon)*
 
-
 ---
 
 ## Specifications
 
 **Input Power:**  8 to 24 volts DC, AC, or DCC  
-**Input Supply Current:** Lots of milliamps (typical)  
 **MSS Standard Compatibility:** 1.x, 2.x, and (proposed) 3.x  (see note 1)  
 **Size:**  5.25"(L) x 5.0"(W) x 0.5"(H) (main and expansion boards)
 
