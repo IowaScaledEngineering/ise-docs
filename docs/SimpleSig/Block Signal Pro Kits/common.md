@@ -15,6 +15,10 @@ Please refer to your specific kit's documentation first, and it will call out th
 
 Pick the diagram above that matches your track configuration, and then refer to the [Reading the Diagrams](#reading-the-diagrams) section of the Getting Started document.  Then you can start planning block gap locations and block detector wiring, where the IR sensors will be mounted, where the signals and various boards will be located, etc.
 
+We cannot emphasie this enough - a successful result requires a thought-out plan going in.
+
+---
+
 ### Step 2 - Install Main Board
 
 As part of your planning, figure out where to best mount the main Block Signal Pro board and any expansion boards.  This should be somewhere that allows relatively easy access for wiring and maintenance, and allows the 8ft sensor cables to reach all of the necessary TrainSpotter and ATOM sensors.  
@@ -24,13 +28,15 @@ As part of your planning, figure out where to best mount the main Block Signal P
 
 The board requires 8 to 20 volts of DC, AC, or DCC power.  Connect the power wires to the **POWER** terminal block on the master board, and it will regulate and feed all of the other attached boards.
 
-*Please do not use anything that could be described as a "model railroad power pack" - these are terrible power supplies and will often damage electronics.  They were designed to run motors and light bulbs, and are terrible for everything else.*
+*Please do not use anything that could be described as a "model railroad power pack" - these are [terrible power supplies](../../Tips%20and%20Tricks/Articles/power-pack.md) and will often damage electronics.  They were designed to run motors and light bulbs, and are absolutely terrible for everything else.*
 
 Once the power leads are connected, test that the board powers up correctly - the two green power LEDs should turn on, and the status LED should begin blinking blue.  Once that's verified, shut the power off again.
 
+---
+
 ### Step 3 - Install Expansion Boards
 
-Most configurations will only have the single master board.  This allows for up to 4 MSS ports, 8 signal heads, 10 sensors, and 6 general purpose input/output lines.  
+Many configurations will only have the single master board.  This allows for up to 4 MSS ports, 8 signal heads, 10 sensors, and 6 general purpose input/output lines.  
 
 Expansion boards, which provide more MSS ports, signals, sensors, and GPIO, can be plugged into the X1, X2, and X3 ports on the mater.  Expanders look a lot like the master board, but can be identified in that they lack the main microprocessor, USB connector, and configuration switches.  They also only have a single connector in the expansion connector section, in the X1/UP position.  
 
@@ -44,6 +50,7 @@ Here's how a master would be plugged in to up to three expansion boards.  As men
 
 [![](img/multi-board.png)](img/multi-board.png)
 
+---
 
 ### Step 4 - Install ATOM Detectors
 
@@ -55,19 +62,27 @@ All of the feeders for the detected rail in a block must pass through the curren
 
 Install ATOM detectors as needed and use the included 8 foot cables to connect them into appropriate sensor connector as indicated in the diagram.
 
+![](img/mss-xcade-sensors-clipped.png)
+
+---
+
 ### Step 5 - Install TrainSpotter Detectors ![](img/ckt-irsense-installation.png){align=right style="width:20%; margin-left:20px; margin-bottom:10px"}
 
 The TrainSpotters provides optical detection, and when used with the ATOM current detectors, provide reliable signaling without requiring resistor-equipped axles on all rolling stock.
 
-They should be placed as shown on the track diagram for the configuration you'll be using.  Once mounted, use one of the included 8 foot sensor cables to connect the TrainSpotter to the appropriate sensor connector, as shown on the track diagram.
+They should be placed as shown on the track diagram (the orange circles over the track) for the configuration you'll be using.  Once mounted, use one of the included 8 foot sensor cables to connect the TrainSpotter to the appropriate sensor connector, as shown on the track diagram.
 
 For home layout use, the TrainSpotter may be omitted if all of your cars have resistor-equipped axles and you want to depend entirely upon current detection.  
 
-![](../Switch%20Signal%20Basic/img/mss-switch-ir-connections.png)
+Once installed, use the included 8 foot cables to connect them to the sensor port as indicated on the track diagram.
+
+![](img/mss-xcade-sensors-clipped.png)
+
+---
 
 ### Step 6 - Turnout Position GPIO Lines
 
-Most configurations of the Block Signal Pro kits will involve turnouts.  For each turnout, the controller needs to know the whether the turnout is normal (lined for the main, usually straight) or diverging/reversed.
+Most configurations of the Block Signal Pro kits will involve turnouts.  For each turnout, the Block Signal Pro needs to know the whether the turnout is normal (lined for the main, usually straight) or reversed (diverging).
 
 To detect this this, contacts on either a power switch machine or manual ground throw are needed.  The contacts are a switch.  One side should be connected to the **GND** terminal on the GPIO terminal block.  The other side should be connected to the appropriate **GPIO** terminal based on the track diagram for your configuration.   These switch contacts should be closed (aka connected) when the turnout is set to the reverse/diverging direction, and open when the switch is set to the normal position.  
 
@@ -76,22 +91,24 @@ Here's an example showing how you might wire a Circuitron Tortoise switch machin
 [![](img/tortoise-contacts.png)](img/tortoise-contacts.png)
 
 !!! warning "GPIO Voltage Limits"
-    Never, ever expose any of the GPIO lines to a voltage below ground or of more than 5 volts DC.  It will instantly damage the board, likely in a way that cannot be economically repaired.  Also, for any GPIO used as an output, they can only source or sink a maximum of 10 milliamps.
+    Never, ever expose any of the GPIO lines to a voltage below ground or of more than 5 volts DC.  It will instantly damage the board, likely in a way that cannot be economically repaired.  The set of contacts used for the signal system should not be shared with any other function!
 
 ### Step 7 - Signals
 
 The placement of signals is going to be quite different based on what track configuration is being used.  Please refer to the track diagram for exact placement.  
 
 !!! info "Common Anode vs Common Cathode"
-    The Block Signal Advanced supports both common anode (positive) and common cathode (negative) signals, but all of the signals connected must be of one type or the other.  Mixing common anode and common cathode signals on the same board is not supported.
+    The Block Signal Pro supports both common anode (positive) and common cathode (negative) signals, but all of the signals connected must be of one type or the other.  Mixing common anode and common cathode signals on the same board is not supported.
 
 Each signal head on the diagram should be labeled with which signal port it plugs into, such as A1, B1, C2, D2, etc.  For Atlas signals and those using compatible Molex Picoblade connectors, connect those directly to the corresponding connector on the board.  For wire-in signals, use the terminal blocks for the red/yellow/green leads, and the "SIGNAL COMMON" terminal block for the common anode (positive) or common cathode (negative) lead.  
 
-Congratulations!  You've now got the hard stuff done!  Now it's time to do a little configuration and you're ready to start railroading!
+Congratulations!  You've now got the hard stuff done!  Now it's time to do a little configuration and you're ready to start running trains!
 
 ----
 
-## Configuration
+## Initial Configuration
+
+While every different track configuration will have different configuration options, the basic process of getting up and going with all of them initially is common.  Walk through the steps below to get the module set up for the specific kit you're installing.
 
 ### Power
 
@@ -103,30 +120,58 @@ Configuring the Block Signal Pro is done via WiFi and a web browser.
 
 First, turn on Config Switch 1.  The status LED next to it should start blinking yellow.  This will indicate your Block Signal Pro is now creating a WiFi network you can attach to with a phone or laptop.  
 
-[![](img/phone-wifi-connect.png){align=right style="height: 200px;"}](img/phone-wifi-connect.png)
+![Starting up WiFi](img/bsp-wifi-switch.png)
 
-By default, this network will be named "ISE-BSC-XXXXXX" where XXXXXX is the last six hex characters of the module's unique identifier.  If you rename your module using the "Module Name/SSID" setting in the Basic Info tab, it will change the WiFi network name.
+By default, this network will be named "ISE-BSP-XXXXXX" where XXXXXX is the last six hex characters of the module's unique identifier.  If you rename your module using the "Module Name/SSID" setting in the Basic Info tab, it will change the WiFi network name.
 
 Connect to this network.  Your device may give you some warning about the WiFi network not having internet access.  Just ignore it and continue.
 
 Open a browser and connect to 192.168.1.1 and you should get a screen similar to the ones shown below.
 
-[![](img/phone-connect-ip.png){style="height: 200px;"}](img/phone-connect-ip.png) [![](img/phone-basic-info.png){style="height: 200px;"}](img/phone-basic-info.png)
+[![Making the initial wifi connection](./img/bsp-initial-connection.png)](./img/bsp-initial-connection.png)
+
+!!! info "HTTP vs HTTPS"
+    The Block Signal Pro does not support https (the secure version of http).  There's just no reason to for this use case and it adds headaches.  If your browser won't connect, try typing "http://192.168.1.1" instead.  Some browsers default to https if not told explicitly not to do so.
 
 ### Basic Configuration
 
-Once you've connected, the most important thing to set is the "Predefined Configuration".  This is the built-in logic for however your track is configured.  Once you set this and hit the "Change Configuration" button at the bottom, the device will reboot into the selected configuration.  It will briefly drop the WiFi network in the process.  Depending on your device, you may have to reconnect.
+Once you've connected, the most important thing to set is the "Predefined Configuration".  This is the built-in logic for however your track is configured.  Once you set this and hit the "Change Configuration" button at the bottom, the device will load the selected configuration.  
+
+!!! info "WiFi Name Changes" 
+    If you change the WiFi network name, it will not take effect until you restart the module, either by cycling the power or by hitting the RESET button.  This is so you don't have to re-establish your wifi connection while setting it up.
+
+
+[![Choosing the basic configuration](./img/bsp-choose-configuration.png)](./img/bsp-choose-configuration.png)
 
 ### Detailed Configuration
+[![Select the detailed configuration tab](./img/bsp-configuration-tab.png){align=right style="height:300px;"}](./img/bsp-configuration-tab.png)
 
-Once you've picked the predefined configuration that you want to use, you'll get a Configuration tab that has all of the various options for that track configuration.  This is where you can select options such as approach lighting, searchlight emulation, or set specific nuances of the track configuration.  You can also customize the signal aspects shown on each mast for each SimpleSig/MSS indication.
+!!! info Start with Defaults!
+    Defaults are there for a reason.  I highly recommend just starting with the defaults first, since then you have a known baseline configuration.  You can then go in and change settings one at a time and then hitting save,  allowing you to make sure each change is exactly what you want.
+
+***The configuration screen will look different for every basic configuration, so please refer to the specific kit instructions for details.***
+
+Once you've picked the predefined configuration that you want to use and reconnected, you'll get a Configuration tab that has all of the various options for that track configuration.  This is where you can select options such as approach lighting, searchlight emulation, or set specific nuances of the track configuration.  You can also customize the signal aspects shown on each mast for each SimpleSig/MSS indication.
+
+When you're done making configuration changes, hit the "Save Configuration" button at the bottom to commit it to the Block Signal Pro.
+
 
 ### Disable WiFi
 
-Once you're done, turn Config Switch 1 back to off.  This disables the WiFi network and prevents anybody from messing with your configuration.  The status LED should stop blinking yellow and start blinking blue again.
+Once you're done configuring, turn Config Switch 1 back to off.  This disables the WiFi network and prevents anybody from messing with your configuration.  The status LED should stop blinking yellow and start blinking blue again.
 
 !!! warning "Secure Your Block Signal Pro!"
     The module itself does not have any sort of security, such as a password or anything else.  The anticipated use case is that you will turn on the WiFi, configure the module, and then shut it off again to prevent any further configuration changes.  Please don't forget to shut it off when you're done to keep your module secure!
+
+---
+
+## Uploading/Downloading Configurations
+
+At the bottom of the Configuration tab are two buttons - upload and download.  These allow you to save off the active detailed configuration and then re-upload it if you ever need to do so.  It also allows you to configure one device and then upload that same configuration to the same basic configuration - so a single crossover will only accept the configuration file from another single crossover.  If you try to upload a configuration for a double crossover, it will error out.
+
+If you're having problems with your configuration, we may ask you to download the configuration file and then email it to us as an attachment.
+
+The files are just JSON, so if you're comfortable editing them directly, you're more than welcome to do so.  Just be warned there's not a whole lot of error handling if you put in something that doesn't parse.
 
 ---
 
@@ -140,9 +185,11 @@ The Signal Configuration boxes allow you to change the behaviour of the signal h
 
 The Modular Signal System standard is capable of sending six indications through the wire:  Clear, Advance Approach, Approach, Advance Approach Diverging, Approach Diverging, and Stop.  In addition, in complex interlocking plants like the Block Signal Pro kits are designed to handle, more information is mixed in based on how the turnouts are set to route through the plant.  
 
-Most configurations will allow you to modify the aspects displayed on the signal heads for each configuration.  For example, if one path through a crossover leads to an unsignalled yard track, most prototypes would not display a clear signal.  You may want to display a restricting aspect, such as flashing red over red.  The signal configuration screen allows you to do this.
+Most configurations will allow you to modify the aspects displayed on the signal heads for each configuration.  For example, if one path through a crossover leads to an unsignalled yard track, most prototypes would not display a clear signal but rather some form of restricting.  You may want to green or green over red to something more like a flashing red over red.  The signal configuration screen allows you to do this.
 
 For signals that sit ahead of multiple routes, there may be multiple sections, one for each potential route.  In the example shown on the right for a double-headed signal, it has independent configurations for the main and diverging routes.
+
+Note: Not all aspects may be available for all routes - in particular the approach diverging and advance approach diverging.  Much of this has to do with the way the MSS standard works.  A port can either transmit or receive the approach diverging signal, not both.  Any port leading in to route that can go multiple ways is going to act as a transmitter if anything other than straight through on the main is set.  Thus, it cannot ever receive an approach diverging in those scenarios.  This is mostly prototypical for route-signaled railroads, as the indication to take the diverging route at the points would override any need to warn about a future diverging route.
 
 ### Searchlight Heads
 
@@ -158,9 +205,18 @@ This leads to interesting effects when changing aspects.  When going between yel
 
 Most configurations have a "Status" tab on the screen.  Selecting this will allow you to see the current status of all of the board's sensors, MSS connections, and GPIO states.  This can be helpful when debugging problems.
 
+### Basic Status
+
+![](img/status-block-basic.png){align=right style="width: 300px;"}  The basic status block will give you a quick overview of the important bits of your interlocking plant - the turnout statuses and what the signals should be diplaying.  This can help you debug problems without checking all of the inputs and thinking through exactly how that all combines to make the signal indications you see.
+
+Turnouts will either indicate NORMAL (blue) or REVERSE (orange).
+
+Signals will show the aspects from each head, color-coded.  So a one-head signal may just show "GRN" or "F-GRN" (flashing green).  A two-headed signal will show "GRN / RED", meaning green on the top head and red on the lower head.  A three-headed signal will show them likewise in order from the top, such as "YLW / RED / RED".
+
+
 ### MSS Ports 
 
-![](img/status-block-mss.png){align=right style="height: 200px;"}  MSS Ports will have a block that looks like the one to the right.  It shows the indications being both received (RX:) and transmitted (TX:) on that port, in addition to the individual wire states.  
+![](img/status-block-mss.png){align=right style="width: 300px;"}  MSS Ports will have a block that looks like the one to the right.  It shows the indications being both received (RX:) and transmitted (TX:) on that port, in addition to the individual wire states.  
 
 For the RX and TX indications, the potential options are:
 
@@ -175,7 +231,7 @@ For each of the individual signals being sent and received over the Modular Sign
 
 ### Sensor Inputs
 
-![](img/status-block-sensor.png){align=right style="height: 200px;"} For the sensor inputs important to a given track configuration, the Status screen will show an array of sensor input blocks.
+![](img/status-block-sensor.png){align=right style="width: 300px;"} For the sensor inputs important to a given track configuration, the Status screen will show an array of sensor input blocks.
 
 For an sensor that is not detecting anything, the box will remain blue.  If a sensor is activated, the box will show orange.
 
@@ -183,7 +239,7 @@ If you are getting false detection from an ATOM or TrainSpotter, this is an easy
 
 ### General Purpose I/O
 
-![](img/status-block-gpio.png){align=right style="height: 170px;"} The GPIO lines are used differently for every configuration, and thus the status block requires a little more interpretation by the user.
+![](img/status-block-gpio.png){align=right style="width: 300px;"} The GPIO lines are used differently for every configuration, and thus the status block requires a little more interpretation by the user.
 
 Above each block, there will be how that GPIO line is used by the track configuration.  It will be either IN for inputs, OUT for outputs, or "N/A" if the line just isn't used.  The blocks will be colored orange if high (+5V), and blue if low / near ground (0V).  
 
@@ -257,10 +313,42 @@ GPIO pins are named very similarly to sensor ports- GPIOn, where n is between 1-
 
 ----
 
+## Firmware Updates
+
+The firmware on the Block Signal Pro is user-upgradable using a USB mini-B cable, your computer, and Google Chrome (or web browser that supports WebSerial ports).  
+
+**Step 1** - Download the firmware binary and save it somewhere.
+
+**Step 2** -Connect your computer and the Block Signal Pro master board using a USB mini-B cable.  Turn the **BL** switch on the Block Signal Pro and press the **RESET** button.  The green lights should come on indicating that you have power, but the main **STATUS** should not start blinking.  If the **STATUS** LED is blinking, you didn't get the **BL** switch turned on before you pressed **RESET**.
+
+**Step 3** - Open Google Chrome (or other browser with WebSerial support) and go to [esptool.spacehuhn.com](https://esptool.spacehuhn.com/)
+
+[![](img/espwebtool.png)](img/espwebtool.png)
+
+**Step 4** -  Click the big **CONNECT** button and it should pop up a list of serial ports on your computer that it could connect to.  Select the one that says something about "ESP32-S2".  
+
+[![](img/espwebtool-pickport.png)](img/espwebtool-pickport.png)
+
+**Step 5** - If you're successful, the terminal at the bottom should start scrolling commands and you'll see the screen change to four address ranges with file selectors.  Change the address on the first line to 0 from 1000, and select the firmware .bin file from wherever you saved it.
+
+[![](img/espwebtool-pickfirmware.png)](img/espwebtool-pickfirmware.png)
+
+**Step 6** - Hit **PROGRAM**.  You'll get a final confirmation box.  If you're sure everything looks good - specifically which firmware file you're programming and that you've set 0 as the address on the left - hit continue.
+
+[![](img/espwebtool-confirm.png)](img/espwebtool-confirm.png)
+
+**Step 7** - If you get a screen that looks like the following, then... success!  You've successfully upgraded your firmware.  Turn the **BL** switch back to off and hit the reset button to restart the module running the new software.
+
+[![](img/espwebtool-success.png)](img/espwebtool-success.png)
+
+**If Something Went Wrong** - Don't worry.  If something went wrong in one of the above steps, no permanent damage was done.  It's nearly impossible to "brick" these boards, as the bootloader is permanent in the microcontroller and cannot be erased.  Just repeat the steps as above and try again!
+
+----
+
 ## Specifications
 
-**Input Power:**  8 to 24 volts DC, AC, or DCC  
-**Input Supply Current:** Lots of milliamps (typical)  
+**Input Power:**  8 to 24 volts DC or DCC  
+**Input Supply Current:** Varies significantly based on 
 **MSS Standard Compatibility:** 1.x, 2.x, and (proposed) 3.x  (see note 1)  
 **Size:**  5.25"(L) x 5.0"(W) x 0.5"(H) (main board)
 
@@ -270,10 +358,6 @@ Note 1:  The diverging approach line on the MSS-XCADE hardware is active low and
 
 ## Open Source 
 
-Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify,
-adapt, improve, and share with others.
+Iowa Scaled Engineering is committed to creating open designs that users are free to build, modify, adapt, improve, and share with others.
 
-The design of the MSS-ATLASADAPTER hardware is open source hardware, and is made available under the
-terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/). 
-Design files can be found in the [mss-atlasadapter](https://github.com/IowaScaledEngineering/mss-atlasadapter) project on 
-GitHub.
+The design of the MSS-XCADE hardware is open source hardware, and is made available under the terms of the [Creative Commons Attribution-Share Alike v3.0 license](http://creativecommons.org/licenses/by-sa/3.0/).  Design files can be found in the [mss-xcade](https://github.com/IowaScaledEngineering/mss-xcade) and [mss-xcade-firmware](https://github.com/IowaScaledEngineering/mss-xcade-firmware) projects on GitHub.

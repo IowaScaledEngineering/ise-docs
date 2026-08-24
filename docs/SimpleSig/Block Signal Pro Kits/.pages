@@ -1,0 +1,6 @@
+nav:
+  - Introduction: index.md
+  - Common Instructions: common.md
+  - Single/Double Crossover: xover.md
+  - Crossover w/Branch: 2to3.md
+  - ...
