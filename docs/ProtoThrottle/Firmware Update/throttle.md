@@ -13,6 +13,10 @@ If you choose option #1 or option #2, then stop here.  There is no need to
 continue reading.  Just follow the instructions above.  However, if you're
 adventurous, then keep reading.
 
+The following instructions are for Windows computers.  Updating from a Mac
+or Linux machine, while possible, is not officially supported at this time. 
+See the last section for some helpful hints if you do go this route.
+
 ## Step 1: Prerequisites
 
 Follow all the instructions [here](../../Tips and Tricks/Updating Firmware/avr-programmer.md). 
@@ -56,7 +60,8 @@ slide switch on the programmer is set to 3.3V.
 !!! warning
     If the yellow LED on the programmer is lit, DO NOT PROCEED.  This means
     the slide switch is not in the correct position.  Correct this before
-    proceeding.
+    proceeding.  **If you proceed with the yellow LED lit, you will damage
+    your ProtoThrottle and that damage is not covered by warranty!**
 
 Attach the ribbon cable from the programmer to the 6-prong male pin header on
 the printed circuit board.  Make sure the triangle shape on the ribbon
@@ -73,3 +78,19 @@ bottom of the AVRDUDESS window will show the progress.  When you see the
 
 At this point, you can close AVRDUDESS and disconnect the programmer from
 your throttle.  Enjoy your updated throttle!
+
+---
+
+## Linux / Mac Instructions
+
+This section is only for Mac or Linux users who are attempting to update the
+ProtoThrottle from the command line.  This method is not officially
+supported (a.k.a. you are on your own), but the following sample command line may
+be helpful:
+
+```
+avrdude -P usb -c iseavrprog -p atmega1284p -B1 -U flash:w:mrbw-cst_v1.2.2_4ec009.hex:i
+```
+
+Replace the mrbw-cst_v1.2.2_4ec009.hex portion with the name of the firmware
+.hex file you are uploading.
