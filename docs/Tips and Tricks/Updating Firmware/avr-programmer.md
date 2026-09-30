@@ -8,7 +8,7 @@ title: AVR Programmer
 These instructions are written assuming you are using one of our
 [CKT-AVRPROGRAMMER](https://www.iascaled.com/store/CKT-AVRPROGRAMMER)
 devices.  While other, similar AVR programmers can be used, those are not
-officially supported (i.e.  you are on your own / use at your own risk). 
+officially supported (i.e. you are on your own / use at your own risk). 
 Once you have the programmer board, proceed to Step 2.
 
 !!! note
@@ -81,7 +81,7 @@ process above.  If the driver still does not install, then don't proceed.
 You will need to first troubleshoot why the driver is not installing
 correctly.
 
-!!! warning "Please Note"
+!!! warning "Before Continuing"
     Unplug the programmer and replug it into the USB port before continuing. 
     This makes sure the drivers are properly loaded after installation.
 
@@ -99,16 +99,18 @@ Extract the downloaded ZIP file on your computer:
 
 ![AVRDUDESS Extract](img/avrdudess-extract.png)
 
-Open the folder where the files were extracted and double click on the
-avrdudess.exe program to open it.  Note: be sure to double click on
-avrdudess.exe, not avrdude.exe.
+Open the folder where the files were extracted (not the original ZIP file
+folder) and double click on the avrdudess.exe program to open it:
 
 ![AVRDUDESS Run](img/avrdudess-run.png)
 
+!!! note
+    Make sure you double click on avrdude<ins>ss</ins>.exe, not avrdude.exe.
+
 ## Step 4: Install the Firmware
 
-This next step, where the actual firmware gets installed, is product
-specific.  Please refer to the specific update instructions on the product
+This next step, where the actual firmware gets installed, is specific to
+each product.  Please refer to the update instructions on the product
 page for details:
 
 [ProtoThrottle](../../ProtoThrottle/Firmware Update/throttle.md)

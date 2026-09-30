@@ -29,7 +29,7 @@ The latest official ProtoThrottle firmware can be found on GitHub:
 
 <https://github.com/IowaScaledEngineering/mrbw-cst/releases>
 
-Download, and save to your computer, the .hex file for the latest version:
+Download the .hex file for the latest version, and save it to your computer:
 
 ![ProtoThrottle Hex File](img/pt-hex.png)
 
@@ -45,7 +45,7 @@ For MCU, select ATmega1284P:
 
 ![AVRDUDESS MCU](img/avrdudess-mcu.png)
 
-In the Flash section, click the "..." button and select the .hex file you
+In the Flash section, click the [...] button and select the .hex file you
 downloaded in Step 2:
 
 ![AVRDUDESS MCU](img/avrdudess-flash.png)
