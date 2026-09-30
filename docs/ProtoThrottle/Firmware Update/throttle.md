@@ -46,7 +46,7 @@ downloaded in Step 2:
 
 ![AVRDUDESS MCU](img/avrdudess-flash.png)
 
-## Step 4: Connect Programmer and Throttle
+## Step 4: Connect Programmer to Throttle
 
 Attach the programmer to your computer using the USB cable.  Make sure the
 slide switch on the programmer is set to 3.3V.
