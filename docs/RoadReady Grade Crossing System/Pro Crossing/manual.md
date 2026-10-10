@@ -257,7 +257,7 @@ The Island Timeout is the time that the crossing will remain active after all is
 | ![](img/ckt-xing-adv-config-0x02s.png) | 2 Quadrant Gates, 2s activation delay *(default)* | 
 | ![](img/ckt-xing-adv-config-0x03s.png) | 2 Quadrant Gates, no activation delay | 
 | ![](img/ckt-xing-adv-config-0x04s.png) | 4 Quadrant Gates, 2s activation delay, simultaneous rise | 
-| ![](img/ckt-xing-adv-config-0x05s.png) | 4 Quadrant Gates, 2s activation delay, delayed aux rise | 
+| ![](img/ckt-xing-adv-config-0x05s.png) | 4 Quadrant Gates, 2s activation delay, delayed main rise | 
 
 ### Servo Up & Down Position
 
