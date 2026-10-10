@@ -190,27 +190,32 @@ If your crossing uses gates, it's possible to set if the bell plays continuously
 
 ### Approach Timeout
 
+The Approach Timeout is the time that a train has from tripping an approach sensor to reaching an island sensor.  If the train does not reach an island sensor within the configured time, the crossing will time out and turn off.
 
+!!! note info
+    The opposite approach sensor is locked out for 5 seconds more than the approach timeout.  For example, if a train approaches from the left and triggers the approach sensor and the approach timeout is set to 25 seconds, the train has 25 seconds to reach the island or the crossing will time out.  If it makes the crossing, it then has 30 seconds to reach the right approach sensor and not retrigger the crossing.
 
 | Value | Approach Timeout |
 |-------|----------------|
-| ![](img/ckt-xing-adv-config-0x01s.png) | 5 seconds | 
-| ![](img/ckt-xing-adv-config-0x02s.png) | 7.5 seconds | 
-| ![](img/ckt-xing-adv-config-0x03s.png) | 10 seconds | 
-| ![](img/ckt-xing-adv-config-0x04s.png) | 12.5 seconds | 
-| ![](img/ckt-xing-adv-config-0x05s.png) | 15 seconds *(default)*| 
-| ![](img/ckt-xing-adv-config-0x06s.png) | 17.5 seconds | 
-| ![](img/ckt-xing-adv-config-0x07s.png) | 20 seconds | 
-| ![](img/ckt-xing-adv-config-0x08s.png) | 22.5 seconds | 
-| ![](img/ckt-xing-adv-config-0x09s.png) | 25 seconds | 
-| ![](img/ckt-xing-adv-config-0x0As.png) | 27.5 seconds | 
-| ![](img/ckt-xing-adv-config-0x0Bs.png) | 30 seconds | 
-| ![](img/ckt-xing-adv-config-0x0Cs.png) | 32.5 seconds | 
-| ![](img/ckt-xing-adv-config-0x0Ds.png) | 35 seconds | 
-| ![](img/ckt-xing-adv-config-0x0Es.png) | 37.5 seconds | 
-| ![](img/ckt-xing-adv-config-0x0Fs.png) | 40 seconds | 
+| ![](img/ckt-xing-adv-config-0x01s.png) | 10 seconds | 
+| ![](img/ckt-xing-adv-config-0x02s.png) | 12.5 seconds | 
+| ![](img/ckt-xing-adv-config-0x03s.png) | 15 seconds *(default)* | 
+| ![](img/ckt-xing-adv-config-0x04s.png) | 17.5 seconds | 
+| ![](img/ckt-xing-adv-config-0x05s.png) | 20 seconds | 
+| ![](img/ckt-xing-adv-config-0x06s.png) | 22.5 seconds | 
+| ![](img/ckt-xing-adv-config-0x07s.png) | 25 seconds | 
+| ![](img/ckt-xing-adv-config-0x08s.png) | 27.5 seconds | 
+| ![](img/ckt-xing-adv-config-0x09s.png) | 30 seconds | 
+| ![](img/ckt-xing-adv-config-0x0As.png) | 32.5 seconds | 
+| ![](img/ckt-xing-adv-config-0x0Bs.png) | 35 seconds | 
+| ![](img/ckt-xing-adv-config-0x0Cs.png) | 37.5 seconds | 
+| ![](img/ckt-xing-adv-config-0x0Ds.png) | 40 seconds | 
+| ![](img/ckt-xing-adv-config-0x0Es.png) | 45 seconds | 
+| ![](img/ckt-xing-adv-config-0x0Fs.png) | 50 seconds | 
 
 ### Island Timeout
+
+The Island Timeout is the time that the crossing will remain active after all island sensors are clear.
 
 | Value | Island Timeout |
 |-------|----------------|

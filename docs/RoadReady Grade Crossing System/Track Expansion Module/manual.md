@@ -85,7 +85,7 @@ The "Island Timeout" is the time that the crossing will remain active after all 
 
 | X | Y | Island Delay |
 |---|---|----------------|
-| 0 | 0 | 0.5 seconds | 
+| 0 | 0 | 1 second | 
 | 0 | 1 | 2 seconds | 
 | 1 | 0 | 5 seconds | 
 | 1 | 1 | 10 seconds | 
@@ -96,14 +96,14 @@ The "Approach Timeout" is the time that a train has from tripping an approach se
 
 | A | B | C | Approach Timeout |
 |---|---|---|----------------|
-| 0 | 0 | 0 | 20 seconds | 
-| 0 | 0 | 1 | 25 seconds | 
-| 0 | 1 | 0 | 30 seconds | 
-| 0 | 1 | 1 | 35 seconds | 
-| 1 | 0 | 0 | 40 seconds | 
-| 1 | 0 | 1 | 50 seconds | 
-| 1 | 1 | 0 | 60 seconds | 
-| 1 | 1 | 1 | Reserved (do not use)  | 
+| 0 | 0 | 0 | 10 seconds | 
+| 0 | 0 | 1 | 15 seconds | 
+| 0 | 1 | 0 | 20 seconds | 
+| 0 | 1 | 1 | 25 seconds | 
+| 1 | 0 | 0 | 30 seconds | 
+| 1 | 0 | 1 | 35 seconds | 
+| 1 | 1 | 0 | 40 seconds | 
+| 1 | 1 | 1 | 50 seconds  | 
 
 !!! note info
     The opposite approach sensor is locked out for 5 seconds more than the approach timeout.  For example, if a train approaches from the left and triggers the approach sensor and the approach timeout is set to 25 seconds, the train has 25 seconds to reach the island or the crossing will time out.  If it makes the crossing, it then has 30 seconds to reach the right approach sensor and not retrigger the crossing.
