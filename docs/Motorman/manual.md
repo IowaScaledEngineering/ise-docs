@@ -1,7 +1,7 @@
 ---
 title: User Manual
 ---
-# Motorman ![](img/motorman-logo.png){align=right style="height: 75px; margin-top:0px; margin-bottom: 0px"}<br>User Manual
+# Motorman ![](img/motorman-logo.png){align=right style="height: 125px; margin-top:0px; margin-bottom: 0px"}<br>User Manual
 
 ## Overview
 
