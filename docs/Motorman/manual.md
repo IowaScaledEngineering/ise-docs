@@ -53,13 +53,13 @@ Using DCC accessory decoders, it's possible to add switches in the middle of the
 
 ### Loop
 
-The "Loop" is just that - a circle of track, where the train always goes forward.  It only uses the Left and Intermediate Left sensors.  The equipment will always travel forward, stopping for the end delays when "left" sensors are triggered, and stopping for intermediate delays when "intermediate left" sensors are triggered.  Any sensor connected to "right" or "intermediate right" will have no effect in this mode.
+The "Loop" is just that - a circle of track, where the train always goes forward.  It only uses the Left and Intermediate Left sensors.  The equipment will always travel forward, stopping for the end delays when Left sensors are triggered, and stopping for intermediate delays when Intermediate Left sensors are triggered.  Any sensor connected to Right or Intermediate Right will have no effect in this mode.
 
 [![Loop Track Configurations](img/motorman-track-loop.png)](img/motorman-track-loop.png)
 
 ### Loop to Loop
 
-"Loop to Loop" is a combination of the two - a reversing loop on each end connected by a single track between.  The equipment always goes forward, but will obey the correct left or right intermediate sensors depending on direction of travel.  Plus, you can use actions based on the left and right end sensors to direct accessory decoder to line the reversing loop turnouts.
+"Loop to Loop" is a combination of the two - a reversing loop on each end connected by a single track between.  The equipment always goes forward, but will obey the correct left or right intermediate sensors depending on direction of travel.  Plus, you can use actions based on the left and right end sensors to direct accessory decoders to line the reversing loop turnouts.
 
 [![Loop to Loop Track Configurations](img/motorman-track-l2l.png)](img/motorman-track-l2l.png)
 
@@ -70,7 +70,7 @@ The "Loop" is just that - a circle of track, where the train always goes forward
 !!! warning "Please Note"
     All wiring should be done with the power off.  This significantly reduces the chances of accidentally slipping and causing a short circuit that damages the board or the detectors.
 
-Here's a list of our recommended steps to get up and running.  We recommend just getting something running in the most basic mode first, and then adding more advanced features.  That allows you to figure out where things went wrong, rather than setting it all up and being utterly bewildered when all the complexity doesn't work the first shot.  Once you've got basic operations working reliably and are somewhat familiar with the unit, then you can start adding more advanced things, such as [accessory decoder control](#accessory-configuration) or [intermediate stop sensors].  
+Here's a list of our recommended steps to get up and running.  We recommend just getting something running in the most basic mode first, and then adding more advanced features.  That allows you to figure out where things went wrong, rather than setting it all up and being utterly bewildered when all the complexity you're dreaming of doesn't work the first shot.  Once you've got basic operations working reliably and are somewhat familiar with the unit, then you can start adding more advanced things, such as [accessory decoder control](#accessory-configuration) or [intermediate stop sensors](#7-adding-intermediate-sensors).  
 
 Wiring Overview Diagram  *(Click to enlarge)*
 
@@ -93,9 +93,9 @@ Looking at your track, designate one direction left and one direction right.  En
 
 [![Sensor Positioning](img/motorman-end-sensor-positioning.png)](img/motorman-end-sensor-positioning.png)
 
-As a tip, we recommend temporarily positioning them on the layout using small boxes or other supports to figure out the exact placement before drilling any holes and committing to a location.  Just make sure they don't come in contact with rails or anything else energized, or damage will result.
+As a tip, we recommend temporarily positioning the sensors on the layout using small boxes or other supports to figure out the exact placement before drilling any holes and committing to a location.  Just make sure they don't come in contact with rails or anything else energized, or damage will result.
 
-Once you've figured out roughly where you want them, connect them to the Motorman control board.  Red wires to into the **+12V** terminal.  Black wires go into the **GND** terminal.   The white wire from the left sensor goes into the **LEFT** terminal, and correspondingly, the white wire from the right sensor goes into the **RIGHT** terminal.
+Once you've figured out roughly where you want them, connect them to the Motorman control board.  Red wires to into the **+12V** terminal.  Black wires go into the **GND** terminal.   The white wire from the left sensor goes into the **LEFT** terminal, and correspondingly, the white wire from the right sensor goes into the **RIGHT** terminal.  Again, a reminder to **do this with the unit unpowered** to prevent costly mistakes when wiring.
 
 If you need longer wires to reach the ends of your track, just extend the wires using any small wire you have handy.  There's no significant length limit on how far the sensors can be from the control unit.
 
@@ -105,11 +105,12 @@ Plug the barrel jack from the included power supply into the Motorman control un
 
 ### 4 - Test Your Sensors
 
-Let's make sure that your sensors are connected and working properly.  Take a piece of unpowered rolling stock (a boxcar will work fine, or even your hand) and place it in front of the left sensor.  You should see the red light on the sensor come on when something is placed in front of it and go off when the object is removed.  Now look at the main screen of the Motorman.  As asterisk should appear next to the L on the main screen when the left sensor is triggered, and go away when the sensor is not triggered.
+Let's make sure that your sensors are connected and working properly.  Take a piece of unpowered rolling stock (a boxcar will work fine, or even your hand) and place it in front of the left sensor.  You should see the red light on the sensor come on when something is placed in front of it and go off when the object is removed.  Now look at the main screen of the Motorman.  As asterisk should appear next to the L on the main screen when the left sensor is covered, and go away when the sensor is not covered.
 
 If that works, repeat with the right sensor. 
 
-!!! warning If either sensor test fails, stop and figure out what's not right.  Nothing will work unless the head unit is reliably receiving signals from the sensors. 
+!!! warning
+    If either sensor test fails, stop and figure out what's not right.  Nothing will work unless the head unit is reliably receiving signals from the sensors. 
 
 ### 5 - Basic Configuration
 
@@ -125,7 +126,7 @@ The main Motorman unit has four "soft keys" below the display.  The bottom line 
 
 To do the configuration, see the [Locomotive Config](#locomotive-configuration) menu.  A few tips:
 
-If you're running DC, you'll want to configure the DC slot - 00.  We recommend setting would set the MAX speed to something greater than 20 to start, as this may not be enough to even break the static friction of some older motors.  I would recommend starting at 50-60% and you can always slow it down once you get it working.
+If you're running DC, you'll want to configure the DC slot - 00.  We recommend setting the MAX speed to something greater than 20 to start, as this may not be enough to even break the static friction of some older motors.  I would recommend starting at 50-60 and you can always slow it down once you get it working.
 
 If you're running DCC equipment, just use slot 01 for now and configure the bare minimum you need to get the equipment moving.  The only function I would configure initially is the "engine run" function for sound decoders that need it to make the unit move.  Put it in one of the always on function slots.
 
@@ -147,7 +148,7 @@ The red and black wires from intermediate sensors go to the +12V and GND termina
 
 (Note:  If you don't need deceleration distance to stop at a specific point, you can use a single sensor for the intermediate stop and wire the white wire into both the I-L and I-R terminals and it will serve as both.)
 
-You can add as many intermediate pairs as you want.  Any Iowa Scaled Engineering TrainSpotter (except the TrainSpotter-M motion sensor) will work.  These additional sensors will come with a shorter wiring pigtail that has four wires.  The blue wire is not used in this application and should either be clipped or taped off so that it doesn't accidentally come in contact with anything.
+You can add as many intermediate pairs as you want.  Any Iowa Scaled Engineering [TrainSpotter](https://www.iascaled.com/TrainSpotter) (except the TrainSpotter-M motion sensor) will work.  These additional sensors will come with a shorter wiring pigtail that has four wires.  The blue wire is not used in this application and should either be clipped or taped off so that it doesn't accidentally come in contact with anything.
 
 ---
 
@@ -180,13 +181,13 @@ If the Motorman doesn't go into learning mode on startup, check that the sensors
 
 #### The Main Screen
 
-Most of the time, the Motorman will be sitting on the main screen.  It's designed to communicate a wealth of state information at a quick glance.
+Most of the time, the Motorman will be sitting on the main screen.  It's designed to communicate a wealth of information at a quick glance.
 
 From the main screen, you can use **LOAD** to load a new active locomotive configuration if you're in DCC mode.  (In DC mode, it always uses [locomotive configuration](#locomotive-configuration) slot 00, so there is no load function key.) 
 
 **MANL** allows you to manually operate the current locomotive.  *Note:  When you exit manual operation, the Motorman will reset to its "just powered up" state, since it has no idea where you moved the equipment since it was last in control.*
 
-**STOP** pauses the current operation and will bring the equipment to a halt.  It will also change the key to **RUN!**, which will resume operations from that point when it's next pressed.  This is handy if a minor derailment or need to quickly fix something without restarting the whole operation.
+**STOP** pauses the current operation and will bring the equipment to a halt.  It will also change the key to **RUN!**, which will resume operations from that point when it's next pressed.  This is handy if a minor derailment occurs or you need to quickly fix something without restarting the whole operation.
 
 **CONF** allows you to enter the [Configuration](#configuration) menu.
 
@@ -196,7 +197,7 @@ Here's a summary of the basic main screen items:
 
 * **ACTIVE LOCO ADDRESS** - Shown in the upper left in red, this indicates the locomotive address that the Motorman is currently trying to control.  If it's in DC mode, it will simply show ****DC****.  If it's in DCC mode, it will show a four digit address for long addresses, or an s followed by three digits for short addresses from 1-127.
 * **TRACK POWER METERS** - This section, shown in green, shows the current track voltage and current draw.  Depending on the hardware version, the current draw may be replaced with "FAULT" in the event of a track short or overload condition.
-* **OPERATIONAL STATE** - Show in orange, the [Operational State](#operational-state) gives you an idea what state the Motorman is currently in.  This can be very handy for debugging why transitions aren't happening as expected.
+* **OPERATIONAL STATE** - Shown in orange, the [Operational State](#operational-state) shows you the current state of the Motorman.  This can be very handy for debugging why things aren't happening as expected.
 * **SENSOR STATES** - This shows the current state of the sensor inputs and how they're mapped to forward and reverse.  The first three characters describe the left sensor.  For example, it might read L-? - meaning it's left sensor, the dash means it's not triggered, and the question mark means the Motorman hasn't learned if it's forward or reverse yet.  Likewise, it might read L*R, with the asterisk meaning that the sensor is currently triggered, and the Motorman thinks that left is the reverse direction for the current equipment.   The three characters representing the right sensor work similarly.  The next section with the I shows the intermediate sensors.  The character after the I shows which intermediate sensors are triggered.  IL would mean just intermediate left, IR means just intermediate right, and IA means both intermediate left and right are triggered.
 * **SOFT KEYS** - The bottom line shows the current function of the four keys below the screen.  
 * **RAMP RATE** - This is the acceleration/deceleration rate of the current locomotive configuration.  It's specified in the number of seconds from a stop to reaching full commanded speed, or from full speed to coming to a stop.  Note that this is just commanded speed from the Motorman.  If you are running DCC, any momentum programmed into the decoder is on top of this.
@@ -210,9 +211,9 @@ The Motorman is very similar.  It will drive forward until it reaches the end se
 
 * **LRN – Learning**  The Motorman is learning which track direction corresponds with forward. Once an end sensor is reached, that track direction (left or right) will be deemed “forward” until such time that the locomotive is changed, the STOP key is pressed (configurable), a reinitialization is triggered from [Manual Operation](#manual-operation), or the power is cycled. This association between left/right and forward/reverse will be indicated in the “Sensor Inputs” section of the main screen.
 
-* **FWD – Forward Travel** The locomotive is driven forward at the speed set in the locomotive profile until either the end stop sensor is reached, or an intermediate sensor opposite the forward end is reached. If the end sensor is tripped, the state will go to FDC. If an intermediate sensor is tripped, the state will go to FID.
+* **FWD – Forward Travel** The locomotive is driving forward at the speed set in the locomotive profile until either the end stop sensor is reached, or an intermediate sensor opposite the forward end is reached. If the end sensor is tripped, the state will go to FDC. If an intermediate sensor is tripped, the state will go to FID.
 
-* **REV – Reverse Travel** The locomotive is driven in reverse at the speed set in the locomotive profile until either the end stop sensor is reached, or an intermediate sensor opposite the reverse end is reached. If the end stop sensor is tripped, the state will go to RDC. If the intermediate sensor is tripped, the state will go to RID.
+* **REV – Reverse Travel** The locomotive is driving in reverse at the speed set in the locomotive profile until either the end stop sensor is reached, or an intermediate sensor opposite the reverse end is reached. If the end stop sensor is tripped, the state will go to RDC. If the intermediate sensor is tripped, the state will go to RID.
 
 * **FDC – Forward Deceleration** The forward direction end stop sensor has been tripped and the speed is decreasing to zero based on the locomotive’s ramp rate. Once the current speed reaches zero, the state will transition to FTR. 
 
@@ -228,7 +229,7 @@ The Motorman is very similar.  It will drive forward until it reaches the end se
 
 * **RID – Reverse Intermediate Deceleration** A reverse intermediate sensor has been tripped and the equipment is decelerating to zero speed. Once the speed reaches zero, the state will transition to RIW.
 
-* **FIW – Forward Intermediate Wait** The locomotive has stopped in the forward direction at an intermediate sensor, and will wait for the configured delay. Once the delay expires, state will transition to FIA.
+* **FIW – Forward Intermediate Wait** The locomotive has stopped in the forward direction at an intermediate sensor, and will wait for the configured delay. Once the delay expires, the state will transition to FIA.
 
 * **RIW - Reverse Intermediate Wait** The locomotive has stopped in the reverse direction at an intermediate sensor, and will wait for the configured delay. Once the delay expires, the state will transition to RIA.
 
@@ -276,11 +277,11 @@ Slot 00 is always DC, and is the only configuration for DC.  Slots 01 to 14 are 
 
 Slot 00 is automatically used when [DC operation](#dcdcc-output) is selected.  For DCC operation, the **LOAD** button on the main screen is used to select which configuration slot is active.
 
-Each line shows the configuration slot number, DCC address (or ****DC**** for slot 0), maximum speed (0 to 100%) and ramp rate (0.1 to 25.5 seconds). Use the **UP/DOWN** keys to select the configuration to change, and press the **SLCT** key to reconfigure that go into the Configure Locomotive screen #1. The **BACK** key will take you back to the main configuration screen.
+Each line shows the configuration slot number, DCC address (or \*\*DC\*\* for slot 0), maximum speed (0 to 100%) and ramp rate (0.1 to 25.5 seconds). Use the **UP/DOWN** keys to select the configuration to change.  Press the **SLCT** key to configure the details for the selected locomotive slot. The **BACK** key will take you back to the main configuration screen.
 
 ![Address and Speed configuration](img/motorman-loco-slots.png)
 
-Here's a flowchart of how the screens fit together:
+Here's a flowchart of how the locomotive configuration screens fit together:
 
 [![Locomotive Configuration Flowchart](img/loco-config-screenflow.png)](img/loco-config-screenflow.png)
 
@@ -312,7 +313,7 @@ If you're configuring one of the 14 DCC slots (01-14), the **NEXT** key will mov
 
 These two (version 1 firmware) or three (version 2 firmware) screens allows you to set DCC decoder function behavior. 
 
-For all of them, **F--** indicates that no function is selected. If the field is set to **F00** to **F28**, that function will be active when this locomotive slot is active.
+For all of them, **F--** indicates that no function is selected. If the field is set to **F00** to **F28**, that function will be active when this locomotive slot is selected and in the state described below.
 
 The keys operate similarly for all of the configuration screens.  The third line will have a **^** (carat) showing which field is currently being changed.  Use the **++** key to increment the current field, and the **>>** key to change which field is being adjusted.  
 
@@ -354,7 +355,7 @@ The Motorman also has a single function that can be turned on during acceleratio
 
 ### Accessory Configuration
 
-While operating in DCC mode, the Motorman to drive up to six accessory decoders based on sensor triggers.  These are configured from the the **Accessory Config** menu.
+While operating in DCC mode, the Motorman can drive up to six accessory decoders based on sensor triggers.  These are configured from the the **Accessory Config** menu.
 
 ![Six accessory decoder slots](img/motorman-accessory-slots.png)
 
@@ -422,9 +423,9 @@ The asterisk will show the currently selected value.  Use **ENBL** to enable the
 
 ### Travel Mode
 
-The "travel mode" is describes how the track is configured, and how you want the equipment to operate over that track.
+The "travel mode" describes how the track is configured, and how you want the equipment to operate over that track.
 
-The original Motorman firmware only supported a single travel mode - Point to Point.  This was a track with two ends, and the equipment would "ping pong" between the two ends.  Version 2.0 of the firmware added two new modes - Loop and Loop to Loop (Lp2Lp). 
+The original Motorman firmware only supported a single travel mode - Point to Point.  This was a track with two ends, and the equipment would "ping pong" between the two ends.  Version 2.0 of the firmware added two new modes - Loop and Loop to Loop. 
 
 #### Point-to-Point
 
@@ -432,16 +433,16 @@ In this mode, equipment will travel forward until it reaches an end sensor.  At 
 
 Along the way, it will stop upon reaching intermediate sensors in its direction of travel.  If traveling left, it will stop for intermediate right sensors.  If traveling right, it will stop for intermediate left sensors.
 
-#### Loop
+#### Loop (V2+)
 
 In this mode, equipment always operates forward around a loop.  Only the left and intermediate right sensors have any effect.  
 
 Upon reaching any left sensor, the equipment will pause based on the end stop delays, and any accessory actions tied to the left sensors will trigger.
 
-Upon reaching any intermediate right sensor, the equipment will base based on the intermediate delays, and any accessory actions tied to the intermediate right sensors will trigger.
+Upon reaching any intermediate right sensor, the equipment will stop based on the intermediate delays, and any accessory actions tied to the intermediate right sensors will trigger.
 
 
-#### Loop to Loop
+#### Loop to Loop (V2+)
 
 In this mode, equipment always operates forward.  When it reaches an end sensor, it will "learn" if left or right is forward. 
 
@@ -453,7 +454,7 @@ Accessory actions or other systems not connected to the Motorman can be used to 
 
 ### Sensor Learning
 
-For [learning mode](#learning-mode), equipment must start between the two end sensors.  If the Motorman is trying to "learn" if forward is left or right, it will indicate by showing "LRN" as its operating state, and the ? will appear next to the left and right sensors.  If you want to skip learning and go immediately into operations, then using the this configuration option, you can define the relationship between forward movement and going left or going right.  
+For [learning mode](#learning-mode), equipment must start between the two end sensors.  If the Motorman is trying to "learn" if forward is left or right, it will indicate by showing "LRN" as its operating state, and the ? will appear next to the left and right sensors.  If you want to skip learning and go immediately into operations, then using this configuration option, you can define the relationship between forward movement and going left or going right.  
 
 Select **Learn** if you want the Motorman to start up in learning mode.  
 
@@ -487,11 +488,11 @@ Select **NO** to have the Motorman start up in a fresh, initialized state when t
 
 Select **SAVE** to save and exit, or **CNCL** to discard your change and back out to the [Configuration Menu](#configuration).
 
-Note:  Resume On Power On bypasses [learning mode](#learning-mode) once the relationship between left/right and forward/reverse is learned, even on initial power up.  To re-enter learning mode, you can either turn on the [Stop Relearns Dir](#stop-relearns-dir) function and press the **STOP** button to get into learning mode, or you can disable Resume On Power On and restart.  Normally in the sort of situations, it's usually helpful to just disable [Sensor Learning](#sensor-learning) entirely and tell the system which direction corresponds with forward travel.
+With Resume On Power On enabled, [learning mode](#learning-mode) is bypassed once the relationship between left/right and forward/reverse is learned, even on initial power up.  To re-enter learning mode, you can either turn on the [Stop Relearns Dir](#stop-relearns-dir) function and press the **STOP** button to get into learning mode, or you can disable Resume On Power On and restart.  Normally in these sort of situations, it's usually helpful to just disable [Sensor Learning](#sensor-learning) entirely and tell the system which direction corresponds with forward travel.
 
-Note 2: Resume On Power On bypasses the introductory splash screen so that it doesn't miss any events.  It will drop you immediately into the [main screen](#the-main-screen) when power is reapplied.
+Resume On Power On also bypasses the introductory splash screen so that it doesn't miss any events.  It will drop you immediately into the [main screen](#the-main-screen) when power is reapplied.
 
-Note 3: It is highly recommended to not use momentum or large keep-alives in locomotives being used with Resume On Power On.  If the locomotive moves after the Motorman loses power, it may coast over an unpowered sensor and the Motorman will not register the event since it's off.  Operation after that is undefined, and probably not good.
+It is highly recommended to **not** use momentum or large keep-alives in locomotives being used with Resume On Power On.  If the locomotive moves after the Motorman loses power, it may coast over an unpowered sensor and the Motorman will not register the event since it's off.  Operation after that is undefined, and probably not good.
 
 !!! warning "Non-Volatile Memory Wear"
     The "Resume on Power On" functionality is constantly saving the Motorman's state to the internal non-volatile memory, so that it knows what was last happening when the power went down.  This non-volatile memory has a finite number of writes before it will start exhibiting errors and fail.  The firmware does wear-leveling and spreads the wear out, but even then, may cause the device to wear out in about a decade of continuous operation, assuming a 30 second run between endpoints.  Just FYI.
@@ -550,7 +551,7 @@ The safest way to switch between the two is by using a DPDT toggle switch rated 
 
 ### Excess Inrush Current
 
-The Motorman has an extremely fast short circuit detector, since it's intended for unattended operation and safety is a priority.  If there's too much capacitance on the track when it powers up, the Motorman may see this as short circuit due to the inrush current.
+The Motorman has an extremely fast short circuit detector, since it's intended for unattended operation and safety is a priority.  If there's too much capacitance on the track when it powers up, the Motorman may see this as a short circuit due to the inrush current.
 
 For DCC, often the answer is as simple as adding 6-10 feet of paired wire (such as lamp cord) between the Motorman and the track.  This often adds just enough inductance to solve the problem.  
 
@@ -558,7 +559,7 @@ For more extreme scenarios, adding a very low resistance, large wattage power re
 
 ### Additional Sensors
 
-Additional sensors can be added for more end or intermediate stops using any of our standard TrainSpotter sensors, **except for the TrainSpotter-M**.  The motion-sensitive TrainSpotter-M sensors detect movement rather than position, and thus are not useful for the Motorman.
+Additional sensors can be added for more end or intermediate stops using any of our standard [TrainSpotter](https://www.iascaled.com/TrainSpotter) sensors, **except for the TrainSpotter-M**.  The motion-sensitive TrainSpotter-M sensors detect movement rather than position, and thus are not useful for the Motorman.
 
 Multiple sensors can be connected to the same input (end or midpoint).  Just connect all the wires together of the same color and put them into the correct terminal block.
 
@@ -572,9 +573,9 @@ If the Motorman isn't responding the way you think it should, almost always the 
 
 Step 1 - Verify that if you move equipment over them, the red light on the sensor turns on, and when it's removed the light turns off.  If it doesn't, try your hand.  If you can't get the red light to come on at all, either the sensor is not getting power (most likely - check red/black wires) or the sensor has gone bad (significantly less likely).  If your hand works and the equipment doesn't, there's probably too much space between the sensor and your equipment.
 
-Step 2 - Verify that the Motorman sees the sensor input.  When the sensor is not triggered, verify that the red light is off and check the sensor state on either the [main screen](#the-main-screen) or on the [diagnostic screen](#diagnostic-leds).  It should be showing that sensor as not triggered.  Activate the sensor and verify that the red light comes on, and that the corresponding sensor indicator on the screen turns on.  If the red light on the sensor turns on but the indicator on the screen does not, then check the white wire connection.  If that seems good but the sensor indicator on the Motorman screen still doesn't turn on, use a short piece of wire to connect between the GND and sensor input terminals on the Motorman.  (Be very careful not to brush against any other connection.  You can easily kill the Motorman input or the output on the sensor.)  If it now turns on, then it's either a bad white wire or bad sensor.  If it doesn't turn on, the Motorman input is bad.
+Step 2 - Verify that the Motorman sees the sensor input.  When the sensor is not triggered, verify that the red light is off and check the sensor state on either the [main screen](#the-main-screen) or on the [diagnostic screen](#diagnostic-leds).  It should be showing that sensor as not triggered.  Activate the sensor and verify that the red light comes on, and that the corresponding sensor indicator on the screen turns on.  If the red light on the sensor turns on but the indicator on the screen does not, then check the white wire connection.  If that seems good but the sensor indicator on the Motorman screen still doesn't turn on, use a short piece of wire to connect between the GND and sensor input terminals on the Motorman.  (Be very careful not to brush against any other connection.  You can easily kill the Motorman input or the output on the sensor.)  If it now turns on, then it's either a bad white wire or bad sensor.  If it doesn't turn on, the Motorman input has been damaged.
 
-Step 3 - If the sensors are all turning on and off correctly on the Motorman screen, then the issue is likely either in configuration or you've found a bug.  Usually it's a configuration problem.  Use the [operational state](#operational-state) to watch how the Motorman responds to the sensor inputs, and this may point you at the issue.  If you think you've found a bug, figure out how to reproduce it reliably, document the steps and your configuration, and send it to support@iascaled.com for us to look at.
+Step 3 - If the sensors are all turning on and off correctly on the Motorman screen, then the issue is likely either in configuration or you've found a bug.  Usually it's a configuration problem.  Use the [operational state](#operational-state) to watch how the Motorman responds to the sensor inputs, and this may point you at the issue.  If you think you've found a bug, figure out how to reproduce it reliably, document the steps and your configuration, and send it to support@iascaled.com for us to review.
 
 #### Diagnostic Screen
 
