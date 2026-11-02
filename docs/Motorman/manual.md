@@ -658,6 +658,12 @@ Fixes the following bugs:
 
 ---
 
+## Previous Manual
+
+The previous manual for version 1.x firmware is still available from [this link](./motorman-manual-v1.pdf).
+
+---
+
 ## Specifications
 
 **Input Power:**  12 volts DC @ >2 amps, 2.1x5.5mm barrel jack, center positive  
