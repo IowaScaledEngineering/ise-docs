@@ -63,6 +63,9 @@ The "Loop" is just that - a circle of track, where the train always goes forward
 
 [![Loop to Loop Track Configurations](img/motorman-track-l2l.png)](img/motorman-track-l2l.png)
 
+!!! info "Reversers"
+    Note that the Motorman does not take care of the polarity reversing required for the end loops.  Just like with a regular DCC system, this needs an autoreverser or two to handle them.  The easiest way would be to put one on the feeders for the center section.  The other option would be to put one on each of the reverse loops.  For DC operation, this is... complicated.
+
 ---
 
 ## Quick Start Guide
@@ -89,7 +92,11 @@ For DCC use, the polarity does not matter. If using DC mode, then the physical d
 
 The basic kit includes two TrainSpotter optical sensors - one for each end of a basic point-to-point or loop-to-loop run.   We strongly recommend getting the end sensors operational first, and then adding any intermediate sensors.
 
-Looking at your track, designate one direction left and one direction right.  End sensors should be positioned far enough from the end of track that equipment has time to decelerate to a stop before running out of rail.  The end deceleration rate is [configurable](#) to as little as a tenth of a second from when the sensor is tripped, but the result will be a jarring stop and won't appear very prototypical.  If it's happening in a hidden space, however, this may be fine.
+Looking at your track, designate one direction left and one direction right.  End sensors should be positioned far enough from the end of track that equipment has time to decelerate to a stop before running out of rail.  The end deceleration rate for the locomotive is [configurable](#locomotive-configuration) to as little as a tenth of a second from when the sensor is tripped, but the result will be a jarring stop and won't appear very prototypical.  If it's happening in a hidden space, however, this may be fine.
+
+!!! info "Decoder Momentum and Stopping Distance"
+    Any momentum configured in the locomotive's decoder is in addition to the deceleration in the Motorman's locomotive configuration.  Be sure to account for this when positioning sensors.   
+
 
 [![Sensor Positioning](img/motorman-end-sensor-positioning.png)](img/motorman-end-sensor-positioning.png)
 
@@ -166,6 +173,8 @@ When the Motorman starts up or goes through reinitialization, normally it will s
 [![Correct startup positioning](img/motorman-learning-positioning.png)](img/motorman-learning-positioning.png)
 
 You can tell the Motorman is in learning mode by checking the [Operational State](#operational-state) on the [main screen](#the-main-screen).  If it's currently learning, it will show LRN as the operational state and it will show ? by the two end sensors instead of F or R.
+
+![](img/motorman-learning-mode.png)
 
 Once the Motorman has learned which sensor (left or right) corresponds with forward movement, it will then start normal operation.
 
@@ -439,7 +448,7 @@ In this mode, equipment always operates forward around a loop.  Only the left an
 
 Upon reaching any left sensor, the equipment will pause based on the end stop delays, and any accessory actions tied to the left sensors will trigger.
 
-Upon reaching any intermediate right sensor, the equipment will stop based on the intermediate delays, and any accessory actions tied to the intermediate right sensors will trigger.
+Upon reaching any intermediate right sensor, the equipment will stop based on the intermediate delays, and any accessory actions tied to the intermediate left sensors will trigger.
 
 
 #### Loop to Loop (V2+)
