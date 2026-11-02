@@ -50,10 +50,8 @@ motherboards.
 The ATOM needs 5V to 24V of clean DC power.  When using the terminal blocks,
 power should be supplied to the +V (positive) and GND (negative) terminals.
 
-**Please do not use old power packs as a source of “DC” power.**  Their DC
-outputs are usually unfiltered and generally have peak voltages that far
-exceed the nominal voltage listed.  Often these peaks are 35+ volts, and far
-more than enough to destroy low voltage electronics.
+!!! warning "Please do not use power packs"
+    Please do not use old power packs as a source of DC power.  Their DC outputs are usually unfiltered and generally have peak voltages that far exceed the nominal voltage listed, or what most meters will indicate, since they average they voltage they see.  Often these peaks are 35+ volts, and those peaks exceed the rated input for the ATOM and will destroy them quickly.  For more details, read **[Your Old Power Pack Isn’t a DC Supply](../Tips%20and%20Tricks/Articles/power-pack.md)**.
 
 ![](img/ckt-bd1-connections.png)
 
@@ -75,17 +73,14 @@ the black “tombstone” current transformer on the ATOM.  The track feeder
 should only pass through the hole one time, as shown by the yellow wire in
 the diagram.
 
-Normally the two outputs are in an “open drain” configuration, meaning they
-act like a switch to ground – either they conduct current or they look like
-an open circuit.  **Do not exceed 40V on either of the two output terminals. 
-Also, do not attach loads that will draw more than 250mA of current or the
-output transistors may be damaged.**
+Normally the two outputs are in an “open drain” configuration, meaning they act like a switch to ground – either they conduct current or they look like an open circuit.  These are also often called "open collector" outputs.  These are a common output type amongst block detectors.  For more information on how they work and how to use them, check out **[Let's Talk About Open Collector Outputs](../Tips%20and%20Tricks/Articles/opencollector.md)**.
 
 If your application requires pull-up resistors, such as for connecting to a
 logic-level input, short jumpers JP1 and/or JP2 using a blob of solder to
-enable the on-board 10k pull-up resistors.  These resistors pull the D and
-/D outputs up to the +V voltage.  JP1 is for the D terminal (or the blue
-wire) and JP2 is for the /D terminal (or the white wire).
+enable the on-board 10k pull-up resistors.  These resistors pull the D and /D outputs up to the +V power supply voltage, so be careful if you're working with a 3.3V or 5V logic input and your power supply is 12V.  JP1 is for the D terminal (or the blue wire) and JP2 is for the /D terminal (or the white wire).
+
+!!! warning "Output Maximum Current/Voltage"
+    Do not exceed 40V on either of the two output terminals. Also, do not attach loads that will draw more than 250mA of current or the output transistors will be damaged.
 
 ---
 
